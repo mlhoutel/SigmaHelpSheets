@@ -39,7 +39,7 @@ install nginx server: docker run -d -p 8080:80 nginx
 open webpage: http://192.168.99.103:8080/
 ```
 
-### Get docker contner id
+### Get container id
 in Linux: 
 ```
 sudo docker ps -aqf "name=containername"
@@ -68,7 +68,7 @@ apt-get install nano
 ```
 
 # Helps
-Stop contener: 
+Stop container: 
 ```
 docker stop 2769d51daeb2 
 ```
@@ -76,19 +76,19 @@ Remove docker:
 ```
 docker rm 2769d51daeb2 
 ```
-Pull contner: 
+Pull container: 
 ```
 docker pull hello-world
 ```
-List of running contners : 
+List of running container : 
 ```
 docker ps
 ```
-List of images : 
+List of containers images : 
 ```
 docker images -a
 ```
-Clean and remove all contners : 
+Clean and remove all container : 
 ```
 docker system prune
 ```
