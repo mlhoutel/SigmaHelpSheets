@@ -73,27 +73,11 @@ apt-get install nano
 ```
 
 # Helps
-Stop container: 
 ```
-docker stop 2769d51daeb2 
-```
-Remove docker: 
-```
-docker rm 2769d51daeb2 
-```
-Pull container: 
-```
-docker pull hello-world
-```
-List of running container : 
-```
-docker ps
-```
-List of containers images : 
-```
-docker images -a
-```
-Clean and remove all container : 
-```
-docker system prune
+Stop container: docker stop 2769d51daeb2 
+Remove docker: docker rm 2769d51daeb2 
+Pull container: docker pull hello-world
+List of running container : docker ps
+List of containers images : docker images -a
+Clean and remove all container : docker system prune
 ```
