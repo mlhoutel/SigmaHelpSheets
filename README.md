@@ -1,17 +1,21 @@
 # DOCKER SHEET
 ## Docker Setup
 [Docker Hub](https://hub.docker.com/)
-[Docker Hub](https://www.docker.com//)
+
+[Docker Website](https://www.docker.com//)
 
 
 
 ## Connect to the VM
 ```
 user: docker
-pwd:tcuser
+pwd: tcuser
 ```
 
-Get the VM ip with ```ifconfig eth1```
+Get the VM ip with 
+```
+ifconfig eth1
+```
 
 Set the azert keyboard
 ```
@@ -36,8 +40,14 @@ open webpage: http://192.168.99.103:8080/
 ```
 
 ### Get docker contner id
-in Linux: ```sudo docker ps -aqf "name=containername"```
-in Windows: ```docker ps -aqf "name=containername"```
+in Linux: 
+```
+sudo docker ps -aqf "name=containername"
+```
+in Windows: 
+```
+docker ps -aqf "name=containername"
+```
 
 ### Operational bash cmd: 
 ```
@@ -45,7 +55,9 @@ docker exec -ti 2769d51daeb2 bash
 ```
 
 ### Edit nginx webpage:
-```cd /usr/share/nginx/html```
+```
+cd /usr/share/nginx/html
+```
 
 Get Nano:
 ```
@@ -56,9 +68,27 @@ apt-get install nano
 ```
 
 # Helps
-Stop contener: ```docker stop 2769d51daeb2 ```
-Remove docker: ```docker rm 2769d51daeb2 ```
-Pull contner: ```docker pull hello-world```
-List of running contners : ```docker ps```
-List of images : ```docker images -a```
-Clean and remove all contners : ```docker system prune```
+Stop contener: 
+```
+docker stop 2769d51daeb2 
+```
+Remove docker: 
+```
+docker rm 2769d51daeb2 
+```
+Pull contner: 
+```
+docker pull hello-world
+```
+List of running contners : 
+```
+docker ps
+```
+List of images : 
+```
+docker images -a
+```
+Clean and remove all contners : 
+```
+docker system prune
+```
