@@ -2,7 +2,7 @@
 
 # Fast Help
 Instruction | Command
-------------  -------------
+------------ | -------------
 **Run container** | ```docker run hello-world```
 **Get container id (Linux)** | ```sudo docker ps -aqf "name=containername"```
 **Get container id (Windows)** | ```docker ps -aqf "name=containername"```
