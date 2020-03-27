@@ -1,4 +1,19 @@
 # DOCKER SHEET
+
+# Fast Help
+Instruction | Command
+------------  -------------
+**Run container** | ```docker run hello-world```
+**Get container id (Linux)** | ```sudo docker ps -aqf "name=containername"```
+**Get container id (Windows)** | ```docker ps -aqf "name=containername"```
+**Operational bash cmd** | ```docker exec -ti 2769d51daeb2 bash```
+**Stop container** | ```docker stop 2769d51daeb2``` 
+**Remove container** | ```docker rm 2769d51daeb2 ```
+**Pull container** | ```docker pull hello-world```
+**List of running container** | ```docker ps```
+**List of containers images** | ```docker images -a```
+**Clean and remove all container** | ```docker system prune```
+
 ## Docker Setup
 https://hub.docker.com/
 
@@ -16,12 +31,10 @@ Windows Family | https://github.com/docker/toolbox/releases
 user: docker
 pwd: tcuser
 ```
-
 Get the VM ip with 
 ```
 ifconfig eth1
 ```
-
 Set the azert keyboard
 ```
 su docker
@@ -39,31 +52,15 @@ paste : ctrl + shift + V
 ssh docker@192.168.99.103
 ```
 ## Tutorial
+### Install nginx server
 ```
 install nginx server: docker run -d -p 8080:80 nginx
 open webpage: http://192.168.99.103:8080/
 ```
-
-### Get container id
-in Linux: 
-```
-sudo docker ps -aqf "name=containername"
-```
-in Windows: 
-```
-docker ps -aqf "name=containername"
-```
-
-### Operational bash cmd: 
-```
-docker exec -ti 2769d51daeb2 bash
-```
-
 ### Edit nginx webpage:
 ```
 cd /usr/share/nginx/html
 ```
-
 Get Nano:
 ```
 apt-get update
@@ -72,12 +69,3 @@ apt-file update
 apt-get install nano
 ```
 
-# Helps
-```
-**Stop container**: docker stop 2769d51daeb2 
-**Remove docker**: docker rm 2769d51daeb2 
-**Pull container**: docker pull hello-world
-**List of running container**: docker ps
-**List of containers images**: docker images -a
-**Clean and remove all container**: docker system prune
-```
