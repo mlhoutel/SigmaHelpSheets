@@ -1,12 +1,11 @@
 # DOCKER SHEET
 ## Docker Setup
-[Docker Hub](https://hub.docker.com/)
-
-[Docker Website](https://www.docker.com/)
+https://hub.docker.com/
+https://www.docker.com/
 
 OS | Installation Link
 ------------ | -------------
-Linux |  sudo apt-get install docker-ce docker-ce-cli containerd.io
+Linux |  ```sudo apt-get install docker-ce docker-ce-cli containerd.io```
 Mac | https://hub.docker.com/editions/community/docker-ce-desktop-mac/
 Windows Pro | https://hub.docker.com/editions/community/docker-ce-desktop-windows/
 Windows Family | https://github.com/docker/toolbox/releases
