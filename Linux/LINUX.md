@@ -1,4 +1,4 @@
-# LINUX SHEET
+# :penguin: LINUX SHEET
 
 # Fast Help
 Instruction | Command
