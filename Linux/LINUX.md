@@ -13,8 +13,8 @@ Instruction | Command
 ├───dev                                         *Root*  
 ├───etc                                         *Root*   
 ├───home                                        *Root*  
-│    ├───userA  
-│    └───userB  
+│     ├───userA  
+│     └───userB  
 ├───lib                                         *Root*  
 ├───media                                       *Root*  
 ├───mnt                                         *Root*  
