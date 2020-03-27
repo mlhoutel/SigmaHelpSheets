@@ -3,4 +3,4 @@
 # Fast Help
 Instruction | Command
 ------------ | -------------
-**Move directory** | ```cd```
+**Move directory** | ```cd directory_name```
