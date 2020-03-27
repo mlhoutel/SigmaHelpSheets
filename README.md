@@ -3,15 +3,16 @@
 # Fast Help
 Instruction | Command
 ------------ | -------------
+**Pull image** | ```docker pull hello-world```
+**List of containers images** | ```docker images -a```
+**Create container** | ```docker create --name prismatic ubuntu```
 **Run container** | ```docker run hello-world```
 **Get container id (Linux)** | ```sudo docker ps -aqf "name=containername"```
 **Get container id (Windows)** | ```docker ps -aqf "name=containername"```
 **Operational bash cmd** | ```docker exec -ti 2769d51daeb2 bash```
 **Stop container** | ```docker stop 2769d51daeb2``` 
 **Remove container** | ```docker rm 2769d51daeb2 ```
-**Pull container** | ```docker pull hello-world```
 **List of running container** | ```docker ps```
-**List of containers images** | ```docker images -a```
 **Clean and remove all container** | ```docker system prune```
 
 ## Docker Setup
