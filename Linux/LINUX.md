@@ -7,6 +7,7 @@ Instruction | Command
 
 
 ## Linux directory
+```
 /                                               *Root*  
 ├───bin                                         *Root*  
 ├───boot                                        *Root*  
@@ -25,3 +26,4 @@ Instruction | Command
 ├───tmp                                         *Root*  
 ├───usr                                         *Root*  
 └───var                                         *Root*  
+```
