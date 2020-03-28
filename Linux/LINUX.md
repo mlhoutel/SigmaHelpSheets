@@ -4,7 +4,18 @@
 Instruction | Command
 ------------ | -------------
 **Move directory** | ```cd directory_name```
-
+**Current folder** | ```pwd```
+**Command location** | ```which command_name```
+**List folders** | ```ls [-l (detail)][-a (hidden)][-F (type)][-h (size)][-t (date)][-r (reverse)]```
+**Disk usage** | ```du [-h (size)][-a (all)][-s (sum)]```
+**Move directory** | ```cd directory_name```
+**Move directory** | ```cd directory_name```
+**Move directory** | ```cd directory_name```
+**Move directory** | ```cd directory_name```
+**Move directory** | ```cd directory_name```
+**Move directory** | ```cd directory_name```
+**Move directory** | ```cd directory_name```
+**Move directory** | ```cd directory_name```
 
 ## Linux directory
 ```
