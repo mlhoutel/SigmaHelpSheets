@@ -8,22 +8,22 @@ Instruction | Command
 
 ## Linux directory
 ```
-/                                               *Root*  
-├───bin                                         *Root*  
-├───boot                                        *Root*  
-├───dev                                         *Root*  
-├───etc                                         *Root*   
-├───home                                        *Root*  
+/                                               *Root directory*  
+├───bin                                         *Users programs*  
+├───boot                                        *System booting*  
+├───dev                                         *Devices (ex:CD)*  
+├───etc                                         *Config folder*   
+├───home                                        *Users folders*  
 │     ├───userA  
 │     └───userB  
-├───lib                                         *Root*  
-├───media                                       *Root*  
-├───mnt                                         *Root*  
-├───opt                                         *Root*  
-├───proc                                        *Root*  
-├───root                                        *Root*  
-├───sbin                                        *Root*  
-├───tmp                                         *Root*  
-├───usr                                         *Root*  
-└───var                                         *Root*  
+├───lib                                         *Shared libraries*  
+├───media                                       *Medias (ex:USB)*  
+├───mnt                                         *Temporary medias*  
+├───opt                                         *Programs add-ons*  
+├───proc                                        *System infos*  
+├───root                                        *Root user folder*  
+├───sbin                                        *System programs*  
+├───tmp                                         *Temporary folder*  
+├───usr                                         *Users programs*  
+└───var                                         *Datas and Logs*  
 ```
