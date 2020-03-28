@@ -8,13 +8,13 @@
 
 * **:penguin: [Linux](./Linux/LINUX.md)**
 
-* **:penguin: [PHP](./PHP/PHP.md)**
+* **:elephant: [PHP](./PHP/PHP.md)**
 
-* **:penguin: [C++](./C++/C++.md)**
+* **:keyboard: [C++](./C++/C++.md)**
 
-* **:penguin: [C#](./C#/C#.md)**
+* **:desktop_computer: [C#](./C#/C#.md)**
 
-* **:snake [Python](./Linux/LINUX.md)**
+* **:snake: [Python](./Linux/LINUX.md)**
 
 * **:elephant: [Postgres](./BDD/PGSQL.md)**
 
