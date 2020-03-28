@@ -4,10 +4,8 @@
 ## Includes and dependancies
 Library | Command
 ------------ | -------------
-**A** | ```#include <stdio.h>```
-**A** | ```#include <stdio.h>```
-**A** | ```#include <stdio.h>```
-**A** | ```#include <stdio.h>```
+**Input Output (scanf printf)** | ```#include <stdio.h>```
+**Draw in Window** | ```#include <SFML/Graphics.hpp>```
 
 ## Basic C
 Type | Alias | Example
@@ -27,3 +25,11 @@ Instruction | Command
 **declare structure** | ```typedef struct {int width; int height; } Rectangle;```
 **init structure** | ```Rectangle rect;```
 **edit structure** | ```rect.width = 10;```
+
+## SFML
+Instruction | Command
+------------ | -------------
+**Namespace** | ```using namespace sf;```
+**main function** | ```int main() { }```
+
+## Basic C++
