@@ -7,3 +7,15 @@
 * **:whale: [Docker](./Docker/DOCKER.md)**
 
 * **:penguin: [Linux](./Linux/LINUX.md)**
+
+* **:penguin: [PHP](./PHP/PHP.md)**
+
+* **:penguin: [C++](./C++/C++.md)**
+
+* **:penguin: [C#](./C#/C#.md)**
+
+* **:snake [Python](./Linux/LINUX.md)**
+
+* **:elephant: [Postgres](./BDD/PGSQL.md)**
+
+
