@@ -11,6 +11,7 @@ Instruction | Command
 **Get container id (Windows)** | ```docker ps -aqf "name=containername"```
 **Run a saved image** | ```docker run -it -p 8091:8091 prismatic```
 **Operational bash cmd** | ```docker exec -ti 2769d51daeb2 bash```
+**Commit cintainer** | ```docker commit 2769d51daeb2``` 
 **Stop container** | ```docker stop 2769d51daeb2``` 
 **Remove container** | ```docker rm 2769d51daeb2 ```
 **List of running container** | ```docker ps```
