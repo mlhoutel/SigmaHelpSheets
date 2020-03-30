@@ -9,6 +9,7 @@ Instruction | Command
 **Run container** | ```docker run hello-world```
 **Get container id (Linux)** | ```sudo docker ps -aqf "name=containername"```
 **Get container id (Windows)** | ```docker ps -aqf "name=containername"```
+**Run a saved image** | ```docker run -it -p 8091:8091 prismatic```
 **Operational bash cmd** | ```docker exec -ti 2769d51daeb2 bash```
 **Stop container** | ```docker stop 2769d51daeb2``` 
 **Remove container** | ```docker rm 2769d51daeb2 ```
