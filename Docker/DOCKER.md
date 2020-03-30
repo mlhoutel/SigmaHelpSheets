@@ -14,6 +14,7 @@ Instruction | Command
 **Commit cintainer** | ```docker commit 2769d51daeb2``` 
 **Stop container** | ```docker stop 2769d51daeb2``` 
 **Remove container** | ```docker rm 2769d51daeb2 ```
+**Remove image** | ```docker rmi 2769d51daeb2 ```
 **List of running container** | ```docker ps```
 **Clean and remove all container** | ```docker system prune```
 **Rename image** | ```docker tag 18455f1ec44d "prismatic" ```
