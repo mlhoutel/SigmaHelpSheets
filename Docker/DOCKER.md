@@ -18,6 +18,9 @@ Instruction | Command
 **List of running container** | ```docker ps```
 **Clean and remove all container** | ```docker system prune```
 **Rename image** | ```docker tag 18455f1ec44d "prismatic" ```
+**Create VM** | docker-machine create --driver virtualbox --virtualbox-disk-size "40000" default
+**Delete VM** | docker rm default
+
 
 ## Docker Setup
 https://hub.docker.com/
