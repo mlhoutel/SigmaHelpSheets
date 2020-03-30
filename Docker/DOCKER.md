@@ -20,7 +20,9 @@ Instruction | Command
 **Rename image** | ```docker tag 18455f1ec44d "prismatic" ```
 **Create VM** | docker-machine create --driver virtualbox --virtualbox-disk-size "40000" default
 **Delete VM** | docker rm default
-
+**Docker login** | docker login -u "myusername" -p "mypassword" docker.io
+**Docker ID** | docker tag 18455f1ec44d mlhoutel/ubuntu_prismatic:latest
+**Docker push** | docker push docker.io/mlhoutel/ubuntu_prismatic:latest
 
 ## Docker Setup
 https://hub.docker.com/
