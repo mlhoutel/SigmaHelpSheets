@@ -8,7 +8,7 @@
 
 * **:penguin: [Linux](./Linux/LINUX.md)**
 
-* ** :atom: [Prismatic](./Prismatic/PRISMATIC.md)**
+* **:atom: [Prismatic](./Prismatic/PRISMATIC.md)**
 
 * **:elephant: [PHP]()**
 
