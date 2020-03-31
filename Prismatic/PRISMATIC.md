@@ -28,32 +28,34 @@ bootstrap
 ##### 4.1 Create a new VS 2017 project
 ##### 4.2 Add test code https://www.boost.org/doc/libs/1_72_0/more/getting_started/windows.html
 ##### 4.3 Edit the project properties
-**All Configurations:**
+**All Configurations:**  
 	* *Windows SDK Version* => ```10.0.17763.0```   
 	* *Tools* => ```Visual Studio 2019 (v142)```  
 	* *C/C++/Additionnal Include Directories* => ```D:\Documents\Projets\CEA Grenoble Project\prismatic\required\boost_1_72_0```   
 	* *Linker/General/Additionnal Library Directories* => ```D:\Documents\Projets\CEA Grenoble Project\prismatic\required\boost_1_72_0\stage\lib```  
 
 ### FFTW3
-ressources : 
-	https://www.youtube.com/watch?v=0qQm5AGB_18
-	http://www.fftw.org/download.html
+**Ressources:**
+* https://www.youtube.com/watch?v=0qQm5AGB_18
+* http://www.fftw.org/download.html
 
-download from http://www.fftw.org/download.html [fftw-3.3.8.tar.gz]
-
-unzip then untar 
+#### 1. Download [fftw-3.3.8.tar.gz](http://www.fftw.org/download.html)  
+#### 2. Unzip and Untar the file
 ```
 tar xvf fftw-3.3.8.tar
 ```
-Cmake Build with Visual Studio 15 2017
-Check **BUILD_SHARED_LIBS**, **ENABLE_FLOAT** and **ENABLE_THREADS**
-[Configure] then [Generate] and open the project in VS 2017
+#### 3. Open the GUI of Cmake  
+#### 3.1 Complete the links with the code source directory and the build directory  
+#### 3.2 Click on Configure and select Visual Studio 15 2017  
+#### 3.3 Check **BUILD_SHARED_LIBS**, **ENABLE_FLOAT** and **ENABLE_THREADS**  
+#### 3.4 Cick again on Configure and if nothing is still red, click on Generate
 
-Right Click on the fftw3_threads and go to Properties/General:
-	*Windows SDK Version* => 10.0.17763.0
-	*Configuration Type* => Dynamic library (dll)
+#### 4. Open the project in VS 2017
+#### 4.1 Right Click on the fftw3_threads and go to Properties/General:  
+* *Windows SDK Version* => ```10.0.17763.0```
+* *Configuration Type* => ```Dynamic library (dll)```
 
-In the up bar, go to *Build/Batch Build* and check all the **fftw3_threads** options
+#### 4.2 In the up bar, go to *Build/Batch Build* and check all the **fftw3_threads** options
 
 Use in a VS project: (test code https://gist.github.com/damian-dz/a5d7d61993597253747b6dfe400805d9)
 	Project properties
