@@ -2,25 +2,29 @@
 ## DEPENDENCIES 
 
 You will have to install some tools and libraries in order to build prismatic form source:
- **Tools needed:**
- * Visual Studio 15 2017 (https://visualstudio.microsoft.com/fr/vs/older-downloads/)
- * CMake (https://cmake.org/download/)
- * 7zip (https://www.7-zip.org/)
+ 
+ **Tools needed :**
+ * *Visual Studio 15 2017* (https://visualstudio.microsoft.com/fr/vs/older-downloads/)
+ * *CMake* (https://cmake.org/download/)
+ * *7zip* (https://www.7-zip.org/)
 
- **Libraries: **
- * BOOST
- * FFTW3
- * HDF5
+ **Libraries :**
+ * *BOOST*
+ * *FFTW3*
+ * *HDF5*
 
 ### BOOST
-ressources:
-	https://boostorg.github.io/build/manual/develop/index.html#bbv2.overview.configuration
-	https://github.com/boostorg/wiki/wiki/Getting-Started%3A-Overview
-	https://www.boost.org/doc/libs/1_72_0/more/getting_started/windows.html
+**Ressources used:**
 
-download from https://sourceforge.net/projects/boost/files/boost/1.72.0/ [boost_1_72_0.zip]
+https://boostorg.github.io/build/manual/develop/index.html#bbv2.overview.configuration
 
-unzip then open a cmd in the directory
+https://github.com/boostorg/wiki/wiki/Getting-Started%3A-Overview
+
+https://www.boost.org/doc/libs/1_72_0/more/getting_started/windows.html
+
+**Download [boost_1_72_0.zip](https://sourceforge.net/projects/boost/files/boost/1.72.0/)**
+
+unzip the file then open a cmd in the directory
 ```
 bootstrap
 ./b2 --build-dir="D:\Documents\Projets\CEA Grenoble Project\prismatic\required\boost-1.72.0-simple" --build-type=complete msvc stage
