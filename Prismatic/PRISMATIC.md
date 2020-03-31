@@ -14,17 +14,14 @@ You will have to install some tools and libraries in order to build prismatic fo
  * *HDF5*
 
 ### BOOST
-**Ressources used:**
+**Ressources:**
+* https://boostorg.github.io/build/manual/develop/index.html#bbv2.overview.configuration  
+* https://github.com/boostorg/wiki/wiki/Getting-Started%3A-Overview  
+* https://www.boost.org/doc/libs/1_72_0/more/getting_started/windows.html  
 
-https://boostorg.github.io/build/manual/develop/index.html#bbv2.overview.configuration
+#### 1. Download [boost_1_72_0.zip](https://sourceforge.net/projects/boost/files/boost/1.72.0/)
 
-https://github.com/boostorg/wiki/wiki/Getting-Started%3A-Overview
-
-https://www.boost.org/doc/libs/1_72_0/more/getting_started/windows.html
-
-**Download [boost_1_72_0.zip](https://sourceforge.net/projects/boost/files/boost/1.72.0/)**
-
-unzip the file then open a cmd in the directory
+#### 2. unzip the file then open a cmd in the directory
 ```
 bootstrap
 ./b2 --build-dir="D:\Documents\Projets\CEA Grenoble Project\prismatic\required\boost-1.72.0-simple" --build-type=complete msvc stage
