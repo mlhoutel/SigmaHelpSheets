@@ -8,14 +8,16 @@
 
 * **:penguin: [Linux](./Linux/LINUX.md)**
 
-* **:elephant: [PHP](./PHP/PHP.md)**
+* ** :atom: [Prismatic](./Prismatic/PRISMATIC.md)**
 
-* **:keyboard: [C++](./C++/C++.md)**
+* **:elephant: [PHP]()**
 
-* **:desktop_computer: [C#](./C#/C#.md)**
+* **:keyboard: [C++]()**
 
-* **:snake: [Python](./Linux/LINUX.md)**
+* **:desktop_computer: [C#]()**
 
-* **:elephant: [Postgres](./BDD/PGSQL.md)**
+* **:snake: [Python]()**
+
+* **:elephant: [Postgres]()**
 
 
