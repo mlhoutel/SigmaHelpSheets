@@ -1,5 +1,5 @@
 ## Compile Prismatic-master from source
-You will have to install some tools and libraries in order to build prismatic form source:
+You will have to install some tools and libraries in order to build prismatic from source:
  
  **Tools needed :**
  * *Visual Studio 15 2017* (https://visualstudio.microsoft.com/fr/vs/older-downloads/)
