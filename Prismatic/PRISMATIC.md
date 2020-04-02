@@ -10,6 +10,10 @@ You will have to install some tools and libraries in order to build prismatic fr
  * [BOOST](#boost)
  * [FFTW3](#fftw3)
  * [HDF5](#hdf5)
+ 
+ **Compilation :**
+ * [Prismatic](#prismatic)
+ * [Pyprismatic]()
 
 ## BOOST
 ### Ressources:
@@ -29,8 +33,8 @@ bootstrap
 
 ### Test: 
 #### 4. Create a new VS 2017 project
-##### 4.1 Add the test code from https://www.boost.org/doc/libs/1_72_0/more/getting_started/windows.html
-##### 4.2 Edit the project properties
+#### 4.1 Add the test code from https://www.boost.org/doc/libs/1_72_0/more/getting_started/windows.html
+#### 4.2 Edit the project properties
 **All Configurations:**  
 * *Windows SDK Version* => ```10.0.17763.0```    
 * *Tools* => ```Visual Studio 2019 (v142)```  
@@ -61,9 +65,9 @@ tar xvf fftw-3.3.8.tar
 #### 4.2 In the menu bar, go to *Build/Batch Build* and check all the **fftw3_threads** options and compile
 
 ### Test:   
-#### 4. Create a new VS 2017 project
-##### 4.1 Add test code https://gist.github.com/damian-dz/a5d7d61993597253747b6dfe400805d9
-##### 4.2 Edit the project properties
+#### 5. Create a new VS 2017 project
+#### 5.1 Add test code https://gist.github.com/damian-dz/a5d7d61993597253747b6dfe400805d9
+#### 5.2 Edit the project properties
 *All Configurations:*  
 * *C/C++/Additionnal Include Directories* => ```Path\to\fftw\api```  
 - *Linker/Input/Additionnal Dependency* => ```fftw3.lib;...```  
@@ -85,8 +89,8 @@ tar xvf fftw-3.3.8.tar
 ### Compile:    
 #### 1. Download [hdf5-1.12.0.zip](https://hdf-wordpress-1.s3.amazonaws.com/wp-content/uploads/manual/HDF5/HDF5_1_12_0/source/hdf5-1.12.0.zip)  
 #### 2. Unzip the file
-##### 2.1 create a new folder where the library will be compiled
-##### 2.2 To use the make script from hdf5, open a cmd in this directory
+#### 2.1 create a new folder where the library will be compiled
+#### 2.2 To use the make script from hdf5, open a cmd in this directory
 
 **On Windows 32 bit**  
 ```
@@ -116,9 +120,9 @@ cpack -C Release CPackConfig.cmake
 ```
 
 **Test:** 
-##### 3. Open a cmd in the compiled directory
+#### 3. Open a cmd in the compiled directory
 ```ctest . -C Release``` 
-##### 3.1 Check that 2027/2027 Tests are *Passed* 
+#### 3.1 Check that 2027/2027 Tests are *Passed* 
 
 #### TEMPORARY
 * https://sourceforge.net/projects/nsis/files/NSIS%203/3.05/nsis-3.05-setup.exe/download?use_mirror=netix&download=
@@ -170,10 +174,9 @@ cpack -C Release CPackConfig.cmake
     ------lib
     ------share
 
-
+## PRISMATIC
 https://prism-em.com/docs-compiling/
 
-PRISMATIC
 In the MakeFile replace 
 FIND_PACKAGE(Boost) 
 by
