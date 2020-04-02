@@ -7,9 +7,9 @@ You will have to install some tools and libraries in order to build prismatic fr
  * *7zip* (https://www.7-zip.org/)
 
  **Libraries :**
- * *BOOST*
- * *FFTW3*
- * *HDF5*
+ * [BOOST](#boost)
+ * [FFTW3](#fftw3)
+ * [HDF5](#hdf5)
 
 ## BOOST
 ### Ressources:
@@ -79,7 +79,8 @@ tar xvf fftw-3.3.8.tar
 ## HDF5
 ### Ressources:
 * https://support.hdfgroup.org/ftp/HDF5/current/src/unpacked/release_docs/INSTALL_CMake.txt  
-* https://support.hdfgroup.org/HDF5/release/cmakebuild.html  
+* https://support.hdfgroup.org/HDF5/release/cmakebuild.html    
+
 
 ### Compile:    
 #### 1. Download [hdf5-1.12.0.zip](https://hdf-wordpress-1.s3.amazonaws.com/wp-content/uploads/manual/HDF5/HDF5_1_12_0/source/hdf5-1.12.0.zip)  
@@ -92,6 +93,8 @@ tar xvf fftw-3.3.8.tar
 cmake -G "Visual Studio 12 2013" -DCMAKE_BUILD_TYPE:STRING=Release -DBUILD_SHARED_LIBS:BOOL=OFF -DBUILD_TESTING:BOOL=ON -DHDF5_BUILD_TOOLS:BOOL=ON path\to\hdf5
 
 cmake --build . --config Release
+
+cpack -C Release CPackConfig.cmake
 ```
 
 **On Windows 64 bit**
@@ -99,6 +102,8 @@ cmake --build . --config Release
 cmake -G "Visual Studio 15 2017 Win64" -DCMAKE_BUILD_TYPE:STRING=Release -DBUILD_SHARED_LIBS:BOOL=OFF -DBUILD_TESTING:BOOL=ON -DHDF5_BUILD_TOOLS:BOOL=ON -DHDF5_ENABLE_THREADSAFE -DALLOW_UNSUPPORTED -DBUILD_TESTING:BOOL=ON path\to\hdf5
 
 cmake --build . --config Release
+
+cpack -C Release CPackConfig.cmake
 ```
 
 **On Linux and Mac**
@@ -106,28 +111,19 @@ cmake --build . --config Release
 cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE:STRING=Release -DBUILD_SHARED_LIBS:BOOL=OFF -DBUILD_TESTING:BOOL=ON -DHDF5_BUILD_TOOLS:BOOL=ON path\to\hdf5
 
 cmake --build . --config Release
+
+cpack -C Release CPackConfig.cmake
 ```
-
-##### 2.2* You can also use CMake, open the GUI of Cmake  
-##### 2.2.1* Complete the links with the code source directory and the build directory  
-##### 2.2.2* Click on Configure and select Visual Studio 15 2017  
-##### 2.2.3* Check **HDF5_ENABLE_THREADSAFE**, **ALLOW_UNSUPPORTED**, Click on the Add entry button
-```
-ENABLE_CXX
-set(ADD_BUILD_OPTIONS "${ADD_BUILD_OPTIONS} -DHDF5_BUILD_CPP_LIB:BOOL=ON")
-```  
-##### 2.2.4* Click again on Configure and if nothing is still red, click on Generate
-
-##### 2.2.5* Open the project in VS 2017
-##### 2.2.6* Right Click on the fftw3_threads and go to Properties/General:  
-* *Windows SDK Version* => ```10.0.17763.0```
-* *Configuration Type* => ```Dynamic library (dll)```
-
 
 **Test:** 
 ##### 3. Open a cmd in the compiled directory
 ```ctest . -C Release``` 
 ##### 3.1 Check that 2027/2027 Tests are *Passed* 
+
+#### TEMPORARY
+* https://sourceforge.net/projects/nsis/files/NSIS%203/3.05/nsis-3.05-setup.exe/download?use_mirror=netix&download=
+* https://support.hdfgroup.org/ftp/HDF5/current/src/unpacked/release_docs/USING_HDF5_VS.txt  
+* https://www.youtube.com/watch?v=BAjsCldRMMc  
 
 #### TODO...
 
@@ -140,7 +136,7 @@ set(ADD_BUILD_OPTIONS "${ADD_BUILD_OPTIONS} -DHDF5_BUILD_CPP_LIB:BOOL=ON")
    ctest . -C Release
 
 8. Create an install image with this command:
-   cpack -C Release CPackConfig.cmake
+   
 
 9. To install
  On Windows (with WiX installed), execute:
@@ -175,6 +171,7 @@ set(ADD_BUILD_OPTIONS "${ADD_BUILD_OPTIONS} -DHDF5_BUILD_CPP_LIB:BOOL=ON")
     ------share
 
 
+https://prism-em.com/docs-compiling/
 
 PRISMATIC
 In the MakeFile replace 
