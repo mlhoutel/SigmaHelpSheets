@@ -90,36 +90,16 @@ tar xvf fftw-3.3.8.tar
 #### 1. Download [hdf5-1.12.0.zip](https://hdf-wordpress-1.s3.amazonaws.com/wp-content/uploads/manual/HDF5/HDF5_1_12_0/source/hdf5-1.12.0.zip)  
 #### 2. Unzip the file
 #### 2.1 Create a new folder where the library will be compiled
-#### 2.2 To use the make script from hdf5, open a cmd in this directory
-
-**On Windows 32 bit**  
-```
-cmake -G "Visual Studio 12 2013" -DCMAKE_BUILD_TYPE:STRING=Release -DBUILD_SHARED_LIBS:BOOL=OFF -DBUILD_TESTING:BOOL=ON -DHDF5_BUILD_TOOLS:BOOL=ON path\to\hdf5
-
-cmake --build . --config Release
-
-cpack -C Release CPackConfig.cmake
-```
-
-**On Windows 64 bit**
+#### 2.2 Open a cmd in the created directory
 ```  
-cmake -G "Visual Studio 15 2017 Win64" -DCMAKE_BUILD_TYPE:STRING=Release -DBUILD_SHARED_LIBS:BOOL=OFF -DBUILD_TESTING:BOOL=ON -DHDF5_BUILD_TOOLS:BOOL=ON -DHDF5_ENABLE_THREADSAFE -DALLOW_UNSUPPORTED -DBUILD_TESTING:BOOL=ON path\to\hdf5
+cmake -G "Visual Studio 15 2017 Win64" -DCMAKE_BUILD_TYPE:STRING=Release -DBUILD_SHARED_LIBS:BOOL=OFF -DBUILD_TESTING:BOOL=ON -DHDF5_BUILD_TOOLS:BOOL=ON -DHDF5_ENABLE_THREADSAFE:BOOL=ON -DALLOW_UNSUPPORTED:BOOL=ON -DBUILD_TESTING:BOOL=ON path\to\hdf5
 
 cmake --build . --config Release
 
 cpack -C Release CPackConfig.cmake
 ```
 
-**On Linux and Mac**
-```
-cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE:STRING=Release -DBUILD_SHARED_LIBS:BOOL=OFF -DBUILD_TESTING:BOOL=ON -DHDF5_BUILD_TOOLS:BOOL=ON path\to\hdf5
-
-cmake --build . --config Release
-
-cpack -C Release CPackConfig.cmake
-```
-
-**Test:** 
+### Test:  
 #### 3. Open a cmd in the compiled directory
 ```ctest . -C Release``` 
 #### 3.1 Check that 2027/2027 Tests are *Passed* 
