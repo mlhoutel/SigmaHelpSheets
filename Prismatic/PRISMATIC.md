@@ -56,7 +56,7 @@ tar xvf fftw-3.3.8.tar
 #### 3.1 Complete the links with the code source directory and the build directory  
 #### 3.2 Click on Configure and select Visual Studio 15 2017  
 #### 3.3 Check **BUILD_SHARED_LIBS**, **ENABLE_FLOAT** and **ENABLE_THREADS**  
-#### 3.4 Cick again on Configure and if nothing is still red, click on Generate
+#### 3.4 Click again on Configure and if nothing is red, click on Generate
 #### 4. Open the project in VS 2017
 #### 4.1 Right Click on the fftw3_threads and go to Properties/General:  
 * *Windows SDK Version* => ```10.0.17763.0```
@@ -89,7 +89,7 @@ tar xvf fftw-3.3.8.tar
 ### Compile:    
 #### 1. Download [hdf5-1.12.0.zip](https://hdf-wordpress-1.s3.amazonaws.com/wp-content/uploads/manual/HDF5/HDF5_1_12_0/source/hdf5-1.12.0.zip)  
 #### 2. Unzip the file
-#### 2.1 create a new folder where the library will be compiled
+#### 2.1 Create a new folder where the library will be compiled
 #### 2.2 To use the make script from hdf5, open a cmd in this directory
 
 **On Windows 32 bit**  
@@ -130,17 +130,6 @@ cpack -C Release CPackConfig.cmake
 * https://www.youtube.com/watch?v=BAjsCldRMMc  
 
 #### TODO...
-
- where "X" is the current release version.
-
-6. Build the C library, tools and tests with this command:
-   cmake --build . --config Release
-
-7. Test the C library and tools with this command:
-   ctest . -C Release
-
-8. Create an install image with this command:
-   
 
 9. To install
  On Windows (with WiX installed), execute:
