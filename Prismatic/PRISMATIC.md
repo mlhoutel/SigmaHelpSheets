@@ -64,6 +64,30 @@ tar xvf fftw-3.3.8.tar
 
 #### 4.2 In the menu bar, go to *Build/Batch Build* and check all the **fftw3_threads** options and compile
 
+
+### MINGW:
+#### Go to \Mingw\msys\1.0 and launch the linux simulated environnement with msys.bat 
+#### Info compilation: path to the fftw source code
+```
+./configure --help
+```
+#### Redefine the right options
+```
+--disable-alloca: as of this writing (14 July 2009), the alloca function seems to be broken under the 64-bit MinGW compilers, so when compiling for Win64 you should pass --disable-alloca to tell FFTW not to use that function  
+--with-our-malloc16: this is required in order to allocate properly aligned memory (for SSE) with gcc  
+--with-windows-f77-mangling: this will include Fortran wrappers for some common Windows Fortran compilers (GNU, Intel, and Digital).  
+--enable-shared --disable-static: this will create DLLs instead of static libraries (since MinGW's static-library format seems to be different from Microsoft's).  
+--enable-threads --with-combined-threads: this will include multi-threading support. The second option puts the multi-threading functions into the main FFTW DLL rather than into a separate DLL (the default under Unix); this is required because MinGW can't create DLLs that depend on one another.  
+--enable-portable-binary: required if you want to create DLLs that will work on any Intel processor.  
+--with-incoming-stack-boundary=2: compile FFTW assuming a 4-byte alignment. On win32, some versions of gcc assume that the stack is 16-byte aligned, but code compiled with other compilers may only guarantee a 4-byte alignment, resulting in mysterious segfaults.  
+```
+```
+./configure --disable-alloca --with-our-malloc16 --enable-shared --disable-static --enable-float --enable-threads --with-combined-threads
+make
+make install
+```
+
+
 ### Test:   
 #### 5. Create a new VS 2017 project
 #### 5.1 Add test code https://gist.github.com/damian-dz/a5d7d61993597253747b6dfe400805d9
