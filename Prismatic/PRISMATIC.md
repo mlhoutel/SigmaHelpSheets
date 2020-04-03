@@ -138,7 +138,7 @@ cpack -C Release CPackConfig.cmake
 #### 5.2 Edit the project properties
 *All Configurations:*  
 * *C/C++/Additionnal Include Directories* => ```Path\to\hdf5\include```  
-* *Linker/Genral/Additionnal Libraries repertory* => Path\to\hdf5\lib
+* *Linker/Genral/Additionnal Libraries repertory* => ```Path\to\hdf5\lib```
 * *Linker/Input/Additionnal Dependency* => ```libhdf5.lib;libhdf5_cpp.lib;...```  
 
 
