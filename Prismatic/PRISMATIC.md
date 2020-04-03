@@ -42,6 +42,7 @@ bootstrap
 * *Linker/General/Additionnal Library Directories* => ```Path\to\boost\stage\lib```  
 
 ## FFTW3
+
 ### Ressources:
 * https://www.youtube.com/watch?v=0qQm5AGB_18
 * http://www.fftw.org/download.html
@@ -94,7 +95,7 @@ make install
 #### 5.2 Edit the project properties
 *All Configurations:*  
 * *C/C++/Additionnal Include Directories* => ```Path\to\fftw\api```  
-- *Linker/Input/Additionnal Dependency* => ```fftw3.lib;...```  
+* *Linker/Input/Additionnal Dependency* => ```fftw3.lib;...```  
 	
 *Debug:*  
 * *Linker/General/Additionnal Library Directories* => ```Path\to\fftw\compiled\Debug```  
@@ -108,7 +109,11 @@ make install
 ### Ressources:
 * https://support.hdfgroup.org/ftp/HDF5/current/src/unpacked/release_docs/INSTALL_CMake.txt  
 * https://support.hdfgroup.org/HDF5/release/cmakebuild.html    
+* https://stackoverflow.com/questions/24325508/getting-stared-with-hdf5-on-visual-studio-2013-with-visual-c-2013
+* https://stackoverflow.com/questions/7397296/linking-hdf5-library-into-visual-c-dll-project-unresolved-external-symbol-i
+* https://svn.oss.deltares.nl/repos/openearthtools/trunk/fortran/io/netcdf/win32/visual_fortran_6/lib/win32/all/
 
+(Not necessary: zlib : http://gnuwin32.sourceforge.net/packages/zlib.htm)
 
 ### Compile:    
 #### 1. Download [hdf5-1.12.0.zip](https://hdf-wordpress-1.s3.amazonaws.com/wp-content/uploads/manual/HDF5/HDF5_1_12_0/source/hdf5-1.12.0.zip)  
@@ -128,6 +133,15 @@ cpack -C Release CPackConfig.cmake
 ```ctest . -C Release``` 
 #### 3.1 Check that 2027/2027 Tests are *Passed* 
 
+#### 5. Create a new VS 2017 project
+#### 5.1 Add test code https://support.hdfgroup.org/ftp/HDF5/current/src/unpacked/c++/examples/h5tutr_crtdat.cpp
+#### 5.2 Edit the project properties
+*All Configurations:*  
+* *C/C++/Additionnal Include Directories* => ```Path\to\hdf5\include```  
+* *Linker/Genral/Additionnal Libraries repertory* => Path\to\hdf5\lib
+* *Linker/Input/Additionnal Dependency* => ```libhdf5.lib;libhdf5_cpp.lib;...```  
+
+
 #### TEMPORARY
 * https://sourceforge.net/projects/nsis/files/NSIS%203/3.05/nsis-3.05-setup.exe/download?use_mirror=netix&download=
 * https://support.hdfgroup.org/ftp/HDF5/current/src/unpacked/release_docs/USING_HDF5_VS.txt  
@@ -135,37 +149,6 @@ cpack -C Release CPackConfig.cmake
 
 #### TODO...
 
-9. To install
- On Windows (with WiX installed), execute:
-        HDF5-1.10."X"-win32.msi or HDF5-1.10."X"-win64.msi
- By default this program will install the hdf5 library into the
- "C:\Program Files" directory and will create the following
- directory structure:
-    HDF_Group
-    --HDF5
-    ----1.10."X"
-    ------bin
-    ------include
-    ------lib
-    ------cmake
-
- On Linux, change to the install destination directory
- (create if doesn't exist) and execute:
-        <path-to>/myhdfstuff/build/HDF5-1.10."X"-Linux.sh
- After accepting the license, the script will prompt:
-   By default the HDF5 will be installed in:
-   "<current directory>/HDF5-1.10."X"-Linux"
-   Do you want to include the subdirectory HDF5-1.10."X"-Linux?
-   Saying no will install in: "<current directory>" [Yn]:
- Note that the script will create the following directory structure
- relative to the install point:
-    HDF_Group
-    --HDF5
-    ----1.10."X"
-    ------bin
-    ------include
-    ------lib
-    ------share
 
 ## PRISMATIC
 https://prism-em.com/docs-compiling/
