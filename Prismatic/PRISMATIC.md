@@ -33,7 +33,7 @@ bootstrap
 
 ### Test: 
 #### 4. Create a new VS 2017 project
-#### 4.1 Add the test code from https://www.boost.org/doc/libs/1_72_0/more/getting_started/windows.html
+#### 4.1 Add the test code from [here](https://www.boost.org/doc/libs/1_72_0/more/getting_started/windows.html)  
 #### 4.2 Edit the project properties
 **All Configurations:**  
 * *Windows SDK Version* => ```10.0.17763.0```    
@@ -91,7 +91,7 @@ make install
 
 ### Test:   
 #### 5. Create a new VS 2017 project
-#### 5.1 Add test code https://gist.github.com/damian-dz/a5d7d61993597253747b6dfe400805d9
+#### 5.1 Add the test code from [here](https://gist.github.com/damian-dz/a5d7d61993597253747b6dfe400805d9) 
 #### 5.2 Edit the project properties
 *All Configurations:*  
 * *C/C++/Additionnal Include Directories* => ```Path\to\fftw\api```  
@@ -134,7 +134,7 @@ cpack -C Release CPackConfig.cmake
 #### 3.1 Check that 2027/2027 Tests are *Passed* 
 
 #### 5. Create a new VS 2017 project
-#### 5.1 Add test code https://support.hdfgroup.org/ftp/HDF5/current/src/unpacked/c++/examples/h5tutr_crtdat.cpp
+#### 5.1 Add the test code from [here](https://support.hdfgroup.org/ftp/HDF5/current/src/unpacked/c++/examples/h5tutr_crtdat.cpp)
 #### 5.2 Edit the project properties
 *All Configurations:*  
 * *C/C++/Additionnal Include Directories* => ```Path\to\hdf5\include```  
