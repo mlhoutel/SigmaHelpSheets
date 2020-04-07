@@ -13,7 +13,7 @@ You will have to install some tools and libraries in order to build prismatic fr
  
  **Compilation :**
  * [Prismatic](#prismatic)
- * [Prismatic Gui](#prismatic_gui)
+ * [Prismatic Gui](#prismatic-gui)
  * [Pyprismatic]()
 
 ## BOOST
