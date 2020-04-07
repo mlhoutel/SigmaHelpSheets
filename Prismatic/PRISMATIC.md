@@ -33,7 +33,7 @@ https://stackoverflow.com/questions/43946538/how-to-build-boost-1-64-in-64-bits/
 **32bit system:**
 ```
 bootstrap
-b2 --build-dir="Build32" --build-type=complete msvc stage
+b2 --build-dir="Build32" toolset=msvc-14.1 --build-type=complete stage
 ```  
 **64bit system**
 ```
