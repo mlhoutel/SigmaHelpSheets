@@ -24,11 +24,11 @@ You will have to install some tools and libraries in order to build prismatic fr
 
 
 https://stackoverflow.com/questions/43946538/how-to-build-boost-1-64-in-64-bits/43950508
-### Compile: 
+### Compile BOOST: 
 #### 1. Download [boost_1_72_0.zip](https://sourceforge.net/projects/boost/files/boost/1.72.0/)  
 #### 2. Unzip the file
 #### 3. Create a new folder where the library will be compiled
-#### 3.1 Open a cmd in the directory  
+#### 3.1 Open a cmd in the *Boost* directory  
  
 **32bit system:**
 ```
@@ -41,7 +41,7 @@ bootstrap
 b2 -j8 --build-dir="Build64" toolset=msvc-14.1 address-model=64 architecture=x86 link=static threading=multi runtime-link=shared --build-type=complete stage 
 ```
 
-### Test: 
+### Test BOOST: 
 #### 4. Create a new VS 2017 project
 #### 4.1 Add the test code from [here](https://www.boost.org/doc/libs/1_72_0/more/getting_started/windows.html)  
 #### 4.2 Edit the project properties
@@ -56,18 +56,24 @@ b2 -j8 --build-dir="Build64" toolset=msvc-14.1 address-model=64 architecture=x86
 * https://www.youtube.com/watch?v=0qQm5AGB_18
 * http://www.fftw.org/download.html
 
-### Compile:  
+### Compile FFTW:  
 #### 1. Download [fftw-3.3.8.tar.gz](http://www.fftw.org/download.html)  
 #### 2. Unzip then Untar the file with
 ```
 tar xvf fftw-3.3.8.tar
 ```
-#### 3. Create a new folder where the library will be compiled
+#### 3. Create a new folder (ex: *fftw-3.3.8/Build64*) where the library will be compiled
 #### 3.1 Open a cmd in this folder
+**32bit system:**
+```
+cmake -G "Visual Studio 15 2017 Win32" -DBUILD_SHARED_LIBS:BOOL=ON -DENABLE_FLOAT:BOOL=ON -DENABLE_THREADS:BOOL=ON ../
+cmake --build . --config Release & cmake --build . --config Debug
+
+```
+**64bit system:**
 ```
 cmake -G "Visual Studio 15 2017 Win64" -DBUILD_SHARED_LIBS:BOOL=ON -DENABLE_FLOAT:BOOL=ON -DENABLE_THREADS:BOOL=ON ../
-cmake --build . --config Release
-cmake --build . --config Debug
+cmake --build . --config Release & cmake --build . --config Debug
 ```
 
 #### LINUX
@@ -79,14 +85,14 @@ cmake --build . --config Debug
 --enable-threads --with-combined-threads: this will include multi-threading support. The second option puts the multi-threading functions into the main FFTW DLL rather than into a separate DLL (the default under Unix); this is required because MinGW can't create DLLs that depend on one another.  
 --enable-portable-binary: required if you want to create DLLs that will work on any Intel processor.  
 --with-incoming-stack-boundary=2: compile FFTW assuming a 4-byte alignment. On win32, some versions of gcc assume that the stack is 16-byte aligned, but code compiled with other compilers may only guarantee a 4-byte alignment, resulting in mysterious segfaults.  
-```
-```
+
+-----------------------------------------------------------------------------
 ./configure --disable-alloca --with-our-malloc16 --enable-shared --disable-static --enable-float --enable-threads --with-combined-threads
 make
 make install
 ```
 
-### Test (for the default fftw compiled without --enable-float and --enable-threads):   
+### Test FFTW:   
 #### 4. Create a new VS 2017 project
 #### 4.1 Add the test code from [here](https://gist.github.com/damian-dz/a5d7d61993597253747b6dfe400805d9) 
 #### 4.2 Edit the project properties
@@ -112,36 +118,43 @@ make install
 
 *Not necessary*: [zlib](http://gnuwin32.sourceforge.net/packages/zlib.htm)
 
-### Compile:    
+### Compile HDF5:    
 #### 1. Download [hdf5-1.12.0.zip](https://hdf-wordpress-1.s3.amazonaws.com/wp-content/uploads/manual/HDF5/HDF5_1_12_0/source/hdf5-1.12.0.zip)  
 #### 2. Unzip the file
-#### 2.1 Create a new folder where the library will be compiled
-#### 2.2 Open a cmd in the created directory
+#### 2.1 Create a new folder (ex: *hdf5-1.12.0/Build64*) where the library will be compiled
+#### 2.2 Open a cmd in this directory
+**32bit system:**
 ```  
-cmake -G "Visual Studio 15 2017 Win64" -DCMAKE_BUILD_TYPE:STRING=Release -DBUILD_SHARED_LIBS:BOOL=OFF -DBUILD_TESTING:BOOL=ON -DHDF5_BUILD_TOOLS:BOOL=ON -DHDF5_ENABLE_THREADSAFE:BOOL=ON -DALLOW_UNSUPPORTED:BOOL=ON -DBUILD_TESTING:BOOL=ON path\to\hdf5
+cmake -G "Visual Studio 15 2017 Win32" -DCMAKE_BUILD_TYPE:STRING=Release -DBUILD_SHARED_LIBS:BOOL=OFF -DBUILD_TESTING:BOOL=ON -DHDF5_BUILD_TOOLS:BOOL=ON -DHDF5_ENABLE_THREADSAFE:BOOL=ON -DALLOW_UNSUPPORTED:BOOL=ON -DBUILD_TESTING:BOOL=ON ../
 
-cmake --build . --config Release
-cmake --build . --config Debug
+cmake --build . --config Release & cmake --build . --config Debug
+cpack -C Release CPackConfig.cmake & cpack -C Debug CPackConfig.cmake
+```  
+**64bit system:**
+```  
+cmake -G "Visual Studio 15 2017 Win64" -DCMAKE_BUILD_TYPE:STRING=Release -DBUILD_SHARED_LIBS:BOOL=OFF -DBUILD_TESTING:BOOL=ON -DHDF5_BUILD_TOOLS:BOOL=ON -DHDF5_ENABLE_THREADSAFE:BOOL=ON -DALLOW_UNSUPPORTED:BOOL=ON -DBUILD_TESTING:BOOL=ON ../
 
-cpack -C Release CPackConfig.cmake
-cpack -C Debug CPackConfig.cmake
+cmake --build . --config Release & cmake --build . --config Debug
+cpack -C Release CPackConfig.cmake & cpack -C Debug CPackConfig.cmake
 ```
 
-### Test:  
+### Test HDF5:  
 #### 3. Open a cmd in the compiled directory
-```ctest . -C Release``` 
-#### 3.1 Check that 2027/2027 Tests are *Passed* 
-
-#### 5. Create a new VS 2017 project
-#### 5.1 Add the test code from [here](https://support.hdfgroup.org/ftp/HDF5/current/src/unpacked/c++/examples/h5tutr_crtdat.cpp)
-#### 5.2 Edit the project properties
+```
+ctest . -C Release 
+ctest . -C Debug 
+``` 
+#### 3.1 Check that all Tests are *Passed* 
+#### 4. Create a new VS 2017 project
+#### 4.1 Add the test code from [here](https://support.hdfgroup.org/ftp/HDF5/current/src/unpacked/c++/examples/h5tutr_crtdat.cpp)
+#### 4.2 Edit the project properties
 *All Configurations:*  
 * *C/C++/Additionnal Include Directories* => ```Path\to\hdf5\include```  
 * *Linker/Genral/Additionnal Libraries repertory* => ```Path\to\hdf5\lib```
 * *Linker/Input/Additionnal Dependency* => ```libhdf5.lib;libhdf5_cpp.lib;...```  
 
 
-#### TEMPORARY
+#### (TEMPORARY PASTEBIN)
 * https://sourceforge.net/projects/nsis/files/NSIS%203/3.05/nsis-3.05-setup.exe/download?use_mirror=netix&download=
 * https://support.hdfgroup.org/ftp/HDF5/current/src/unpacked/release_docs/USING_HDF5_VS.txt  
 * https://www.youtube.com/watch?v=BAjsCldRMMc  
@@ -152,32 +165,33 @@ cpack -C Debug CPackConfig.cmake
 * https://www.it-swarm.dev/fr/visual-c%2B%2B/erreur-fatale-lnk1112-le-type-de-machine-du-module-x64-est-en-conflit-avec-le-type-de-machine-cible-x86/969200768/
 
 *You can add the libraries directory to the PATH if you want, otherwise you will have to complete the links manually later...*
-* <kbd>Windows</kbd> PATH > Edit environment variables > Environment variables > Select Path > Edit > New
-
-
+* <kbd>Windows</kbd> + "Path" => Edit environment variables/Environment variables/Path/Edit/New
 
 #### 1. Download [prismatic](https://github.com/prism-em/prismatic)
 ```
 git clone https://github.com/prism-em/prismatic.git 
 ```
-#### 2. Create a new folder where the library will be compiled
-#### 3. Open the Cmake GUI  
+#### 2. Create a new folder (ex: *prismatic-master/Build64*) where the library will be compiled
+#### 3. Open the CMake GUI  
 #### 3.1 Complete the links with the code source directory and the build directory  
-#### 3.2 Click on Configure and select Visual Studio 15 2017 x64
+#### 3.2 Click on </kbd>Configure</kbd> and select Visual Studio 15 2017 x64
 #### 3.3 Complete the missing links to the compiled libraries:
+**FFTW:**  
 * *FFTW_INCLUDE_DIR* => ```path/to/fftw/api```
 * *FFTW_LIBRARY* => ```path/to/fftw```
 
+**HDF5:**  
 * *HDF5_hdf5_LIBRARY_DEBUG* => ```path/to/hdf5/Debug```
 * *HDF5_hdf5_LIBRARY_RELEASE* => ```path/to/hdf5/Release```
 
+**CHECK:**  
 * *CMAKE_EXE_LINKER_FLAGS* => ```/machine:X64```
 * *CMAKE_SHARED_LINKER_FLAGS* => ```/machine:X64```
 * *CMAKE_MODULE_LINKER_FLAGS* => ```/machine:X64```
 * *CMAKE_STATIC_LINKER_FLAGS* => ```/machine:X64```
 
-#### 3.4 Click again on Configure and if nothing is red, click on Generate
-#### 4. Open the project in VS 2017
+#### 3.4 Click again on </kbd>Configure</kbd> and if nothing is red, click on </kbd>Generate</kbd>
+#### 4. Open the project in Visual Studio 2017
 #### 4.1 Right Click on the **prismatic** project and go to Properties/General:
 
 * *Windows SDK Version* => ```10.0.17763.0```
@@ -185,24 +199,24 @@ git clone https://github.com/prism-em/prismatic.git
 * *Plateform tools* => ```Visual Studio 2017 (v141)```
 * *Configurations tools* => ```Application (.exe)```
 
-*All Configurations:*  
+**All Configurations:**  
 * *C/C++/Additionnal Include Directories* => ```Path\to\prismatic\include; Path\to\fftw\api; Path\to\hdf5\include; Path\to\boost\```  
 * *Linker/Input/Additionnal Dependency* => ```fftw3f.lib; libhdf5.lib; libhdf5_cpp.lib; libhdf5_hl_cpp.lib; libhdf5_hl.lib;...```  
 * *Linker/Input/Advanced/Target computer* => ```MachineX64 (/MACHINE:X64)```
 * *Link editor/Command line/Additional options* => Remove ```/machine:X86```
 
-*Debug:*  
+**Debug:**  
 * *Linker/General/Additionnal Library Directories* => ```Path\to\fftw\compiled\Debug```  
 * *Linker/General/Additionnal Library Directories* => ```Path\to\fftw\hdf5(Debug)\lib```  
 * *Builds Events/Post-Build Event* => ```xcopy /d /y "Path\to\fftw\compiled\Debug\*.dll" "$(TargetDir)"```  
   
-*Release:*  
+**Release:**   
 * *Linker/General/Additionnal Library Directories* => ```Path\to\fftw\compiled\Release```  
 * *Linker/General/Additionnal Library Directories* => ```Path\to\fftw\hdf5(Release)\lib```  
 * *Builds Events/Post-Build Event* => ```xcopy /d /y "Path\to\fftw\compiled\Release\*.dll" "$(TargetDir)"``` 
 
 
-#### 5. In the top bar, select ```Release x64``` then Run
+#### 5. In the top bar, select **Release x64** then Run
 #### 6. Get the **prismatic.exe** and **fftwf.dll** files at Path\to\prismatic\compiled\x64\Release
 
 ### Test:  
@@ -241,11 +255,10 @@ file = 'output.jpg'
 cv2.imwrite(file, data)
 ```
 
-### TEMP
-git clone https://code.qt.io/qt/qt5.git
-https://www.qt.io/download-qt-installer
-https://wiki.qt.io/Building_Qt_5_from_Git
-
+#### (TEMPORARY PASTEBIN)
+* git clone https://code.qt.io/qt/qt5.git
+* https://www.qt.io/download-qt-installer
+* https://wiki.qt.io/Building_Qt_5_from_Git
 
 ## PRISMATIC GUI
 ### Ressources:
@@ -256,34 +269,33 @@ https://wiki.qt.io/Building_Qt_5_from_Git
 #### 1.1 Create an Qt account [here](https://login.qt.io/register)
 #### 1.2 Select **Qt 5.14 mscv2017 x64** in the installer
 
-#### 2. Create a new folder where the library will be compiled
-#### 2.1 Open Path/to/prismatic/Qt/prismatic-master.pro in a text editor and add ```CONFIG += console```
+#### 2. Create a new folder (ex: *prismatic-master/Build64GUI*) where the library will be compiled
+#### 2.1 Open **prismatic-master.pro** (Path/to/prismatic/Qt/*) in a text editor and add ```CONFIG += console```
 #### 2.2 (Optional) Open CMakeLists.txt in the prismatic-master source code and check that the paths to the icons are good (if not replace ../Qt by Qt).
 
-#### 3. Open the Cmake GUI  
+#### 3. Open the CMake GUI  
 #### 3.1 Complete the links with the code source directory and the build directory  
 #### 3.2 Click on Configure and select Visual Studio 15 2017 x64
 #### 3.3 Check **PRISMATIC_ENABLE_CLI** and **PRISMATIC_ENABLE_GUI**
 #### 3.4 Complete the missing links to the compiled libraries:
-QT5:
+**QT5:**
 * *QT5Widgets_DIR* => ```path/to/Qt/5.14.2/msvc2017_64/lib/cmake/Qt5Widgets```
 
-FFTW:
+**FFTW:**
 * *FFTW_INCLUDE_DIR* => ```path/to/fftw/api```
 * *FFTW_LIBRARY* => ```path/to/fftw```
 
-HDF5:
+**HDF5:**
 * *HDF5_hdf5_LIBRARY_DEBUG* => ```path/to/hdf5/Debug```
 * *HDF5_hdf5_LIBRARY_RELEASE* => ```path/to/hdf5/Release```
 
-Check:
+**CHECK:**
 * *CMAKE_EXE_LINKER_FLAGS* => ```/machine:X64```
 * *CMAKE_SHARED_LINKER_FLAGS* => ```/machine:X64```
 * *CMAKE_MODULE_LINKER_FLAGS* => ```/machine:X64```
 * *CMAKE_STATIC_LINKER_FLAGS* => ```/machine:X64```
 
 #### 3.5 Click again on Configure and if nothing is red, click on Generate
-
 #### 4. Open the project in VS 2017
 #### 4.1 Select both **prismatic** and **prismatic-gui** with <kbd>Ctrl</kbd> + </kbd>Click</kbd>
 #### 4.2 Right Click on a project and go to Properties/General:
