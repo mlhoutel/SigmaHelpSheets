@@ -72,7 +72,7 @@ cmake --build . --config Release & cmake --build . --config Debug
 ```
 **64bit system:**
 ```
-cmake -G "Visual Studio 15 2017 Win64" -DBUILD_SHARED_LIBS:BOOL=ON -DENABLE_FLOAT:BOOL=ON -DENABLE_THREADS:BOOL=ON ../
+cmake -G "Visual Studio 15 2017 Win64" -DBUILD_SHARED_LIBS:BOOL=ON -DENABLE_FLOAT:BOOL=ON -DENABLE_THREADS:BOOL=ON --DDISABLE-ALLOCA:BOOL=ON --DWITH-OUR-MALLOC16:BOOL=ON --DENABLE-SHARED:BOOL=ON --DDISABLE-STATIC:BOOL=ON --DWITH-COMBINED-THREADS:BOOL=ON ../
 cmake --build . --config Release & cmake --build . --config Debug
 ```
 
