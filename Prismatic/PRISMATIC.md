@@ -127,16 +127,17 @@ make install
 ```  
 cmake -G "Visual Studio 15 2017 Win32" -DCMAKE_BUILD_TYPE:STRING=Release -DBUILD_SHARED_LIBS:BOOL=OFF -DBUILD_TESTING:BOOL=ON -DHDF5_BUILD_TOOLS:BOOL=ON -DHDF5_ENABLE_THREADSAFE:BOOL=ON -DALLOW_UNSUPPORTED:BOOL=ON -DBUILD_TESTING:BOOL=ON ../
 
-cmake --build . --config Release & cmake --build . --config Debug
-cpack -C Release CPackConfig.cmake & cpack -C Debug CPackConfig.cmake
+cmake --build . --config Release & cpack -C Release CPackConfig.cmake 
 ```  
 **64bit system:**
 ```  
 cmake -G "Visual Studio 15 2017 Win64" -DCMAKE_BUILD_TYPE:STRING=Release -DBUILD_SHARED_LIBS:BOOL=OFF -DBUILD_TESTING:BOOL=ON -DHDF5_BUILD_TOOLS:BOOL=ON -DHDF5_ENABLE_THREADSAFE:BOOL=ON -DALLOW_UNSUPPORTED:BOOL=ON -DBUILD_TESTING:BOOL=ON ../
 
-cmake --build . --config Release & cmake --build . --config Debug
-cpack -C Release CPackConfig.cmake & cpack -C Debug CPackConfig.cmake
+cmake --build . --config Release & cpack -C Release CPackConfig.cmake 
 ```
+*This will take some time... If you want to build the Debug library, replace Release by Debug*
+
+#### 2.3 A package with the compiled library has been created (ex: *hdf5-1.12.0/Build64/HDF5-1.12.0-win64.zip*). Move it into another directory and unzip-it.
 
 ### Test HDF5:  
 #### 3. Open a cmd in the compiled directory
