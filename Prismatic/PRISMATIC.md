@@ -13,6 +13,7 @@ You will have to install some tools and libraries in order to build prismatic fr
  
  **Compilation :**
  * [Prismatic](#prismatic)
+ * [Prismatic](#prismatic_gui)
  * [Pyprismatic]()
 
 ## BOOST
@@ -158,7 +159,7 @@ git clone https://github.com/prism-em/prismatic.git
 #### 2. Create a new folder where the library will be compiled
 #### 3. Open the Cmake GUI  
 #### 3.1 Complete the links with the code source directory and the build directory  
-#### 3.2 Click on Configure and select Visual Studio 15 2017  
+#### 3.2 Click on Configure and select Visual Studio 15 2017 x64
 #### 3.3 Complete the missing links to the compiled libraries:
 * *FFTW_INCLUDE_DIR* => ```path/to/fftw/api```
 * *FFTW_LIBRARY* => ```path/to/fftw```
@@ -236,3 +237,144 @@ file = 'output.jpg'
 cv2.imwrite(file, data)
 ```
 
+### TEMP
+git clone https://code.qt.io/qt/qt5.git
+https://www.qt.io/download-qt-installer
+https://wiki.qt.io/Building_Qt_5_from_Git
+
+
+## PRISMATIC GUI
+### Ressources:
+* https://www.qt.io/
+* https://stackoverflow.com/questions/6626397/error-lnk2019-unresolved-external-symbol-winmain16-referenced-in-function
+
+#### 1. Download [Qt](http://ftp.fau.de/qtproject/archive/online_installers/3.2/qt-unified-windows-x86-3.2.2-online.exe)
+#### 1.1 Create an Qt account here[https://login.qt.io/register]
+#### 1.2 Select **Qt 5.14 mscv2017 x64** in the installer
+
+#### 2. Create a new folder where the library will be compiled
+#### 2.1 Open Path/to/prismatic/Qt/prismatic-master.pro in a text editor and add ```CONFIG += console```
+#### 2.2 (Optional) Open CMakeLists.txt in the prismatic-master source code and check that the paths to the icons are good (if not replace ../Qt by Qt).
+
+#### 3. Open the Cmake GUI  
+#### 3.1 Complete the links with the code source directory and the build directory  
+#### 3.2 Click on Configure and select Visual Studio 15 2017 x64
+#### 3.3 Check **PRISMATIC_ENABLE_CLI** and **PRISMATIC_ENABLE_GUI**
+#### 3.4 Complete the missing links to the compiled libraries:
+* *QT5Widgets_DIR* => ```path/to/Qt/5.14.2/msvc2017_64/lib/cmake/Qt5Widgets```
+
+* *FFTW_INCLUDE_DIR* => ```path/to/fftw/api```
+* *FFTW_LIBRARY* => ```path/to/fftw```
+
+* *HDF5_hdf5_LIBRARY_DEBUG* => ```path/to/hdf5/Debug```
+* *HDF5_hdf5_LIBRARY_RELEASE* => ```path/to/hdf5/Release```
+
+* *CMAKE_EXE_LINKER_FLAGS* => ```/machine:X64```
+* *CMAKE_SHARED_LINKER_FLAGS* => ```/machine:X64```
+* *CMAKE_MODULE_LINKER_FLAGS* => ```/machine:X64```
+* *CMAKE_STATIC_LINKER_FLAGS* => ```/machine:X64```
+
+#### 3.5 Click again on Configure and if nothing is red, click on Generate
+
+#### 4. Open the project in VS 2017
+#### 4.1 Select both **prismatic** and **prismatic-gui** with <kbd>Ctrl</kbd> + </kbd>Click</kbd>
+#### 4.2 Right Click on a project and go to Properties/General:
+* *Windows SDK Version* => ```10.0.17763.0```
+* *Configuration Type* => ```Dynamic library (dll)```
+* *Plateform tools* => ```Visual Studio 2017 (v141)```
+* *Configurations tools* => ```Application (.exe)```
+
+*All Configurations:*  
+* *C/C++/Additionnal Include Directories* => 
+```
+D:\Documents\Projets\CEA Grenoble Project\PrismaticGUI\prismatic-gui_autogen\include_Release;
+D:\Programmes\Qt\5.14.2\msvc2017_64\include;D:\Documents\Projets\CEA Grenoble Project\libs\fftw\fftw-3.3.8\api;
+D:\Documents\Projets\CEA Grenoble Project\libs\hdf5\hdf5-1.12.0-WIN64\include;
+D:\Documents\Projets\CEA Grenoble Project\prismGUI\prismatic-master;
+D:\Documents\Projets\CEA Grenoble Project\PrismaticGUI;D:\Documents\Projets\CEA Grenoble Project\libs\prismatic-master\include;
+D:\Documents\Projets\CEA Grenoble Project\libs\boost\boost-1.66.0-WIN64;
+D:\Documents\Projets\CEA Grenoble Project\libs\prismatic-master\Qt;
+D:\Programmes\Qt\5.14.2\msvc2017_64;D:\Programmes\Qt\5.14.2\msvc2017_64\include\QtWidgets;D:\Programmes\Qt\5.14.2\msvc2017_64\include\QtGui;
+D:\Programmes\Qt\5.14.2\msvc2017_64\include\QtCore;D:\Documents\Projets\CEA Grenoble Project\prismGUI\prismatic-master\Qt
+```  
+
+*Release:* 
+* *Linker/Input/Additionnal Dependency* => ```fftw3f.lib;libhdf5_hl.lib;libhdf5.lib;libhdf5_hl_cpp.lib;libhdf5_cpp.lib;Qt5Widgets.lib;Qt5Gui.lib;Qt5Core.lib;qtmain.lib;shell32.lib;WindowsApp.lib;...```  
+
+* *Linker/General/Additionnal Library Directories* => 
+```
+D:\Documents\Projets\CEA Grenoble Project\libs\hdf5\hdf5-1.12.0-WIN64\lib;
+D:\Documents\Projets\CEA Grenoble Project\libs\fftw\fftw-3.3.8\BUILD\Release;
+D:\Programmes\Qt\5.14.2\msvc2017_64\lib;
+D:\Documents\Projets\CEA Grenoble Project\libs\boost\boost-1.66.0-WIN64\stage\lib
+```  
+
+
+* *Builds Events/Post-Build Event* => (You can add these manually or use the automatic post build Event) 
+```
+xcopy /d /y "Path\to\fftw\compiled\Release\*.dll" "$(TargetDir)";
+
+xcopy /d /y "Path\to\Qt\5.14.2\msvc2017_64\bin\Qt5Core.dll" "$(TargetDir)";
+xcopy /d /y "Path\to\Qt\5.14.2\msvc2017_64\bin\Qt5Gui.dll" "$(TargetDir)";
+xcopy /d /y "Path\to\Qt\5.14.2\msvc2017_64\bin\Qt5Widgets.dll" "$(TargetDir)";
+
+if not exist $(TargetDir)\platforms mkdir $(TargetDir)\platforms
+
+xcopy /d /y "Path\to\Qt\Tools\QtCreator\bin\libEGL.dll" "$(TargetDir)\platforms";
+xcopy /d /y "Path\to\Qt\Tools\QtCreator\bin\qwindows.dll" "$(TargetDir)\platforms";
+``` 
+
+* ??? *Linker/System/Sub-System* => Windows (/SUBSYSTEM:WINDOWS)
+* ??? *Linker/Advanced/Importation libraries* => D:/Documents/Projets/CEA Grenoble Project/PrismaticGUI/Release/prismatic-gui.lib
+
+* *C/C++/Preprocessor/Preprocessor definition* => ```WIN32;_WINDOWS;NDEBUG;PRISMATIC_BUILDING_GUI=1;PRISMATIC_ENABLE_GUI;PRISMATIC_ENABLE_CLI;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;CMAKE_INTDIR="Release";```
+
+
+
+
+LIBS
+D:\Documents\Projets\CEA Grenoble Project\libs\hdf5\hdf5-1.12.0-WIN64\lib;
+D:\Documents\Projets\CEA Grenoble Project\libs\fftw\fftw-3.3.8\BUILD\Release;
+D:\Programmes\Qt\5.14.2\msvc2017_64\lib;
+D:\Documents\Projets\CEA Grenoble Project\libs\boost\boost-1.66.0-WIN64\stage\lib;
+
+
+import library D:/Documents/Projets/CEA Grenoble Project/GUI/Build/Release/prismatic.lib
+
+
+QT       += core gui
+ 
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+ 
+TARGET = sans_titre
+TEMPLATE = app
+
+
+Measure-Command {.\prismatic.exe --input-file "SI100.XYZ"}
+
+Days              : 0
+Hours             : 0
+Minutes           : 0
+Seconds           : 0
+Milliseconds      : 316
+Ticks             : 3163259
+TotalDays         : 3,66117939814815E-06
+TotalHours        : 8,78683055555556E-05
+TotalMinutes      : 0,00527209833333333
+TotalSeconds      : 0,3163259
+TotalMilliseconds : 316,3259
+
+
+Measure-Command {.\prismatic.exe --input-file "../test/SI100.XYZ"}
+
+Days              : 0
+Hours             : 0
+Minutes           : 0
+Seconds           : 0
+Milliseconds      : 857
+Ticks             : 8571921
+TotalDays         : 9,92120486111111E-06
+TotalHours        : 0,000238108916666667
+TotalMinutes      : 0,014286535
+TotalSeconds      : 0,8571921
+TotalMilliseconds : 857,1921
