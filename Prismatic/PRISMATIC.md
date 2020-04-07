@@ -249,7 +249,7 @@ https://wiki.qt.io/Building_Qt_5_from_Git
 * https://stackoverflow.com/questions/6626397/error-lnk2019-unresolved-external-symbol-winmain16-referenced-in-function
 
 #### 1. Download [Qt](http://ftp.fau.de/qtproject/archive/online_installers/3.2/qt-unified-windows-x86-3.2.2-online.exe)
-#### 1.1 Create an Qt account here[https://login.qt.io/register]
+#### 1.1 Create an Qt account [here](https://login.qt.io/register)
 #### 1.2 Select **Qt 5.14 mscv2017 x64** in the installer
 
 #### 2. Create a new folder where the library will be compiled
@@ -261,14 +261,18 @@ https://wiki.qt.io/Building_Qt_5_from_Git
 #### 3.2 Click on Configure and select Visual Studio 15 2017 x64
 #### 3.3 Check **PRISMATIC_ENABLE_CLI** and **PRISMATIC_ENABLE_GUI**
 #### 3.4 Complete the missing links to the compiled libraries:
+QT5:
 * *QT5Widgets_DIR* => ```path/to/Qt/5.14.2/msvc2017_64/lib/cmake/Qt5Widgets```
 
+FFTW:
 * *FFTW_INCLUDE_DIR* => ```path/to/fftw/api```
 * *FFTW_LIBRARY* => ```path/to/fftw```
 
+HDF5:
 * *HDF5_hdf5_LIBRARY_DEBUG* => ```path/to/hdf5/Debug```
 * *HDF5_hdf5_LIBRARY_RELEASE* => ```path/to/hdf5/Release```
 
+Check:
 * *CMAKE_EXE_LINKER_FLAGS* => ```/machine:X64```
 * *CMAKE_SHARED_LINKER_FLAGS* => ```/machine:X64```
 * *CMAKE_MODULE_LINKER_FLAGS* => ```/machine:X64```
@@ -287,26 +291,46 @@ https://wiki.qt.io/Building_Qt_5_from_Git
 *All Configurations:*  
 * *C/C++/Additionnal Include Directories* => 
 ```
-D:\Documents\Projets\CEA Grenoble Project\PrismaticGUI\prismatic-gui_autogen\include_Release;
-D:\Programmes\Qt\5.14.2\msvc2017_64\include;D:\Documents\Projets\CEA Grenoble Project\libs\fftw\fftw-3.3.8\api;
-D:\Documents\Projets\CEA Grenoble Project\libs\hdf5\hdf5-1.12.0-WIN64\include;
-D:\Documents\Projets\CEA Grenoble Project\prismGUI\prismatic-master;
-D:\Documents\Projets\CEA Grenoble Project\PrismaticGUI;D:\Documents\Projets\CEA Grenoble Project\libs\prismatic-master\include;
-D:\Documents\Projets\CEA Grenoble Project\libs\boost\boost-1.66.0-WIN64;
-D:\Documents\Projets\CEA Grenoble Project\libs\prismatic-master\Qt;
-D:\Programmes\Qt\5.14.2\msvc2017_64;D:\Programmes\Qt\5.14.2\msvc2017_64\include\QtWidgets;D:\Programmes\Qt\5.14.2\msvc2017_64\include\QtGui;
-D:\Programmes\Qt\5.14.2\msvc2017_64\include\QtCore;D:\Documents\Projets\CEA Grenoble Project\prismGUI\prismatic-master\Qt
+path\to\Qt\5.14.2\msvc2017_64\include;
+path\to\FFTW\api;
+path\to\HDF5\include;
+path\to\BOOST;
+path\to\prismatic-master;
+
+path\to\prismatic-target\prismatic-gui_autogen\include_Release;
+path\to\prismatic-target;
+path\to\prismatic-master\include;
+path\to\prismatic-master\Qt;
+
+path\to\Qt\5.14.2\msvc2017_64;
+path\to\Qt\5.14.2\msvc2017_64\include\QtWidgets;
+path\to\Qt\5.14.2\msvc2017_64\include\QtGui;
+path\to\Qt\5.14.2\msvc2017_64\include\QtCore;
 ```  
 
 *Release:* 
-* *Linker/Input/Additionnal Dependency* => ```fftw3f.lib;libhdf5_hl.lib;libhdf5.lib;libhdf5_hl_cpp.lib;libhdf5_cpp.lib;Qt5Widgets.lib;Qt5Gui.lib;Qt5Core.lib;qtmain.lib;shell32.lib;WindowsApp.lib;...```  
+* *Linker/Input/Additionnal Dependency* => 
+```
+fftw3f.lib;
+libhdf5_hl.lib;
+libhdf5.lib;
+libhdf5_hl_cpp.lib;
+libhdf5_cpp.lib;
+Qt5Widgets.lib;
+Qt5Gui.lib;
+Qt5Core.lib;
+qtmain.lib;
+shell32.lib;
+WindowsApp.lib;
+...
+```  
 
 * *Linker/General/Additionnal Library Directories* => 
 ```
-D:\Documents\Projets\CEA Grenoble Project\libs\hdf5\hdf5-1.12.0-WIN64\lib;
-D:\Documents\Projets\CEA Grenoble Project\libs\fftw\fftw-3.3.8\BUILD\Release;
-D:\Programmes\Qt\5.14.2\msvc2017_64\lib;
-D:\Documents\Projets\CEA Grenoble Project\libs\boost\boost-1.66.0-WIN64\stage\lib
+path\to\HDF5\lib;
+path\to\FFTW\Release;
+path\to\BOOST\stage\lib;
+path\to\Qt\5.14.2\msvc2017_64\lib;
 ```  
 
 
@@ -331,7 +355,7 @@ xcopy /d /y "Path\to\Qt\Tools\QtCreator\bin\qwindows.dll" "$(TargetDir)\platform
 
 
 
-
+``` 
 LIBS
 D:\Documents\Projets\CEA Grenoble Project\libs\hdf5\hdf5-1.12.0-WIN64\lib;
 D:\Documents\Projets\CEA Grenoble Project\libs\fftw\fftw-3.3.8\BUILD\Release;
@@ -378,3 +402,4 @@ TotalHours        : 0,000238108916666667
 TotalMinutes      : 0,014286535
 TotalSeconds      : 0,8571921
 TotalMilliseconds : 857,1921
+``` 
