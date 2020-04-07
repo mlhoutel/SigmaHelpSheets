@@ -29,16 +29,16 @@ https://stackoverflow.com/questions/43946538/how-to-build-boost-1-64-in-64-bits/
 #### 2. Unzip the file
 #### 3. Create a new folder where the library will be compiled
 #### 3.1 Open a cmd in the directory  
-```
-bootstrap
-```  
+ 
 **32bit system:**
 ```
-./b2 --build-dir="Path\to\the\build\directory" --build-type=complete msvc stage
+bootstrap
+b2 --build-dir="Build32" --build-type=complete msvc stage
 ```  
 **64bit system**
 ```
-./b2 -j8 --build-dir="Path\to\the\build\directory" toolset=msvc-14.1 address-model=64 architecture=x86 link=static threading=multi runtime-link=shared --build-type=complete stage 
+bootstrap
+b2 -j8 --build-dir="Build64" toolset=msvc-14.1 address-model=64 architecture=x86 link=static threading=multi runtime-link=shared --build-type=complete stage 
 ```
 
 ### Test: 
