@@ -309,10 +309,19 @@ cv2.imwrite(file, data)
 * *C/C++/Additionnal Include Directories* => 
 ```
 path\to\Qt\5.14.2\msvc2017_64\include;
+path\to\Qt\5.14.2\msvc2017_64\include\QtWidgets;
+path\to\Qt\5.14.2\msvc2017_64\include\QtGui;
+path\to\Qt\5.14.2\msvc2017_64\include\QtCore;
+
 path\to\FFTW\api;
 path\to\HDF5\include;
 path\to\BOOST;
-path\to\prismatic-master;
+
+path\to\prismatic;
+path\to\prismatic\include;
+path\to\prismatic\Qt;
+path\to\prismatic-target;
+
 
 path\to\prismatic-target\prismatic-gui_autogen\include_Release;
 path\to\prismatic-target;
@@ -320,9 +329,7 @@ path\to\prismatic-master\include;
 path\to\prismatic-master\Qt;
 
 path\to\Qt\5.14.2\msvc2017_64;
-path\to\Qt\5.14.2\msvc2017_64\include\QtWidgets;
-path\to\Qt\5.14.2\msvc2017_64\include\QtGui;
-path\to\Qt\5.14.2\msvc2017_64\include\QtCore;
+
 ```  
 
 *Release:* 
@@ -344,8 +351,8 @@ WindowsApp.lib;
 
 * *Linker/General/Additionnal Library Directories* => 
 ```
-path\to\HDF5\lib;
-path\to\FFTW\Release;
+path\to\HDF5\Build\lib;
+path\to\FFTW\Build\Release;
 path\to\BOOST\stage\lib;
 path\to\Qt\5.14.2\msvc2017_64\lib;
 ```  
@@ -359,7 +366,7 @@ xcopy /d /y "Path\to\Qt\5.14.2\msvc2017_64\bin\Qt5Core.dll" "$(TargetDir)";
 xcopy /d /y "Path\to\Qt\5.14.2\msvc2017_64\bin\Qt5Gui.dll" "$(TargetDir)";
 xcopy /d /y "Path\to\Qt\5.14.2\msvc2017_64\bin\Qt5Widgets.dll" "$(TargetDir)";
 
-if not exist $(TargetDir)\platforms mkdir $(TargetDir)\platforms
+if not exist $(TargetDir)\platforms mkdir $(TargetDir)\platforms;
 
 xcopy /d /y "Path\to\Qt\Tools\QtCreator\bin\libEGL.dll" "$(TargetDir)\platforms";
 xcopy /d /y "Path\to\Qt\Tools\QtCreator\bin\qwindows.dll" "$(TargetDir)\platforms";
