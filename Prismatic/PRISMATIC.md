@@ -21,9 +21,8 @@ You will have to install some tools and libraries in order to build prismatic fr
 * https://boostorg.github.io/build/manual/develop/index.html#bbv2.overview.configuration  
 * https://github.com/boostorg/wiki/wiki/Getting-Started%3A-Overview  
 * https://www.boost.org/doc/libs/1_72_0/more/getting_started/windows.html  
+* https://stackoverflow.com/questions/43946538/how-to-build-boost-1-64-in-64-bits/43950508
 
-
-https://stackoverflow.com/questions/43946538/how-to-build-boost-1-64-in-64-bits/43950508
 ### Compile BOOST: 
 #### 1. Download [boost_1_72_0.zip](https://sourceforge.net/projects/boost/files/boost/1.72.0/)  
 #### 2. Unzip the file
