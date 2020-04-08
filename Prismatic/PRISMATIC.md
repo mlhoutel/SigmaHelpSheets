@@ -308,27 +308,22 @@ cv2.imwrite(file, data)
 *All Configurations:*  
 * *C/C++/Additionnal Include Directories* => 
 ```
+path\to\FFTW\api;
+path\to\HDF5\include;
+path\to\BOOST;  
+  
+path\to\prismatic-master;
+path\to\prismatic-master\include;
+path\to\prismatic-master\Qt;  
+  
+path\to\prismatic-target;
+path\to\prismatic-target\prismatic-gui_autogen\include_Release;  
+  
+path\to\Qt\5.14.2\msvc2017_64; 
 path\to\Qt\5.14.2\msvc2017_64\include;
 path\to\Qt\5.14.2\msvc2017_64\include\QtWidgets;
 path\to\Qt\5.14.2\msvc2017_64\include\QtGui;
 path\to\Qt\5.14.2\msvc2017_64\include\QtCore;
-
-path\to\FFTW\api;
-path\to\HDF5\include;
-path\to\BOOST;
-
-path\to\prismatic;
-path\to\prismatic\include;
-path\to\prismatic\Qt;
-path\to\prismatic-target;
-
-
-path\to\prismatic-target\prismatic-gui_autogen\include_Release;
-path\to\prismatic-target;
-path\to\prismatic-master\include;
-path\to\prismatic-master\Qt;
-
-path\to\Qt\5.14.2\msvc2017_64;
 
 ```  
 
@@ -360,16 +355,15 @@ path\to\Qt\5.14.2\msvc2017_64\lib;
 
 * *Builds Events/Post-Build Event* => (You can add these manually or use the automatic post build Event) 
 ```
-xcopy /d /y "Path\to\fftw\compiled\Release\*.dll" "$(TargetDir)";
+copy /y "Path\to\fftw\Build\Release\fftw3f.dll" "$(TargetDir)"
 
-xcopy /d /y "Path\to\Qt\5.14.2\msvc2017_64\bin\Qt5Core.dll" "$(TargetDir)";
-xcopy /d /y "Path\to\Qt\5.14.2\msvc2017_64\bin\Qt5Gui.dll" "$(TargetDir)";
-xcopy /d /y "Path\to\Qt\5.14.2\msvc2017_64\bin\Qt5Widgets.dll" "$(TargetDir)";
+copy /y "Path\to\Qt\5.14.2\msvc2017_64\bin\Qt5Core.dll" "$(TargetDir)"
+copy /y Path\to\Qt\5.14.2\msvc2017_64\bin\Qt5Gui.dll" "$(TargetDir)"
+copy /y "Path\to\Qt\5.14.2\msvc2017_64\bin\Qt5Widgets.dll" "$(TargetDir)"
 
-if not exist $(TargetDir)\platforms mkdir $(TargetDir)\platforms;
-
-xcopy /d /y "Path\to\Qt\Tools\QtCreator\bin\libEGL.dll" "$(TargetDir)\platforms";
-xcopy /d /y "Path\to\Qt\Tools\QtCreator\bin\qwindows.dll" "$(TargetDir)\platforms";
+mkdir "$(TargetDir)\platforms"
+copy /y "Path\to\Tools\QtCreator\bin\libEGL.dll" "$(TargetDir)\platforms"
+copy /y "Path\to\5.14.2\msvc2017_64\plugins\platforms\qwindows.dll" "$(TargetDir)\platforms"
 ``` 
 
 * ??? *Linker/System/Sub-System* => Windows (/SUBSYSTEM:WINDOWS)
