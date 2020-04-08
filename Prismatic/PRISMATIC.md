@@ -30,15 +30,20 @@ https://stackoverflow.com/questions/43946538/how-to-build-boost-1-64-in-64-bits/
 #### 3. Create a new folder where the library will be compiled
 #### 3.1 Open a cmd in the *Boost* directory  
  
-**32bit system:**
+**Win32bit system:**
 ```
+(TOCHECK)
 bootstrap
 b2 --build-dir="Build32" toolset=msvc-14.1 --build-type=complete stage
 ```  
-**64bit system**
+**Win64bit system**
 ```
 bootstrap
 b2 -j8 --build-dir="Build64" toolset=msvc-14.1 address-model=64 architecture=x86 link=static threading=multi runtime-link=shared --build-type=complete stage 
+```
+**Linux system**
+```
+(TODO)
 ```
 
 ### Test BOOST: 
@@ -64,21 +69,23 @@ tar xvf fftw-3.3.8.tar
 ```
 #### 3. Create a new folder (ex: *fftw-3.3.8/Build64*) where the library will be compiled
 #### 3.1 Open a cmd in this folder
-**32bit system:**
+**Win32bit system:**
 ```
+(TOCHECK)
 cmake -G "Visual Studio 15 2017 Win32" -DBUILD_SHARED_LIBS:BOOL=ON -DENABLE_FLOAT:BOOL=ON -DENABLE_THREADS:BOOL=ON ../
 cmake --build . --config Release & cmake --build . --config Debug
 
 ```
-**64bit system:**
+**Win64bit system:**
 ```
 cmake -DBUILD_SHARED_LIBS:BOOL=ON -DBUILD_TESTS:BOOL=ON -DDISABLE_ALLOCA:BOOL=ON -DDISABLE_STATIC:BOOL=ON -DENABLE_FLOAT:BOOL=ON -DENABLE_SHARED:BOOL=ON -DENABLE_THREADS:BOOL=ON -DWITH_COMBINED_THREADS:BOOL=ON -DWITH_OUR_MALLOC16:BOOL=ON ../
 
 cmake --build . --config Release & cmake --build . --config Debug
 ```
 
-#### LINUX
+**Linux system**
 ```
+(TOCHECK)
 --disable-alloca: as of this writing (14 July 2009), the alloca function seems to be broken under the 64-bit MinGW compilers, so when compiling for Win64 you should pass --disable-alloca to tell FFTW not to use that function  
 --with-our-malloc16: this is required in order to allocate properly aligned memory (for SSE) with gcc  
 --with-windows-f77-mangling: this will include Fortran wrappers for some common Windows Fortran compilers (GNU, Intel, and Digital).  
@@ -124,18 +131,24 @@ make install
 #### 2. Unzip the file
 #### 2.1 Create a new folder (ex: *hdf5-1.12.0/Build64*) where the library will be compiled
 #### 2.2 Open a cmd in this directory
-**32bit system:**
+**Win32bit system:**
 ```  
+(TOCHECK)
 cmake -G "Visual Studio 15 2017 Win32" -DCMAKE_BUILD_TYPE:STRING=Release -DBUILD_SHARED_LIBS:BOOL=OFF -DBUILD_TESTING:BOOL=ON -DHDF5_BUILD_TOOLS:BOOL=ON -DHDF5_ENABLE_THREADSAFE:BOOL=ON -DALLOW_UNSUPPORTED:BOOL=ON -DBUILD_TESTING:BOOL=ON ../
 
 cmake --build . --config Release & cpack -C Release CPackConfig.cmake 
 ```  
-**64bit system:**
+**Win64bit system:**
 ```  
 cmake -G "Visual Studio 15 2017 Win64" -DCMAKE_BUILD_TYPE:STRING=Release -DBUILD_SHARED_LIBS:BOOL=OFF -DBUILD_TESTING:BOOL=ON -DHDF5_BUILD_TOOLS:BOOL=ON -DHDF5_ENABLE_THREADSAFE:BOOL=ON -DALLOW_UNSUPPORTED:BOOL=ON -DBUILD_TESTING:BOOL=ON ../
 
 cmake --build . --config Release & cpack -C Release CPackConfig.cmake 
 ```
+**Linux system**
+```
+(TODO)
+```
+
 *This will take some time... If you want to build the Debug library, replace Release by Debug*
 
 #### 2.3 A package with the compiled library has been created (ex: *hdf5-1.12.0/Build64/HDF5-1.12.0-win64.zip*). Move it into another directory and unzip-it.
@@ -176,7 +189,17 @@ git clone https://github.com/prism-em/prismatic.git
 #### 2. Create a new folder (ex: *prismatic-master/Build64*) where the library will be compiled
 #### 3. Open the CMake GUI  
 #### 3.1 Complete the links with the code source directory and the build directory  
-#### 3.2 Click on </kbd>Configure</kbd> and select Visual Studio 15 2017 x64
+#### 3.2 Click on *Configure* and select *Visual Studio 15 2017*
+**Win32 system**
+* Select ```Win32``` in the Optional Plateform Generator
+
+**Win64 system**
+* Select ```x64``` in the Optional Plateform Generator
+
+**Linux system**
+```
+(TODO)
+```
 #### 3.3 Complete the missing links to the compiled libraries:
 **FFTW:**  
 * *FFTW_INCLUDE_DIR* => ```path/to/fftw/api```
@@ -187,12 +210,25 @@ git clone https://github.com/prism-em/prismatic.git
 * *HDF5_hdf5_LIBRARY_RELEASE* => ```path/to/hdf5/Release```
 
 **CHECK:**  
+**Win32 system**
+* *CMAKE_EXE_LINKER_FLAGS* => ```/machine:X86```
+* *CMAKE_SHARED_LINKER_FLAGS* => ```/machine:X86```
+* *CMAKE_MODULE_LINKER_FLAGS* => ```/machine:X86```
+* *CMAKE_STATIC_LINKER_FLAGS* => ```/machine:X86```
+
+**Win64 system**
 * *CMAKE_EXE_LINKER_FLAGS* => ```/machine:X64```
 * *CMAKE_SHARED_LINKER_FLAGS* => ```/machine:X64```
 * *CMAKE_MODULE_LINKER_FLAGS* => ```/machine:X64```
 * *CMAKE_STATIC_LINKER_FLAGS* => ```/machine:X64```
 
-#### 3.4 Click again on </kbd>Configure</kbd> and if nothing is red, click on </kbd>Generate</kbd>
+**Linux system**
+```
+(TODO)
+```
+
+
+#### 3.4 Click again on *Configure* and if nothing is red, click on *Generate*
 #### 4. Open the project in Visual Studio 2017
 #### 4.1 Right Click on the **prismatic** project and go to Properties/General:
 
@@ -204,8 +240,20 @@ git clone https://github.com/prism-em/prismatic.git
 **All Configurations:**  
 * *C/C++/Additionnal Include Directories* => ```Path\to\prismatic\include; Path\to\fftw\api; Path\to\hdf5\include; Path\to\boost\```  
 * *Linker/Input/Additionnal Dependency* => ```fftw3f.lib; libhdf5.lib; libhdf5_cpp.lib; libhdf5_hl_cpp.lib; libhdf5_hl.lib;...```  
+
+* **Win32 system**
+* *Linker/Input/Advanced/Target computer* => ```MachineX86 (/MACHINE:X86)```
+* *Link editor/Command line/Additional options* => Remove ```/machine:X64```
+
+* **Win64 system**
 * *Linker/Input/Advanced/Target computer* => ```MachineX64 (/MACHINE:X64)```
 * *Link editor/Command line/Additional options* => Remove ```/machine:X86```
+
+* **Linux system**
+```
+(TODO)
+```
+
 
 **Debug:**  
 * *Linker/General/Additionnal Library Directories* => ```Path\to\fftw\compiled\Debug```  
@@ -218,7 +266,18 @@ git clone https://github.com/prism-em/prismatic.git
 * *Builds Events/Post-Build Event* => ```xcopy /d /y "Path\to\fftw\compiled\Release\*.dll" "$(TargetDir)"``` 
 
 
-#### 5. In the top bar, select **Release x64** then Run
+#### 5. In the top bar, select: 
+**Win32 system**
+* **Release x32** then Run  
+
+**Win64 system**
+* **Release x64** then Run  
+
+**Linux system**
+```
+(TODO)
+```
+
 #### 6. Get the **prismatic.exe** and **fftwf.dll** files at Path\to\prismatic\compiled\x64\Release
 
 ### Test:  
@@ -269,19 +328,48 @@ cv2.imwrite(file, data)
 
 #### 1. Download [Qt](http://ftp.fau.de/qtproject/archive/online_installers/3.2/qt-unified-windows-x86-3.2.2-online.exe)
 #### 1.1 Create an Qt account [here](https://login.qt.io/register)
-#### 1.2 Select **Qt 5.14 mscv2017 x64** in the installer
+#### 1.2 Select in the installer:
+**Win32 system**
+* **Qt 5.14.2 mscv2017 x32**
 
+**Win64 system**
+* **Qt 5.14.2 mscv2017 x64**
+
+**Linux system**
+```
+(TODO)
+```
 #### 2. Create a new folder (ex: *prismatic-master/Build64GUI*) where the library will be compiled
 #### 2.1 Open **prismatic-master.pro** (Path/to/prismatic/Qt/*) in a text editor and add ```CONFIG += console```
 #### 2.2 (Optional) Open CMakeLists.txt in the prismatic-master source code and check that the paths to the icons are good (if not replace ../Qt by Qt).
 
 #### 3. Open the CMake GUI  
 #### 3.1 Complete the links with the code source directory and the build directory  
-#### 3.2 Click on Configure and select Visual Studio 15 2017 x64
+#### 3.2 Click on Configure and select Visual Studio 15 2017
+**Win32 system**
+* Select ```Win32``` in the Optional Plateform Generator
+
+**Win64 system**
+* Select ```x64``` in the Optional Plateform Generator
+
+**Linux system**
+```
+(TODO)
+```
+
 #### 3.3 Check **PRISMATIC_ENABLE_CLI** and **PRISMATIC_ENABLE_GUI**
 #### 3.4 Complete the missing links to the compiled libraries:
 **QT5:**
+**Win32 system**
+* *QT5Widgets_DIR* => ```path/to/Qt/5.14.2/msvc2017_32/lib/cmake/Qt5Widgets```
+
+**Win64 system**
 * *QT5Widgets_DIR* => ```path/to/Qt/5.14.2/msvc2017_64/lib/cmake/Qt5Widgets```
+
+**Linux system**
+```
+(TODO)
+```
 
 **FFTW:**
 * *FFTW_INCLUDE_DIR* => ```path/to/fftw/api```
@@ -292,14 +380,26 @@ cv2.imwrite(file, data)
 * *HDF5_hdf5_LIBRARY_RELEASE* => ```path/to/hdf5/Release```
 
 **CHECK:**
+* **Win32 system**
+* *CMAKE_EXE_LINKER_FLAGS* => ```/machine:X86```
+* *CMAKE_SHARED_LINKER_FLAGS* => ```/machine:X86```
+* *CMAKE_MODULE_LINKER_FLAGS* => ```/machine:X86```
+* *CMAKE_STATIC_LINKER_FLAGS* => ```/machine:X86```
+
+* **Win64 system**
 * *CMAKE_EXE_LINKER_FLAGS* => ```/machine:X64```
 * *CMAKE_SHARED_LINKER_FLAGS* => ```/machine:X64```
 * *CMAKE_MODULE_LINKER_FLAGS* => ```/machine:X64```
 * *CMAKE_STATIC_LINKER_FLAGS* => ```/machine:X64```
 
+* **Linux system**
+```
+(TODO)
+```
+
 #### 3.5 Click again on Configure and if nothing is red, click on Generate
 #### 4. Open the project in VS 2017
-#### 4.1 Select both **prismatic** and **prismatic-gui** with <kbd>Ctrl</kbd> + </kbd>Click</kbd>
+#### 4.1 Select both **prismatic** and **prismatic-gui** with *Ctrl* + *Click*
 #### 4.2 Right Click on a project and go to Properties/General:
 * *Windows SDK Version* => ```10.0.17763.0```
 * *Configuration Type* => ```Dynamic library (dll)```
@@ -319,7 +419,23 @@ path\to\prismatic-master\Qt;
   
 path\to\prismatic-target;
 path\to\prismatic-target\prismatic-gui_autogen\include_Release;  
-  
+...
+```  
+
+* **Win32 system**
+```
+...
+path\to\Qt\5.14.2\msvc2017_32; 
+path\to\Qt\5.14.2\msvc2017_32\include;
+path\to\Qt\5.14.2\msvc2017_32\include\QtWidgets;
+path\to\Qt\5.14.2\msvc2017_32\include\QtGui;
+path\to\Qt\5.14.2\msvc2017_32\include\QtCore;
+
+```  
+
+* **Win64 system**
+```
+...
 path\to\Qt\5.14.2\msvc2017_64; 
 path\to\Qt\5.14.2\msvc2017_64\include;
 path\to\Qt\5.14.2\msvc2017_64\include\QtWidgets;
@@ -327,6 +443,12 @@ path\to\Qt\5.14.2\msvc2017_64\include\QtGui;
 path\to\Qt\5.14.2\msvc2017_64\include\QtCore;
 
 ```  
+
+* **Linux system**
+```
+(TODO)
+```
+
 
 *Release:* 
 * *Linker/Input/Additionnal Dependency* => 
@@ -350,9 +472,25 @@ WindowsApp.lib;
 path\to\HDF5\Build\lib;
 path\to\FFTW\Build\Release;
 path\to\BOOST\stage\lib;
-path\to\Qt\5.14.2\msvc2017_64\lib;
+...
 ```  
 
+* **Win32 system**
+```  
+...
+path\to\Qt\5.14.2\msvc2017_32\lib;
+``` 
+
+* **Win64 system**
+```  
+...
+path\to\Qt\5.14.2\msvc2017_64\lib;
+``` 
+
+* **Linux system**
+```
+(TODO)
+```
 
 * *Builds Events/Post-Build Event* => (You can add these manually or use the automatic post build Event) 
 ```
@@ -366,59 +504,52 @@ mkdir "$(TargetDir)\platforms"
 copy /y "Path\to\Tools\QtCreator\bin\libEGL.dll" "$(TargetDir)\platforms"
 copy /y "Path\to\5.14.2\msvc2017_64\plugins\platforms\qwindows.dll" "$(TargetDir)\platforms"
 ``` 
-
-* ??? *Linker/System/Sub-System* => Windows (/SUBSYSTEM:WINDOWS)
-* ??? *Linker/Advanced/Importation libraries* => D:/Documents/Projets/CEA Grenoble Project/PrismaticGUI/Release/prismatic-gui.lib
-
+**CHECK:**
+* *Linker/System/Sub-System* => Windows (/SUBSYSTEM:WINDOWS)
+* *Linker/Advanced/Importation libraries* => D:/Documents/Projets/CEA Grenoble Project/PrismaticGUI/Release/prismatic-gui.lib
 * *C/C++/Preprocessor/Preprocessor definition* => ```WIN32;_WINDOWS;NDEBUG;PRISMATIC_BUILDING_GUI=1;PRISMATIC_ENABLE_GUI;PRISMATIC_ENABLE_CLI;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;CMAKE_INTDIR="Release";```
 
-
-
-``` 
-LIBS
-D:\Documents\Projets\CEA Grenoble Project\libs\hdf5\hdf5-1.12.0-WIN64\lib;
-D:\Documents\Projets\CEA Grenoble Project\libs\fftw\fftw-3.3.8\BUILD\Release;
-D:\Programmes\Qt\5.14.2\msvc2017_64\lib;
-D:\Documents\Projets\CEA Grenoble Project\libs\boost\boost-1.66.0-WIN64\stage\lib;
-
-
-import library D:/Documents/Projets/CEA Grenoble Project/GUI/Build/Release/prismatic.lib
-
-
-QT       += core gui
- 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
- 
-TARGET = sans_titre
-TEMPLATE = app
-
-
+### Test Prismatic Performances:  
+**Win32 and Win64 system**
+* Open a Windows PowerShell in the prismatic/Build/Release folder and add the data test file "SI100.XYZ"
+```  
 Measure-Command {.\prismatic.exe --input-file "SI100.XYZ"}
+``` 
 
-Days              : 0
-Hours             : 0
-Minutes           : 0
-Seconds           : 0
-Milliseconds      : 316
-Ticks             : 3163259
-TotalDays         : 3,66117939814815E-06
-TotalHours        : 8,78683055555556E-05
-TotalMinutes      : 0,00527209833333333
-TotalSeconds      : 0,3163259
-TotalMilliseconds : 316,3259
+**Linux system**
+```
+(TODO)
+```
 
+**Example comparing the Base Build (316ms for this simple file) and the GPU Build (857ms for one file, but should be more effective the more complex and time-consuming the computations are for the CPU)**
+``` 
+#Base Build  
+Measure-Command {.\prismatic.exe --input-file "SI100.XYZ"}  
+  
+Days              : 0  
+Hours             : 0  
+Minutes           : 0  
+Seconds           : 0  
+Milliseconds      : 316  
+Ticks             : 3163259  
+TotalDays         : 3,66117939814815E-06  
+TotalHours        : 8,78683055555556E-05  
+TotalMinutes      : 0,00527209833333333  
+TotalSeconds      : 0,3163259  
+TotalMilliseconds : 316,3259  
 
-Measure-Command {.\prismatic.exe --input-file "../test/SI100.XYZ"}
-
-Days              : 0
-Hours             : 0
-Minutes           : 0
-Seconds           : 0
-Milliseconds      : 857
-Ticks             : 8571921
-TotalDays         : 9,92120486111111E-06
-TotalHours        : 0,000238108916666667
-TotalMinutes      : 0,014286535
-TotalSeconds      : 0,8571921
-TotalMilliseconds : 857,1921
+#GPU Build  
+Measure-Command {.\prismatic.exe --input-file "SI100.XYZ"}  
+  
+Days              : 0  
+Hours             : 0  
+Minutes           : 0  
+Seconds           : 0  
+Milliseconds      : 857  
+Ticks             : 8571921  
+TotalDays         : 9,92120486111111E-06  
+TotalHours        : 0,000238108916666667  
+TotalMinutes      : 0,014286535  
+TotalSeconds      : 0,8571921  
+TotalMilliseconds : 857,1921  
 ``` 
