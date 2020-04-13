@@ -16,7 +16,7 @@
 
 * **:desktop_computer: [C#]()**
 
-* **:snake: [Python]()**
+* **:snake: [Python](https://github.com/mlhoutel/python-cheat-sheet)**
 
 * **:elephant: [Postgres]()**
 
