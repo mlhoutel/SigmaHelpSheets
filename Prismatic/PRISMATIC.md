@@ -307,16 +307,21 @@ prismatic.exe --input-file "Path\to\the\directory\SI100.XYZ"
 ```
 import h5py
 
+#Recursively find the subfiles and display the structure like the tree function
 def recursiveHDF(f, pathstring=''):
+    #Test if it is an hdf subfolder
     if hasattr(f, 'keys'):
+        
+        #List the subkeys of this folder
         subkeys = list(f.keys())
+        
+        #Test if it is empty
         if len(subkeys) == 0:
             print(pathstring + '└─── empty')
         else:
+            #Print every subdirectory
             for s in range(len(subkeys)):
                 subkey = subkeys[s]
-                string = ''
-                
                 if(s+1==len(subkeys)):
                     print(pathstring + '└─── ' + subkey)
                     recursiveHDF(f[subkey], pathstring+'     ')
