@@ -305,14 +305,29 @@ prismatic.exe --input-file "Path\to\the\directory\SI100.XYZ"
 #### 8.1 Wait for the *PRISM Calculation complete* message to be displayed
 #### 8.2 If you have python with the hdf5, cv2 and numpy installed, you can use this to visualise the image
 ```
-import cv2
-import numpy as np
 import h5py
-f = h5py.File('Path/to/the/folder/output.h5', 'r')
-dset = f['key']
-data = np.array(dset[:,:,:])
-file = 'output.jpg'
-cv2.imwrite(file, data)
+
+def recursiveHDF(f, pathstring=''):
+    if hasattr(f, 'keys'):
+        subkeys = list(f.keys())
+        if len(subkeys) == 0:
+            print(pathstring + '└─── empty')
+        else:
+            for s in range(len(subkeys)):
+                subkey = subkeys[s]
+                string = ''
+                
+                if(s+1==len(subkeys)):
+                    print(pathstring + '└─── ' + subkey)
+                    recursiveHDF(f[subkey], pathstring+'     ')
+                else:
+                    print(pathstring + '├─── ' + subkey) 
+                    recursiveHDF(f[subkey], pathstring+'│    ')
+    else:
+        print(pathstring + '└─── matrix' + str(f.shape))
+
+f = h5py.File('D:\Documents\Projets\CEA Grenoble Project\Prismatic\PRISMATIC\prismatic\Build64GUI\Release\output.h5', 'r')
+recursiveHDF(f)
 ```
 
 #### (TEMPORARY PASTEBIN)
