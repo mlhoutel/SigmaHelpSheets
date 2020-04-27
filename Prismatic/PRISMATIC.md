@@ -326,7 +326,7 @@ def recursiveHDF(f, pathstring=''):
     else:
         print(pathstring + '└─── matrix' + str(f.shape))
 
-f = h5py.File('D:\Documents\Projets\CEA Grenoble Project\Prismatic\PRISMATIC\prismatic\Build64GUI\Release\output.h5', 'r')
+f = h5py.File('path\to\output.h5', 'r')
 recursiveHDF(f)
 ```
 
