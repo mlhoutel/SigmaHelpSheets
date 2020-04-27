@@ -303,7 +303,7 @@ prismatic.exe --input-file "Path\to\the\directory\SI100.XYZ"
 ```
 
 #### 8.1 Wait for the *PRISM Calculation complete* message to be displayed
-#### 8.2 If you have python with the hdf5, cv2 and numpy installed, you can use this to explore the HDF file
+#### 8.2 If you have python with the hdf5 library, you can use this to explore the HDF file
 ```
 import h5py
 
