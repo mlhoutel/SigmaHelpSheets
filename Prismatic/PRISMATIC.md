@@ -28,7 +28,11 @@ You will have to install some tools and libraries in order to build prismatic fr
 #### 2. Unzip the file
 #### 3. Create a new folder where the library will be compiled
 #### 3.1 Open a cmd in the *Boost* directory  
- 
+> We use there the automatic compiler for boost: b2.   
+> Edit --build-dir="PATH" with the path (absolute or relative) to the folder where the library will be built.   
+> It's recommanded not to change the followings parameters and do not edit the ```stage``` at the end.   
+> The build will be in a subfolder named "stage".  
+
 **Win32bit system:**
 ```
 (TOCHECK)
@@ -68,6 +72,13 @@ tar xvf fftw-3.3.8.tar
 ```
 #### 3. Create a new folder (ex: *fftw-3.3.8/Build64*) where the library will be compiled
 #### 3.1 Open a cmd in this folder
+> We use the cmake tool to build the fftw library.  
+> The ../ at the end is the relative path to the fftw source code folder (Here, Build64 is inside fftw-3.3.8).  
+> All the parameters of the compilation must begin with -D.   
+> To build the default version of this library, use ```cmake -DBUILD_SHARED_LIBS:BOOL=ON -DBUILD_TESTS:BOOL=ON ../```  
+> (You can't test the float version of fftw <-DENABLE_FLOAT> with the test code I give after the compilation, so build a default version for test is a good idea)  
+> If you only want to compile Prismatic, you can just build the Release version with ```cmake --build . --config Release```   
+
 **Win32bit system:**
 ```
 (TOCHECK)
@@ -130,6 +141,10 @@ make install
 #### 2. Unzip the file
 #### 2.1 Create a new folder (ex: *hdf5-1.12.0/Build64*) where the library will be compiled
 #### 2.2 Open a cmd in this directory
+> Once again we use the cmake tool to build hdf5.  
+> The ../ at the end is the relative path to the hdf5 source code folder (Here, Build64 is inside hdf5-1.12.0).  
+> All the parameters of the compilation must begin with -D.   
+
 **Win32bit system:**
 ```  
 (TOCHECK)
