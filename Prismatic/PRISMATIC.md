@@ -73,7 +73,7 @@ tar xvf fftw-3.3.8.tar
 #### 3. Create a new folder (ex: *fftw-3.3.8/Build64*) where the library will be compiled
 #### 3.1 Open a cmd in this folder
 > We use the cmake tool to build the fftw library.  
-> The ../ at the end is the relative path to the fftw source code folder (Here, Build64 is inside fftw-3.3.8).  
+> The ```../``` at the end is the relative path to the fftw source code folder (Here, Build64 is inside fftw-3.3.8).  
 > All the parameters of the compilation must begin with -D.   
 > To build the default version of this library, use ```cmake -DBUILD_SHARED_LIBS:BOOL=ON -DBUILD_TESTS:BOOL=ON ../```  
 > (You can't test the float version of fftw <-DENABLE_FLOAT> with the test code I give after the compilation, so build a default version for test is a good idea)  
@@ -126,9 +126,9 @@ make install
 * *Linker/General/Additionnal Library Directories* => ```Path\to\fftw\compiled\Release```  
 * *Builds Events/Post-Build Event* => ```xcopy /d /y "Path\to\fftw\compiled\Release\*.dll" "$(TargetDir)"``` 
 
-< Make sure that the compilation is done on the right plateform (x64 or x84) on the top bar or you will have an conflict error message.  < Also, make sure that the rights .dll are linked at the right compilation version (Debug and Release).  
-< FFTW is only compilable in the dynamic version, so the program .exe need the fftw3.dll (or fftw3d.dll for the float version) on the same folder in order to work.  
-< the post build event with ```xcopy``` copy the .dll in the .exe folder, but if it don't work, you will have an error when launching the .exe that say that the fftw3.dll is missing. You can search for this dll in the compiled fftw folder and manually copy it to the .exe program folder.   
+> Make sure that the compilation is done on the right plateform (x64 or x84) on the top bar or you will have an conflict error message.  > Also, make sure that the rights .dll are linked at the right compilation version (Debug and Release).  
+> FFTW is only compilable in the dynamic version, so the program .exe need the fftw3.dll (or fftw3d.dll for the float version) on the same folder in order to work.  
+> the post build event with ```xcopy``` copy the .dll in the .exe folder, but if it don't work, you will have an error when launching the .exe that say that the fftw3.dll is missing. You can search for this dll in the compiled fftw folder and manually copy it to the .exe program folder.   
 
 ## HDF5
 ### Ressources:
