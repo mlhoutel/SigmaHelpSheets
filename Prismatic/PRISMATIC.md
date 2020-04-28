@@ -126,6 +126,10 @@ make install
 * *Linker/General/Additionnal Library Directories* => ```Path\to\fftw\compiled\Release```  
 * *Builds Events/Post-Build Event* => ```xcopy /d /y "Path\to\fftw\compiled\Release\*.dll" "$(TargetDir)"``` 
 
+< Make sure that the compilation is done on the right plateform (x64 or x84) on the top bar or you will have an conflict error message.  < Also, make sure that the rights .dll are linked at the right compilation version (Debug and Release).  
+< FFTW is only compilable in the dynamic version, so the program .exe need the fftw3.dll (or fftw3d.dll for the float version) on the same folder in order to work.  
+< the post build event with ```xcopy``` copy the .dll in the .exe folder, but if it don't work, you will have an error when launching the .exe that say that the fftw3.dll is missing. You can search for this dll in the compiled fftw folder and manually copy it to the .exe program folder.   
+
 ## HDF5
 ### Ressources:
 * https://support.hdfgroup.org/ftp/HDF5/current/src/unpacked/release_docs/INSTALL_CMake.txt  
