@@ -145,9 +145,10 @@ make install
 #### 2. Unzip the file
 #### 2.1 Create a new folder (ex: *hdf5-1.12.0/Build64*) where the library will be compiled
 #### 2.2 Open a cmd in this directory
-> Once again we use the cmake tool to build hdf5.  
-> The ../ at the end is the relative path to the hdf5 source code folder (Here, Build64 is inside hdf5-1.12.0).  
+> Once again we use the cmake tool, this time it's to build hdf5.  
+> The ```../``` at the end is the relative path to the hdf5 source code folder (Here, Build64 is inside hdf5-1.12.0).  
 > All the parameters of the compilation must begin with -D.   
+> We only build the Release version for prismatic, if you want both versions, edit ```-DCMAKE_BUILD_TYPE:STRING```  
 
 **Win32bit system:**
 ```  
