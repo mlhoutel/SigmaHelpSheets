@@ -28,7 +28,7 @@ You will have to install some tools and libraries in order to build prismatic fr
 #### 2. Unzip the file
 #### 3. Create a new folder where the library will be compiled
 #### 3.1 Open a cmd in the *Boost* directory  
-> We use there the automatic compiler for boost: b2.   
+> We use there the automatic compiler for boost: b2 (previously named bjam).   
 > Edit --build-dir="BuildXX" with the path (absolute or relative) to the folder where the library will be built.   
 > It's recommanded not to change the followings parameters and do not edit the ```stage``` at the end.   
 > The build will be in a subfolder named "stage".  
