@@ -72,7 +72,8 @@ tar xvf fftw-3.3.8.tar (or tar xvf fftw-3.3.8.tar.gz to do the whole process)
 ```
 #### 3. Create a new folder (ex: *fftw-3.3.8/Build64*) where the library will be compiled
 #### 3.1 Open a cmd in this folder
-> We use the cmake tool to build the fftw library.  
+> We use the cmake tool to build the fftw library. 
+> If cmake is not found in the command, add intto the PATh environment variable the link to 'path\to\CMake\bin'.
 > The ```../``` at the end is the relative path to the fftw source code folder (Here, Build64 is inside fftw-3.3.8).  
 > All the parameters of the compilation must begin with -D.   
 > To build the default version of this library, use ```cmake -DBUILD_SHARED_LIBS:BOOL=ON -DBUILD_TESTS:BOOL=ON ../```  
