@@ -51,8 +51,7 @@ b2 -j8 --build-dir="Build64" toolset=msvc-14.1 address-model=64 architecture=x86
 
 ### Test BOOST: 
 #### 4. Create a new VS 2017 project
-#### 4.1 Add the test code from [here](https://www.boost.org/doc/libs/1_72_0/more/getting_started/windows.html) at 
-*6. Link Your Program to a Boost Library*  
+#### 4.1 Add the test code from [here](https://www.boost.org/doc/libs/1_72_0/more/getting_started/windows.html) at the point 6 (Link Your Program to a Boost Library)   
 #### 4.2 Edit the project properties
 **All Configurations:**  
 * *Windows SDK Version* => ```10.0.17763.0```    
@@ -60,7 +59,7 @@ b2 -j8 --build-dir="Build64" toolset=msvc-14.1 address-model=64 architecture=x86
 * *C/C++/Additionnal Include Directories* => ```Path\to\boost```   
 * *Linker/General/Additionnal Library Directories* => ```Path\to\boost\stage\lib```  
 
-run the code, ...
+run the code, you can write your mail as a string and it will extract the subject with the regex library from boost.
 ## FFTW3
 ### Ressources:
 * https://www.youtube.com/watch?v=0qQm5AGB_18
