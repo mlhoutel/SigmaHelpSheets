@@ -261,6 +261,8 @@ git clone https://github.com/prism-em/prismatic.git
 **All Configurations:**  
 * *C/C++/Additionnal Include Directories* => ```Path\to\prismatic\include; Path\to\fftw\api; Path\to\hdf5\include; Path\to\boost\```  
 * *Linker/Input/Additionnal Dependency* => ```fftw3f.lib; libhdf5.lib; libhdf5_cpp.lib; libhdf5_hl_cpp.lib; libhdf5_hl.lib;...```  
+> The order in wich the libraries are linked is realy important, that's even more true when you have like here a program with many links to others libraries, and that these libraries use the base functions of others libraries.   
+> Like always, the ```...``` at the end are the base system libraries added from default by VS, just add the new before these.   
 
 * **Win32 system**
 * *Linker/Input/Advanced/Target computer* => ```MachineX86 (/MACHINE:X86)```
