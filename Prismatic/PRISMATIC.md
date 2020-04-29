@@ -68,7 +68,7 @@ b2 -j8 --build-dir="Build64" toolset=msvc-14.1 address-model=64 architecture=x86
 #### 1. Download [fftw-3.3.8.tar.gz](http://www.fftw.org/download.html)  
 #### 2. Unzip then Untar the file with
 ```
-tar xvf fftw-3.3.8.tar
+tar xvf fftw-3.3.8.tar (or tar xvf fftw-3.3.8.tar.gz)
 ```
 #### 3. Create a new folder (ex: *fftw-3.3.8/Build64*) where the library will be compiled
 #### 3.1 Open a cmd in this folder
