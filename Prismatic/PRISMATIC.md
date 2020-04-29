@@ -37,13 +37,23 @@ You will have to install some tools and libraries in order to build prismatic fr
 ```
 (TOCHECK)
 bootstrap
-b2 --build-dir="Build32" toolset=msvc-14.1 --build-type=complete stage
+b2 -j8 --build-dir="Build32" toolset=msvc-14.1 threading=multi runtime-link=shared --build-type=complete stage 
 ```  
 **Win64bit system**
 ```
 bootstrap
 b2 -j8 --build-dir="Build64" toolset=msvc-14.1 address-model=64 architecture=x86 link=static threading=multi runtime-link=shared --build-type=complete stage 
 ```
+   
+> ```-j8``` indicate the number of threads availlable to compile this library to faster the build (boost is a raltively big library so the process take some time to compile, but don't put more threas than availlable because it can result in errors.   
+> ```build-dir``` is the directory for the temporaryy files and the build settings.  
+> ```toolset``` is the compilator, mscv-14.1 (to 15) for the Visual Studio 2017 compilator.   
+> ```address-model``` and architecture permit to have the library in x64 while building on a x86 machine.  
+> ```link``` is for building the library into static mode (I also want to build fftw in static instead of dynamic but I don't know if it is possible).   
+> ```theading``` is for using the threads (compilation of library use?)   
+> ```stage``` at the end is the folder where the library will be built. I though I could change it to put my own name for the compilation folder but then the library didn't worked well... (to test?)   
+
+  
 **Linux system**
 ```
 (TODO)
