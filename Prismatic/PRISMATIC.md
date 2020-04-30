@@ -128,37 +128,40 @@ Subject: This is the subject of the mail that should be printed.
 
 ### Compile FFTW:  
 #### 1. Download [fftw-3.3.8.tar.gz](http://www.fftw.org/download.html)  
-#### 2. Unzip, extract the file then Untar it with
+#### 2. Unzip, extract the file then Untar it in ```D:\Libraries``` with
 ```
 tar xvf fftw-3.3.8.tar (or tar xvf fftw-3.3.8.tar.gz to do the whole process)
 ```
 #### 3. Create a new folder (ex: *fftw-3.3.8/Build64*) where the library will be compiled
+```
+mkdir D:\Libraries\fftw-3.3.8\Build64
+mkdir D:\Libraries\fftw-3.3.8\Build32
+```
 #### 3.1 Open a cmd in this folder
 > We use the cmake tool to build the fftw library. 
-> If cmake is not found in the command, add intto the PATh environment variable the link to 'path\to\CMake\bin'.
-> The ```../``` at the end is the relative path to the fftw source code folder (Here, Build64 is inside fftw-3.3.8).  
-> All the parameters of the compilation must begin with -D.   
-> To build the default version of this library, use ```cmake -DBUILD_SHARED_LIBS:BOOL=ON -DBUILD_TESTS:BOOL=ON ../```  
-> (You can't test the float version of fftw <-DENABLE_FLOAT> with the test code I give after the compilation, so build a default version for test is a good idea)  
-> If you only want to compile Prismatic, you can just build the Release version with ```cmake --build . --config Release```   
+> If cmake is not found in the command, add it to the PATH environment variable the link to 'path\to\CMake\bin'. 
+> All the parameters of the compilation must begin with -D.     
 
 **Win32bit system:**
 ```
-(TOCHECK)
-cmake -G "Visual Studio 15 2017 Win32" -DBUILD_SHARED_LIBS:BOOL=ON -DENABLE_FLOAT:BOOL=ON -DENABLE_THREADS:BOOL=ON ../
-cmake --build . --config Release & cmake --build . --config Debug
+cd D:\Libraries\fftw-3.3.8\Build32
 
+(TOCHECK)
+cmake -DBUILD_SHARED_LIBS:BOOL=ON -DENABLE_FLOAT:BOOL=ON -DENABLE_THREADS:BOOL=ON D:\Libraries\fftw-3.3.8"
+
+cmake --build . --config Release & cmake --build . --config Debug
 ```
 **Win64bit system:**
 ```
-cmake -DBUILD_SHARED_LIBS:BOOL=ON -DBUILD_TESTS:BOOL=ON -DDISABLE_ALLOCA:BOOL=ON -DDISABLE_STATIC:BOOL=ON -DENABLE_FLOAT:BOOL=ON -DENABLE_SHARED:BOOL=ON -DENABLE_THREADS:BOOL=ON -DWITH_COMBINED_THREADS:BOOL=ON -DWITH_OUR_MALLOC16:BOOL=ON ../
+cd D:\Libraries\fftw-3.3.8\Build64
+
+cmake -DBUILD_SHARED_LIBS:BOOL=ON -DBUILD_TESTS:BOOL=ON -DDISABLE_ALLOCA:BOOL=ON -DDISABLE_STATIC:BOOL=ON -DENABLE_FLOAT:BOOL=ON -DENABLE_SHARED:BOOL=ON -DENABLE_THREADS:BOOL=ON -DWITH_COMBINED_THREADS:BOOL=ON -DWITH_OUR_MALLOC16:BOOL=ON "D:\Libraries\fftw-3.3.8"
 
 cmake --build . --config Release & cmake --build . --config Debug
 ```
 
 **Linux system**
 ```
-(TOCHECK)
 --disable-alloca: as of this writing (14 July 2009), the alloca function seems to be broken under the 64-bit MinGW compilers, so when compiling for Win64 you should pass --disable-alloca to tell FFTW not to use that function  
 --with-our-malloc16: this is required in order to allocate properly aligned memory (for SSE) with gcc  
 --with-windows-f77-mangling: this will include Fortran wrappers for some common Windows Fortran compilers (GNU, Intel, and Digital).  
@@ -174,20 +177,33 @@ make install
 ```
 
 ### Test FFTW:   
-#### 4. Create a new VS 2017 project
+> To build the default version of this library, use 
+```
+mkdir D:\Libraries\fftw-3.3.8\Build64Default & cd D:\Libraries\fftw-3.3.8\Build64Default
+
+cmake -DBUILD_SHARED_LIBS:BOOL=ON -DBUILD_TESTS:BOOL=ON -DDISABLE_ALLOCA:BOOL=ON -DDISABLE_STATIC:BOOL=ON -DENABLE_SHARED:BOOL=ON -DENABLE_THREADS:BOOL=ON -DWITH_COMBINED_THREADS:BOOL=ON -DWITH_OUR_MALLOC16:BOOL=ON "D:\Libraries\fftw-3.3.8"
+
+cmake --build . --config Release & cmake --build . --config Debug
+```  
+> You can't test the float version of fftw <-DENABLE_FLOAT> with the test code I give, so build a default version for test is a good idea   
+
+#### 4. Open Visual Studio 2017 and create a new C++ console application project into a new directory
+```
+mkdir D:\Libraries\fftw-3.3.8\BuildTest
+```
 #### 4.1 Add the test code from [here](https://gist.github.com/damian-dz/a5d7d61993597253747b6dfe400805d9) 
 #### 4.2 Edit the project properties
-*All Configurations:*  
-* *C/C++/Additionnal Include Directories* => ```Path\to\fftw\api```  
-* *Linker/Input/Additionnal Dependency* => ```fftw3.lib;...```  
+Select **All Configurations:** in the top menu and also select the right **Plateform**
+* *C/C++/Additionnal Include Directories* => ```D:\Libraries\fftw-3.3.8\api```  
+* *Linker/Input/Additionnal Dependency* => ```fftw3.lib;(default system libraries)```  
 	
-*Debug:*  
-* *Linker/General/Additionnal Library Directories* => ```Path\to\fftw\compiled\Debug```  
-* *Builds Events/Post-Build Event* => ```xcopy /d /y "Path\to\fftw\compiled\Debug\*.dll" "$(TargetDir)"```  
+Select **Debug:** in the top menu
+* *Linker/General/Additionnal Library Directories* => ```D:\Libraries\fftw-3.3.8\Build64Default\Debug```  
+* *Builds Events/Post-Build Event* => ```xcopy /d /y "D:\Libraries\fftw-3.3.8\Build64Default\Debug\*.dll" "$(TargetDir)"```  
 	
-*Release:*  
-* *Linker/General/Additionnal Library Directories* => ```Path\to\fftw\compiled\Release```  
-* *Builds Events/Post-Build Event* => ```xcopy /d /y "Path\to\fftw\compiled\Release\*.dll" "$(TargetDir)"``` 
+Select **Release:** in the top menu 
+* *Linker/General/Additionnal Library Directories* => ```D:\Libraries\fftw-3.3.8\Build64Default\Release```  
+* *Builds Events/Post-Build Event* => ```xcopy /d /y "D:\Libraries\fftw-3.3.8\Build64Default\Release\*.dll" "$(TargetDir)"``` 
 
 > Make sure that the compilation is done on the right plateform (x64 or x84) on the top bar or you will have an conflict error message. Also, make sure that the rights .dll are linked at the right compilation version (Debug and Release).   
 > FFTW is only compilable in the dynamic version, so the program .exe need the fftw3.dll (or fftw3d.dll for the float version) on the same folder in order to work.   
