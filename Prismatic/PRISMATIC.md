@@ -6,6 +6,10 @@ You will have to install some tools and libraries in order to build prismatic fr
  * *Visual Studio 15 2017* (https://visualstudio.microsoft.com/fr/vs/older-downloads/)
  * *CMake* (https://cmake.org/download/)
  * *7zip* (https://www.7-zip.org/)
+ 
+  **Others Tools :**
+  * *Anaconda 3.7* (https://visualstudio.microsoft.com/fr/vs/older-downloads/)
+  * *CUDA* (https://visualstudio.microsoft.com/fr/vs/older-downloads/)
 
  **Libraries :**
  * [BOOST](#boost)
