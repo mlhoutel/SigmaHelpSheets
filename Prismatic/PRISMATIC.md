@@ -221,51 +221,63 @@ Select **Release:** in the top menu
 
 ### Compile HDF5:    
 #### 1. Download [hdf5-1.12.0.zip](https://hdf-wordpress-1.s3.amazonaws.com/wp-content/uploads/manual/HDF5/HDF5_1_12_0/source/hdf5-1.12.0.zip)  
-#### 2. Unzip the file
+#### 2. Unzip the file and put it in ```D:\Libraries\```
 #### 2.1 Create a new folder (ex: *hdf5-1.12.0/Build64*) where the library will be compiled
+```
+mkdir 
+mkdir D:\Libraries\hdf5-1.12.0\Build32
+```
 #### 2.2 Open a cmd in this directory
-> Once again we use the cmake tool, this time it's to build hdf5.  
-> The ```../``` at the end is the relative path to the hdf5 source code folder (Here, Build64 is inside hdf5-1.12.0).  
+> Once again we use the cmake tool, this time it's to build hdf5.   
 > All the parameters of the compilation must begin with -D.   
 > We only build the Release version for prismatic, if you want both versions, edit ```-DCMAKE_BUILD_TYPE:STRING```  
 
 **Win32bit system:**
 ```  
-(TOCHECK)
-cmake -G "Visual Studio 15 2017 Win32" -DCMAKE_BUILD_TYPE:STRING=Release -DBUILD_SHARED_LIBS:BOOL=OFF -DBUILD_TESTING:BOOL=ON -DHDF5_BUILD_TOOLS:BOOL=ON -DHDF5_ENABLE_THREADSAFE:BOOL=ON -DALLOW_UNSUPPORTED:BOOL=ON -DBUILD_TESTING:BOOL=ON ../
+cd D:\Libraries\hdf5-1.12.0\Build32
 
-cmake --build . --config Release & cpack -C Release CPackConfig.cmake 
+cmake -G "Visual Studio 15 2017 Win32" -DCMAKE_BUILD_TYPE:STRING=Release -DBUILD_SHARED_LIBS:BOOL=OFF -DBUILD_TESTING:BOOL=ON -DHDF5_BUILD_TOOLS:BOOL=ON -DHDF5_ENABLE_THREADSAFE:BOOL=ON -DALLOW_UNSUPPORTED:BOOL=ON -DBUILD_TESTING:BOOL=ON "D:\Libraries\hdf5-1.12.0"
+
+cmake --build . --config Release
 ```  
 **Win64bit system:**
 ```  
-cmake -G "Visual Studio 15 2017 Win64" -DCMAKE_BUILD_TYPE:STRING=Release -DBUILD_SHARED_LIBS:BOOL=OFF -DBUILD_TESTING:BOOL=ON -DHDF5_BUILD_TOOLS:BOOL=ON -DHDF5_ENABLE_THREADSAFE:BOOL=ON -DALLOW_UNSUPPORTED:BOOL=ON -DBUILD_TESTING:BOOL=ON ../
+cd D:\Libraries\hdf5-1.12.0\Build64
 
-cmake --build . --config Release & cpack -C Release CPackConfig.cmake 
+cmake -G "Visual Studio 15 2017 Win64" -DCMAKE_BUILD_TYPE:STRING=Release -DBUILD_SHARED_LIBS:BOOL=OFF -DBUILD_TESTING:BOOL=ON -DHDF5_BUILD_TOOLS:BOOL=ON -DHDF5_ENABLE_THREADSAFE:BOOL=ON -DALLOW_UNSUPPORTED:BOOL=ON -DBUILD_TESTING:BOOL=ON "D:\Libraries\hdf5-1.12.0"
+
+cmake --build . --config Release 
 ```
 **Linux system**
 ```
 (TODO)
 ```
+> This will take some time... If you want to build the Debug library, replace in the commands the ```Release``` by ```Debug```*
 
-*This will take some time... If you want to build the Debug library, replace Release by Debug*
-
-#### 2.3 A package with the compiled library has been created (ex: *hdf5-1.12.0/Build64/HDF5-1.12.0-win64.zip*). Move it into another directory and unzip-it.
+#### 2.3 Now, we will use the cpack tool to build a Package with the compiled library:
+```
+cpack -C Release CPackConfig.cmake 
+```
+> A package with the compiled library has been created (ex: *hdf5-1.12.0/Build64/HDF5-1.12.0-win64.zip*).   
+> Extract it to the same directory: ```D:\Libraries\hdf5-1.12.0\Build64\HDF5-1.12.0-win64```
 
 ### Test HDF5:  
 #### 3. Open a cmd in the compiled directory
 ```
+cd D:\Libraries\hdf5-1.12.0\Build64
 ctest . -C Release 
-ctest . -C Debug 
 ``` 
 #### 3.1 Check that all Tests are *Passed* 
-#### 4. Create a new VS 2017 project
+#### 4. Open Visual Studio 2017 and create a new C++ console application project into a new directory
+```
+mkdir D:\Libraries\hdf5-1.12.0\BuildTest
+```
 #### 4.1 Add the test code from [here](https://support.hdfgroup.org/ftp/HDF5/current/src/unpacked/c++/examples/h5tutr_crtdat.cpp)
 #### 4.2 Edit the project properties
 *All Configurations:*  
-* *C/C++/Additionnal Include Directories* => ```Path\to\hdf5\include```  
-* *Linker/Genral/Additionnal Libraries repertory* => ```Path\to\hdf5\lib```
+* *C/C++/Additionnal Include Directories* => ``` D:\Libraries\hdf5-1.12.0\Build64\HDF5-1.12.0-win64\include```  
+* *Linker/Genral/Additionnal Libraries repertory* => ``` D:\Libraries\hdf5-1.12.0\Build64\HDF5-1.12.0-win64\lib```
 * *Linker/Input/Additionnal Dependency* => ```libhdf5.lib;libhdf5_cpp.lib;...```  
-
 
 #### (TEMPORARY PASTEBIN)
 * https://sourceforge.net/projects/nsis/files/NSIS%203/3.05/nsis-3.05-setup.exe/download?use_mirror=netix&download=
