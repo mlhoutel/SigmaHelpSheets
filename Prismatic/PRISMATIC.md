@@ -177,9 +177,9 @@ make install
 ```
 
 ### Test FFTW:   
-> To build the default version of this library, use 
+> To build the default version of this library in x32, use 
 ```
-mkdir D:\Libraries\fftw-3.3.8\Build64Default & cd D:\Libraries\fftw-3.3.8\Build64Default
+mkdir D:\Libraries\fftw-3.3.8\Build32Default & cd D:\Libraries\fftw-3.3.8\Build32Default
 
 cmake -DBUILD_SHARED_LIBS:BOOL=ON -DBUILD_TESTS:BOOL=ON -DDISABLE_ALLOCA:BOOL=ON -DDISABLE_STATIC:BOOL=ON -DENABLE_SHARED:BOOL=ON -DENABLE_THREADS:BOOL=ON -DWITH_COMBINED_THREADS:BOOL=ON -DWITH_OUR_MALLOC16:BOOL=ON "D:\Libraries\fftw-3.3.8"
 
@@ -198,12 +198,12 @@ Select **All Configurations:** in the top menu and also select the right **Plate
 * *Linker/Input/Additionnal Dependency* => ```fftw3.lib;(default system libraries)```  
 	
 Select **Debug:** in the top menu
-* *Linker/General/Additionnal Library Directories* => ```D:\Libraries\fftw-3.3.8\Build64Default\Debug```  
-* *Builds Events/Post-Build Event* => ```xcopy /d /y "D:\Libraries\fftw-3.3.8\Build64Default\Debug\*.dll" "$(TargetDir)"```  
+* *Linker/General/Additionnal Library Directories* => ```D:\Libraries\fftw-3.3.8\Build32Default\Debug```  
+* *Builds Events/Post-Build Event* => ```xcopy /d /y "D:\Libraries\fftw-3.3.8\Build32Default\Debug\*.dll" "$(TargetDir)"```  
 	
 Select **Release:** in the top menu 
-* *Linker/General/Additionnal Library Directories* => ```D:\Libraries\fftw-3.3.8\Build64Default\Release```  
-* *Builds Events/Post-Build Event* => ```xcopy /d /y "D:\Libraries\fftw-3.3.8\Build64Default\Release\*.dll" "$(TargetDir)"``` 
+* *Linker/General/Additionnal Library Directories* => ```D:\Libraries\fftw-3.3.8\Build32Default\Release```  
+* *Builds Events/Post-Build Event* => ```xcopy /d /y "D:\Libraries\fftw-3.3.8\Build32Default\Release\*.dll" "$(TargetDir)"``` 
 
 > Make sure that the compilation is done on the right plateform (x64 or x84) on the top bar or you will have an conflict error message. Also, make sure that the rights .dll are linked at the right compilation version (Debug and Release).   
 > FFTW is only compilable in the dynamic version, so the program .exe need the fftw3.dll (or fftw3d.dll for the float version) on the same folder in order to work.   
