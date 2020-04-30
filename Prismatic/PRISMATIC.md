@@ -1,4 +1,5 @@
 ## Compile Prismatic-master from source
+### Tools:   
 You will have to install some tools and libraries in order to build prismatic from source:
  
  **Tools needed :**
@@ -14,7 +15,17 @@ You will have to install some tools and libraries in order to build prismatic fr
  **Compilation :**
  * [Prismatic](#prismatic)
  * [Prismatic Gui](#prismatic-gui)
- * [Pyprismatic]()
+ * [Pyprismatic]()   
+ 
+### Folder organisation: 
+For a clarity matter, and to help the user to do the process without having errors from the links, I will put my personal config for this configuration with the links like that: ```D:\...\```fftw\Build64\   
+> You can edit the first part if you don't want the same config than me, if not, you can put your folders wherever you want.
+
+The global organisation of my folders look like that: 
+```
+(TODO)
+
+```   
 
 ## BOOST
 ### Ressources:
