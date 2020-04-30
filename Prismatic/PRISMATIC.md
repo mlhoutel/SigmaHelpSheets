@@ -274,10 +274,10 @@ mkdir D:\Libraries\hdf5-1.12.0\BuildTest
 ```
 #### 4.1 Add the test code from [here](https://support.hdfgroup.org/ftp/HDF5/current/src/unpacked/c++/examples/h5tutr_crtdat.cpp)
 #### 4.2 Edit the project properties
-*All Configurations:*  
-* *C/C++/Additionnal Include Directories* => ``` D:\Libraries\hdf5-1.12.0\Build64\HDF5-1.12.0-win64\include```  
-* *Linker/Genral/Additionnal Libraries repertory* => ``` D:\Libraries\hdf5-1.12.0\Build64\HDF5-1.12.0-win64\lib```
-* *Linker/Input/Additionnal Dependency* => ```libhdf5.lib;libhdf5_cpp.lib;...```  
+Select **All Configurations:** in the top menu and also select the right **Plateform**
+* *C/C++/Additionnal Include Directories* => ```D:\Libraries\hdf5-1.12.0\Build64\HDF5-1.12.0-win64\include```  
+* *Linker/Genral/Additionnal Libraries repertory* => ```D:\Libraries\hdf5-1.12.0\Build64\HDF5-1.12.0-win64\lib```
+* *Linker/Input/Additionnal Dependency* => ```libhdf5.lib;libhdf5_cpp.lib;(default system libraries)```  
 
 #### (TEMPORARY PASTEBIN)
 * https://sourceforge.net/projects/nsis/files/NSIS%203/3.05/nsis-3.05-setup.exe/download?use_mirror=netix&download=
