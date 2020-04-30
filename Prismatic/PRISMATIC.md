@@ -105,13 +105,22 @@ int main()
 }
 ```   
 #### 4.2 Edit the project properties
-**All Configurations:**  
+Select **All Configurations:** in the top menu and also select the right **Plateform**
 * *Windows SDK Version* => ```10.0.17763.0```    
 * *Tools* => ```Visual Studio 2019 (v142)```  
-* *C/C++/Additionnal Include Directories* => ```Path\to\boost```   
-* *Linker/General/Additionnal Library Directories* => ```Path\to\boost\stage\lib```  
+* *C/C++/Additionnal Include Directories* => ```D:\Libraries\boost_1_72_0```   
+* *Linker/General/Additionnal Library Directories* => ```D:\Libraries\boost_1_72_0\stage\lib```  
 
-run the code, you can write your mail as a string and it will extract the subject with the regex library from boost.
+Select the right plateform at the left of the Run button and then run the code. You can write your mail as a string and it will extract the subject with the regex library from boost.  
+*Try with this:*
+```
+This is some test text, only for test purposes. This shouldn't be re-printed by the regex program.
+```
+*Then test with this:*
+```
+Subject: This is the subject of the mail that should be printed.
+``` 
+
 ## FFTW3
 ### Ressources:
 * https://www.youtube.com/watch?v=0qQm5AGB_18
