@@ -50,7 +50,6 @@ The global organisation of my folders look like that:
 
 **Win32bit system:**
 ```
-(TOCHECK)
 bootstrap
 b2 -j8 --build-dir="Build32" toolset=msvc-14.1 threading=multi runtime-link=shared --build-type=complete stage 
 ```  
