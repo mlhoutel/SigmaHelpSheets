@@ -40,9 +40,17 @@ The global organisation of my folders look like that:
 
 ### Compile BOOST: 
 #### 1. Download [boost_1_72_0.zip](https://sourceforge.net/projects/boost/files/boost/1.72.0/)  
-#### 2. Unzip the file
-#### 3. Create a new folder where the library will be compiled
+#### 2. Unzip the file and put it in ```D:\Libraries\```
+#### 3. Create a new folder where the library will be compiled 
+```
+mkdir D:\Libraries\boost_1_72_0\Build64
+mkdir D:\Libraries\boost_1_72_0\Build32
+```
 #### 3.1 Open a cmd in the *Boost* directory  
+```
+cd D:\Libraries\boost_1_72_0
+bootstrap
+```
 > We use there the automatic compiler for boost: b2 (previously named bjam).   
 > Edit --build-dir="BuildXX" with the path (absolute or relative) to the folder where the library will be built.   
 > It's recommanded not to change the followings parameters and do not edit the ```stage``` at the end.   
@@ -50,12 +58,10 @@ The global organisation of my folders look like that:
 
 **Win32bit system:**
 ```
-bootstrap
 b2 -j8 --build-dir="Build32" toolset=msvc-14.1 threading=multi runtime-link=shared --build-type=complete stage 
 ```  
 **Win64bit system**
 ```
-bootstrap
 b2 -j8 --build-dir="Build64" toolset=msvc-14.1 address-model=64 architecture=x86 link=static threading=multi runtime-link=shared --build-type=complete stage 
 ```
    
@@ -74,8 +80,30 @@ b2 -j8 --build-dir="Build64" toolset=msvc-14.1 address-model=64 architecture=x86
 ```
 
 ### Test BOOST: 
-#### 4. Create a new VS 2017 project
+#### 4. Open Visual Studio 2017 and create a new C++ console application project into a new directory
+```
+mkdir D:\Libraries\boost_1_72_0\BuildTest
+```
 #### 4.1 Add the test code from [here](https://www.boost.org/doc/libs/1_72_0/more/getting_started/windows.html) at the point 6 (Link Your Program to a Boost Library)   
+```
+#include <boost/regex.hpp>
+#include <iostream>
+#include <string>
+
+int main()
+{
+    std::string line;
+    boost::regex pat( "^Subject: (Re: |Aw: )*(.*)" );
+
+    while (std::cin)
+    {
+        std::getline(std::cin, line);
+        boost::smatch matches;
+        if (boost::regex_match(line, matches, pat))
+            std::cout << matches[2] << std::endl;
+    }
+}
+```   
 #### 4.2 Edit the project properties
 **All Configurations:**  
 * *Windows SDK Version* => ```10.0.17763.0```    
