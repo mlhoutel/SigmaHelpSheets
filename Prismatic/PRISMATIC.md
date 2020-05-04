@@ -396,17 +396,7 @@ D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\lib
 ```  
 * *Builds Events/Post-Build Event/Command line* => ```xcopy /d /y "D:\Libraries\fftw-3.3.8\Build64\Debug\*.dll" "$(TargetDir)"``` 
 
-#### 5. In the top bar, select: 
-**Win32 system**
-* **Release x32** then Run  
-
-**Win64 system**
-* **Release x64** then Run  
-
-**Linux system**
-```
-(TODO)
-```
+#### 5. In the top bar, make sure to select Release and the right Plateform, then Click on Run
 
 #### 6. Get the **prismatic.exe** and **fftwf.dll** files at Path\to\prismatic\compiled\x64\Release
 
