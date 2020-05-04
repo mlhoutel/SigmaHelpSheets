@@ -290,7 +290,13 @@ Select **All Configurations:** in the top menu and also select the right **Plate
 * https://www.it-swarm.dev/fr/visual-c%2B%2B/erreur-fatale-lnk1112-le-type-de-machine-du-module-x64-est-en-conflit-avec-le-type-de-machine-cible-x86/969200768/
 
 *You can add the libraries directory to the PATH if you want, otherwise you will have to complete the links manually later...*
-* <kbd>Windows</kbd> + "Path" => Edit environment variables/Environment variables/Path/Edit/New
+> <kbd>Windows</kbd> + "Path" => Edit environment variables/Environment variables/Path/Edit/New
+> Add these links to the PATH
+```
+D:\Libraries\boost_1_72_0
+D:\Libraries\fftw-3.3.8
+D:\Libraries\hdf5-1.12.0
+```
 
 #### 1. Download [prismatic](https://github.com/prism-em/prismatic)
 ```
@@ -299,6 +305,9 @@ git clone https://github.com/prism-em/prismatic.git
 #### 2. Create a new folder (ex: *prismatic-master/Build64*) where the library will be compiled
 #### 3. Open the CMake GUI  
 #### 3.1 Complete the links with the code source directory and the build directory  
+* Where is the source code: ```D:/Libraries/prismatic```   
+* Where to build the binaries: ```D:/Libraries/prismatic/Build64```   
+
 #### 3.2 Click on *Configure* and select *Visual Studio 15 2017*
 **Win32 system**
 * Select ```Win32``` in the Optional Plateform Generator
@@ -309,47 +318,52 @@ git clone https://github.com/prism-em/prismatic.git
 **Linux system**
 ```
 (TODO)
-```
-#### 3.3 Complete the missing links to the compiled libraries:
+```   
+
+#### 3.3 Check Grouped and Advanced then complete the missing links to the compiled libraries:
+**BOOST**
+* *Boost_INCLUDE_DIR* => ```D:\Libraries\boost_1_72_0```
+
+**Click on Configure**
+
 **FFTW:**  
-* *FFTW_INCLUDE_DIR* => ```path/to/fftw/api```
-* *FFTW_LIBRARY* => ```path/to/fftw```
+* *FFTW_INCLUDE_DIR* => ```D:\Libraries\fftw-3.3.8\api```
+* *FFTW_LIBRARY* => ```D:\Libraries\fftw-3.3.8```
 
 **HDF5:**  
-* *HDF5_hdf5_LIBRARY_DEBUG* => ```path/to/hdf5/Debug```
-* *HDF5_hdf5_LIBRARY_RELEASE* => ```path/to/hdf5/Release```
-
-**CHECK:**  
-**Win32 system**
-* *CMAKE_EXE_LINKER_FLAGS* => ```/machine:X86```
-* *CMAKE_SHARED_LINKER_FLAGS* => ```/machine:X86```
-* *CMAKE_MODULE_LINKER_FLAGS* => ```/machine:X86```
-* *CMAKE_STATIC_LINKER_FLAGS* => ```/machine:X86```
-
-**Win64 system**
-* *CMAKE_EXE_LINKER_FLAGS* => ```/machine:X64```
-* *CMAKE_SHARED_LINKER_FLAGS* => ```/machine:X64```
-* *CMAKE_MODULE_LINKER_FLAGS* => ```/machine:X64```
-* *CMAKE_STATIC_LINKER_FLAGS* => ```/machine:X64```
-
-**Linux system**
-```
-(TODO)
-```
-
+* *HDF5_CXX_INCLUDE_DIR* => ```D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\include```
+* *HDF5_hdf5_LIBRARY_DEBUG* => ```D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64```
+* *HDF5_hdf5_LIBRARY_RELEASE* => ```D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64```
 
 #### 3.4 Click again on *Configure* and if nothing is red, click on *Generate*
-#### 4. Open the project in Visual Studio 2017
+> You may have an error message, but it's ok if you have *Generating done* at the end of the process, it's only warning about the DIR-NOTFOUND but we will edit every links maually in the project.
+
+#### 4. Open the project in Visual Studio 2017 
+> You can click on the *Open Project* button in CMake  
+
 #### 4.1 Right Click on the **prismatic** project and go to Properties/General:
+Make sure to select **Select All Configurations** and the right **Plateform**   
 
-* *Windows SDK Version* => ```10.0.17763.0```
-* *Configuration Type* => ```Dynamic library (dll)```
-* *Plateform tools* => ```Visual Studio 2017 (v141)```
-* *Configurations tools* => ```Application (.exe)```
+* *Configuration Property/General/Windows SDK Version* => ```10.0.17763.0```
+* *Configuration Property/General/Plateform tools* => ```Visual Studio 2017 (v141)``
 
-**All Configurations:**  
-* *C/C++/Additionnal Include Directories* => ```Path\to\prismatic\include; Path\to\fftw\api; Path\to\hdf5\include; Path\to\boost\```  
-* *Linker/Input/Additionnal Dependency* => ```fftw3f.lib; libhdf5.lib; libhdf5_cpp.lib; libhdf5_hl_cpp.lib; libhdf5_hl.lib;...```  
+* *C C++/General/Additionnal Include Directories* => 
+```
+D:\Libraries\prismatic\include;
+D:\Libraries\fftw-3.3.8\api;
+D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\include;
+D:\Libraries\boost_1_72_0;
+%(AdditionalIncludeDirectories)
+```  
+* *Linker/Input/Additionnal Dependency* => 
+```
+fftw3f.lib;
+libhdf5.lib;
+libhdf5_cpp.lib;
+libhdf5_hl_cpp.lib;
+libhdf5_hl.lib;
+...
+```  
 > The order in wich the libraries are linked is realy important, that's even more true when you have like here a program with many links to others libraries, and that these libraries use the base functions of others libraries.   
 > Like always, the ```...``` at the end are the base system libraries added by default by VS, just add the new before these.   
 
@@ -364,19 +378,22 @@ git clone https://github.com/prism-em/prismatic.git
 * **Linux system**
 ```
 (TODO)
+```    
+Click on **Apply** and select **Release:** in Configuration   
+* *Linker/General/Additionnal Library Directories* => 
 ```
+D:\Libraries\fftw-3.3.8\Build64\Release;
+D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\lib
+```  
+* *Builds Events/Post-Build Event/Command line* => ```xcopy /d /y "D:\Libraries\fftw-3.3.8\Build64\Release\*.dll" "$(TargetDir)"``` 
 
-
-**Debug:**  
-* *Linker/General/Additionnal Library Directories* => ```Path\to\fftw\compiled\Debug```  
-* *Linker/General/Additionnal Library Directories* => ```Path\to\fftw\hdf5(Debug)\lib```  
-* *Builds Events/Post-Build Event* => ```xcopy /d /y "Path\to\fftw\compiled\Debug\*.dll" "$(TargetDir)"```  
-  
-**Release:**   
-* *Linker/General/Additionnal Library Directories* => ```Path\to\fftw\compiled\Release```  
-* *Linker/General/Additionnal Library Directories* => ```Path\to\fftw\hdf5(Release)\lib```  
-* *Builds Events/Post-Build Event* => ```xcopy /d /y "Path\to\fftw\compiled\Release\*.dll" "$(TargetDir)"``` 
-
+Click on **Apply** and select **Debug:** in Configuration
+* *Linker/General/Additionnal Library Directories* => 
+```
+D:\Libraries\fftw-3.3.8\Build64\Debug;
+D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\lib
+```  
+* *Builds Events/Post-Build Event/Command line* => ```xcopy /d /y "D:\Libraries\fftw-3.3.8\Build64\Debug\*.dll" "$(TargetDir)"``` 
 
 #### 5. In the top bar, select: 
 **Win32 system**
