@@ -1,4 +1,4 @@
-## Compile Prismatic-master from source
+## Compiling Prismatic from source code
 ### Tools:   
 You will have to install some tools and libraries in order to build prismatic from source:
  
