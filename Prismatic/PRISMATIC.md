@@ -147,8 +147,7 @@ mkdir D:\Libraries\fftw-3.3.8\Build32
 ```
 cd D:\Libraries\fftw-3.3.8\Build32
 
-(TOCHECK)
-cmake -DBUILD_SHARED_LIBS:BOOL=ON -DENABLE_FLOAT:BOOL=ON -DENABLE_THREADS:BOOL=ON D:\Libraries\fftw-3.3.8"
+cmake -G "Visual Studio 15 2017 Win32" -DBUILD_SHARED_LIBS:BOOL=ON -DENABLE_FLOAT:BOOL=ON -DENABLE_THREADS:BOOL=ON D:\Libraries\fftw-3.3.8"
 
 cmake --build . --config Release & cmake --build . --config Debug
 ```
@@ -156,7 +155,7 @@ cmake --build . --config Release & cmake --build . --config Debug
 ```
 cd D:\Libraries\fftw-3.3.8\Build64
 
-cmake -DBUILD_SHARED_LIBS:BOOL=ON -DBUILD_TESTS:BOOL=ON -DDISABLE_ALLOCA:BOOL=ON -DDISABLE_STATIC:BOOL=ON -DENABLE_FLOAT:BOOL=ON -DENABLE_SHARED:BOOL=ON -DENABLE_THREADS:BOOL=ON -DWITH_COMBINED_THREADS:BOOL=ON -DWITH_OUR_MALLOC16:BOOL=ON "D:\Libraries\fftw-3.3.8"
+cmake -G "Visual Studio 15 2017 Win64" -DBUILD_SHARED_LIBS:BOOL=ON -DBUILD_TESTS:BOOL=ON -DDISABLE_ALLOCA:BOOL=ON -DDISABLE_STATIC:BOOL=ON -DENABLE_FLOAT:BOOL=ON -DENABLE_SHARED:BOOL=ON -DENABLE_THREADS:BOOL=ON -DWITH_COMBINED_THREADS:BOOL=ON -DWITH_OUR_MALLOC16:BOOL=ON "D:\Libraries\fftw-3.3.8"
 
 cmake --build . --config Release & cmake --build . --config Debug
 ```
