@@ -396,7 +396,7 @@ D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\lib
 * *Builds Events/Post-Build Event/Command line* => ```xcopy /d /y "D:\Libraries\fftw-3.3.8\Build64\Debug\*.dll" "$(TargetDir)"``` 
 
 #### 5. In the top bar, make sure to select Release and the right Plateform, then Click on Run
-
+> You may have an error popup when the project try to run the ALL BUILD version, just run manually the build file with ```D:\Libraries\prismatic\Build64\Release\prismatic.exe```   
 #### 6. Get the **prismatic.exe** and **fftwf.dll** files at Path\to\prismatic\compiled\x64\Release
 
 ### Test:  
