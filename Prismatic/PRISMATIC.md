@@ -7,9 +7,10 @@ You will have to install some tools and libraries in order to build prismatic fr
  * *CMake* (https://cmake.org/download/)
  * *7zip* (https://www.7-zip.org/)
  
-  **Others Tools (Python library and GPU) :**
+  **Others Tools (Python library, GUI and GPU) :**
   * *Anaconda 3.7* (https://visualstudio.microsoft.com/fr/vs/older-downloads/)
   * *CUDA* (https://visualstudio.microsoft.com/fr/vs/older-downloads/)
+  * *Qt* (http://ftp.fau.de/qtproject/archive/online_installers/3.2/)
 
  **Libraries :**
  * [BOOST](#boost)
