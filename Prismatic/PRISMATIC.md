@@ -680,25 +680,19 @@ TotalMilliseconds : 857,1921
 
 ## PRISMATIC GPU
 ### Ressources:
-* https://www.qt.io/
+* https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html
 * https://stackoverflow.com/questions/6626397/error-lnk2019-unresolved-external-symbol-winmain16-referenced-in-function
 
-#### 1. Download [Qt](http://ftp.fau.de/qtproject/archive/online_installers/3.2/qt-unified-windows-x86-3.2.2-online.exe)
-#### 1.1 Create an Qt account [here](https://login.qt.io/register)
-#### 1.2 Select in the installer the Qt path at ```D:\Libraries\Qt``` and select the right version for the compilation:
-**Win32 system**
-* **Qt 5.14.2 MSCV 2017 32-Bits**
+#### 1. Download the [CUDA](https://developer.nvidia.com/cuda-downloads) Toolkit 10.2 for Windows (v10)
+#### 1.1 Make sure that you have a Graphical card compatible with CUDA
+#### 1.2 Cuda will be installed at ```C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2```
+> You can test the installation by running ```nvcc -V``` to check the Version on the instalation. If the call to nvcc don't work, make sure to add this link to the PATH: ```C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\bin```
+> You can even compile some of the tests codes at ```C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.2```
+> the .exe will be built at ```C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.2\bin\win64```
 
-**Win64 system**
-* **Qt 5.14.2 MSCV 2017 64-Bits**
-
-**Linux system**
+#### 2. Create a new folder (ex: *prismatic-master/Build64GPU*) where the library will be compiled
 ```
-(TODO)
-```
-#### 2. Create a new folder (ex: *prismatic-master/Build64GUI*) where the library will be compiled
-```
-mkdir D:\Libraries\prismatic\Build64GUI
+mkdir D:\Libraries\prismatic\Build64GPU
 ```
 #### 2.1 Open **prismatic-master.pro** (D:\Libraries\prismatic\Qt\prismatic-master.pro) in a text editor:
 ```
@@ -708,29 +702,15 @@ Then add at the end
 ```
 CONFIG += console
 ```
-
-#### 2.2 (Optional) Open CMakeLists.txt in the prismatic-master source code and check that the paths to the icons are good (if not replace ../Qt by Qt).
-#### 2.3 You can also add the link to Qt to the PATH: ```D:\Libraries\Qt```   
-
 #### 3. Open the CMake GUI  
 #### 3.1 Complete the links with the code source directory and the build directory  
 * Where is the source code: ```D:/Libraries/prismatic```   
-* Where to build the binaries: ```D:/Libraries/prismatic/Build64GUI```    
+* Where to build the binaries: ```D:/Libraries/prismatic/Build64GPU```    
 
 #### 3.2 Click on *Configure* and select *Visual Studio 15 2017*
-**Win32 system**
-* Select ```Win32``` in the Optional Plateform Generator
+#### 3.3 Check **Grouped** and **Advanced**, then check **PRISMATIC_ENABLE_GPU**, **PRISMATIC_ENABLE_GUI** and **PRISMATIC_ENABLE_CLI**
 
-**Win64 system**
-* Select ```x64``` in the Optional Plateform Generator
-
-**Linux system**
-```
-(TODO)
-```   
-
-#### 3.3 Check **Grouped** and **Advanced**, then check **PRISMATIC_ENABLE_GUI** and **PRISMATIC_ENABLE_CLI**
-#### 3.4 Complete the missing links to the compiled libraries:
+#### 3.4 **Click on Configure** Then complete the missing links to the compiled libraries:
 
 **BOOST**
 * *Boost_INCLUDE_DIR* => ```D:\Libraries\boost_1_72_0```
@@ -753,6 +733,11 @@ CONFIG += console
 
 **Click on Configure**
 
+**CUDA:**
+* *CUDA_64_BITS_DEVICE_CODE* => make sure that it's checked if you build in x64
+
+**Click on Configure**
+
 #### 3.5 Click again on Configure and if nothing is still red, click on Generate
 > You may again have an error message, but it's ok if you have *Generating done* at the end of the process, it's only warning about the DIR-NOTFOUND but we will edit every links maually in the project.
 
@@ -768,6 +753,8 @@ Make sure to select **Select All Configurations** and the right **Plateform**
 
 * *C C++/General/Additionnal Include Directories* => 
 ```
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\include
+
 D:\Libraries\prismatic\include;
 D:\Libraries\fftw-3.3.8\api;
 D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\include;
@@ -790,6 +777,8 @@ D:\Libraries\prismatic\Build64GUI\prismatic-gui_autogen\include_Release;
 ```  
 * *Linker/Input/Additionnal Dependency* => 
 ```
+cudart_static.lib
+cufft.lib
 fftw3f.lib;
 libhdf5_hl.lib;
 libhdf5.lib;
@@ -818,6 +807,7 @@ Click on **Apply** and select **Release:** in Configuration
 
 * *Linker/General/Additionnal Library Directories* => 
 ```  
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\lib\x64\
 D:\Libraries\boost_1_72_0\stage\lib;
 D:\Libraries\fftw-3.3.8\Build64\Release;
 D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\lib;
