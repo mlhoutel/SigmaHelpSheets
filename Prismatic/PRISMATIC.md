@@ -834,6 +834,7 @@ Click on **Apply**
 * *Linker/Advanced/Importation libraries* => D:/Documents/Projets/CEA Grenoble Project/PrismaticGUI/Release/prismatic-gui.lib
 * *C/C++/Preprocessor/Preprocessor definition* => ```WIN32;_WINDOWS;NDEBUG;PRISMATIC_BUILDING_GUI=1;PRISMATIC_ENABLE_GUI;PRISMATIC_ENABLE_CLI;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;CMAKE_INTDIR="Release";```
 
-#### 5. In the top bar, make sure to select Release and the right Plateform, then Click on Run
+#### 5. Make sure to desactivate the antivirus because it can block some files and corrupt the process
+#### 5.1 In the top bar, make sure to select Release and the right Plateform, then Click on Run
 > You may have an error popup when the project try to run the ALL BUILD version, just run manually the build file with 
 ```D:\Libraries\prismatic\Build64\Release\prismatic.exe```  
