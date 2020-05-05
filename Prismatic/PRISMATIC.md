@@ -753,7 +753,7 @@ Make sure to select **Select All Configurations** and the right **Plateform**
 
 * *C C++/General/Additionnal Include Directories* => 
 ```
-C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\include
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\include;
 
 D:\Libraries\prismatic\include;
 D:\Libraries\fftw-3.3.8\api;
@@ -771,14 +771,14 @@ D:\Libraries\Qt\5.14.2\msvc2017_64\include\QtWidgets;
 D:\Libraries\Qt\5.14.2\msvc2017_64\include\QtGui;
 D:\Libraries\Qt\5.14.2\msvc2017_64\include\QtCore;
 
-D:\Libraries\prismatic\Build64GUI;
-D:\Libraries\prismatic\Build64GUI\prismatic-gui_autogen\include_Release;
+D:\Libraries\prismatic\Build64GPU;
+D:\Libraries\prismatic\Build64GPU\prismatic-gui_autogen\include_Release;
 %(AdditionalIncludeDirectories)
 ```  
 * *Linker/Input/Additionnal Dependency* => 
 ```
-cudart_static.lib
-cufft.lib
+cudart_static.lib;
+cufft.lib;
 fftw3f.lib;
 libhdf5_hl.lib;
 libhdf5.lib;
@@ -807,7 +807,7 @@ Click on **Apply** and select **Release:** in Configuration
 
 * *Linker/General/Additionnal Library Directories* => 
 ```  
-C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\lib\x64\
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\lib\x64;
 D:\Libraries\boost_1_72_0\stage\lib;
 D:\Libraries\fftw-3.3.8\Build64\Release;
 D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\lib;
