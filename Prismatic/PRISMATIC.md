@@ -65,7 +65,13 @@ D:\Libraries
 │    ├─── include
 │    ├─── src
 │    └─── Qt
-
+C:\Program Files
+├─── NVIDIA GPU Computing Toolkit
+│    └─── CUDA\v10.2
+C:\Program Files (x86)
+├─── Microsoft Visual Studio    
+│    ├─── 2017\Community
+│    └─── 2019\Community
 ```   
 
 ## BOOST
