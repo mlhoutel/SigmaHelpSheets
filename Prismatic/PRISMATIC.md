@@ -28,7 +28,43 @@ For a clarity matter, and to help the user to do the process without having erro
 
 The global organisation of my folders look like that: 
 ```
-(TODO)
+D:\Libraries
+├─── Downloads
+│    ├─── boost_1_72_0.zip
+│    ├─── cuda_10.2.89_win10_network.exe
+│    ├─── fftw-3.3.8.tar.gz
+│    ├─── hdf5-1.12.0.zip
+│    ├─── qt-unified-windows-x86-3.2.2-online.exe
+│    └─── vs_Community.exe
+│
+├─── boost_1_72_0
+│    ├─── boost 
+│    ├─── stage/lib 
+│    ├─── Build64
+│    └─── BuildTest
+├─── fftw-3.3.8
+│    ├─── api
+│    ├─── Build64
+│    │    └─── Release
+│    ├─── Build64Default
+│    └─── BuildTest
+├─── hdf5-1.12.0
+│    ├─── Build64
+│    │    └─── _CPack_Packages\win64\ZIP\HDF5-1.12.0-win64
+│    │         └─── include
+│    │         └─── lib
+│    └─── BuildTest
+├─── Qt\5.14.2\msvc2017_64
+│    ├─── include
+│    └─── lib
+│ 
+├─── prismatic
+│    ├─── Build64
+│    ├─── Build64GUI
+│    ├─── Build64GPU
+│    ├─── include
+│    ├─── src
+│    └─── Qt
 
 ```   
 
