@@ -20,7 +20,7 @@ You will have to install some tools and libraries in order to build prismatic fr
  **Compilation :**
  * [Prismatic](#prismatic)
  * [Prismatic Gui](#prismatic-gui)
- * [Pyprismatic]()   
+ * [Prismatic GPU](#prismatic-gpu)  
  
 ### Folder organisation: 
 For a clarity matter, and to help the user to do the process without having errors from the links, I will put my personal config for this configuration with the links like that: ```D:\...\```**```fftw\Build64\```**
@@ -677,3 +677,173 @@ TotalMinutes      : 0,014286535
 TotalSeconds      : 0,8571921  
 TotalMilliseconds : 857,1921  
 ``` 
+
+## PRISMATIC GPU
+### Ressources:
+* https://www.qt.io/
+* https://stackoverflow.com/questions/6626397/error-lnk2019-unresolved-external-symbol-winmain16-referenced-in-function
+
+#### 1. Download [Qt](http://ftp.fau.de/qtproject/archive/online_installers/3.2/qt-unified-windows-x86-3.2.2-online.exe)
+#### 1.1 Create an Qt account [here](https://login.qt.io/register)
+#### 1.2 Select in the installer the Qt path at ```D:\Libraries\Qt``` and select the right version for the compilation:
+**Win32 system**
+* **Qt 5.14.2 MSCV 2017 32-Bits**
+
+**Win64 system**
+* **Qt 5.14.2 MSCV 2017 64-Bits**
+
+**Linux system**
+```
+(TODO)
+```
+#### 2. Create a new folder (ex: *prismatic-master/Build64GUI*) where the library will be compiled
+```
+mkdir D:\Libraries\prismatic\Build64GUI
+```
+#### 2.1 Open **prismatic-master.pro** (D:\Libraries\prismatic\Qt\prismatic-master.pro) in a text editor:
+```
+notepad D:\Libraries\prismatic\Qt\prismatic-gui.pro
+```
+Then add at the end
+```
+CONFIG += console
+```
+
+#### 2.2 (Optional) Open CMakeLists.txt in the prismatic-master source code and check that the paths to the icons are good (if not replace ../Qt by Qt).
+#### 2.3 You can also add the link to Qt to the PATH: ```D:\Libraries\Qt```   
+
+#### 3. Open the CMake GUI  
+#### 3.1 Complete the links with the code source directory and the build directory  
+* Where is the source code: ```D:/Libraries/prismatic```   
+* Where to build the binaries: ```D:/Libraries/prismatic/Build64GUI```    
+
+#### 3.2 Click on *Configure* and select *Visual Studio 15 2017*
+**Win32 system**
+* Select ```Win32``` in the Optional Plateform Generator
+
+**Win64 system**
+* Select ```x64``` in the Optional Plateform Generator
+
+**Linux system**
+```
+(TODO)
+```   
+
+#### 3.3 Check **Grouped** and **Advanced**, then check **PRISMATIC_ENABLE_GUI** and **PRISMATIC_ENABLE_CLI**
+#### 3.4 Complete the missing links to the compiled libraries:
+
+**BOOST**
+* *Boost_INCLUDE_DIR* => ```D:\Libraries\boost_1_72_0```
+
+**Click on Configure**
+
+**FFTW:**  
+* *FFTW_INCLUDE_DIR* => ```D:\Libraries\fftw-3.3.8\api```
+* *FFTW_LIBRARY* => ```D:\Libraries\fftw-3.3.8```
+
+**HDF5:**  
+* *HDF5_CXX_INCLUDE_DIR* => ```D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\include```
+* *HDF5_hdf5_LIBRARY_DEBUG* => ```D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64```
+* *HDF5_hdf5_LIBRARY_RELEASE* => ```D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64```
+
+**Click on Configure**
+
+**Ungouped Entries (QT5):**
+* *QT5Widgets_DIR* => ```D:\Libraries\Qt\5.14.2\msvc2017_64\lib\cmake\Qt5Widgets```
+
+**Click on Configure**
+
+#### 3.5 Click again on Configure and if nothing is still red, click on Generate
+> You may again have an error message, but it's ok if you have *Generating done* at the end of the process, it's only warning about the DIR-NOTFOUND but we will edit every links maually in the project.
+
+#### 4. Open the project in Visual Studio 2017 
+> You can click on the *Open Project* button in CMake  
+
+#### 4.1 Select both **prismatic** and **prismatic-gui** with *Ctrl* + *Click*
+#### 4.2 Right Click on a project and go to Properties/General:
+Make sure to select **Select All Configurations** and the right **Plateform**   
+
+* *Configuration Property/General/Windows SDK Version* => ```10.0.17763.0```
+* *Configuration Property/General/Plateform tools* => ```Visual Studio 2017 (v141)``
+
+* *C C++/General/Additionnal Include Directories* => 
+```
+D:\Libraries\prismatic\include;
+D:\Libraries\fftw-3.3.8\api;
+D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\include;
+D:\Libraries\boost_1_72_0;
+
+D:\Libraries\prismatic;
+D:\Libraries\prismatic\include;
+D:\Libraries\prismatic\Qt;
+
+D:\Libraries\Qt\5.14.2\msvc2017_64;
+D:\Libraries\Qt\5.14.2\msvc2017_64\lib;
+D:\Libraries\Qt\5.14.2\msvc2017_64\include;
+D:\Libraries\Qt\5.14.2\msvc2017_64\include\QtWidgets;
+D:\Libraries\Qt\5.14.2\msvc2017_64\include\QtGui;
+D:\Libraries\Qt\5.14.2\msvc2017_64\include\QtCore;
+
+D:\Libraries\prismatic\Build64GUI;
+D:\Libraries\prismatic\Build64GUI\prismatic-gui_autogen\include_Release;
+%(AdditionalIncludeDirectories)
+```  
+* *Linker/Input/Additionnal Dependency* => 
+```
+fftw3f.lib;
+libhdf5_hl.lib;
+libhdf5.lib;
+libhdf5_hl_cpp.lib;
+libhdf5_cpp.lib;
+Qt5Widgets.lib;
+Qt5Gui.lib;
+Qt5Core.lib;
+qtmain.lib;
+shell32.lib;
+WindowsApp.lib;
+%(AdditionalDependencies)
+```  
+> The order in wich the libraries are linked is realy important, that's even more true when you have like here a program with many links to others libraries, and that these libraries use the base functions of others libraries.   
+> Like always, the ```...``` at the end are the base system libraries added by default by VS, just add the new before these.   
+
+* **Win32 system**
+* *Linker/Input/Advanced/Target computer* => ```MachineX86 (/MACHINE:X86)```
+* *Link editor/Command line/Additional options* => Remove ```/machine:X64```
+
+* **Win64 system**
+* *Linker/Input/Advanced/Target computer* => ```MachineX64 (/MACHINE:X64)```
+* *Link editor/Command line/Additional options* => Remove ```/machine:X86```
+
+Click on **Apply** and select **Release:** in Configuration   
+
+* *Linker/General/Additionnal Library Directories* => 
+```  
+D:\Libraries\boost_1_72_0\stage\lib;
+D:\Libraries\fftw-3.3.8\Build64\Release;
+D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\lib;
+D:\Libraries\Qt\5.14.2\msvc2017_64\lib;
+
+%(AdditionalLibraryDirectories)
+```  
+* *Builds Events/Post-Build Event/Command line* => 
+```
+xcopy /d /y "D:\Libraries\fftw-3.3.8\Build64\Debug\*.dll" "$(TargetDir)"
+
+xcopy /d /y "D:\Libraries\Qt\5.14.2\msvc2017_64\bin\Qt5Core.dll" "$(TargetDir)"
+xcopy /d /y "D:\Libraries\Qt\5.14.2\msvc2017_64\bin\Qt5Gui.dll" "$(TargetDir)"
+xcopy /d /y "D:\Libraries\Qt\5.14.2\msvc2017_64\bin\Qt5Widgets.dll" "$(TargetDir)"
+
+mkdir "$(TargetDir)\platforms"
+xcopy /d /y "D:\Libraries\Qt\Tools\QtCreator\bin\libEGL.dll" "$(TargetDir)\platforms"
+xcopy /d /y "D:\Libraries\Qt\5.14.2\msvc2017_64\plugins\platforms\qwindows.dll" "$(TargetDir)\platforms"
+``` 
+Click on **Apply**
+
+**Select only the properties for prismatic-gui and check that these parameters are good:**
+* *Linker/System/Sub-System* => Windows (/SUBSYSTEM:WINDOWS)
+* *Linker/Advanced/Importation libraries* => D:/Documents/Projets/CEA Grenoble Project/PrismaticGUI/Release/prismatic-gui.lib
+* *C/C++/Preprocessor/Preprocessor definition* => ```WIN32;_WINDOWS;NDEBUG;PRISMATIC_BUILDING_GUI=1;PRISMATIC_ENABLE_GUI;PRISMATIC_ENABLE_CLI;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;CMAKE_INTDIR="Release";```
+
+#### 5. In the top bar, make sure to select Release and the right Plateform, then Click on Run
+> You may have an error popup when the project try to run the ALL BUILD version, just run manually the build file with 
+```D:\Libraries\prismatic\Build64\Release\prismatic.exe```  
