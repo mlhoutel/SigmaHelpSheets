@@ -19,7 +19,7 @@ You will have to install some tools and libraries in order to build prismatic fr
  
  **Compilation :**
  * [Prismatic](#prismatic)
- * [Prismatic Gui](#prismatic-gui)
+ * [Prismatic GUI](#prismatic-gui)
  * [Prismatic GPU](#prismatic-gpu)  
  
 ### Folder organisation: 
@@ -319,7 +319,7 @@ Select **All Configurations:** in the top menu and also select the right **Plate
 * https://www.it-swarm.dev/fr/visual-c%2B%2B/erreur-fatale-lnk1112-le-type-de-machine-du-module-x64-est-en-conflit-avec-le-type-de-machine-cible-x86/969200768/
 
 *You can add the libraries directory to the PATH if you want, otherwise you will have to complete the links manually later...*
-> <kbd>Windows</kbd> + </kbd>"Path"</kbd> => Edit environment variables/Environment variables/Path/Edit/New
+> <kbd>Windows</kbd> + <kbd>"Path"</kbd> => Edit environment variables/Environment variables/Path/Edit/New
 > Add these links to the PATH
 ```
 D:\Libraries\boost_1_72_0
