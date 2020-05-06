@@ -23,8 +23,8 @@ You will have to install some tools and libraries in order to build prismatic fr
  * [Prismatic GPU](#prismatic-gpu)  
  
 ### Folder organisation: 
-For a clarity matter, and to help the user to do the process without having errors from the links, I will put my personal config for this configuration with the links like that: ```D:\Libraries\```**```fftw-3.3.8\Build64\```**
-> You can edit the first part if you don't want the same config than me, if not, you can put your folders wherever you want.
+For a clarity matter, and to help the user to do the process without having errors from the links, I will put my personal config for this configuration with the links like that: ```D:\Libraries\fftw-3.3.8\Build64\```
+> You can edit the first part (```D:\Libraries\```) and you can put your folders wherever you want if you don't want the same folder configuration as me, but you will have to edit every links for the Build of prismatic and make sure that it match your configuration. 
 
 The global organisation of my folders look like that: 
 ```
