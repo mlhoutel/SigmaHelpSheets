@@ -387,7 +387,10 @@ D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\inc
 D:\Libraries\boost_1_72_0;
 %(AdditionalIncludeDirectories)
 ```  
-> For fast copy: ```D:\Libraries\prismatic\include;D:\Libraries\fftw-3.3.8\api;D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\include;D:\Libraries\boost_1_72_0;%(AdditionalIncludeDirectories)```
+> For fast copy: <kbd>CTRL+C</kbd> this line then click in the VS textbox, <kbd>CTRL+A</kbd> and <kbd>CTRL+V</kbd>
+```
+D:\Libraries\prismatic\include;D:\Libraries\fftw-3.3.8\api;D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\include;D:\Libraries\boost_1_72_0;%(AdditionalIncludeDirectories)
+```
 
 * *Linker/Input/Additionnal Dependency* => 
 ```
@@ -398,7 +401,10 @@ libhdf5_hl_cpp.lib;
 libhdf5_hl.lib;
 %(AdditionalDependencies)
 ```  
-> For fast copy: ```fftw3f.lib;libhdf5.lib;libhdf5_cpp.lib;libhdf5_hl_cpp.lib;libhdf5_hl.lib;%(AdditionalDependencies)```
+> For fast copy: <kbd>CTRL+C</kbd> this line then click in the VS textbox, <kbd>CTRL+A</kbd> and <kbd>CTRL+V</kbd>
+```
+fftw3f.lib;libhdf5.lib;libhdf5_cpp.lib;libhdf5_hl_cpp.lib;libhdf5_hl.lib;%(AdditionalDependencies)
+```
 
 > The order in wich the libraries are linked is realy important, that's even more true when you have like here a program with many links to others libraries, and that these libraries use the base functions of others libraries.   
 
@@ -420,7 +426,10 @@ Click on **Apply** and select **Release:** in Configuration
 D:\Libraries\fftw-3.3.8\Build64\Release;
 D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\lib
 ```  
-> For fast copy: ```D:\Libraries\fftw-3.3.8\Build64\Release;D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\lib;%(AdditionalLibraryDirectories)```
+> For fast copy: <kbd>CTRL+C</kbd> this line then click in the VS textbox, <kbd>CTRL+A</kbd> and <kbd>CTRL+V</kbd>
+```
+D:\Libraries\fftw-3.3.8\Build64\Release;D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\lib;%(AdditionalLibraryDirectories)
+```
 
 * *Builds Events/Post-Build Event/Command line* => ```xcopy /d /y "D:\Libraries\fftw-3.3.8\Build64\Release\*.dll" "$(TargetDir)"``` 
 
@@ -599,7 +608,7 @@ D:\Libraries\prismatic\Build64GUI;
 D:\Libraries\prismatic\Build64GUI\prismatic-gui_autogen\include_Release;
 %(AdditionalIncludeDirectories)
 ```  
-> For fast copy: </kbd>CTRL+C</kbd> this line then click in the VS textbox, </kbd>CTRL+A</kbd> and </kbd>CTRL+V</kbd>
+> For fast copy: <kbd>CTRL+C</kbd> this line then click in the VS textbox, <kbd>CTRL+A</kbd> and <kbd>CTRL+V</kbd>
 ```
 D:\Libraries\prismatic\include;D:\Libraries\fftw-3.3.8\api;D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\include;D:\Libraries\boost_1_72_0;D:\Libraries\prismatic;D:\Libraries\prismatic\include;D:\Libraries\prismatic\Qt;D:\Libraries\Qt\5.14.2\msvc2017_64;D:\Libraries\Qt\5.14.2\msvc2017_64\lib;D:\Libraries\Qt\5.14.2\msvc2017_64\include;D:\Libraries\Qt\5.14.2\msvc2017_64\include\QtWidgets;D:\Libraries\Qt\5.14.2\msvc2017_64\include\QtGui;D:\Libraries\Qt\5.14.2\msvc2017_64\include\QtCore;D:\Libraries\prismatic\Build64GUI;D:\Libraries\prismatic\Build64GUI\prismatic-gui_autogen\include_Release;%(AdditionalIncludeDirectories)
 ```
@@ -619,7 +628,7 @@ shell32.lib;
 WindowsApp.lib;
 %(AdditionalDependencies)
 ```  
-> For fast copy: </kbd>CTRL+C</kbd> this line then click in the VS textbox, </kbd>CTRL+A</kbd> and </kbd>CTRL+V</kbd>
+> For fast copy: <kbd>CTRL+C</kbd> this line then click in the VS textbox, <kbd>CTRL+A</kbd> and <kbd>CTRL+V</kbd>
 ```
 fftw3f.lib;libhdf5_hl.lib;libhdf5.lib;libhdf5_hl_cpp.lib;libhdf5_cpp.lib;Qt5Widgets.lib;Qt5Gui.lib;Qt5Core.lib;qtmain.lib;shell32.lib;WindowsApp.lib;%(AdditionalDependencies)
 ```
@@ -645,7 +654,7 @@ D:\Libraries\Qt\5.14.2\msvc2017_64\lib;
 
 %(AdditionalLibraryDirectories)
 ```  
-> For fast copy: </kbd>CTRL+C</kbd> this line then click in the VS textbox, </kbd>CTRL+A</kbd> and </kbd>CTRL+V</kbd>
+> For fast copy: <kbd>CTRL+C</kbd> this line then click in the VS textbox, <kbd>CTRL+A</kbd> and <kbd>CTRL+V</kbd>
 ```
 D:\Libraries\boost_1_72_0\stage\lib;D:\Libraries\fftw-3.3.8\Build64\Release;D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\lib;D:\Libraries\Qt\5.14.2\msvc2017_64\lib;%(AdditionalLibraryDirectories)
 ```
@@ -815,7 +824,7 @@ D:\Libraries\prismatic\Build64GPU;
 D:\Libraries\prismatic\Build64GPU\prismatic-gui_autogen\include_Release;
 %(AdditionalIncludeDirectories)
 ```  
-> For fast copy: </kbd>CTRL+C</kbd> this line then click in the VS textbox, </kbd>CTRL+A</kbd> and </kbd>CTRL+V</kbd>
+> For fast copy: <kbd>CTRL+C</kbd> this line then click in the VS textbox, <kbd>CTRL+A</kbd> and <kbd>CTRL+V</kbd>
 ```
 C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\include; D:\Libraries\prismatic\include; D:\Libraries\fftw-3.3.8\api; D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\include; D:\Libraries\boost_1_72_0; D:\Libraries\prismatic; D:\Libraries\prismatic\include; D:\Libraries\prismatic\Qt; D:\Libraries\Qt\5.14.2\msvc2017_64; D:\Libraries\Qt\5.14.2\msvc2017_64\lib; D:\Libraries\Qt\5.14.2\msvc2017_64\include; D:\Libraries\Qt\5.14.2\msvc2017_64\include\QtWidgets; D:\Libraries\Qt\5.14.2\msvc2017_64\include\QtGui; D:\Libraries\Qt\5.14.2\msvc2017_64\include\QtCore; D:\Libraries\prismatic\Build64GPU; D:\Libraries\prismatic\Build64GPU\prismatic-gui_autogen\include_Release; %(AdditionalIncludeDirectories)
 ```
@@ -837,7 +846,7 @@ shell32.lib;
 WindowsApp.lib;
 %(AdditionalDependencies)
 ```  
-> For fast copy: </kbd>CTRL+C</kbd> this line then click in the VS textbox, </kbd>CTRL+A</kbd> and </kbd>CTRL+V</kbd>
+> For fast copy: <kbd>CTRL+C</kbd> this line then click in the VS textbox, <kbd>CTRL+A</kbd> and <kbd>CTRL+V</kbd>
 ```
 cudart_static.lib;cufft.lib;fftw3f.lib;libhdf5_hl.lib;libhdf5.lib;libhdf5_hl_cpp.lib;libhdf5_cpp.lib;Qt5Widgets.lib;Qt5Gui.lib;Qt5Core.lib;qtmain.lib;shell32.lib;WindowsApp.lib;%(AdditionalDependencies)
 ```
@@ -864,7 +873,7 @@ D:\Libraries\Qt\5.14.2\msvc2017_64\lib;
 
 %(AdditionalLibraryDirectories)
 ```  
-> For fast copy: </kbd>CTRL+C</kbd> this line then click in the VS textbox, </kbd>CTRL+A</kbd> and </kbd>CTRL+V</kbd>
+> For fast copy: <kbd>CTRL+C</kbd> this line then click in the VS textbox, <kbd>CTRL+A</kbd> and <kbd>CTRL+V</kbd>
 ```
 C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\lib\x64; D:\Libraries\boost_1_72_0\stage\lib; D:\Libraries\fftw-3.3.8\Build64\Release; D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\lib; D:\Libraries\Qt\5.14.2\msvc2017_64\lib; %(AdditionalLibraryDirectories)
 ```
