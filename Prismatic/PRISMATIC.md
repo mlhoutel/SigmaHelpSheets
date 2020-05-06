@@ -168,9 +168,9 @@ Subject: This is the subject of the mail that should be printed.
 
 ### Compile FFTW:  
 #### 1. Download [fftw-3.3.8.tar.gz](http://www.fftw.org/download.html)  
-#### 2. Unzip, extract the file then Untar it in ```D:\Libraries``` with
+#### 2. Use this command to Extract the file then Untar it in ```D:\Libraries```:
 ```
-tar xvf fftw-3.3.8.tar (or tar xvf fftw-3.3.8.tar.gz -C D:\Libraries\ to do the whole process)
+tar xvf fftw-3.3.8.tar.gz -C D:\Libraries\
 ```
 #### 3. Open a cmd in this folder
 > We use the cmake tool to build the fftw library. 
