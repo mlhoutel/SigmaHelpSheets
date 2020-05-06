@@ -85,27 +85,23 @@ C:\Program Files (x86)
 ### Compile BOOST: 
 #### 1. Download [boost_1_72_0.zip](https://sourceforge.net/projects/boost/files/boost/1.72.0/)  
 #### 2. Unzip the file and put it in ```D:\Libraries\```
-#### 3. Create a new folder where the library will be compiled 
-```
-mkdir D:\Libraries\boost_1_72_0\Build64
-mkdir D:\Libraries\boost_1_72_0\Build32
-```
-#### 3.1 Open a cmd in the *Boost* directory  
+
+#### 3. Open a cmd in the *Boost* directory  
 ```
 cd D:\Libraries\boost_1_72_0
 bootstrap
 ```
-> We use there the automatic compiler for boost: b2 (previously named bjam).   
-> Edit --build-dir="BuildXX" with the path (absolute or relative) to the folder where the library will be built.   
-> It's recommanded not to change the followings parameters and do not edit the ```stage``` at the end.   
-> The build will be in a subfolder named "stage".  
 
 **Win32bit system:**
 ```
+mkdir D:\Libraries\boost_1_72_0\Build32
+
 b2 -j8 --build-dir="Build32" toolset=msvc-14.1 threading=multi runtime-link=shared --build-type=complete stage 
 ```  
 **Win64bit system**
 ```
+mkdir D:\Libraries\boost_1_72_0\Build64
+
 b2 -j8 --build-dir="Build64" toolset=msvc-14.1 address-model=64 architecture=x86 link=static threading=multi runtime-link=shared --build-type=complete stage 
 ```
    
