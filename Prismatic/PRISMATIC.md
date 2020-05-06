@@ -38,41 +38,41 @@ D:\Libraries
 │    └─── vs_Community.exe
 │
 ├─── boost_1_72_0
-│    ├─── boost 
-│    ├─── stage/lib 
-│    ├─── Build64
-│    └─── BuildTest
+│    ├─── boost 						//Header files
+│    ├─── stage/lib 						//Library files
+│    ├─── Build64						//Build
+│    └─── BuildTest						//VS Test project
 ├─── fftw-3.3.8
-│    ├─── api
-│    ├─── Build64
-│    │    └─── Release
-│    ├─── Build64Default
-│    └─── BuildTest
+│    ├─── api							//Header files
+│    ├─── Build64						//Build Float
+│    │    └─── Release						//Library files
+│    ├─── Build64Default					//Build Default (Tests)
+│    │    └─── Release	
+│    └─── BuildTest						//VS Test project
 ├─── hdf5-1.12.0
-│    ├─── Build64
-│    │    └─── _CPack_Packages\win64\ZIP\HDF5-1.12.0-win64
-│    │         └─── include
-│    │         └─── lib
-│    └─── BuildTest
+│    ├─── Build64						//Build
+│    │    └─── _CPack_Packages\win64\ZIP\HDF5-1.12.0-win64	//Package
+│    │         └─── include					//Header files
+│    │         └─── lib						//Library files
+│    └─── BuildTest						//VS Test project
 ├─── Qt\5.14.2\msvc2017_64
-│    ├─── include
-│    └─── lib
+│    ├─── include						//Header files
+│    └─── lib							//Library files
 │ 
-├─── prismatic
-│    ├─── Build64
-│    ├─── Build64GUI
-│    ├─── Build64GPU
-│    ├─── include
-│    ├─── src
-│    └─── Qt
-│
-C:\Program Files
-├─── NVIDIA GPU Computing Toolkit
+└─── prismatic
+     ├─── Build64
+     ├─── Build64GUI
+     ├─── Build64GPU
+     ├─── include						//Header files
+     ├─── src							//Library files
+     └─── Qt							//GUI files
+
+C:\
+├─── Program Files\NVIDIA GPU Computing Toolkit
 │    └─── CUDA\v10.2
-C:\Program Files (x86)
-├─── Microsoft Visual Studio    
-│    ├─── 2017\Community
-│    └─── 2019\Community
+└─── Program Files (x86)\Microsoft Visual Studio    
+     ├─── 2017\Community
+     └─── 2019\Community
 ```   
 
 ## BOOST
