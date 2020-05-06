@@ -319,7 +319,7 @@ Select **All Configurations:** in the top menu and also select the right **Plate
 * https://www.it-swarm.dev/fr/visual-c%2B%2B/erreur-fatale-lnk1112-le-type-de-machine-du-module-x64-est-en-conflit-avec-le-type-de-machine-cible-x86/969200768/
 
 *You can add the libraries directory to the PATH if you want, otherwise you will have to complete the links manually later...*
-> <kbd>Windows</kbd> + "Path" => Edit environment variables/Environment variables/Path/Edit/New
+> <kbd>Windows</kbd> + </kbd>"Path"</kbd> => Edit environment variables/Environment variables/Path/Edit/New
 > Add these links to the PATH
 ```
 D:\Libraries\boost_1_72_0
@@ -599,7 +599,10 @@ D:\Libraries\prismatic\Build64GUI;
 D:\Libraries\prismatic\Build64GUI\prismatic-gui_autogen\include_Release;
 %(AdditionalIncludeDirectories)
 ```  
-> For fast copy: ```D:\Libraries\prismatic\include;D:\Libraries\fftw-3.3.8\api;D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\include;D:\Libraries\boost_1_72_0;D:\Libraries\prismatic;D:\Libraries\prismatic\include;D:\Libraries\prismatic\Qt;D:\Libraries\Qt\5.14.2\msvc2017_64;D:\Libraries\Qt\5.14.2\msvc2017_64\lib;D:\Libraries\Qt\5.14.2\msvc2017_64\include;D:\Libraries\Qt\5.14.2\msvc2017_64\include\QtWidgets;D:\Libraries\Qt\5.14.2\msvc2017_64\include\QtGui;D:\Libraries\Qt\5.14.2\msvc2017_64\include\QtCore;D:\Libraries\prismatic\Build64GUI;D:\Libraries\prismatic\Build64GUI\prismatic-gui_autogen\include_Release;%(AdditionalIncludeDirectories)```
+> For fast copy: </kbd>CTRL+C</kbd> this line then click in the VS textbox, </kbd>CTRL+A</kbd> and </kbd>CTRL+V</kbd>
+```
+D:\Libraries\prismatic\include;D:\Libraries\fftw-3.3.8\api;D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\include;D:\Libraries\boost_1_72_0;D:\Libraries\prismatic;D:\Libraries\prismatic\include;D:\Libraries\prismatic\Qt;D:\Libraries\Qt\5.14.2\msvc2017_64;D:\Libraries\Qt\5.14.2\msvc2017_64\lib;D:\Libraries\Qt\5.14.2\msvc2017_64\include;D:\Libraries\Qt\5.14.2\msvc2017_64\include\QtWidgets;D:\Libraries\Qt\5.14.2\msvc2017_64\include\QtGui;D:\Libraries\Qt\5.14.2\msvc2017_64\include\QtCore;D:\Libraries\prismatic\Build64GUI;D:\Libraries\prismatic\Build64GUI\prismatic-gui_autogen\include_Release;%(AdditionalIncludeDirectories)
+```
 
 * *Linker/Input/Additionnal Dependency* => 
 ```
@@ -616,7 +619,10 @@ shell32.lib;
 WindowsApp.lib;
 %(AdditionalDependencies)
 ```  
-> For fast copy: ```fftw3f.lib;libhdf5_hl.lib;libhdf5.lib;libhdf5_hl_cpp.lib;libhdf5_cpp.lib;Qt5Widgets.lib;Qt5Gui.lib;Qt5Core.lib;qtmain.lib;shell32.lib;WindowsApp.lib;%(AdditionalDependencies)```
+> For fast copy: </kbd>CTRL+C</kbd> this line then click in the VS textbox, </kbd>CTRL+A</kbd> and </kbd>CTRL+V</kbd>
+```
+fftw3f.lib;libhdf5_hl.lib;libhdf5.lib;libhdf5_hl_cpp.lib;libhdf5_cpp.lib;Qt5Widgets.lib;Qt5Gui.lib;Qt5Core.lib;qtmain.lib;shell32.lib;WindowsApp.lib;%(AdditionalDependencies)
+```
 
 > The order in wich the libraries are linked is realy important, that's even more true when you have like here a program with many links to others libraries, and that these libraries use the base functions of others libraries.     
 
@@ -639,7 +645,10 @@ D:\Libraries\Qt\5.14.2\msvc2017_64\lib;
 
 %(AdditionalLibraryDirectories)
 ```  
-> For fast copy: ```D:\Libraries\boost_1_72_0\stage\lib;D:\Libraries\fftw-3.3.8\Build64\Release;D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\lib;D:\Libraries\Qt\5.14.2\msvc2017_64\lib;%(AdditionalLibraryDirectories)```
+> For fast copy: </kbd>CTRL+C</kbd> this line then click in the VS textbox, </kbd>CTRL+A</kbd> and </kbd>CTRL+V</kbd>
+```
+D:\Libraries\boost_1_72_0\stage\lib;D:\Libraries\fftw-3.3.8\Build64\Release;D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\lib;D:\Libraries\Qt\5.14.2\msvc2017_64\lib;%(AdditionalLibraryDirectories)
+```
 
 * *Builds Events/Post-Build Event/Command line* => 
 ```
@@ -780,7 +789,7 @@ CONFIG += console
 Make sure to select **Select All Configurations** and the right **Plateform**   
 
 * *Configuration Property/General/Windows SDK Version* => ```10.0.17763.0```
-* *Configuration Property/General/Plateform tools* => ```Visual Studio 2017 (v141)``
+* *Configuration Property/General/Plateform tools* => ```Visual Studio 2017 (v141)```
 
 * *C C++/General/Additionnal Include Directories* => 
 ```
@@ -806,7 +815,10 @@ D:\Libraries\prismatic\Build64GPU;
 D:\Libraries\prismatic\Build64GPU\prismatic-gui_autogen\include_Release;
 %(AdditionalIncludeDirectories)
 ```  
-> For fast copy: ```C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\include; D:\Libraries\prismatic\include; D:\Libraries\fftw-3.3.8\api; D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\include; D:\Libraries\boost_1_72_0; D:\Libraries\prismatic; D:\Libraries\prismatic\include; D:\Libraries\prismatic\Qt; D:\Libraries\Qt\5.14.2\msvc2017_64; D:\Libraries\Qt\5.14.2\msvc2017_64\lib; D:\Libraries\Qt\5.14.2\msvc2017_64\include; D:\Libraries\Qt\5.14.2\msvc2017_64\include\QtWidgets; D:\Libraries\Qt\5.14.2\msvc2017_64\include\QtGui; D:\Libraries\Qt\5.14.2\msvc2017_64\include\QtCore; D:\Libraries\prismatic\Build64GPU; D:\Libraries\prismatic\Build64GPU\prismatic-gui_autogen\include_Release; %(AdditionalIncludeDirectories)```
+> For fast copy: </kbd>CTRL+C</kbd> this line then click in the VS textbox, </kbd>CTRL+A</kbd> and </kbd>CTRL+V</kbd>
+```
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\include; D:\Libraries\prismatic\include; D:\Libraries\fftw-3.3.8\api; D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\include; D:\Libraries\boost_1_72_0; D:\Libraries\prismatic; D:\Libraries\prismatic\include; D:\Libraries\prismatic\Qt; D:\Libraries\Qt\5.14.2\msvc2017_64; D:\Libraries\Qt\5.14.2\msvc2017_64\lib; D:\Libraries\Qt\5.14.2\msvc2017_64\include; D:\Libraries\Qt\5.14.2\msvc2017_64\include\QtWidgets; D:\Libraries\Qt\5.14.2\msvc2017_64\include\QtGui; D:\Libraries\Qt\5.14.2\msvc2017_64\include\QtCore; D:\Libraries\prismatic\Build64GPU; D:\Libraries\prismatic\Build64GPU\prismatic-gui_autogen\include_Release; %(AdditionalIncludeDirectories)
+```
 
 * *Linker/Input/Additionnal Dependency* => 
 ```
@@ -825,7 +837,10 @@ shell32.lib;
 WindowsApp.lib;
 %(AdditionalDependencies)
 ```  
-> For fast copy: ```cudart_static.lib;cufft.lib;fftw3f.lib;libhdf5_hl.lib;libhdf5.lib;libhdf5_hl_cpp.lib;libhdf5_cpp.lib;Qt5Widgets.lib;Qt5Gui.lib;Qt5Core.lib;qtmain.lib;shell32.lib;WindowsApp.lib;%(AdditionalDependencies)```
+> For fast copy: </kbd>CTRL+C</kbd> this line then click in the VS textbox, </kbd>CTRL+A</kbd> and </kbd>CTRL+V</kbd>
+```
+cudart_static.lib;cufft.lib;fftw3f.lib;libhdf5_hl.lib;libhdf5.lib;libhdf5_hl_cpp.lib;libhdf5_cpp.lib;Qt5Widgets.lib;Qt5Gui.lib;Qt5Core.lib;qtmain.lib;shell32.lib;WindowsApp.lib;%(AdditionalDependencies)
+```
 
 > The order in wich the libraries are linked is realy important, that's even more true when you have like here a program with many links to others libraries, and that these libraries use the base functions of others libraries.   
 
@@ -849,7 +864,10 @@ D:\Libraries\Qt\5.14.2\msvc2017_64\lib;
 
 %(AdditionalLibraryDirectories)
 ```  
-> For fast copy: ```C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\lib\x64; D:\Libraries\boost_1_72_0\stage\lib; D:\Libraries\fftw-3.3.8\Build64\Release; D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\lib; D:\Libraries\Qt\5.14.2\msvc2017_64\lib; %(AdditionalLibraryDirectories)```
+> For fast copy: </kbd>CTRL+C</kbd> this line then click in the VS textbox, </kbd>CTRL+A</kbd> and </kbd>CTRL+V</kbd>
+```
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\lib\x64; D:\Libraries\boost_1_72_0\stage\lib; D:\Libraries\fftw-3.3.8\Build64\Release; D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\lib; D:\Libraries\Qt\5.14.2\msvc2017_64\lib; %(AdditionalLibraryDirectories)
+```
 
 * *Builds Events/Post-Build Event/Command line* => 
 ```
