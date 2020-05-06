@@ -330,6 +330,8 @@ D:\Libraries\hdf5-1.12.0
 
 #### 1. Download [prismatic](https://github.com/prism-em/prismatic)
 ```
+cd D:/Libraries
+
 git clone https://github.com/prism-em/prismatic.git 
 ```
 #### 2. Create a new folder (ex: *prismatic-master/Build64*) where the library will be compiled
