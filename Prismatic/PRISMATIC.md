@@ -387,6 +387,8 @@ D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\inc
 D:\Libraries\boost_1_72_0;
 %(AdditionalIncludeDirectories)
 ```  
+> For fast copy: ```D:\Libraries\prismatic\include;D:\Libraries\fftw-3.3.8\api;D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\include;D:\Libraries\boost_1_72_0;%(AdditionalIncludeDirectories)```
+
 * *Linker/Input/Additionnal Dependency* => 
 ```
 fftw3f.lib;
@@ -394,10 +396,11 @@ libhdf5.lib;
 libhdf5_cpp.lib;
 libhdf5_hl_cpp.lib;
 libhdf5_hl.lib;
-...
+%(AdditionalDependencies)
 ```  
+> For fast copy: ```fftw3f.lib;libhdf5.lib;libhdf5_cpp.lib;libhdf5_hl_cpp.lib;libhdf5_hl.lib;%(AdditionalDependencies)```
+
 > The order in wich the libraries are linked is realy important, that's even more true when you have like here a program with many links to others libraries, and that these libraries use the base functions of others libraries.   
-> Like always, the ```...``` at the end are the base system libraries added by default by VS, just add the new before these.   
 
 * **Win32 system**
 * *Linker/Input/Advanced/Target computer* => ```MachineX86 (/MACHINE:X86)```
@@ -417,15 +420,9 @@ Click on **Apply** and select **Release:** in Configuration
 D:\Libraries\fftw-3.3.8\Build64\Release;
 D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\lib
 ```  
-* *Builds Events/Post-Build Event/Command line* => ```xcopy /d /y "D:\Libraries\fftw-3.3.8\Build64\Release\*.dll" "$(TargetDir)"``` 
+> For fast copy: ```D:\Libraries\fftw-3.3.8\Build64\Release;D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\lib;%(AdditionalLibraryDirectories)```
 
-Click on **Apply** and select **Release:** in Configuration
-* *Linker/General/Additionnal Library Directories* => 
-```
-D:\Libraries\fftw-3.3.8\Build64\Release;
-D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\lib
-```  
-* *Builds Events/Post-Build Event/Command line* => ```xcopy /d /y "D:\Libraries\fftw-3.3.8\Build64\Debug\*.dll" "$(TargetDir)"``` 
+* *Builds Events/Post-Build Event/Command line* => ```xcopy /d /y "D:\Libraries\fftw-3.3.8\Build64\Release\*.dll" "$(TargetDir)"``` 
 
 #### 5. In the top bar, make sure to select Release and the right Plateform, then Click on Run
 > You may have an error popup when the project try to run the ALL BUILD version, just run manually the build file with ```D:\Libraries\prismatic\Build64\Release\prismatic.exe```   
@@ -602,6 +599,8 @@ D:\Libraries\prismatic\Build64GUI;
 D:\Libraries\prismatic\Build64GUI\prismatic-gui_autogen\include_Release;
 %(AdditionalIncludeDirectories)
 ```  
+> For fast copy: ```D:\Libraries\prismatic\include;D:\Libraries\fftw-3.3.8\api;D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\include;D:\Libraries\boost_1_72_0;D:\Libraries\prismatic;D:\Libraries\prismatic\include;D:\Libraries\prismatic\Qt;D:\Libraries\Qt\5.14.2\msvc2017_64;D:\Libraries\Qt\5.14.2\msvc2017_64\lib;D:\Libraries\Qt\5.14.2\msvc2017_64\include;D:\Libraries\Qt\5.14.2\msvc2017_64\include\QtWidgets;D:\Libraries\Qt\5.14.2\msvc2017_64\include\QtGui;D:\Libraries\Qt\5.14.2\msvc2017_64\include\QtCore;D:\Libraries\prismatic\Build64GUI;D:\Libraries\prismatic\Build64GUI\prismatic-gui_autogen\include_Release;%(AdditionalIncludeDirectories)```
+
 * *Linker/Input/Additionnal Dependency* => 
 ```
 fftw3f.lib;
@@ -617,8 +616,9 @@ shell32.lib;
 WindowsApp.lib;
 %(AdditionalDependencies)
 ```  
-> The order in wich the libraries are linked is realy important, that's even more true when you have like here a program with many links to others libraries, and that these libraries use the base functions of others libraries.   
-> Like always, the ```...``` at the end are the base system libraries added by default by VS, just add the new before these.   
+> For fast copy: ```fftw3f.lib;libhdf5_hl.lib;libhdf5.lib;libhdf5_hl_cpp.lib;libhdf5_cpp.lib;Qt5Widgets.lib;Qt5Gui.lib;Qt5Core.lib;qtmain.lib;shell32.lib;WindowsApp.lib;%(AdditionalDependencies)```
+
+> The order in wich the libraries are linked is realy important, that's even more true when you have like here a program with many links to others libraries, and that these libraries use the base functions of others libraries.     
 
 * **Win32 system**
 * *Linker/Input/Advanced/Target computer* => ```MachineX86 (/MACHINE:X86)```
@@ -639,6 +639,8 @@ D:\Libraries\Qt\5.14.2\msvc2017_64\lib;
 
 %(AdditionalLibraryDirectories)
 ```  
+> For fast copy: ```D:\Libraries\boost_1_72_0\stage\lib;D:\Libraries\fftw-3.3.8\Build64\Release;D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\lib;D:\Libraries\Qt\5.14.2\msvc2017_64\lib;%(AdditionalLibraryDirectories)```
+
 * *Builds Events/Post-Build Event/Command line* => 
 ```
 xcopy /d /y "D:\Libraries\fftw-3.3.8\Build64\Debug\*.dll" "$(TargetDir)"
@@ -804,6 +806,8 @@ D:\Libraries\prismatic\Build64GPU;
 D:\Libraries\prismatic\Build64GPU\prismatic-gui_autogen\include_Release;
 %(AdditionalIncludeDirectories)
 ```  
+> For fast copy: ```C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\include; D:\Libraries\prismatic\include; D:\Libraries\fftw-3.3.8\api; D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\include; D:\Libraries\boost_1_72_0; D:\Libraries\prismatic; D:\Libraries\prismatic\include; D:\Libraries\prismatic\Qt; D:\Libraries\Qt\5.14.2\msvc2017_64; D:\Libraries\Qt\5.14.2\msvc2017_64\lib; D:\Libraries\Qt\5.14.2\msvc2017_64\include; D:\Libraries\Qt\5.14.2\msvc2017_64\include\QtWidgets; D:\Libraries\Qt\5.14.2\msvc2017_64\include\QtGui; D:\Libraries\Qt\5.14.2\msvc2017_64\include\QtCore; D:\Libraries\prismatic\Build64GPU; D:\Libraries\prismatic\Build64GPU\prismatic-gui_autogen\include_Release; %(AdditionalIncludeDirectories)```
+
 * *Linker/Input/Additionnal Dependency* => 
 ```
 cudart_static.lib;
@@ -821,8 +825,9 @@ shell32.lib;
 WindowsApp.lib;
 %(AdditionalDependencies)
 ```  
+> For fast copy: ```cudart_static.lib;cufft.lib;fftw3f.lib;libhdf5_hl.lib;libhdf5.lib;libhdf5_hl_cpp.lib;libhdf5_cpp.lib;Qt5Widgets.lib;Qt5Gui.lib;Qt5Core.lib;qtmain.lib;shell32.lib;WindowsApp.lib;%(AdditionalDependencies)```
+
 > The order in wich the libraries are linked is realy important, that's even more true when you have like here a program with many links to others libraries, and that these libraries use the base functions of others libraries.   
-> Like always, the ```...``` at the end are the base system libraries added by default by VS, just add the new before these.   
 
 * **Win32 system**
 * *Linker/Input/Advanced/Target computer* => ```MachineX86 (/MACHINE:X86)```
@@ -844,6 +849,8 @@ D:\Libraries\Qt\5.14.2\msvc2017_64\lib;
 
 %(AdditionalLibraryDirectories)
 ```  
+> For fast copy: ```C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\lib\x64; D:\Libraries\boost_1_72_0\stage\lib; D:\Libraries\fftw-3.3.8\Build64\Release; D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\lib; D:\Libraries\Qt\5.14.2\msvc2017_64\lib; %(AdditionalLibraryDirectories)```
+
 * *Builds Events/Post-Build Event/Command line* => 
 ```
 xcopy /d /y "D:\Libraries\fftw-3.3.8\Build64\Debug\*.dll" "$(TargetDir)"
