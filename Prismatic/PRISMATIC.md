@@ -172,19 +172,14 @@ Subject: This is the subject of the mail that should be printed.
 ```
 tar xvf fftw-3.3.8.tar (or tar xvf fftw-3.3.8.tar.gz to do the whole process)
 ```
-#### 3. Create a new folder (ex: *fftw-3.3.8/Build64*) where the library will be compiled
-```
-mkdir D:\Libraries\fftw-3.3.8\Build64
-mkdir D:\Libraries\fftw-3.3.8\Build32
-```
-#### 3.1 Open a cmd in this folder
+#### 3. Open a cmd in this folder
 > We use the cmake tool to build the fftw library. 
 > If cmake is not found in the command, add it to the PATH environment variable the link to 'path\to\CMake\bin'. 
 > All the parameters of the compilation must begin with -D.     
 
 **Win32bit system:**
 ```
-cd D:\Libraries\fftw-3.3.8\Build32
+mkdir D:\Libraries\fftw-3.3.8\Build32 & cd D:\Libraries\fftw-3.3.8\Build32
 
 cmake -G "Visual Studio 15 2017 Win32" -DBUILD_SHARED_LIBS:BOOL=ON -DENABLE_FLOAT:BOOL=ON -DENABLE_THREADS:BOOL=ON D:\Libraries\fftw-3.3.8"
 
@@ -192,7 +187,7 @@ cmake --build . --config Release & cmake --build . --config Debug
 ```
 **Win64bit system:**
 ```
-cd D:\Libraries\fftw-3.3.8\Build64
+mkdir D:\Libraries\fftw-3.3.8\Build64 & cd D:\Libraries\fftw-3.3.8\Build64
 
 cmake -G "Visual Studio 15 2017 Win64" -DBUILD_SHARED_LIBS:BOOL=ON -DBUILD_TESTS:BOOL=ON -DDISABLE_ALLOCA:BOOL=ON -DDISABLE_STATIC:BOOL=ON -DENABLE_FLOAT:BOOL=ON -DENABLE_SHARED:BOOL=ON -DENABLE_THREADS:BOOL=ON -DWITH_COMBINED_THREADS:BOOL=ON -DWITH_OUR_MALLOC16:BOOL=ON "D:\Libraries\fftw-3.3.8"
 
@@ -261,19 +256,14 @@ Select **Release:** in the top menu
 ### Compile HDF5:    
 #### 1. Download [hdf5-1.12.0.zip](https://hdf-wordpress-1.s3.amazonaws.com/wp-content/uploads/manual/HDF5/HDF5_1_12_0/source/hdf5-1.12.0.zip)  
 #### 2. Unzip the file and put it in ```D:\Libraries\```
-#### 2.1 Create a new folder (ex: *hdf5-1.12.0/Build64*) where the library will be compiled
-```
-mkdir 
-mkdir D:\Libraries\hdf5-1.12.0\Build32
-```
-#### 2.2 Open a cmd in this directory
+#### 2.1 Open a cmd in this directory
 > Once again we use the cmake tool, this time it's to build hdf5.   
 > All the parameters of the compilation must begin with -D.   
 > We only build the Release version for prismatic, if you want both versions, edit ```-DCMAKE_BUILD_TYPE:STRING```  
 
 **Win32bit system:**
 ```  
-cd D:\Libraries\hdf5-1.12.0\Build32
+mkdir D:\Libraries\hdf5-1.12.0\Build32 & cd D:\Libraries\hdf5-1.12.0\Build32
 
 cmake -G "Visual Studio 15 2017 Win32" -DCMAKE_BUILD_TYPE:STRING=Release -DBUILD_SHARED_LIBS:BOOL=OFF -DBUILD_TESTING:BOOL=ON -DHDF5_BUILD_TOOLS:BOOL=ON -DHDF5_ENABLE_THREADSAFE:BOOL=ON -DALLOW_UNSUPPORTED:BOOL=ON -DBUILD_TESTING:BOOL=ON "D:\Libraries\hdf5-1.12.0"
 
@@ -281,7 +271,7 @@ cmake --build . --config Release
 ```  
 **Win64bit system:**
 ```  
-cd D:\Libraries\hdf5-1.12.0\Build64
+mkdir D:\Libraries\hdf5-1.12.0\Build64 & D:\Libraries\hdf5-1.12.0\Build64
 
 cmake -G "Visual Studio 15 2017 Win64" -DCMAKE_BUILD_TYPE:STRING=Release -DBUILD_SHARED_LIBS:BOOL=OFF -DBUILD_TESTING:BOOL=ON -DHDF5_BUILD_TOOLS:BOOL=ON -DHDF5_ENABLE_THREADSAFE:BOOL=ON -DALLOW_UNSUPPORTED:BOOL=ON -DBUILD_TESTING:BOOL=ON "D:\Libraries\hdf5-1.12.0"
 
@@ -293,7 +283,7 @@ cmake --build . --config Release
 ```
 > This will take some time... If you want to build the Debug library, replace in the commands the ```Release``` by ```Debug```*
 
-#### 2.3 Now, we will use the cpack tool to build a Package with the compiled library:
+#### 2.2 Now, we will use the cpack tool to build a Package with the compiled library:
 ```
 cpack -C Release CPackConfig.cmake 
 ```
