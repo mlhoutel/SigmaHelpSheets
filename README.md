@@ -30,7 +30,7 @@
   Fourier Transform   
   Fractales https://www.youtube.com/watch?v=RU0wScIj36o https://mathcurve.com/courbes2d/courbes2d.shtml   
 
-Physique   
+* Physique   
   Euler Method /Verlet Integration   
   Fluids   
   Boids   
@@ -39,28 +39,28 @@ Physique
   Wavelets   
   Chaos equation (Lorentz Attractor, Double pendulum, 3bodies problem) https://youtu.be/fDek6cYijxI   
 
-Informatic Basis   
+* Informatic Basis   
   Binaire et Hex   
   System   
   ...   
   
-C++   
+* C++   
   Language   
   Qt   
   SFML   
   CMake and Builds   
   
-C#   
+* C#   
   Language   
   XAML   
   MVVM Light   
   API   
   
-Java   
+* Java   
   Language   
   ...
 
-Python   
+* Python   
   Language   
   Numpy   
   Cv2   
@@ -68,18 +68,18 @@ Python
   Anaconda (conda pip)   
   Jupyter Notebook   
   
-Js   
+* Js   
   Language   
   Ajax   
   p5   
   
-Php   
+* Php   
   Language   
   POST/GET...   
   MVC   
   Laravel   
 
-Algorithms   
+* Algorithms   
   Sorting   
   Crypto   
   Hanoi solver https://www.youtube.com/watch?v=2SUvWfNJSsM https://www.youtube.com/watch?v=bdMfjfT0lKk   
@@ -88,27 +88,26 @@ Algorithms
   Pathfinding https://clementmihailescu.github.io/Pathfinding-Visualizer/   
   
 
-BDD   
+* BDD   
   Setup Postgres/Apache   
   SQL (POSTGRES/...)   
   PL/SQL (ORACLE/...)   
   Security (SQL injection...)   
    
-Windows     
+* Windows     
   Structure    
   Environment Variables    
   Batch    
    
-Unix   
+* Unix   
   Structure   
   Administration   
   Bash   
 
-Other   
-  Docker   
-  Sphinx   
-  Prismatic   
+* Docker   
+* Sphinx   
+* Prismatic   
   
-Cuisine?   
-Musique?   
+* Cuisine?   
+* Musique?   
   
