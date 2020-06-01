@@ -1,0 +1,190 @@
+============================
+Welcome to my Help-Sheets !
+============================
+
+That's my ``help sheet`` where I put all the **usefull commands**, **tips** and **tricks** that I find on the subjects that I study, and even more...
+
+----------------------------
+
+.. sidebar:: Informations / About me
+
+	.. image:: _static/placeholder.png  
+
+	:I'm currently a student in Computer Science, but I have many others interests...:
+
+	.. admonition:: You can reach me and see my website
+
+		| `maellhoutellier.com <https://mlhoutel.github.io/maellhoutellier.com/>`_
+		| mlhoutel@gmail.com
+
+
+This website is **primarly built** for me to check the things I may have forgot, but also to make my learning on these subject easier:
+
+	| I realy like to ``write down`` and retranscrible with ``my words`` processes that can seem **complex**, but that can be explained with **simplicity**. It's not an easy task, but I tried my best to make these explanations understandable.
+	
+	| **Good luck!**
+
+Table of the sheets by Subject
+===============================
+
+:Sciences:
+	"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+.. toctree::
+	:maxdepth: 2
+	:caption: Sciences
+	
+	pages/Maths/Maths.rst
+	pages/Physics/Physics.rst
+	pages/Chemistry/Chemistry.rst
+	pages/Computer Science/Computer Science.rst
+	pages/Algorithms/Algorithms.rst
+
+:Desktop Languages:
+	"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+	
+.. toctree::
+	:maxdepth: 2
+	:caption: Desktop Languages
+
+	pages/Cpp/Cpp.rst
+	pages/Python/Python.rst
+	pages/Csharp/Csharp.rst
+	pages/Java/Java.rst
+
+:Web Languages:
+	"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+	
+.. toctree::
+	:maxdepth: 2
+	:caption: Web Languages
+
+	pages/JavaScript/JavaScript.rst
+	pages/Php/Php.rst
+
+:System:
+	"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+.. toctree::
+	:maxdepth: 2
+	:caption: System
+
+	pages/Windows/Windows.rst
+	pages/Unix/Unix.rst
+	pages/Database/Database.rst
+
+:Miscellaneous:
+	"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+.. toctree::
+	:maxdepth: 2
+	:caption: Miscellaneous
+
+	pages/Sphinx/Sphinx.rst
+	pages/Docker/Docker.rst
+	pages/Prismatic/Prismatic.rst
+
+.. admonition:: Caution
+
+	These sheets are not courses, but more like reminders and notes that you can fast check if you are unsure, or maybe find solutions of some problems that you are stuck on. 
+
+:Hobbies:
+	"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+.. toctree::
+	:maxdepth: 2
+	:caption: Miscellaneous
+
+	pages/Music/Music.rst
+	pages/Cooking/Cooking.rst
+
+.. _Website Make Text: https://maketext.io/
+.. _Website Loading: https://loading.io/
+
+.. _Website Md To Rst: https://github.com/brentvollebregt/auto-py-to-exe
+.. _API Cloud Convert: https://cloudconvert.com/api/v2#terminology
+
+.. _Website Auto Py To Exe: https://pypi.org/project/auto-py-to-exe/
+.. _GitHub Auto Py To Exe: https://github.com/brentvollebregt/auto-py-to-exe
+
+.. _Website Cmder: https://cmder.net/
+.. _GitHub Cmder: https://github.com/cmderdev/cmder
+
+.. _Website Screen to Gif: https://www.screentogif.com/
+.. _GitHub Screen to Gif: https://github.com/NickeManarin/ScreenToGif
+
+.. _Website Sublime Text: https://www.sublimetext.com/
+.. _GitHub Packages Sublime Text: https://github.com/SublimeText
+
+:Usefull Tools:
+
++-------------------------------------------+-------------------------------------------+-------------------------------------------+
+| .. figure:: _static/placeholder.png       | .. figure:: _static/placeholder.png       | .. figure:: _static/placeholder.png       |
+|   :width: 300px                           |   :width: 300px                           |   :width: 300px                           |
+|   :alt: Make Text Website                 |   :alt: Make Text Website                 |   :alt: Make Text Website                 |
+|   :align: center                          |   :align: center                          |   :align: center                          |
+|   :figclass: align-center                 |   :figclass: align-center                 |   :figclass: align-center                 |
+|                                           |                                           |                                           |
+|   **Make Text Website**                   |   **Md To Rst Website**                   |   **Auto Py To Exe Software**             |
+|                                           |                                           |                                           |
+| | It is a realy cool website that can     | | It is a website that convert yours      | | It is a python software that convert    |
+| | generate *svg or png* images with great | | ``Mardown`` documentation files to      | | your ``python program (.py)`` into an   |
+| | ``text typos``, help with logo design.  | | ``Rst``. It's fast and realy helpfull   | | ``executable (.exe)``.                  |
+| :LINKS:                                   | :LINKS:                                   | :LINKS:                                   |
+|                                           |                                           |                                           |
+| | `Website Make Text`_                    | | `Website Md To Rst`_                    | | `Website Auto Py To Exe`_               |
+| | `Website Loading`_                      | | `API Cloud Convert`_                    | | `GitHub Auto Py To Exe`_                |
++-------------------------------------------+-------------------------------------------+-------------------------------------------+
+| .. figure:: _static/placeholder.png       | .. figure:: _static/placeholder.png       | .. figure:: _static/placeholder.png       |
+|   :width: 300px                           |   :width: 300px                           |   :width: 300px                           |
+|   :alt: Make Text Website                 |   :alt: Make Text Website                 |   :alt: Make Text Website                 |
+|   :align: center                          |   :align: center                          |   :align: center                          |
+|   :figclass: align-center                 |   :figclass: align-center                 |   :figclass: align-center                 |
+|                                           |                                           |                                           |
+|   **Cmder Software**                      |   **Screen to Gif Software**              |   **Sublime Text 3 Software**             |
+|                                           |                                           |                                           |
+| | It is a replacement ``command line``.   | | It is a realy cool software that allow  | | Sublime text is a ``light text editor`` |
+| | It implements many usefull commands     | | you to take ``gif videos`` and retouch  | | compatible with many languages and      |
+| | from ``Unix to Windows``.               | | them from ``every computer`` (portable) | | fully ``scriptable`` with Packages      |
+| :LINKS:                                   | :LINKS:                                   | :LINKS:                                   |
+|                                           |                                           |                                           |
+| | `Website Cmder`_                        | | `Website Screen to Gif`_                | | `Website Sublime Text`_                 |
+| | `GitHub Cmder`_                         | | `GitHub Screen to Gif`_                 | | `GitHub Packages Sublime Text`_         |
++-------------------------------------------+-------------------------------------------+-------------------------------------------+
+
+.. |logo| image:: _static/placeholder.png
+	:width: 30%
+	:alt: Alternative text
+
+|logo| |logo| |logo|
+

@@ -1,0 +1,75 @@
+
+{% extends "!layout.html" %}
+{% block extrahead %}
+    <link href="{{ pathto("_static/style.css", True) }}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{#
+
+    This template exists as a way to implement a version menu without changing what
+    the theme normally renders the menu on local builds and on builds on Read the
+    Docs. This is for local testing purposes only.
+
+#}
+
+{% block footer %}
+    {% if not READTHEDOCS %}
+        <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+            <span class="rst-current-version" data-toggle="rst-current-version">
+                <span class="fa fa-book"> Help Sheet</span>
+                    v: latest
+                <span class="fa fa-caret-down"></span>
+            </span>
+            
+            <div class="rst-other-versions">
+                <dl>
+                    <dt>{{ _('Versions') }}</dt>
+                    {% if test_versions %}
+                        {% for version in test_versions %}
+                            <dd><a href="#">{{ version }}</a></dd>
+                        {% endfor %}
+                    {% else %}
+                        <dd><a href="#">latest</a></dd>
+                        <dd><a href="#">1.0</a></dd>
+                        <dd><a href="#">1.1</a></dd>
+                    {% endif %}
+                </dl>
+
+                 <dl>
+                    <dt>{{ _('Downloads') }}</dt>
+                    <dd><a href="#">PDF</a></dd>
+                    <dd><a href="#">ePub</a></dd>
+                    <dd><a href="#">HTML</a></dd>
+                </dl>
+                
+                <dl>
+                    <dt>{{ _('Informations') }}</dt>
+                    <dd><a href="https://github.com/mlhoutel/Help-Sheet">{{ _('Project Git') }}</a></dd>
+                    <dd><a href="https://mlhoutel.github.io/maellhoutellier.com/">{{ _('My website') }}</a></dd>
+                </dl>
+
+                <dl>
+                    <dt>Debug</dt>
+                    <dd><a href="#" data-toggle="rst-debug-badge">Swap badge position</a></dd>
+                </dl>
+            </div>
+        </div>
+    {% endif %}
+    
+    <style>
+        :root {
+            --c-blue: #2980B9;     /* Black    [31;  39;  45]  */
+            --c-grey: #24313A;
+        }
+
+        /* Sidebar header (and topbar for mobile) */
+        .wy-side-nav-search, .wy-nav-top {
+            background: var(--c-blue);
+        }
+        /* Sidebar */
+        .wy-nav-side {
+            background: var(--c-grey);
+        }
+    </style>
+
+{% endblock %}

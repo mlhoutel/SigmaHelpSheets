@@ -1,0 +1,1755 @@
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Prismatic &mdash; Long Title</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/sumblack.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/debug.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Music" href="../Music/Music.html" />
+    <link rel="prev" title="Docker" href="../Docker/Docker.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html">
+          
+
+          
+            
+            <img src="../../_static/sigmwhite.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Sciences</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Maths/Maths.html">Maths</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Physics/Physics.html">Physics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chemistry/Chemistry.html">Chemistry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Computer Science/Computer Science.html">Computer Science</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Algorithms/Algorithms.html">Algorithms</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Desktop Languages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Cpp/Cpp.html">C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Python/Python.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Csharp/Csharp.html">C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Java/Java.html">Java</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Web Languages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../JavaScript/JavaScript.html">JavaScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Php/Php.html">Php</a></li>
+</ul>
+<p class="caption"><span class="caption-text">System</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Windows/Windows.html">Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Unix/Unix.html">Unix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Database/Database.html">DataBases</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Miscellaneous</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Sphinx/Sphinx.html">Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docker/Docker.html">Docker</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Prismatic</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#compiling-prismatic-from-source-code">Compiling Prismatic from source code</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#tools">Tools:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#folder-organisation">Folder organisation:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#boost">BOOST</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ressources">Ressources:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#compile-boost">Compile BOOST:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#download-boost-1-72-0-zip">1. Download boost_1_72_0.zip</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#unzip-the-file-and-put-it-in-d-libraries">2. Unzip the file and put it in <code class="docutils literal notranslate"><span class="pre">D:\Libraries\</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#open-a-cmd-in-the-boost-directory">3. Open a cmd in the <em>Boost</em> directory</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#test-boost">Test BOOST:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#open-visual-studio-2017-and-create-a-new-c-console-application-project-into-a-new-directory">4. Open Visual Studio 2017 and create a new C++ console application project into a new directory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#add-the-test-code-from-here-at-the-point-6-link-your-program-to-a-boost-library">4.1 Add the test code from here at the point 6 (Link Your Program to a Boost Library)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#edit-the-project-properties">4.2 Edit the project properties</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#fftw3">FFTW3</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Ressources:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#compile-fftw">Compile FFTW:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#download-fftw-3-3-8-tar-gz">1. Download fftw-3.3.8.tar.gz</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#open-a-cmd-in-the-downloaded-file-directory">2. Open a cmd in the downloaded file directory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#use-this-command-to-extract-the-file-then-untar-it-in-d-libraries">2.1 Use this command to Extract the file then Untar it in <code class="docutils literal notranslate"><span class="pre">D:\Libraries</span></code>:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#open-a-cmd-in-this-folder">3. Open a cmd in this folder</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#test-fftw">Test FFTW:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">4. Open Visual Studio 2017 and create a new C++ console application project into a new directory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#add-the-test-code-from-here">4.1 Add the test code from here</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">4.2 Edit the project properties</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#hdf5">HDF5</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">Ressources:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#compile-hdf5">Compile HDF5:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#download-hdf5-1-12-0-zip">1. Download hdf5-1.12.0.zip</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">2. Unzip the file and put it in <code class="docutils literal notranslate"><span class="pre">D:\Libraries\</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#open-a-cmd-in-this-directory">2.1 Open a cmd in this directory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#now-we-will-use-the-cpack-tool-to-build-a-package-with-the-compiled-library">2.2 Now, we will use the cpack tool to build a Package with the compiled library:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#test-hdf5">Test HDF5:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#open-a-cmd-in-the-compiled-directory">3. Open a cmd in the compiled directory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#check-that-all-tests-are-passed">3.1 Check that all Tests are <em>Passed</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">4. Open Visual Studio 2017 and create a new C++ console application project into a new directory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">4.1 Add the test code from here</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id8">4.2 Edit the project properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#temporary-pastebin">(TEMPORARY PASTEBIN)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id9">PRISMATIC</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id10">Ressources:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#download-prismatic">1. Download prismatic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#create-a-new-folder-ex-prismatic-master-build64-where-the-library-will-be-compiled">2. Create a new folder (ex: <em>prismatic-master/Build64</em>) where the library will be compiled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#open-the-cmake-gui">3. Open the CMake GUI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#complete-the-links-with-the-code-source-directory-and-the-build-directory">3.1 Complete the links with the code source directory and the build directory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#click-on-configure-and-select-visual-studio-15-2017">3.2 Click on <em>Configure</em> and select <em>Visual Studio 15 2017</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#check-grouped-and-advanced-then-complete-the-missing-links-to-the-compiled-libraries">3.3 Check Grouped and Advanced then complete the missing links to the compiled libraries:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#click-again-on-configure-and-if-nothing-is-red-click-on-generate">3.4 Click again on <em>Configure</em> and if nothing is red, click on <em>Generate</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#open-the-project-in-visual-studio-2017">4. Open the project in Visual Studio 2017</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#right-click-on-the-prismatic-project-and-go-to-properties-general">4.1 Right Click on the <strong>prismatic</strong> project and go to Properties/General:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#in-the-top-bar-make-sure-to-select-release-and-the-right-plateform-then-click-on-run">5. In the top bar, make sure to select Release and the right Plateform, then Click on Run</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get-the-prismatic-exe-and-fftwf-dll-files-at-path-to-prismatic-compiled-x64-release">6. Get the <strong>prismatic.exe</strong> and <strong>fftwf.dll</strong> files at Path\to\prismatic\compiled\x64\Release</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#test">Test:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#copy-the-prismatic-exe-and-fftwf-dll-files-in-a-new-directory">7. Copy the <strong>prismatic.exe</strong> and <strong>fftwf.dll</strong> files in a new directory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#create-a-new-file-si100-xyz-in-this-directory">7.1 Create a new file “SI100.XYZ” in this directory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#open-it-and-paste-these-datas">7.1 Open it and paste these datas:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#open-a-cmd-in-the-directory">8. Open a cmd in the directory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wait-for-the-prism-calculation-complete-message-to-be-displayed">8.1 Wait for the <em>PRISM Calculation complete</em> message to be displayed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#if-you-have-python-with-the-hdf5-library-you-can-use-this-to-explore-the-hdf-file">8.2 If you have python with the hdf5 library, you can use this to explore the HDF file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id11">(TEMPORARY PASTEBIN)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#prismatic-gui">PRISMATIC GUI</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id12">Ressources:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#download-qt">1. Download Qt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#create-an-qt-account-here">1.1 Create an Qt account here</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#select-in-the-installer-the-qt-path-at-d-libraries-qt-and-select-the-right-version-for-the-compilation">1.2 Select in the installer the Qt path at <code class="docutils literal notranslate"><span class="pre">D:\Libraries\Qt</span></code> and select the right version for the compilation:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#create-a-new-folder-ex-prismatic-master-build64gui-where-the-library-will-be-compiled">2. Create a new folder (ex: <em>prismatic-master/Build64GUI</em>) where the library will be compiled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#open-prismatic-master-pro-d-libraries-prismatic-qt-prismatic-master-pro-in-a-text-editor">2.1 Open <strong>prismatic-master.pro</strong> (D:\Libraries\prismatic\Qt\prismatic-master.pro) in a text editor:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#optional-open-cmakelists-txt-in-the-prismatic-master-source-code-and-check-that-the-paths-to-the-icons-are-good-if-not-replace-qt-by-qt">2.2 (Optional) Open CMakeLists.txt in the prismatic-master source code and check that the paths to the icons are good (if not replace ../Qt by Qt).</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#you-can-also-add-the-link-to-qt-to-the-path-d-libraries-qt">2.3 You can also add the link to Qt to the PATH: <code class="docutils literal notranslate"><span class="pre">D:\Libraries\Qt</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id13">3. Open the CMake GUI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id14">3.1 Complete the links with the code source directory and the build directory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id15">3.2 Click on <em>Configure</em> and select <em>Visual Studio 15 2017</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#check-grouped-and-advanced-then-check-prismatic-enable-gui-and-prismatic-enable-cli">3.3 Check <strong>Grouped</strong> and <strong>Advanced</strong>, then check <strong>PRISMATIC_ENABLE_GUI</strong> and <strong>PRISMATIC_ENABLE_CLI</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#complete-the-missing-links-to-the-compiled-libraries">3.4 Complete the missing links to the compiled libraries:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#click-again-on-configure-and-if-nothing-is-still-red-click-on-generate">3.5 Click again on Configure and if nothing is still red, click on Generate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id16">4. Open the project in Visual Studio 2017</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#select-both-prismatic-and-prismatic-gui-with-ctrl-click">4.1 Select both <strong>prismatic</strong> and <strong>prismatic-gui</strong> with <em>Ctrl</em> + <em>Click</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#right-click-on-a-project-and-go-to-properties-general">4.2 Right Click on a project and go to Properties/General:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id17">5. In the top bar, make sure to select Release and the right Plateform, then Click on Run</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#test-prismatic-performances">Test Prismatic Performances:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#prismatic-gpu">PRISMATIC GPU</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id18">Ressources:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#download-the-cuda-toolkit-10-2-for-windows-v10">1. Download the CUDA Toolkit 10.2 for Windows (v10)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#make-sure-that-you-have-a-graphical-card-compatible-with-cuda">1.1 Make sure that you have a Graphical card compatible with CUDA</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cuda-will-be-installed-at-c-program-files-nvidia-gpu-computing-toolkit-cuda-v10-2">1.2 Cuda will be installed at <code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files\NVIDIA</span> <span class="pre">GPU</span> <span class="pre">Computing</span> <span class="pre">Toolkit\CUDA\v10.2</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#create-a-new-folder-ex-prismatic-master-build64gpu-where-the-library-will-be-compiled">2. Create a new folder (ex: <em>prismatic-master/Build64GPU</em>) where the library will be compiled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id19">2.1 Open <strong>prismatic-master.pro</strong> (D:\Libraries\prismatic\Qt\prismatic-master.pro) in a text editor:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id20">3. Open the CMake GUI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id21">3.1 Complete the links with the code source directory and the build directory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id22">3.2 Click on <em>Configure</em> and select <em>Visual Studio 15 2017</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#check-grouped-and-advanced-then-check-prismatic-enable-gpu-prismatic-enable-gui-and-prismatic-enable-cli">3.3 Check <strong>Grouped</strong> and <strong>Advanced</strong>, then check <strong>PRISMATIC_ENABLE_GPU</strong>, <strong>PRISMATIC_ENABLE_GUI</strong> and <strong>PRISMATIC_ENABLE_CLI</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#click-on-configure-then-complete-the-missing-links-to-the-compiled-libraries">3.4 <strong>Click on Configure</strong> Then complete the missing links to the compiled libraries:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id23">3.5 Click again on Configure and if nothing is still red, click on Generate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id24">4. Open the project in Visual Studio 2017</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id25">4.1 Select both <strong>prismatic</strong> and <strong>prismatic-gui</strong> with <em>Ctrl</em> + <em>Click</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id26">4.2 Right Click on a project and go to Properties/General:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id27">5.2 In the top bar, make sure to select Release and the right Plateform, then Click on Run</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Miscellaneous</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Music/Music.html">Music</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Cooking/Cooking.html">Cooking</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Help-Sheet</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Prismatic</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/pages/Prismatic/Prismatic.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="toctree-wrapper compound">
+</div>
+<div class="section" id="prismatic">
+<h1>Prismatic<a class="headerlink" href="#prismatic" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="compiling-prismatic-from-source-code">
+<h2>Compiling Prismatic from source code<a class="headerlink" href="#compiling-prismatic-from-source-code" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tools">
+<h3>Tools:<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h3>
+<p>You will have to install some tools and libraries in order to build
+prismatic from source:</p>
+<p><strong>Tools needed :</strong></p>
+<ul class="simple">
+<li><p><em>Visual Studio 15 2017</em>
+(<a class="reference external" href="https://visualstudio.microsoft.com/fr/vs/older-downloads/">https://visualstudio.microsoft.com/fr/vs/older-downloads/</a>)</p></li>
+<li><p><em>CMake</em> (<a class="reference external" href="https://cmake.org/download/">https://cmake.org/download/</a>)</p></li>
+<li><p><em>7zip</em> (<a class="reference external" href="https://www.7-zip.org/">https://www.7-zip.org/</a>)</p></li>
+</ul>
+<p><strong>Others Tools (Python library, GUI and GPU) :</strong></p>
+<ul class="simple">
+<li><p><em>Anaconda 3.7</em>
+(<a class="reference external" href="https://visualstudio.microsoft.com/fr/vs/older-downloads/">https://visualstudio.microsoft.com/fr/vs/older-downloads/</a>)</p></li>
+<li><p><em>CUDA</em> (<a class="reference external" href="https://visualstudio.microsoft.com/fr/vs/older-downloads/">https://visualstudio.microsoft.com/fr/vs/older-downloads/</a>)</p></li>
+<li><p><em>Qt</em> (<a class="reference external" href="http://ftp.fau.de/qtproject/archive/online_installers/3.2/">http://ftp.fau.de/qtproject/archive/online_installers/3.2/</a>)</p></li>
+</ul>
+<p><strong>Libraries :</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="#boost">BOOST</a></p></li>
+<li><p><a class="reference external" href="#fftw3">FFTW3</a></p></li>
+<li><p><a class="reference external" href="#hdf5">HDF5</a></p></li>
+</ul>
+<p><strong>Compilation :</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="#prismatic">Prismatic</a></p></li>
+<li><p><a class="reference external" href="#prismatic-gui">Prismatic GUI</a></p></li>
+<li><p><a class="reference external" href="#prismatic-gpu">Prismatic GPU</a></p></li>
+</ul>
+</div>
+<div class="section" id="folder-organisation">
+<h3>Folder organisation:<a class="headerlink" href="#folder-organisation" title="Permalink to this headline">¶</a></h3>
+<p>For a clarity matter, and to help the user to do the process without
+having errors from the links, I will put my personal config for this
+configuration with the links like that:
+<code class="docutils literal notranslate"><span class="pre">D:\Libraries\fftw-3.3.8\Build64\</span></code></p>
+<blockquote>
+<div><p>You can edit the first part (<code class="docutils literal notranslate"><span class="pre">D:\Libraries\</span></code>) and you can put your
+folders wherever you want if you don’t want the same folder
+configuration as me, but you will have to edit every links for the
+Build of prismatic and make sure that it match your configuration.</p>
+</div></blockquote>
+<p>The global organisation of my folders look like that:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>D:\Libraries
+├─── Downloads
+│    ├─── boost_1_72_0.zip
+│    ├─── cuda_10.2.89_win10_network.exe
+│    ├─── fftw-3.3.8.tar.gz
+│    ├─── hdf5-1.12.0.zip
+│    ├─── qt-unified-windows-x86-3.2.2-online.exe
+│    └─── vs_Community.exe
+│
+├─── boost_1_72_0
+│    ├─── boost                         //Header files
+│    ├─── stage/lib                         //Library files
+│    ├─── Build64                       //Build
+│    └─── BuildTest                     //VS Test project
+├─── fftw-3.3.8
+│    ├─── api                           //Header files
+│    ├─── Build64                       //Build Float
+│    │    └─── Release                      //Library files
+│    ├─── Build64Default                    //Build Default (Tests)
+│    │    └─── Release
+│    └─── BuildTest                     //VS Test project
+├─── hdf5-1.12.0
+│    ├─── Build64                       //Build
+│    │    └─── _CPack_Packages\win64\ZIP\HDF5-1.12.0-win64  //Package
+│    │         └─── include                 //Header files
+│    │         └─── lib                     //Library files
+│    └─── BuildTest                     //VS Test project
+├─── Qt\5.14.2\msvc2017_64
+│    ├─── include                       //Header files
+│    └─── lib                           //Library files
+│
+└─── prismatic
+     ├─── Build64
+     ├─── Build64GUI
+     ├─── Build64GPU
+     ├─── include                       //Header files
+     ├─── src                           //Library files
+     └─── Qt                            //GUI files
+
+C:\
+├─── Program Files\NVIDIA GPU Computing Toolkit
+│    └─── CUDA\v10.2
+└─── Program Files (x86)\Microsoft Visual Studio
+     ├─── 2017\Community
+     └─── 2019\Community
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="boost">
+<h2>BOOST<a class="headerlink" href="#boost" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ressources">
+<h3>Ressources:<a class="headerlink" href="#ressources" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://boostorg.github.io/build/manual/develop/index.html#bbv2.overview.configuration">https://boostorg.github.io/build/manual/develop/index.html#bbv2.overview.configuration</a></p></li>
+<li><p><a class="reference external" href="https://github.com/boostorg/wiki/wiki/Getting-Started%3A-Overview">https://github.com/boostorg/wiki/wiki/Getting-Started%3A-Overview</a></p></li>
+<li><p><a class="reference external" href="https://www.boost.org/doc/libs/1_72_0/more/getting_started/windows.html">https://www.boost.org/doc/libs/1_72_0/more/getting_started/windows.html</a></p></li>
+<li><p><a class="reference external" href="https://stackoverflow.com/questions/43946538/how-to-build-boost-1-64-in-64-bits/43950508">https://stackoverflow.com/questions/43946538/how-to-build-boost-1-64-in-64-bits/43950508</a></p></li>
+</ul>
+</div>
+<div class="section" id="compile-boost">
+<h3>Compile BOOST:<a class="headerlink" href="#compile-boost" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="download-boost-1-72-0-zip">
+<h4>1. Download <a class="reference external" href="https://sourceforge.net/projects/boost/files/boost/1.72.0/">boost_1_72_0.zip</a><a class="headerlink" href="#download-boost-1-72-0-zip" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="unzip-the-file-and-put-it-in-d-libraries">
+<h4>2. Unzip the file and put it in <code class="docutils literal notranslate"><span class="pre">D:\Libraries\</span></code><a class="headerlink" href="#unzip-the-file-and-put-it-in-d-libraries" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="open-a-cmd-in-the-boost-directory">
+<h4>3. Open a cmd in the <em>Boost</em> directory<a class="headerlink" href="#open-a-cmd-in-the-boost-directory" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">D</span><span class="p">:</span>\<span class="n">Libraries</span>\<span class="n">boost_1_72_0</span>
+<span class="n">bootstrap</span>
+</pre></div>
+</div>
+<p><strong>Win32bit system:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">D</span><span class="p">:</span>\<span class="n">Libraries</span>\<span class="n">boost_1_72_0</span>\<span class="n">Build32</span>
+
+<span class="n">b2</span> <span class="o">-</span><span class="n">j8</span> <span class="o">--</span><span class="n">build</span><span class="o">-</span><span class="nb">dir</span><span class="o">=</span><span class="s2">&quot;Build32&quot;</span> <span class="n">toolset</span><span class="o">=</span><span class="n">msvc</span><span class="o">-</span><span class="mf">14.1</span> <span class="n">threading</span><span class="o">=</span><span class="n">multi</span> <span class="n">runtime</span><span class="o">-</span><span class="n">link</span><span class="o">=</span><span class="n">shared</span> <span class="o">--</span><span class="n">build</span><span class="o">-</span><span class="nb">type</span><span class="o">=</span><span class="n">complete</span> <span class="n">stage</span>
+</pre></div>
+</div>
+<p><strong>Win64bit system</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>mkdir D:\Libraries\boost_1_72_0\Build64
+
+b2 -j8 --build-dir=&quot;Build64&quot; toolset=msvc-14.1 address-model=64 architecture=x86 link=static threading=multi runtime-link=shared --build-type=complete stage
+
+| ``-j8`` indicate the number of threads availlable to compile this
+library to faster the build (boost is a raltively big library so the
+process take some time to compile, but don&#39;t put more threas than
+availlable because it can result in errors.
+| ``build-dir`` is the directory for the temporaryy files and the
+build settings.
+| ``toolset`` is the compilator, mscv-14.1 (to 15) for the Visual
+Studio 2017 compilator.
+| ``address-model`` and architecture permit to have the library in
+x64 while building on a x86 machine.
+| ``link`` is for building the library into static mode (I also want
+to build fftw in static instead of dynamic but I don&#39;t know if it is
+possible).
+| ``theading`` is for using the threads (compilation of library
+use?)
+| ``stage`` at the end is the folder where the library will be
+built. I though I could change it to put my own name for the
+compilation folder but then the library didn&#39;t worked well... (to
+test?)
+</pre></div>
+</div>
+<p><strong>Linux system</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">TODO</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="test-boost">
+<h3>Test BOOST:<a class="headerlink" href="#test-boost" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="open-visual-studio-2017-and-create-a-new-c-console-application-project-into-a-new-directory">
+<h4>4. Open Visual Studio 2017 and create a new C++ console application project into a new directory<a class="headerlink" href="#open-visual-studio-2017-and-create-a-new-c-console-application-project-into-a-new-directory" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">D</span><span class="p">:</span>\<span class="n">Libraries</span>\<span class="n">boost_1_72_0</span>\<span class="n">BuildTest</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="add-the-test-code-from-here-at-the-point-6-link-your-program-to-a-boost-library">
+<h4>4.1 Add the test code from <a class="reference external" href="https://www.boost.org/doc/libs/1_72_0/more/getting_started/windows.html">here</a> at the point 6 (Link Your Program to a Boost Library)<a class="headerlink" href="#add-the-test-code-from-here-at-the-point-6-link-your-program-to-a-boost-library" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#include &lt;boost/regex.hpp&gt;</span>
+<span class="c1">#include &lt;iostream&gt;</span>
+<span class="c1">#include &lt;string&gt;</span>
+
+<span class="nb">int</span> <span class="n">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">std</span><span class="p">::</span><span class="n">string</span> <span class="n">line</span><span class="p">;</span>
+    <span class="n">boost</span><span class="p">::</span><span class="n">regex</span> <span class="n">pat</span><span class="p">(</span> <span class="s2">&quot;^Subject: (Re: |Aw: )*(.*)&quot;</span> <span class="p">);</span>
+
+    <span class="k">while</span> <span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">cin</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">std</span><span class="p">::</span><span class="n">getline</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">cin</span><span class="p">,</span> <span class="n">line</span><span class="p">);</span>
+        <span class="n">boost</span><span class="p">::</span><span class="n">smatch</span> <span class="n">matches</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">boost</span><span class="p">::</span><span class="n">regex_match</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">matches</span><span class="p">,</span> <span class="n">pat</span><span class="p">))</span>
+            <span class="n">std</span><span class="p">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">matches</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="p">::</span><span class="n">endl</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="edit-the-project-properties">
+<h4>4.2 Edit the project properties<a class="headerlink" href="#edit-the-project-properties" title="Permalink to this headline">¶</a></h4>
+<p>Select <strong>All Configurations:</strong> in the top menu and also select the right
+<strong>Plateform</strong></p>
+<ul class="simple">
+<li><p><em>Windows SDK Version</em> =&gt; <code class="docutils literal notranslate"><span class="pre">10.0.17763.0</span></code></p></li>
+<li><p><em>Tools</em> =&gt; <code class="docutils literal notranslate"><span class="pre">Visual</span> <span class="pre">Studio</span> <span class="pre">2019</span> <span class="pre">(v142)</span></code></p></li>
+<li><p><em>C/C++/Additionnal Include Directories</em> =&gt;
+<code class="docutils literal notranslate"><span class="pre">D:\Libraries\boost_1_72_0</span></code></p></li>
+<li><p><em>Linker/General/Additionnal Library Directories</em> =&gt;
+<code class="docutils literal notranslate"><span class="pre">D:\Libraries\boost_1_72_0\stage\lib</span></code></p></li>
+</ul>
+<div class="line-block">
+<div class="line">Select the right plateform at the left of the Run button and then run</div>
+</div>
+<p>the code. You can write your mail as a string and it will extract the
+subject with the regex library from boost.
+| <em>Try with this:</em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">This</span> <span class="ow">is</span> <span class="n">some</span> <span class="n">test</span> <span class="n">text</span><span class="p">,</span> <span class="n">only</span> <span class="k">for</span> <span class="n">test</span> <span class="n">purposes</span><span class="o">.</span> <span class="n">This</span> <span class="n">shouldn</span><span class="s1">&#39;t be re-printed by the regex program.</span>
+</pre></div>
+</div>
+<p><em>Then test with this:</em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Subject</span><span class="p">:</span> <span class="n">This</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">subject</span> <span class="n">of</span> <span class="n">the</span> <span class="n">mail</span> <span class="n">that</span> <span class="n">should</span> <span class="n">be</span> <span class="n">printed</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="fftw3">
+<h2>FFTW3<a class="headerlink" href="#fftw3" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Ressources:<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=0qQm5AGB_18">https://www.youtube.com/watch?v=0qQm5AGB_18</a></p></li>
+<li><p><a class="reference external" href="http://www.fftw.org/download.html">http://www.fftw.org/download.html</a></p></li>
+</ul>
+</div>
+<div class="section" id="compile-fftw">
+<h3>Compile FFTW:<a class="headerlink" href="#compile-fftw" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="download-fftw-3-3-8-tar-gz">
+<h4>1. Download <a class="reference external" href="http://www.fftw.org/download.html">fftw-3.3.8.tar.gz</a><a class="headerlink" href="#download-fftw-3-3-8-tar-gz" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="open-a-cmd-in-the-downloaded-file-directory">
+<h4>2. Open a cmd in the downloaded file directory<a class="headerlink" href="#open-a-cmd-in-the-downloaded-file-directory" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="use-this-command-to-extract-the-file-then-untar-it-in-d-libraries">
+<h4>2.1 Use this command to Extract the file then Untar it in <code class="docutils literal notranslate"><span class="pre">D:\Libraries</span></code>:<a class="headerlink" href="#use-this-command-to-extract-the-file-then-untar-it-in-d-libraries" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tar</span> <span class="n">xvf</span> <span class="n">fftw</span><span class="o">-</span><span class="mf">3.3</span><span class="o">.</span><span class="mf">8.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span> <span class="o">-</span><span class="n">C</span> <span class="n">D</span><span class="p">:</span>\<span class="n">Libraries</span>\
+</pre></div>
+</div>
+</div>
+<div class="section" id="open-a-cmd-in-this-folder">
+<h4>3. Open a cmd in this folder<a class="headerlink" href="#open-a-cmd-in-this-folder" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><div class="line-block">
+<div class="line">We use the cmake tool to build the fftw library.</div>
+<div class="line">If cmake is not found in the command, add it to the PATH</div>
+</div>
+<p>environment variable the link to ‘path\to\CMake\bin’.
+| All the parameters of the compilation must begin with -D.</p>
+</div></blockquote>
+<p><strong>Win32bit system:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">D</span><span class="p">:</span>\<span class="n">Libraries</span>\<span class="n">fftw</span><span class="o">-</span><span class="mf">3.3</span><span class="o">.</span><span class="mi">8</span>\<span class="n">Build32</span> <span class="o">&amp;</span> <span class="n">cd</span> <span class="n">D</span><span class="p">:</span>\<span class="n">Libraries</span>\<span class="n">fftw</span><span class="o">-</span><span class="mf">3.3</span><span class="o">.</span><span class="mi">8</span>\<span class="n">Build32</span>
+
+<span class="n">cmake</span> <span class="o">-</span><span class="n">G</span> <span class="s2">&quot;Visual Studio 15 2017 Win32&quot;</span> <span class="o">-</span><span class="n">DBUILD_SHARED_LIBS</span><span class="p">:</span><span class="n">BOOL</span><span class="o">=</span><span class="n">ON</span> <span class="o">-</span><span class="n">DENABLE_FLOAT</span><span class="p">:</span><span class="n">BOOL</span><span class="o">=</span><span class="n">ON</span> <span class="o">-</span><span class="n">DENABLE_THREADS</span><span class="p">:</span><span class="n">BOOL</span><span class="o">=</span><span class="n">ON</span> <span class="n">D</span><span class="p">:</span>\<span class="n">Libraries</span>\<span class="n">fftw</span><span class="o">-</span><span class="mf">3.3</span><span class="o">.</span><span class="mi">8</span><span class="s2">&quot;</span>
+
+<span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span> <span class="o">--</span><span class="n">config</span> <span class="n">Release</span> <span class="o">&amp;</span> <span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span> <span class="o">--</span><span class="n">config</span> <span class="n">Debug</span>
+</pre></div>
+</div>
+<p><strong>Win64bit system:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">D</span><span class="p">:</span>\<span class="n">Libraries</span>\<span class="n">fftw</span><span class="o">-</span><span class="mf">3.3</span><span class="o">.</span><span class="mi">8</span>\<span class="n">Build64</span> <span class="o">&amp;</span> <span class="n">cd</span> <span class="n">D</span><span class="p">:</span>\<span class="n">Libraries</span>\<span class="n">fftw</span><span class="o">-</span><span class="mf">3.3</span><span class="o">.</span><span class="mi">8</span>\<span class="n">Build64</span>
+
+<span class="n">cmake</span> <span class="o">-</span><span class="n">G</span> <span class="s2">&quot;Visual Studio 15 2017 Win64&quot;</span> <span class="o">-</span><span class="n">DBUILD_SHARED_LIBS</span><span class="p">:</span><span class="n">BOOL</span><span class="o">=</span><span class="n">ON</span> <span class="o">-</span><span class="n">DBUILD_TESTS</span><span class="p">:</span><span class="n">BOOL</span><span class="o">=</span><span class="n">ON</span> <span class="o">-</span><span class="n">DDISABLE_ALLOCA</span><span class="p">:</span><span class="n">BOOL</span><span class="o">=</span><span class="n">ON</span> <span class="o">-</span><span class="n">DDISABLE_STATIC</span><span class="p">:</span><span class="n">BOOL</span><span class="o">=</span><span class="n">ON</span> <span class="o">-</span><span class="n">DENABLE_FLOAT</span><span class="p">:</span><span class="n">BOOL</span><span class="o">=</span><span class="n">ON</span> <span class="o">-</span><span class="n">DENABLE_SHARED</span><span class="p">:</span><span class="n">BOOL</span><span class="o">=</span><span class="n">ON</span> <span class="o">-</span><span class="n">DENABLE_THREADS</span><span class="p">:</span><span class="n">BOOL</span><span class="o">=</span><span class="n">ON</span> <span class="o">-</span><span class="n">DWITH_COMBINED_THREADS</span><span class="p">:</span><span class="n">BOOL</span><span class="o">=</span><span class="n">ON</span> <span class="o">-</span><span class="n">DWITH_OUR_MALLOC16</span><span class="p">:</span><span class="n">BOOL</span><span class="o">=</span><span class="n">ON</span> <span class="s2">&quot;D:\Libraries</span><span class="se">\f</span><span class="s2">ftw-3.3.8&quot;</span>
+
+<span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span> <span class="o">--</span><span class="n">config</span> <span class="n">Release</span> <span class="o">&amp;</span> <span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span> <span class="o">--</span><span class="n">config</span> <span class="n">Debug</span>
+</pre></div>
+</div>
+<p><strong>Linux system</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">disable</span><span class="o">-</span><span class="n">alloca</span><span class="p">:</span> <span class="k">as</span> <span class="n">of</span> <span class="n">this</span> <span class="n">writing</span> <span class="p">(</span><span class="mi">14</span> <span class="n">July</span> <span class="mi">2009</span><span class="p">),</span> <span class="n">the</span> <span class="n">alloca</span> <span class="n">function</span> <span class="n">seems</span> <span class="n">to</span> <span class="n">be</span> <span class="n">broken</span> <span class="n">under</span> <span class="n">the</span> <span class="mi">64</span><span class="o">-</span><span class="n">bit</span> <span class="n">MinGW</span> <span class="n">compilers</span><span class="p">,</span> <span class="n">so</span> <span class="n">when</span> <span class="n">compiling</span> <span class="k">for</span> <span class="n">Win64</span> <span class="n">you</span> <span class="n">should</span> <span class="k">pass</span> <span class="o">--</span><span class="n">disable</span><span class="o">-</span><span class="n">alloca</span> <span class="n">to</span> <span class="n">tell</span> <span class="n">FFTW</span> <span class="ow">not</span> <span class="n">to</span> <span class="n">use</span> <span class="n">that</span> <span class="n">function</span>
+<span class="o">--</span><span class="k">with</span><span class="o">-</span><span class="n">our</span><span class="o">-</span><span class="n">malloc16</span><span class="p">:</span> <span class="n">this</span> <span class="ow">is</span> <span class="n">required</span> <span class="ow">in</span> <span class="n">order</span> <span class="n">to</span> <span class="n">allocate</span> <span class="n">properly</span> <span class="n">aligned</span> <span class="n">memory</span> <span class="p">(</span><span class="k">for</span> <span class="n">SSE</span><span class="p">)</span> <span class="k">with</span> <span class="n">gcc</span>
+<span class="o">--</span><span class="k">with</span><span class="o">-</span><span class="n">windows</span><span class="o">-</span><span class="n">f77</span><span class="o">-</span><span class="n">mangling</span><span class="p">:</span> <span class="n">this</span> <span class="n">will</span> <span class="n">include</span> <span class="n">Fortran</span> <span class="n">wrappers</span> <span class="k">for</span> <span class="n">some</span> <span class="n">common</span> <span class="n">Windows</span> <span class="n">Fortran</span> <span class="n">compilers</span> <span class="p">(</span><span class="n">GNU</span><span class="p">,</span> <span class="n">Intel</span><span class="p">,</span> <span class="ow">and</span> <span class="n">Digital</span><span class="p">)</span><span class="o">.</span>
+<span class="o">--</span><span class="n">enable</span><span class="o">-</span><span class="n">shared</span> <span class="o">--</span><span class="n">disable</span><span class="o">-</span><span class="n">static</span><span class="p">:</span> <span class="n">this</span> <span class="n">will</span> <span class="n">create</span> <span class="n">DLLs</span> <span class="n">instead</span> <span class="n">of</span> <span class="n">static</span> <span class="n">libraries</span> <span class="p">(</span><span class="n">since</span> <span class="n">MinGW</span><span class="s1">&#39;s static-library format seems to be different from Microsoft&#39;</span><span class="n">s</span><span class="p">)</span><span class="o">.</span>
+<span class="o">--</span><span class="n">enable</span><span class="o">-</span><span class="n">threads</span> <span class="o">--</span><span class="k">with</span><span class="o">-</span><span class="n">combined</span><span class="o">-</span><span class="n">threads</span><span class="p">:</span> <span class="n">this</span> <span class="n">will</span> <span class="n">include</span> <span class="n">multi</span><span class="o">-</span><span class="n">threading</span> <span class="n">support</span><span class="o">.</span> <span class="n">The</span> <span class="n">second</span> <span class="n">option</span> <span class="n">puts</span> <span class="n">the</span> <span class="n">multi</span><span class="o">-</span><span class="n">threading</span> <span class="n">functions</span> <span class="n">into</span> <span class="n">the</span> <span class="n">main</span> <span class="n">FFTW</span> <span class="n">DLL</span> <span class="n">rather</span> <span class="n">than</span> <span class="n">into</span> <span class="n">a</span> <span class="n">separate</span> <span class="n">DLL</span> <span class="p">(</span><span class="n">the</span> <span class="n">default</span> <span class="n">under</span> <span class="n">Unix</span><span class="p">);</span> <span class="n">this</span> <span class="ow">is</span> <span class="n">required</span> <span class="n">because</span> <span class="n">MinGW</span> <span class="n">can</span><span class="s1">&#39;t create DLLs that depend on one another.</span>
+<span class="o">--</span><span class="n">enable</span><span class="o">-</span><span class="n">portable</span><span class="o">-</span><span class="n">binary</span><span class="p">:</span> <span class="n">required</span> <span class="k">if</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">create</span> <span class="n">DLLs</span> <span class="n">that</span> <span class="n">will</span> <span class="n">work</span> <span class="n">on</span> <span class="nb">any</span> <span class="n">Intel</span> <span class="n">processor</span><span class="o">.</span>
+<span class="o">--</span><span class="k">with</span><span class="o">-</span><span class="n">incoming</span><span class="o">-</span><span class="n">stack</span><span class="o">-</span><span class="n">boundary</span><span class="o">=</span><span class="mi">2</span><span class="p">:</span> <span class="nb">compile</span> <span class="n">FFTW</span> <span class="n">assuming</span> <span class="n">a</span> <span class="mi">4</span><span class="o">-</span><span class="n">byte</span> <span class="n">alignment</span><span class="o">.</span> <span class="n">On</span> <span class="n">win32</span><span class="p">,</span> <span class="n">some</span> <span class="n">versions</span> <span class="n">of</span> <span class="n">gcc</span> <span class="n">assume</span> <span class="n">that</span> <span class="n">the</span> <span class="n">stack</span> <span class="ow">is</span> <span class="mi">16</span><span class="o">-</span><span class="n">byte</span> <span class="n">aligned</span><span class="p">,</span> <span class="n">but</span> <span class="n">code</span> <span class="n">compiled</span> <span class="k">with</span> <span class="n">other</span> <span class="n">compilers</span> <span class="n">may</span> <span class="n">only</span> <span class="n">guarantee</span> <span class="n">a</span> <span class="mi">4</span><span class="o">-</span><span class="n">byte</span> <span class="n">alignment</span><span class="p">,</span> <span class="n">resulting</span> <span class="ow">in</span> <span class="n">mysterious</span> <span class="n">segfaults</span><span class="o">.</span>
+
+<span class="o">-----------------------------------------------------------------------------</span>
+<span class="o">./</span><span class="n">configure</span> <span class="o">--</span><span class="n">disable</span><span class="o">-</span><span class="n">alloca</span> <span class="o">--</span><span class="k">with</span><span class="o">-</span><span class="n">our</span><span class="o">-</span><span class="n">malloc16</span> <span class="o">--</span><span class="n">enable</span><span class="o">-</span><span class="n">shared</span> <span class="o">--</span><span class="n">disable</span><span class="o">-</span><span class="n">static</span> <span class="o">--</span><span class="n">enable</span><span class="o">-</span><span class="nb">float</span> <span class="o">--</span><span class="n">enable</span><span class="o">-</span><span class="n">threads</span> <span class="o">--</span><span class="k">with</span><span class="o">-</span><span class="n">combined</span><span class="o">-</span><span class="n">threads</span>
+<span class="n">make</span>
+<span class="n">make</span> <span class="n">install</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="test-fftw">
+<h3>Test FFTW:<a class="headerlink" href="#test-fftw" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>To build the default version of this library in x32, use</p>
+</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">D</span><span class="p">:</span>\<span class="n">Libraries</span>\<span class="n">fftw</span><span class="o">-</span><span class="mf">3.3</span><span class="o">.</span><span class="mi">8</span>\<span class="n">Build32Default</span> <span class="o">&amp;</span> <span class="n">cd</span> <span class="n">D</span><span class="p">:</span>\<span class="n">Libraries</span>\<span class="n">fftw</span><span class="o">-</span><span class="mf">3.3</span><span class="o">.</span><span class="mi">8</span>\<span class="n">Build32Default</span>
+
+<span class="n">cmake</span> <span class="o">-</span><span class="n">DBUILD_SHARED_LIBS</span><span class="p">:</span><span class="n">BOOL</span><span class="o">=</span><span class="n">ON</span> <span class="o">-</span><span class="n">DBUILD_TESTS</span><span class="p">:</span><span class="n">BOOL</span><span class="o">=</span><span class="n">ON</span> <span class="o">-</span><span class="n">DDISABLE_ALLOCA</span><span class="p">:</span><span class="n">BOOL</span><span class="o">=</span><span class="n">ON</span> <span class="o">-</span><span class="n">DDISABLE_STATIC</span><span class="p">:</span><span class="n">BOOL</span><span class="o">=</span><span class="n">ON</span> <span class="o">-</span><span class="n">DENABLE_SHARED</span><span class="p">:</span><span class="n">BOOL</span><span class="o">=</span><span class="n">ON</span> <span class="o">-</span><span class="n">DENABLE_THREADS</span><span class="p">:</span><span class="n">BOOL</span><span class="o">=</span><span class="n">ON</span> <span class="o">-</span><span class="n">DWITH_COMBINED_THREADS</span><span class="p">:</span><span class="n">BOOL</span><span class="o">=</span><span class="n">ON</span> <span class="o">-</span><span class="n">DWITH_OUR_MALLOC16</span><span class="p">:</span><span class="n">BOOL</span><span class="o">=</span><span class="n">ON</span> <span class="s2">&quot;D:\Libraries</span><span class="se">\f</span><span class="s2">ftw-3.3.8&quot;</span>
+
+<span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span> <span class="o">--</span><span class="n">config</span> <span class="n">Release</span> <span class="o">&amp;</span> <span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span> <span class="o">--</span><span class="n">config</span> <span class="n">Debug</span>
+
+<span class="n">You</span> <span class="n">can</span><span class="s1">&#39;t test the float version of fftw &lt;-DENABLE\_FLOAT&gt; with the</span>
+<span class="n">test</span> <span class="n">code</span> <span class="n">I</span> <span class="n">give</span><span class="p">,</span> <span class="n">so</span> <span class="n">build</span> <span class="n">a</span> <span class="n">default</span> <span class="n">version</span> <span class="k">for</span> <span class="n">test</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">good</span> <span class="n">idea</span>
+</pre></div>
+</div>
+<div class="section" id="id2">
+<h4>4. Open Visual Studio 2017 and create a new C++ console application project into a new directory<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">D</span><span class="p">:</span>\<span class="n">Libraries</span>\<span class="n">fftw</span><span class="o">-</span><span class="mf">3.3</span><span class="o">.</span><span class="mi">8</span>\<span class="n">BuildTest</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="add-the-test-code-from-here">
+<h4>4.1 Add the test code from <a class="reference external" href="https://gist.github.com/damian-dz/a5d7d61993597253747b6dfe400805d9">here</a><a class="headerlink" href="#add-the-test-code-from-here" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id3">
+<h4>4.2 Edit the project properties<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<p>Select <strong>All Configurations:</strong> in the top menu and also select the right
+<strong>Plateform</strong></p>
+<ul class="simple">
+<li><p><em>C/C++/Additionnal Include Directories</em> =&gt;
+<code class="docutils literal notranslate"><span class="pre">D:\Libraries\fftw-3.3.8\api</span></code></p></li>
+<li><p><em>Linker/Input/Additionnal Dependency</em> =&gt;
+<code class="docutils literal notranslate"><span class="pre">fftw3.lib;(default</span> <span class="pre">system</span> <span class="pre">libraries)</span></code></p></li>
+</ul>
+<p>Select <strong>Debug:</strong> in the top menu</p>
+<ul class="simple">
+<li><p><em>Linker/General/Additionnal Library Directories</em> =&gt;
+<code class="docutils literal notranslate"><span class="pre">D:\Libraries\fftw-3.3.8\Build32Default\Debug</span></code></p></li>
+<li><p><em>Builds Events/Post-Build Event</em> =&gt;
+<code class="docutils literal notranslate"><span class="pre">xcopy</span> <span class="pre">/d</span> <span class="pre">/y</span> <span class="pre">&quot;D:\Libraries\fftw-3.3.8\Build32Default\Debug\*.dll&quot;</span> <span class="pre">&quot;$(TargetDir)&quot;</span></code></p></li>
+</ul>
+<p>Select <strong>Release:</strong> in the top menu</p>
+<ul>
+<li><p><em>Linker/General/Additionnal Library Directories</em> =&gt;
+<code class="docutils literal notranslate"><span class="pre">D:\Libraries\fftw-3.3.8\Build32Default\Release</span></code></p></li>
+<li><p><em>Builds Events/Post-Build Event</em> =&gt;
+<code class="docutils literal notranslate"><span class="pre">xcopy</span> <span class="pre">/d</span> <span class="pre">/y</span> <span class="pre">&quot;D:\Libraries\fftw-3.3.8\Build32Default\Release\*.dll&quot;</span> <span class="pre">&quot;$(TargetDir)&quot;</span></code></p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Make sure that the compilation is done on the right plateform (x64</div>
+</div>
+<p>or x84) on the top bar or you will have an conflict error message.
+Also, make sure that the rights .dll are linked at the right
+compilation version (Debug and Release).
+| FFTW is only compilable in the dynamic version, so the program
+.exe need the fftw3.dll (or fftw3d.dll for the float version) on the
+same folder in order to work.
+| the post build event with <code class="docutils literal notranslate"><span class="pre">xcopy</span></code> copy the .dll in the .exe
+folder, but if it don’t work, you will have an error when launching
+the .exe that say that the fftw3.dll is missing. You will have to
+search for this dll in the compiled fftw folder and manually copy it
+to the .exe program folder.</p>
+</div></blockquote>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="hdf5">
+<h2>HDF5<a class="headerlink" href="#hdf5" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h3>Ressources:<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://support.hdfgroup.org/ftp/HDF5/current/src/unpacked/release_docs/INSTALL_CMake.txt">https://support.hdfgroup.org/ftp/HDF5/current/src/unpacked/release_docs/INSTALL_CMake.txt</a></p></li>
+<li><p><a class="reference external" href="https://support.hdfgroup.org/HDF5/release/cmakebuild.html">https://support.hdfgroup.org/HDF5/release/cmakebuild.html</a></p></li>
+<li><p><a class="reference external" href="https://stackoverflow.com/questions/24325508/getting-stared-with-hdf5-on-visual-studio-2013-with-visual-c-2013">https://stackoverflow.com/questions/24325508/getting-stared-with-hdf5-on-visual-studio-2013-with-visual-c-2013</a></p></li>
+<li><p><a class="reference external" href="https://stackoverflow.com/questions/7397296/linking-hdf5-library-into-visual-c-dll-project-unresolved-external-symbol-i">https://stackoverflow.com/questions/7397296/linking-hdf5-library-into-visual-c-dll-project-unresolved-external-symbol-i</a></p></li>
+<li><p><a class="reference external" href="https://svn.oss.deltares.nl/repos/openearthtools/trunk/fortran/io/netcdf/win32/visual_fortran_6/lib/win32/all/">https://svn.oss.deltares.nl/repos/openearthtools/trunk/fortran/io/netcdf/win32/visual_fortran_6/lib/win32/all/</a></p></li>
+</ul>
+<p><em>Not necessary</em>:
+<a class="reference external" href="http://gnuwin32.sourceforge.net/packages/zlib.htm">zlib</a></p>
+</div>
+<div class="section" id="compile-hdf5">
+<h3>Compile HDF5:<a class="headerlink" href="#compile-hdf5" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="download-hdf5-1-12-0-zip">
+<h4>1. Download <a class="reference external" href="https://hdf-wordpress-1.s3.amazonaws.com/wp-content/uploads/manual/HDF5/HDF5_1_12_0/source/hdf5-1.12.0.zip">hdf5-1.12.0.zip</a><a class="headerlink" href="#download-hdf5-1-12-0-zip" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id5">
+<h4>2. Unzip the file and put it in <code class="docutils literal notranslate"><span class="pre">D:\Libraries\</span></code><a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="open-a-cmd-in-this-directory">
+<h4>2.1 Open a cmd in this directory<a class="headerlink" href="#open-a-cmd-in-this-directory" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Once again we use the cmake tool, this time it’s to build hdf5.</div>
+<div class="line">All the parameters of the compilation must begin with -D.</div>
+<div class="line">We only build the Release version for prismatic, if you want both</div>
+</div>
+<p>versions, edit <code class="docutils literal notranslate"><span class="pre">-DCMAKE_BUILD_TYPE:STRING</span></code></p>
+</div></blockquote>
+<p><strong>Win32bit system:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">D</span><span class="p">:</span>\<span class="n">Libraries</span>\<span class="n">hdf5</span><span class="o">-</span><span class="mf">1.12</span><span class="o">.</span><span class="mi">0</span>\<span class="n">Build32</span> <span class="o">&amp;</span> <span class="n">cd</span> <span class="n">D</span><span class="p">:</span>\<span class="n">Libraries</span>\<span class="n">hdf5</span><span class="o">-</span><span class="mf">1.12</span><span class="o">.</span><span class="mi">0</span>\<span class="n">Build32</span>
+
+<span class="n">cmake</span> <span class="o">-</span><span class="n">G</span> <span class="s2">&quot;Visual Studio 15 2017 Win32&quot;</span> <span class="o">-</span><span class="n">DCMAKE_BUILD_TYPE</span><span class="p">:</span><span class="n">STRING</span><span class="o">=</span><span class="n">Release</span> <span class="o">-</span><span class="n">DBUILD_SHARED_LIBS</span><span class="p">:</span><span class="n">BOOL</span><span class="o">=</span><span class="n">OFF</span> <span class="o">-</span><span class="n">DBUILD_TESTING</span><span class="p">:</span><span class="n">BOOL</span><span class="o">=</span><span class="n">ON</span> <span class="o">-</span><span class="n">DHDF5_BUILD_TOOLS</span><span class="p">:</span><span class="n">BOOL</span><span class="o">=</span><span class="n">ON</span> <span class="o">-</span><span class="n">DHDF5_ENABLE_THREADSAFE</span><span class="p">:</span><span class="n">BOOL</span><span class="o">=</span><span class="n">ON</span> <span class="o">-</span><span class="n">DALLOW_UNSUPPORTED</span><span class="p">:</span><span class="n">BOOL</span><span class="o">=</span><span class="n">ON</span> <span class="o">-</span><span class="n">DBUILD_TESTING</span><span class="p">:</span><span class="n">BOOL</span><span class="o">=</span><span class="n">ON</span> <span class="s2">&quot;D:\Libraries\hdf5-1.12.0&quot;</span>
+
+<span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span> <span class="o">--</span><span class="n">config</span> <span class="n">Release</span>
+</pre></div>
+</div>
+<p><strong>Win64bit system:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">D</span><span class="p">:</span>\<span class="n">Libraries</span>\<span class="n">hdf5</span><span class="o">-</span><span class="mf">1.12</span><span class="o">.</span><span class="mi">0</span>\<span class="n">Build64</span> <span class="o">&amp;</span> <span class="n">D</span><span class="p">:</span>\<span class="n">Libraries</span>\<span class="n">hdf5</span><span class="o">-</span><span class="mf">1.12</span><span class="o">.</span><span class="mi">0</span>\<span class="n">Build64</span>
+
+<span class="n">cmake</span> <span class="o">-</span><span class="n">G</span> <span class="s2">&quot;Visual Studio 15 2017 Win64&quot;</span> <span class="o">-</span><span class="n">DCMAKE_BUILD_TYPE</span><span class="p">:</span><span class="n">STRING</span><span class="o">=</span><span class="n">Release</span> <span class="o">-</span><span class="n">DBUILD_SHARED_LIBS</span><span class="p">:</span><span class="n">BOOL</span><span class="o">=</span><span class="n">OFF</span> <span class="o">-</span><span class="n">DBUILD_TESTING</span><span class="p">:</span><span class="n">BOOL</span><span class="o">=</span><span class="n">ON</span> <span class="o">-</span><span class="n">DHDF5_BUILD_TOOLS</span><span class="p">:</span><span class="n">BOOL</span><span class="o">=</span><span class="n">ON</span> <span class="o">-</span><span class="n">DHDF5_ENABLE_THREADSAFE</span><span class="p">:</span><span class="n">BOOL</span><span class="o">=</span><span class="n">ON</span> <span class="o">-</span><span class="n">DALLOW_UNSUPPORTED</span><span class="p">:</span><span class="n">BOOL</span><span class="o">=</span><span class="n">ON</span> <span class="o">-</span><span class="n">DBUILD_TESTING</span><span class="p">:</span><span class="n">BOOL</span><span class="o">=</span><span class="n">ON</span> <span class="s2">&quot;D:\Libraries\hdf5-1.12.0&quot;</span>
+
+<span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span> <span class="o">--</span><span class="n">config</span> <span class="n">Release</span>
+</pre></div>
+</div>
+<p><strong>Linux system</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(TODO)
+
+This will take some time... If you want to build the Debug library,
+replace in the commands the ``Release`` by ``Debug``\ \*
+</pre></div>
+</div>
+</div>
+<div class="section" id="now-we-will-use-the-cpack-tool-to-build-a-package-with-the-compiled-library">
+<h4>2.2 Now, we will use the cpack tool to build a Package with the compiled library:<a class="headerlink" href="#now-we-will-use-the-cpack-tool-to-build-a-package-with-the-compiled-library" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cpack -C Release CPackConfig.cmake
+
+| A package with the compiled library has been created (ex:
+*hdf5-1.12.0/Build64/HDF5-1.12.0-win64.zip*).
+| Extract it to the same directory:
+``D:\Libraries\hdf5-1.12.0\Build64\HDF5-1.12.0-win64``
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="test-hdf5">
+<h3>Test HDF5:<a class="headerlink" href="#test-hdf5" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="open-a-cmd-in-the-compiled-directory">
+<h4>3. Open a cmd in the compiled directory<a class="headerlink" href="#open-a-cmd-in-the-compiled-directory" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">D</span><span class="p">:</span>\<span class="n">Libraries</span>\<span class="n">hdf5</span><span class="o">-</span><span class="mf">1.12</span><span class="o">.</span><span class="mi">0</span>\<span class="n">Build64</span>
+<span class="n">ctest</span> <span class="o">.</span> <span class="o">-</span><span class="n">C</span> <span class="n">Release</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="check-that-all-tests-are-passed">
+<h4>3.1 Check that all Tests are <em>Passed</em><a class="headerlink" href="#check-that-all-tests-are-passed" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id6">
+<h4>4. Open Visual Studio 2017 and create a new C++ console application project into a new directory<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">D</span><span class="p">:</span>\<span class="n">Libraries</span>\<span class="n">hdf5</span><span class="o">-</span><span class="mf">1.12</span><span class="o">.</span><span class="mi">0</span>\<span class="n">BuildTest</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id7">
+<h4>4.1 Add the test code from <a class="reference external" href="https://support.hdfgroup.org/ftp/HDF5/current/src/unpacked/c++/examples/h5tutr_crtdat.cpp">here</a><a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id8">
+<h4>4.2 Edit the project properties<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
+<p>Select <strong>All Configurations:</strong> in the top menu and also select the right
+<strong>Plateform</strong></p>
+<ul class="simple">
+<li><p><em>C/C++/Additionnal Include Directories</em> =&gt;
+<code class="docutils literal notranslate"><span class="pre">D:\Libraries\hdf5-1.12.0\Build64\HDF5-1.12.0-win64\include</span></code></p></li>
+<li><p><em>Linker/Genral/Additionnal Libraries repertory</em> =&gt;
+<code class="docutils literal notranslate"><span class="pre">D:\Libraries\hdf5-1.12.0\Build64\HDF5-1.12.0-win64\lib</span></code></p></li>
+<li><p><em>Linker/Input/Additionnal Dependency</em> =&gt;
+<code class="docutils literal notranslate"><span class="pre">libhdf5.lib;libhdf5_cpp.lib;(default</span> <span class="pre">system</span> <span class="pre">libraries)</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="temporary-pastebin">
+<h4>(TEMPORARY PASTEBIN)<a class="headerlink" href="#temporary-pastebin" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference external" href="https://sourceforge.net/projects/nsis/files/NSIS%203/3.05/nsis-3.05-setup.exe/download?use_mirror=netix&amp;download">https://sourceforge.net/projects/nsis/files/NSIS%203/3.05/nsis-3.05-setup.exe/download?use_mirror=netix&amp;download</a>=</p></li>
+<li><p><a class="reference external" href="https://support.hdfgroup.org/ftp/HDF5/current/src/unpacked/release_docs/USING_HDF5_VS.txt">https://support.hdfgroup.org/ftp/HDF5/current/src/unpacked/release_docs/USING_HDF5_VS.txt</a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=BAjsCldRMMc">https://www.youtube.com/watch?v=BAjsCldRMMc</a></p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="id9">
+<h2>PRISMATIC<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id10">
+<h3>Ressources:<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://prism-em.com/docs-compiling/">https://prism-em.com/docs-compiling/</a></p></li>
+<li><p><a class="reference external" href="https://www.it-swarm.dev/fr/visual-c%2B%2B/erreur-fatale-lnk1112-le-type-de-machine-du-module-x64-est-en-conflit-avec-le-type-de-machine-cible-x86/969200768/">https://www.it-swarm.dev/fr/visual-c%2B%2B/erreur-fatale-lnk1112-le-type-de-machine-du-module-x64-est-en-conflit-avec-le-type-de-machine-cible-x86/969200768/</a></p></li>
+</ul>
+<p><em>You can add the libraries directory to the PATH if you want, otherwise
+you will have to complete the links manually later…</em></p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Windows + “Path” =&gt; Edit environment variables/Environment</div>
+</div>
+<p>variables/Path/Edit/New
+| Add these links to the PATH</p>
+</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">D</span><span class="p">:</span>\<span class="n">Libraries</span>\<span class="n">boost_1_72_0</span>
+<span class="n">D</span><span class="p">:</span>\<span class="n">Libraries</span>\<span class="n">fftw</span><span class="o">-</span><span class="mf">3.3</span><span class="o">.</span><span class="mi">8</span>
+<span class="n">D</span><span class="p">:</span>\<span class="n">Libraries</span>\<span class="n">hdf5</span><span class="o">-</span><span class="mf">1.12</span><span class="o">.</span><span class="mi">0</span>
+</pre></div>
+</div>
+<div class="section" id="download-prismatic">
+<h4>1. Download <a class="reference external" href="https://github.com/prism-em/prismatic">prismatic</a><a class="headerlink" href="#download-prismatic" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">D</span><span class="p">:</span><span class="o">/</span><span class="n">Libraries</span>
+
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">prism</span><span class="o">-</span><span class="n">em</span><span class="o">/</span><span class="n">prismatic</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-a-new-folder-ex-prismatic-master-build64-where-the-library-will-be-compiled">
+<h4>2. Create a new folder (ex: <em>prismatic-master/Build64</em>) where the library will be compiled<a class="headerlink" href="#create-a-new-folder-ex-prismatic-master-build64-where-the-library-will-be-compiled" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">D</span><span class="p">:</span><span class="o">/</span><span class="n">Libraries</span><span class="o">/</span><span class="n">prismatic</span><span class="o">/</span><span class="n">Build64</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="open-the-cmake-gui">
+<h4>3. Open the CMake GUI<a class="headerlink" href="#open-the-cmake-gui" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="complete-the-links-with-the-code-source-directory-and-the-build-directory">
+<h4>3.1 Complete the links with the code source directory and the build directory<a class="headerlink" href="#complete-the-links-with-the-code-source-directory-and-the-build-directory" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Where is the source code: <code class="docutils literal notranslate"><span class="pre">D:/Libraries/prismatic</span></code></p></li>
+<li><p>Where to build the binaries: <code class="docutils literal notranslate"><span class="pre">D:/Libraries/prismatic/Build64</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="click-on-configure-and-select-visual-studio-15-2017">
+<h4>3.2 Click on <em>Configure</em> and select <em>Visual Studio 15 2017</em><a class="headerlink" href="#click-on-configure-and-select-visual-studio-15-2017" title="Permalink to this headline">¶</a></h4>
+<p><strong>Win32 system</strong></p>
+<ul class="simple">
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">Win32</span></code> in the Optional Plateform Generator</p></li>
+</ul>
+<p><strong>Win64 system</strong></p>
+<ul class="simple">
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">x64</span></code> in the Optional Plateform Generator</p></li>
+</ul>
+<p><strong>Linux system</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">TODO</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="check-grouped-and-advanced-then-complete-the-missing-links-to-the-compiled-libraries">
+<h4>3.3 Check Grouped and Advanced then complete the missing links to the compiled libraries:<a class="headerlink" href="#check-grouped-and-advanced-then-complete-the-missing-links-to-the-compiled-libraries" title="Permalink to this headline">¶</a></h4>
+<p><strong>BOOST</strong></p>
+<ul class="simple">
+<li><p><em>Boost_INCLUDE_DIR</em> =&gt; <code class="docutils literal notranslate"><span class="pre">D:\Libraries\boost_1_72_0</span></code></p></li>
+</ul>
+<p><strong>Click on Configure</strong></p>
+<p><strong>FFTW:</strong></p>
+<ul class="simple">
+<li><p><em>FFTW_INCLUDE_DIR</em> =&gt; <code class="docutils literal notranslate"><span class="pre">D:\Libraries\fftw-3.3.8\api</span></code></p></li>
+<li><p><em>FFTW_LIBRARY</em> =&gt; <code class="docutils literal notranslate"><span class="pre">D:\Libraries\fftw-3.3.8</span></code></p></li>
+</ul>
+<p><strong>HDF5:</strong></p>
+<ul class="simple">
+<li><p><em>HDF5_CXX_INCLUDE_DIR</em> =&gt;
+<code class="docutils literal notranslate"><span class="pre">D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\include</span></code></p></li>
+<li><p><em>HDF5_hdf5_LIBRARY_DEBUG</em> =&gt;
+<code class="docutils literal notranslate"><span class="pre">D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64</span></code></p></li>
+<li><p><em>HDF5_hdf5_LIBRARY_RELEASE</em> =&gt;
+<code class="docutils literal notranslate"><span class="pre">D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="click-again-on-configure-and-if-nothing-is-red-click-on-generate">
+<h4>3.4 Click again on <em>Configure</em> and if nothing is red, click on <em>Generate</em><a class="headerlink" href="#click-again-on-configure-and-if-nothing-is-red-click-on-generate" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>You may have an error message, but it’s ok if you have <em>Generating
+done</em> at the end of the process, it’s only warning about the
+DIR-NOTFOUND but we will edit every links maually in the project.</p>
+</div></blockquote>
+</div>
+<div class="section" id="open-the-project-in-visual-studio-2017">
+<h4>4. Open the project in Visual Studio 2017<a class="headerlink" href="#open-the-project-in-visual-studio-2017" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>You can click on the <em>Open Project</em> button in CMake</p>
+</div></blockquote>
+</div>
+<div class="section" id="right-click-on-the-prismatic-project-and-go-to-properties-general">
+<h4>4.1 Right Click on the <strong>prismatic</strong> project and go to Properties/General:<a class="headerlink" href="#right-click-on-the-prismatic-project-and-go-to-properties-general" title="Permalink to this headline">¶</a></h4>
+<p>Make sure to select <strong>Select All Configurations</strong> and the right
+<strong>Plateform</strong></p>
+<ul>
+<li><p><em>Configuration Property/General/Windows SDK Version</em> =&gt;
+<code class="docutils literal notranslate"><span class="pre">10.0.17763.0</span></code></p></li>
+<li><p><em>Configuration Property/General/Plateform tools</em> =&gt;
+`<code class="docutils literal notranslate"><span class="pre">Visual</span> <span class="pre">Studio</span> <span class="pre">2017</span> <span class="pre">(v141)</span></code></p></li>
+<li><p><em>C C++/General/Additionnal Include Directories</em> =&gt;</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">D</span><span class="p">:</span>\<span class="n">Libraries</span>\<span class="n">prismatic</span>\<span class="n">include</span><span class="p">;</span>
+<span class="n">D</span><span class="p">:</span>\<span class="n">Libraries</span>\<span class="n">fftw</span><span class="o">-</span><span class="mf">3.3</span><span class="o">.</span><span class="mi">8</span>\<span class="n">api</span><span class="p">;</span>
+<span class="n">D</span><span class="p">:</span>\<span class="n">Libraries</span>\<span class="n">hdf5</span><span class="o">-</span><span class="mf">1.12</span><span class="o">.</span><span class="mi">0</span>\<span class="n">Build64</span>\<span class="n">_CPack_Packages</span>\<span class="n">win64</span>\<span class="n">ZIP</span>\<span class="n">HDF5</span><span class="o">-</span><span class="mf">1.12</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">win64</span>\<span class="n">include</span><span class="p">;</span>
+<span class="n">D</span><span class="p">:</span>\<span class="n">Libraries</span>\<span class="n">boost_1_72_0</span><span class="p">;</span>
+<span class="o">%</span><span class="p">(</span><span class="n">AdditionalIncludeDirectories</span><span class="p">)</span>
+
+<span class="n">For</span> <span class="n">fast</span> <span class="n">copy</span><span class="p">:</span> <span class="n">CTRL</span><span class="o">+</span><span class="n">C</span> <span class="n">this</span> <span class="n">line</span> <span class="n">then</span> <span class="n">click</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">VS</span> <span class="n">textbox</span><span class="p">,</span>
+<span class="n">CTRL</span><span class="o">+</span><span class="n">A</span> <span class="ow">and</span> <span class="n">CTRL</span><span class="o">+</span><span class="n">V</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">D</span><span class="p">:</span>\<span class="n">Libraries</span>\<span class="n">prismatic</span>\<span class="n">include</span><span class="p">;</span><span class="n">D</span><span class="p">:</span>\<span class="n">Libraries</span>\<span class="n">fftw</span><span class="o">-</span><span class="mf">3.3</span><span class="o">.</span><span class="mi">8</span>\<span class="n">api</span><span class="p">;</span><span class="n">D</span><span class="p">:</span>\<span class="n">Libraries</span>\<span class="n">hdf5</span><span class="o">-</span><span class="mf">1.12</span><span class="o">.</span><span class="mi">0</span>\<span class="n">Build64</span>\<span class="n">_CPack_Packages</span>\<span class="n">win64</span>\<span class="n">ZIP</span>\<span class="n">HDF5</span><span class="o">-</span><span class="mf">1.12</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">win64</span>\<span class="n">include</span><span class="p">;</span><span class="n">D</span><span class="p">:</span>\<span class="n">Libraries</span>\<span class="n">boost_1_72_0</span><span class="p">;</span><span class="o">%</span><span class="p">(</span><span class="n">AdditionalIncludeDirectories</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p><em>Linker/Input/Additionnal Dependency</em> =&gt;</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fftw3f</span><span class="o">.</span><span class="n">lib</span><span class="p">;</span>
+<span class="n">libhdf5</span><span class="o">.</span><span class="n">lib</span><span class="p">;</span>
+<span class="n">libhdf5_cpp</span><span class="o">.</span><span class="n">lib</span><span class="p">;</span>
+<span class="n">libhdf5_hl_cpp</span><span class="o">.</span><span class="n">lib</span><span class="p">;</span>
+<span class="n">libhdf5_hl</span><span class="o">.</span><span class="n">lib</span><span class="p">;</span>
+<span class="o">%</span><span class="p">(</span><span class="n">AdditionalDependencies</span><span class="p">)</span>
+
+<span class="n">For</span> <span class="n">fast</span> <span class="n">copy</span><span class="p">:</span> <span class="n">CTRL</span><span class="o">+</span><span class="n">C</span> <span class="n">this</span> <span class="n">line</span> <span class="n">then</span> <span class="n">click</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">VS</span> <span class="n">textbox</span><span class="p">,</span>
+<span class="n">CTRL</span><span class="o">+</span><span class="n">A</span> <span class="ow">and</span> <span class="n">CTRL</span><span class="o">+</span><span class="n">V</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>   <span class="n">fftw3f</span><span class="o">.</span><span class="n">lib</span><span class="p">;</span><span class="n">libhdf5</span><span class="o">.</span><span class="n">lib</span><span class="p">;</span><span class="n">libhdf5_cpp</span><span class="o">.</span><span class="n">lib</span><span class="p">;</span><span class="n">libhdf5_hl_cpp</span><span class="o">.</span><span class="n">lib</span><span class="p">;</span><span class="n">libhdf5_hl</span><span class="o">.</span><span class="n">lib</span><span class="p">;</span><span class="o">%</span><span class="p">(</span><span class="n">AdditionalDependencies</span><span class="p">)</span>
+
+<span class="n">The</span> <span class="n">order</span> <span class="ow">in</span> <span class="n">wich</span> <span class="n">the</span> <span class="n">libraries</span> <span class="n">are</span> <span class="n">linked</span> <span class="ow">is</span> <span class="n">realy</span> <span class="n">important</span><span class="p">,</span>
+<span class="n">that</span><span class="s1">&#39;s even more true when you have like here a program with many</span>
+<span class="n">links</span> <span class="n">to</span> <span class="n">others</span> <span class="n">libraries</span><span class="p">,</span> <span class="ow">and</span> <span class="n">that</span> <span class="n">these</span> <span class="n">libraries</span> <span class="n">use</span> <span class="n">the</span> <span class="n">base</span>
+<span class="n">functions</span> <span class="n">of</span> <span class="n">others</span> <span class="n">libraries</span><span class="o">.</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Win32 system</strong></p></li>
+<li><p><em>Linker/Input/Advanced/Target computer</em> =&gt;
+<code class="docutils literal notranslate"><span class="pre">MachineX86</span> <span class="pre">(/MACHINE:X86)</span></code></p></li>
+<li><p><em>Link editor/Command line/Additional options</em> =&gt; Remove
+<code class="docutils literal notranslate"><span class="pre">/machine:X64</span></code></p></li>
+<li><p><strong>Win64 system</strong></p></li>
+<li><p><em>Linker/Input/Advanced/Target computer</em> =&gt;
+<code class="docutils literal notranslate"><span class="pre">MachineX64</span> <span class="pre">(/MACHINE:X64)</span></code></p></li>
+<li><p><em>Link editor/Command line/Additional options</em> =&gt; Remove
+<code class="docutils literal notranslate"><span class="pre">/machine:X86</span></code></p></li>
+<li><p><strong>Linux system</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">TODO</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Click on <strong>Apply</strong> and select <strong>Release:</strong> in Configuration</p>
+</li>
+<li><p><em>Linker/General/Additionnal Library Directories</em> =&gt;</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">D</span><span class="p">:</span>\<span class="n">Libraries</span>\<span class="n">fftw</span><span class="o">-</span><span class="mf">3.3</span><span class="o">.</span><span class="mi">8</span>\<span class="n">Build64</span>\<span class="n">Release</span><span class="p">;</span>
+<span class="n">D</span><span class="p">:</span>\<span class="n">Libraries</span>\<span class="n">hdf5</span><span class="o">-</span><span class="mf">1.12</span><span class="o">.</span><span class="mi">0</span>\<span class="n">Build64</span>\<span class="n">_CPack_Packages</span>\<span class="n">win64</span>\<span class="n">ZIP</span>\<span class="n">HDF5</span><span class="o">-</span><span class="mf">1.12</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">win64</span>\<span class="n">lib</span>
+
+<span class="n">For</span> <span class="n">fast</span> <span class="n">copy</span><span class="p">:</span> <span class="n">CTRL</span><span class="o">+</span><span class="n">C</span> <span class="n">this</span> <span class="n">line</span> <span class="n">then</span> <span class="n">click</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">VS</span> <span class="n">textbox</span><span class="p">,</span>
+<span class="n">CTRL</span><span class="o">+</span><span class="n">A</span> <span class="ow">and</span> <span class="n">CTRL</span><span class="o">+</span><span class="n">V</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">D</span><span class="p">:</span>\<span class="n">Libraries</span>\<span class="n">fftw</span><span class="o">-</span><span class="mf">3.3</span><span class="o">.</span><span class="mi">8</span>\<span class="n">Build64</span>\<span class="n">Release</span><span class="p">;</span><span class="n">D</span><span class="p">:</span>\<span class="n">Libraries</span>\<span class="n">hdf5</span><span class="o">-</span><span class="mf">1.12</span><span class="o">.</span><span class="mi">0</span>\<span class="n">Build64</span>\<span class="n">_CPack_Packages</span>\<span class="n">win64</span>\<span class="n">ZIP</span>\<span class="n">HDF5</span><span class="o">-</span><span class="mf">1.12</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">win64</span>\<span class="n">lib</span><span class="p">;</span><span class="o">%</span><span class="p">(</span><span class="n">AdditionalLibraryDirectories</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p><em>Builds Events/Post-Build Event/Command line</em> =&gt;
+<code class="docutils literal notranslate"><span class="pre">xcopy</span> <span class="pre">/d</span> <span class="pre">/y</span> <span class="pre">&quot;D:\Libraries\fftw-3.3.8\Build64\Release\*.dll&quot;</span> <span class="pre">&quot;$(TargetDir)&quot;</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="in-the-top-bar-make-sure-to-select-release-and-the-right-plateform-then-click-on-run">
+<h4>5. In the top bar, make sure to select Release and the right Plateform, then Click on Run<a class="headerlink" href="#in-the-top-bar-make-sure-to-select-release-and-the-right-plateform-then-click-on-run" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>You may have an error popup when the project try to run the ALL
+BUILD version, just run manually the build file with
+<code class="docutils literal notranslate"><span class="pre">D:\Libraries\prismatic\Build64\Release\prismatic.exe</span></code></p>
+</div></blockquote>
+</div>
+<div class="section" id="get-the-prismatic-exe-and-fftwf-dll-files-at-path-to-prismatic-compiled-x64-release">
+<h4>6. Get the <strong>prismatic.exe</strong> and <strong>fftwf.dll</strong> files at Path\to\prismatic\compiled\x64\Release<a class="headerlink" href="#get-the-prismatic-exe-and-fftwf-dll-files-at-path-to-prismatic-compiled-x64-release" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+<div class="section" id="test">
+<h3>Test:<a class="headerlink" href="#test" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="copy-the-prismatic-exe-and-fftwf-dll-files-in-a-new-directory">
+<h4>7. Copy the <strong>prismatic.exe</strong> and <strong>fftwf.dll</strong> files in a new directory<a class="headerlink" href="#copy-the-prismatic-exe-and-fftwf-dll-files-in-a-new-directory" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="create-a-new-file-si100-xyz-in-this-directory">
+<h4>7.1 Create a new file “SI100.XYZ” in this directory<a class="headerlink" href="#create-a-new-file-si100-xyz-in-this-directory" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="open-it-and-paste-these-datas">
+<h4>7.1 Open it and paste these datas:<a class="headerlink" href="#open-it-and-paste-these-datas" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">one</span> <span class="n">unit</span> <span class="n">cell</span> <span class="n">of</span> <span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="n">silicon</span>
+      <span class="mf">5.43</span>    <span class="mf">5.43</span>    <span class="mf">5.43</span>
+  <span class="mi">14</span>  <span class="mf">0.0000</span>  <span class="mf">0.0000</span>  <span class="mf">0.0000</span>  <span class="mf">1.0</span>  <span class="mf">0.076</span>
+  <span class="mi">14</span>  <span class="mf">2.7150</span>  <span class="mf">2.7150</span>  <span class="mf">0.0000</span>  <span class="mf">1.0</span>  <span class="mf">0.076</span>
+  <span class="mi">14</span>  <span class="mf">1.3575</span>  <span class="mf">4.0725</span>  <span class="mf">1.3575</span>  <span class="mf">1.0</span>  <span class="mf">0.076</span>
+  <span class="mi">14</span>  <span class="mf">4.0725</span>  <span class="mf">1.3575</span>  <span class="mf">1.3575</span>  <span class="mf">1.0</span>  <span class="mf">0.076</span>
+  <span class="mi">14</span>  <span class="mf">2.7150</span>  <span class="mf">0.0000</span>  <span class="mf">2.7150</span>  <span class="mf">1.0</span>  <span class="mf">0.076</span>
+  <span class="mi">14</span>  <span class="mf">0.0000</span>  <span class="mf">2.7150</span>  <span class="mf">2.7150</span>  <span class="mf">1.0</span>  <span class="mf">0.076</span>
+  <span class="mi">14</span>  <span class="mf">1.3575</span>  <span class="mf">1.3575</span>  <span class="mf">4.0725</span>  <span class="mf">1.0</span>  <span class="mf">0.076</span>
+  <span class="mi">14</span>  <span class="mf">4.0725</span>  <span class="mf">4.0725</span>  <span class="mf">4.0725</span>  <span class="mf">1.0</span>  <span class="mf">0.076</span>
+  <span class="o">-</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="open-a-cmd-in-the-directory">
+<h4>8. Open a cmd in the directory<a class="headerlink" href="#open-a-cmd-in-the-directory" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">prismatic</span><span class="o">.</span><span class="n">exe</span> <span class="o">--</span><span class="nb">input</span><span class="o">-</span><span class="n">file</span> <span class="s2">&quot;Path</span><span class="se">\t</span><span class="s2">o</span><span class="se">\t</span><span class="s2">he\directory\SI100.XYZ&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="wait-for-the-prism-calculation-complete-message-to-be-displayed">
+<h4>8.1 Wait for the <em>PRISM Calculation complete</em> message to be displayed<a class="headerlink" href="#wait-for-the-prism-calculation-complete-message-to-be-displayed" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="if-you-have-python-with-the-hdf5-library-you-can-use-this-to-explore-the-hdf-file">
+<h4>8.2 If you have python with the hdf5 library, you can use this to explore the HDF file<a class="headerlink" href="#if-you-have-python-with-the-hdf5-library-you-can-use-this-to-explore-the-hdf-file" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">h5py</span>
+
+<span class="c1">#Recursively find the subfiles and display the structure like the tree function</span>
+<span class="k">def</span> <span class="nf">recursiveHDF</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">pathstring</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
+    <span class="c1">#Test if it is an hdf subfolder</span>
+    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="s1">&#39;keys&#39;</span><span class="p">):</span>
+
+        <span class="c1">#List the subkeys of this folder</span>
+        <span class="n">subkeys</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+
+        <span class="c1">#Test if it is empty</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">subkeys</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">pathstring</span> <span class="o">+</span> <span class="s1">&#39;└─── empty&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1">#Print every subdirectory</span>
+            <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">subkeys</span><span class="p">)):</span>
+                <span class="n">subkey</span> <span class="o">=</span> <span class="n">subkeys</span><span class="p">[</span><span class="n">s</span><span class="p">]</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">s</span><span class="o">+</span><span class="mi">1</span><span class="o">==</span><span class="nb">len</span><span class="p">(</span><span class="n">subkeys</span><span class="p">)):</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="n">pathstring</span> <span class="o">+</span> <span class="s1">&#39;└─── &#39;</span> <span class="o">+</span> <span class="n">subkey</span><span class="p">)</span>
+                    <span class="n">recursiveHDF</span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="n">subkey</span><span class="p">],</span> <span class="n">pathstring</span><span class="o">+</span><span class="s1">&#39;     &#39;</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="n">pathstring</span> <span class="o">+</span> <span class="s1">&#39;├─── &#39;</span> <span class="o">+</span> <span class="n">subkey</span><span class="p">)</span>
+                    <span class="n">recursiveHDF</span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="n">subkey</span><span class="p">],</span> <span class="n">pathstring</span><span class="o">+</span><span class="s1">&#39;│    &#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">pathstring</span> <span class="o">+</span> <span class="s1">&#39;└─── matrix&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="n">h5py</span><span class="o">.</span><span class="n">File</span><span class="p">(</span><span class="s1">&#39;path</span><span class="se">\t</span><span class="s1">o\output.h5&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">recursiveHDF</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id11">
+<h4>(TEMPORARY PASTEBIN)<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>git clone <a class="reference external" href="https://code.qt.io/qt/qt5.git">https://code.qt.io/qt/qt5.git</a></p></li>
+<li><p><a class="reference external" href="https://www.qt.io/download-qt-installer">https://www.qt.io/download-qt-installer</a></p></li>
+<li><p><a class="reference external" href="https://wiki.qt.io/Building_Qt_5_from_Git">https://wiki.qt.io/Building_Qt_5_from_Git</a></p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="prismatic-gui">
+<h2>PRISMATIC GUI<a class="headerlink" href="#prismatic-gui" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id12">
+<h3>Ressources:<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.qt.io/">https://www.qt.io/</a></p></li>
+<li><p><a class="reference external" href="https://stackoverflow.com/questions/6626397/error-lnk2019-unresolved-external-symbol-winmain16-referenced-in-function">https://stackoverflow.com/questions/6626397/error-lnk2019-unresolved-external-symbol-winmain16-referenced-in-function</a></p></li>
+</ul>
+<div class="section" id="download-qt">
+<h4>1. Download <a class="reference external" href="http://ftp.fau.de/qtproject/archive/online_installers/3.2/qt-unified-windows-x86-3.2.2-online.exe">Qt</a><a class="headerlink" href="#download-qt" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="create-an-qt-account-here">
+<h4>1.1 Create an Qt account <a class="reference external" href="https://login.qt.io/register">here</a><a class="headerlink" href="#create-an-qt-account-here" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="select-in-the-installer-the-qt-path-at-d-libraries-qt-and-select-the-right-version-for-the-compilation">
+<h4>1.2 Select in the installer the Qt path at <code class="docutils literal notranslate"><span class="pre">D:\Libraries\Qt</span></code> and select the right version for the compilation:<a class="headerlink" href="#select-in-the-installer-the-qt-path-at-d-libraries-qt-and-select-the-right-version-for-the-compilation" title="Permalink to this headline">¶</a></h4>
+<p><strong>Win32 system</strong></p>
+<ul class="simple">
+<li><p><strong>Qt 5.14.2 MSCV 2017 32-Bits</strong></p></li>
+</ul>
+<p><strong>Win64 system</strong></p>
+<ul class="simple">
+<li><p><strong>Qt 5.14.2 MSCV 2017 64-Bits</strong></p></li>
+</ul>
+<p><strong>Linux system</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">TODO</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-a-new-folder-ex-prismatic-master-build64gui-where-the-library-will-be-compiled">
+<h4>2. Create a new folder (ex: <em>prismatic-master/Build64GUI</em>) where the library will be compiled<a class="headerlink" href="#create-a-new-folder-ex-prismatic-master-build64gui-where-the-library-will-be-compiled" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">D</span><span class="p">:</span>\<span class="n">Libraries</span>\<span class="n">prismatic</span>\<span class="n">Build64GUI</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="open-prismatic-master-pro-d-libraries-prismatic-qt-prismatic-master-pro-in-a-text-editor">
+<h4>2.1 Open <strong>prismatic-master.pro</strong> (D:\Libraries\prismatic\Qt\prismatic-master.pro) in a text editor:<a class="headerlink" href="#open-prismatic-master-pro-d-libraries-prismatic-qt-prismatic-master-pro-in-a-text-editor" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">notepad</span> <span class="n">D</span><span class="p">:</span>\<span class="n">Libraries</span>\<span class="n">prismatic</span>\<span class="n">Qt</span>\<span class="n">prismatic</span><span class="o">-</span><span class="n">gui</span><span class="o">.</span><span class="n">pro</span>
+</pre></div>
+</div>
+<p>Then add at the end</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CONFIG</span> <span class="o">+=</span> <span class="n">console</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="optional-open-cmakelists-txt-in-the-prismatic-master-source-code-and-check-that-the-paths-to-the-icons-are-good-if-not-replace-qt-by-qt">
+<h4>2.2 (Optional) Open CMakeLists.txt in the prismatic-master source code and check that the paths to the icons are good (if not replace ../Qt by Qt).<a class="headerlink" href="#optional-open-cmakelists-txt-in-the-prismatic-master-source-code-and-check-that-the-paths-to-the-icons-are-good-if-not-replace-qt-by-qt" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="you-can-also-add-the-link-to-qt-to-the-path-d-libraries-qt">
+<h4>2.3 You can also add the link to Qt to the PATH: <code class="docutils literal notranslate"><span class="pre">D:\Libraries\Qt</span></code><a class="headerlink" href="#you-can-also-add-the-link-to-qt-to-the-path-d-libraries-qt" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id13">
+<h4>3. Open the CMake GUI<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id14">
+<h4>3.1 Complete the links with the code source directory and the build directory<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Where is the source code: <code class="docutils literal notranslate"><span class="pre">D:/Libraries/prismatic</span></code></p></li>
+<li><p>Where to build the binaries: <code class="docutils literal notranslate"><span class="pre">D:/Libraries/prismatic/Build64GUI</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="id15">
+<h4>3.2 Click on <em>Configure</em> and select <em>Visual Studio 15 2017</em><a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h4>
+<p><strong>Win32 system</strong></p>
+<ul class="simple">
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">Win32</span></code> in the Optional Plateform Generator</p></li>
+</ul>
+<p><strong>Win64 system</strong></p>
+<ul class="simple">
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">x64</span></code> in the Optional Plateform Generator</p></li>
+</ul>
+<p><strong>Linux system</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">TODO</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="check-grouped-and-advanced-then-check-prismatic-enable-gui-and-prismatic-enable-cli">
+<h4>3.3 Check <strong>Grouped</strong> and <strong>Advanced</strong>, then check <strong>PRISMATIC_ENABLE_GUI</strong> and <strong>PRISMATIC_ENABLE_CLI</strong><a class="headerlink" href="#check-grouped-and-advanced-then-check-prismatic-enable-gui-and-prismatic-enable-cli" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="complete-the-missing-links-to-the-compiled-libraries">
+<h4>3.4 Complete the missing links to the compiled libraries:<a class="headerlink" href="#complete-the-missing-links-to-the-compiled-libraries" title="Permalink to this headline">¶</a></h4>
+<p><strong>BOOST</strong></p>
+<ul class="simple">
+<li><p><em>Boost_INCLUDE_DIR</em> =&gt; <code class="docutils literal notranslate"><span class="pre">D:\Libraries\boost_1_72_0</span></code></p></li>
+</ul>
+<p><strong>Click on Configure</strong></p>
+<p><strong>FFTW:</strong></p>
+<ul class="simple">
+<li><p><em>FFTW_INCLUDE_DIR</em> =&gt; <code class="docutils literal notranslate"><span class="pre">D:\Libraries\fftw-3.3.8\api</span></code></p></li>
+<li><p><em>FFTW_LIBRARY</em> =&gt; <code class="docutils literal notranslate"><span class="pre">D:\Libraries\fftw-3.3.8</span></code></p></li>
+</ul>
+<p><strong>HDF5:</strong></p>
+<ul class="simple">
+<li><p><em>HDF5_CXX_INCLUDE_DIR</em> =&gt;
+<code class="docutils literal notranslate"><span class="pre">D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\include</span></code></p></li>
+<li><p><em>HDF5_hdf5_LIBRARY_DEBUG</em> =&gt;
+<code class="docutils literal notranslate"><span class="pre">D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64</span></code></p></li>
+<li><p><em>HDF5_hdf5_LIBRARY_RELEASE</em> =&gt;
+<code class="docutils literal notranslate"><span class="pre">D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64</span></code></p></li>
+</ul>
+<p><strong>Click on Configure</strong></p>
+<p><strong>Ungouped Entries (QT5):</strong></p>
+<ul class="simple">
+<li><p><em>QT5Widgets_DIR</em> =&gt;
+<code class="docutils literal notranslate"><span class="pre">D:\Libraries\Qt\5.14.2\msvc2017_64\lib\cmake\Qt5Widgets</span></code></p></li>
+</ul>
+<p><strong>Click on Configure</strong></p>
+</div>
+<div class="section" id="click-again-on-configure-and-if-nothing-is-still-red-click-on-generate">
+<h4>3.5 Click again on Configure and if nothing is still red, click on Generate<a class="headerlink" href="#click-again-on-configure-and-if-nothing-is-still-red-click-on-generate" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>You may again have an error message, but it’s ok if you have
+<em>Generating done</em> at the end of the process, it’s only warning about
+the DIR-NOTFOUND but we will edit every links maually in the
+project.</p>
+</div></blockquote>
+</div>
+<div class="section" id="id16">
+<h4>4. Open the project in Visual Studio 2017<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>You can click on the <em>Open Project</em> button in CMake</p>
+</div></blockquote>
+</div>
+<div class="section" id="select-both-prismatic-and-prismatic-gui-with-ctrl-click">
+<h4>4.1 Select both <strong>prismatic</strong> and <strong>prismatic-gui</strong> with <em>Ctrl</em> + <em>Click</em><a class="headerlink" href="#select-both-prismatic-and-prismatic-gui-with-ctrl-click" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="right-click-on-a-project-and-go-to-properties-general">
+<h4>4.2 Right Click on a project and go to Properties/General:<a class="headerlink" href="#right-click-on-a-project-and-go-to-properties-general" title="Permalink to this headline">¶</a></h4>
+<p>Make sure to select <strong>Select All Configurations</strong> and the right
+<strong>Plateform</strong></p>
+<ul>
+<li><p><em>Configuration Property/General/Windows SDK Version</em> =&gt;
+<code class="docutils literal notranslate"><span class="pre">10.0.17763.0</span></code></p></li>
+<li><p><em>Configuration Property/General/Plateform tools</em> =&gt;
+`<code class="docutils literal notranslate"><span class="pre">Visual</span> <span class="pre">Studio</span> <span class="pre">2017</span> <span class="pre">(v141)</span></code></p></li>
+<li><div class="line-block">
+<div class="line"><em>C C++/General/Additionnal Include Directories</em> =&gt;</div>
+<div class="line">```</div>
+<div class="line">D:\Libraries\prismatic\include;</div>
+<div class="line">D:\Libraries\fftw-3.3.8\api;</div>
+<div class="line">D:\Libraries\hdf5-1.12.0\Build64_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\include;</div>
+<div class="line">D:\Libraries\boost_1_72_0;</div>
+</div>
+</li>
+</ul>
+<div class="line-block">
+<div class="line">D:\Libraries\prismatic;</div>
+<div class="line">D:\Libraries\prismatic\include;</div>
+<div class="line">D:\Libraries\prismatic\Qt;</div>
+</div>
+<div class="line-block">
+<div class="line">D:\Libraries\Qt\5.14.2\msvc2017_64;</div>
+<div class="line">D:\Libraries\Qt\5.14.2\msvc2017_64\lib;</div>
+<div class="line">D:\Libraries\Qt\5.14.2\msvc2017_64\include;</div>
+<div class="line">D:\Libraries\Qt\5.14.2\msvc2017_64\include\QtWidgets;</div>
+<div class="line">D:\Libraries\Qt\5.14.2\msvc2017_64\include\QtGui;</div>
+<div class="line">D:\Libraries\Qt\5.14.2\msvc2017_64\include\QtCore;</div>
+</div>
+<div class="line-block">
+<div class="line">D:\Libraries\prismatic\Build64GUI;</div>
+<div class="line">D:\Libraries\prismatic\Build64GUI\prismatic-gui_autogen\include_Release;</div>
+<div class="line">%(AdditionalIncludeDirectories)</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">For</span> <span class="n">fast</span> <span class="n">copy</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">kbd</span><span class="o">&gt;</span><span class="n">CTRL</span><span class="o">+</span><span class="n">C</span><span class="o">&lt;/</span><span class="n">kbd</span><span class="o">&gt;</span> <span class="n">this</span> <span class="n">line</span> <span class="n">then</span> <span class="n">click</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">VS</span> <span class="n">textbox</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">kbd</span><span class="o">&gt;</span><span class="n">CTRL</span><span class="o">+</span><span class="n">A</span><span class="o">&lt;/</span><span class="n">kbd</span><span class="o">&gt;</span> <span class="ow">and</span> <span class="o">&lt;</span><span class="n">kbd</span><span class="o">&gt;</span><span class="n">CTRL</span><span class="o">+</span><span class="n">V</span><span class="o">&lt;/</span><span class="n">kbd</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>D:\Libraries\prismatic\include;D:\Libraries\fftw-3.3.8\api;D:\Libraries\hdf5-1.12.0\Build64_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\include;D:\Libraries\boost_1_72_0;D:\Libraries\prismatic;D:\Libraries\prismatic\include;D:\Libraries\prismatic\Qt;D:\Libraries\Qt\5.14.2\msvc2017_64;D:\Libraries\Qt\5.14.2\msvc2017_64\lib;D:\Libraries\Qt\5.14.2\msvc2017_64\include;D:\Libraries\Qt\5.14.2\msvc2017_64\include\QtWidgets;D:\Libraries\Qt\5.14.2\msvc2017_64\include\QtGui;D:\Libraries\Qt\5.14.2\msvc2017_64\include\QtCore;D:\Libraries\prismatic\Build64GUI;D:\Libraries\prismatic\Build64GUI\prismatic-gui_autogen\include_Release;%(AdditionalIncludeDirectories)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="o">*</span><span class="n">Linker</span><span class="o">/</span><span class="n">Input</span><span class="o">/</span><span class="n">Additionnal</span> <span class="n">Dependency</span><span class="o">*</span> <span class="o">=&gt;</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">fftw3f.lib;</div>
+<div class="line">libhdf5_hl.lib;</div>
+<div class="line">libhdf5.lib;</div>
+<div class="line">libhdf5_hl_cpp.lib;</div>
+<div class="line">libhdf5_cpp.lib;</div>
+<div class="line">Qt5Widgets.lib;</div>
+<div class="line">Qt5Gui.lib;</div>
+<div class="line">Qt5Core.lib;</div>
+<div class="line">qtmain.lib;</div>
+<div class="line">shell32.lib;</div>
+<div class="line">WindowsApp.lib;</div>
+<div class="line">%(AdditionalDependencies)</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">For</span> <span class="n">fast</span> <span class="n">copy</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">kbd</span><span class="o">&gt;</span><span class="n">CTRL</span><span class="o">+</span><span class="n">C</span><span class="o">&lt;/</span><span class="n">kbd</span><span class="o">&gt;</span> <span class="n">this</span> <span class="n">line</span> <span class="n">then</span> <span class="n">click</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">VS</span> <span class="n">textbox</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">kbd</span><span class="o">&gt;</span><span class="n">CTRL</span><span class="o">+</span><span class="n">A</span><span class="o">&lt;/</span><span class="n">kbd</span><span class="o">&gt;</span> <span class="ow">and</span> <span class="o">&lt;</span><span class="n">kbd</span><span class="o">&gt;</span><span class="n">CTRL</span><span class="o">+</span><span class="n">V</span><span class="o">&lt;/</span><span class="n">kbd</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>fftw3f.lib;libhdf5_hl.lib;libhdf5.lib;libhdf5_hl_cpp.lib;libhdf5_cpp.lib;Qt5Widgets.lib;Qt5Gui.lib;Qt5Core.lib;qtmain.lib;shell32.lib;WindowsApp.lib;%(AdditionalDependencies)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt; The order in wich the libraries are linked is realy important, that&#39;s even more true when you have like here a program with many links to others libraries, and that these libraries use the base functions of others libraries.
+
+* **Win32 system**
+* *Linker/Input/Advanced/Target computer* =&gt; ```MachineX86 (/MACHINE:X86)```
+* *Link editor/Command line/Additional options* =&gt; Remove ```/machine:X64```
+
+* **Win64 system**
+* *Linker/Input/Advanced/Target computer* =&gt; ```MachineX64 (/MACHINE:X64)```
+* *Link editor/Command line/Additional options* =&gt; Remove ```/machine:X86```
+
+Click on **Apply** and select **Release:** in Configuration
+
+* *Linker/General/Additionnal Library Directories* =&gt;
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">D:\Libraries\boost_1_72_0\stage\lib;</div>
+<div class="line">D:\Libraries\fftw-3.3.8\Build64\Release;</div>
+<div class="line">D:\Libraries\hdf5-1.12.0\Build64_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\lib;</div>
+<div class="line">D:\Libraries\Qt\5.14.2\msvc2017_64\lib;</div>
+</div>
+<p>%(AdditionalLibraryDirectories)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">For</span> <span class="n">fast</span> <span class="n">copy</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">kbd</span><span class="o">&gt;</span><span class="n">CTRL</span><span class="o">+</span><span class="n">C</span><span class="o">&lt;/</span><span class="n">kbd</span><span class="o">&gt;</span> <span class="n">this</span> <span class="n">line</span> <span class="n">then</span> <span class="n">click</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">VS</span> <span class="n">textbox</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">kbd</span><span class="o">&gt;</span><span class="n">CTRL</span><span class="o">+</span><span class="n">A</span><span class="o">&lt;/</span><span class="n">kbd</span><span class="o">&gt;</span> <span class="ow">and</span> <span class="o">&lt;</span><span class="n">kbd</span><span class="o">&gt;</span><span class="n">CTRL</span><span class="o">+</span><span class="n">V</span><span class="o">&lt;/</span><span class="n">kbd</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>D:\Libraries\boost_1_72_0\stage\lib;D:\Libraries\fftw-3.3.8\Build64\Release;D:\Libraries\hdf5-1.12.0\Build64_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\lib;D:\Libraries\Qt\5.14.2\msvc2017_64\lib;%(AdditionalLibraryDirectories)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="o">*</span><span class="n">Builds</span> <span class="n">Events</span><span class="o">/</span><span class="n">Post</span><span class="o">-</span><span class="n">Build</span> <span class="n">Event</span><span class="o">/</span><span class="n">Command</span> <span class="n">line</span><span class="o">*</span> <span class="o">=&gt;</span>
+</pre></div>
+</div>
+<p>xcopy /d /y “D:\Libraries\fftw-3.3.8\Build64\Debug*.dll”
+“$(TargetDir)”</p>
+<div class="line-block">
+<div class="line">xcopy /d /y</div>
+</div>
+<p>“D:\Libraries\Qt\5.14.2\msvc2017_64\bin\Qt5Core.dll”
+“$(TargetDir)”
+| xcopy /d /y “D:\Libraries\Qt\5.14.2\msvc2017_64\bin\Qt5Gui.dll”
+“$(TargetDir)”
+| xcopy /d /y
+“D:\Libraries\Qt\5.14.2\msvc2017_64\bin\Qt5Widgets.dll”
+“$(TargetDir)”</p>
+<div class="line-block">
+<div class="line">mkdir “$(TargetDir)\platforms”</div>
+<div class="line">xcopy /d /y “D:\Libraries\Qt\Tools\QtCreator\bin\libEGL.dll”</div>
+</div>
+<p>“$(TargetDir)\platforms”
+| xcopy /d /y
+“D:\Libraries\Qt\5.14.2\msvc2017_64\plugins\platforms\qwindows.dll”
+“$(TargetDir)\platforms”
+| ```
+| Click on <strong>Apply</strong></p>
+<p><strong>Select only the properties for prismatic-gui and check that these
+parameters are good:</strong></p>
+<ul class="simple">
+<li><p><em>Linker/System/Sub-System</em> =&gt; Windows (/SUBSYSTEM:WINDOWS)</p></li>
+<li><p><em>Linker/Advanced/Importation libraries</em> =&gt; D:/Documents/Projets/CEA
+Grenoble Project/PrismaticGUI/Release/prismatic-gui.lib</p></li>
+<li><p><em>C/C++/Preprocessor/Preprocessor definition</em> =&gt;
+<code class="docutils literal notranslate"><span class="pre">WIN32;_WINDOWS;NDEBUG;PRISMATIC_BUILDING_GUI=1;PRISMATIC_ENABLE_GUI;PRISMATIC_ENABLE_CLI;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;CMAKE_INTDIR=&quot;Release&quot;;</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="id17">
+<h4>5. In the top bar, make sure to select Release and the right Plateform, then Click on Run<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><div class="line-block">
+<div class="line">You may have an error popup when the project try to run the ALL</div>
+</div>
+<p>BUILD version, just run manually the build file with
+| <code class="docutils literal notranslate"><span class="pre">D:\Libraries\prismatic\Build64\Release\prismatic.exe</span></code></p>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="test-prismatic-performances">
+<h3>Test Prismatic Performances:<a class="headerlink" href="#test-prismatic-performances" title="Permalink to this headline">¶</a></h3>
+<p><strong>Win32 and Win64 system</strong></p>
+<ul>
+<li><p>Open a Windows PowerShell in the prismatic/Build/Release folder and
+add the data test file “SI100.XYZ”</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Measure</span><span class="o">-</span><span class="n">Command</span> <span class="p">{</span><span class="o">.</span>\<span class="n">prismatic</span><span class="o">.</span><span class="n">exe</span> <span class="o">--</span><span class="nb">input</span><span class="o">-</span><span class="n">file</span> <span class="s2">&quot;SI100.XYZ&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p><strong>Linux system</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">TODO</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Example comparing the Base Build (316ms for this simple file) and the
+GPU Build (857ms for one file, but should be more effective the more
+complex and time-consuming the computations are for the CPU)</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Base Build</span>
+<span class="n">Measure</span><span class="o">-</span><span class="n">Command</span> <span class="p">{</span><span class="o">.</span>\<span class="n">prismatic</span><span class="o">.</span><span class="n">exe</span> <span class="o">--</span><span class="nb">input</span><span class="o">-</span><span class="n">file</span> <span class="s2">&quot;SI100.XYZ&quot;</span><span class="p">}</span>
+
+<span class="n">Days</span>              <span class="p">:</span> <span class="mi">0</span>
+<span class="n">Hours</span>             <span class="p">:</span> <span class="mi">0</span>
+<span class="n">Minutes</span>           <span class="p">:</span> <span class="mi">0</span>
+<span class="n">Seconds</span>           <span class="p">:</span> <span class="mi">0</span>
+<span class="n">Milliseconds</span>      <span class="p">:</span> <span class="mi">316</span>
+<span class="n">Ticks</span>             <span class="p">:</span> <span class="mi">3163259</span>
+<span class="n">TotalDays</span>         <span class="p">:</span> <span class="mi">3</span><span class="p">,</span><span class="mf">66117939814815E-06</span>
+<span class="n">TotalHours</span>        <span class="p">:</span> <span class="mi">8</span><span class="p">,</span><span class="mf">78683055555556E-05</span>
+<span class="n">TotalMinutes</span>      <span class="p">:</span> <span class="mi">0</span><span class="p">,</span><span class="mi">00527209833333333</span>
+<span class="n">TotalSeconds</span>      <span class="p">:</span> <span class="mi">0</span><span class="p">,</span><span class="mi">3163259</span>
+<span class="n">TotalMilliseconds</span> <span class="p">:</span> <span class="mi">316</span><span class="p">,</span><span class="mi">3259</span>
+
+<span class="c1">#GPU Build</span>
+<span class="n">Measure</span><span class="o">-</span><span class="n">Command</span> <span class="p">{</span><span class="o">.</span>\<span class="n">prismatic</span><span class="o">.</span><span class="n">exe</span> <span class="o">--</span><span class="nb">input</span><span class="o">-</span><span class="n">file</span> <span class="s2">&quot;SI100.XYZ&quot;</span><span class="p">}</span>
+
+<span class="n">Days</span>              <span class="p">:</span> <span class="mi">0</span>
+<span class="n">Hours</span>             <span class="p">:</span> <span class="mi">0</span>
+<span class="n">Minutes</span>           <span class="p">:</span> <span class="mi">0</span>
+<span class="n">Seconds</span>           <span class="p">:</span> <span class="mi">0</span>
+<span class="n">Milliseconds</span>      <span class="p">:</span> <span class="mi">857</span>
+<span class="n">Ticks</span>             <span class="p">:</span> <span class="mi">8571921</span>
+<span class="n">TotalDays</span>         <span class="p">:</span> <span class="mi">9</span><span class="p">,</span><span class="mf">92120486111111E-06</span>
+<span class="n">TotalHours</span>        <span class="p">:</span> <span class="mi">0</span><span class="p">,</span><span class="mi">000238108916666667</span>
+<span class="n">TotalMinutes</span>      <span class="p">:</span> <span class="mi">0</span><span class="p">,</span><span class="mi">014286535</span>
+<span class="n">TotalSeconds</span>      <span class="p">:</span> <span class="mi">0</span><span class="p">,</span><span class="mi">8571921</span>
+<span class="n">TotalMilliseconds</span> <span class="p">:</span> <span class="mi">857</span><span class="p">,</span><span class="mi">1921</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="prismatic-gpu">
+<h2>PRISMATIC GPU<a class="headerlink" href="#prismatic-gpu" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id18">
+<h3>Ressources:<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html">https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html</a></p></li>
+<li><p><a class="reference external" href="https://stackoverflow.com/questions/6626397/error-lnk2019-unresolved-external-symbol-winmain16-referenced-in-function">https://stackoverflow.com/questions/6626397/error-lnk2019-unresolved-external-symbol-winmain16-referenced-in-function</a></p></li>
+</ul>
+<div class="section" id="download-the-cuda-toolkit-10-2-for-windows-v10">
+<h4>1. Download the <a class="reference external" href="https://developer.nvidia.com/cuda-downloads">CUDA</a> Toolkit 10.2 for Windows (v10)<a class="headerlink" href="#download-the-cuda-toolkit-10-2-for-windows-v10" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="make-sure-that-you-have-a-graphical-card-compatible-with-cuda">
+<h4>1.1 Make sure that you have a Graphical card compatible with CUDA<a class="headerlink" href="#make-sure-that-you-have-a-graphical-card-compatible-with-cuda" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="cuda-will-be-installed-at-c-program-files-nvidia-gpu-computing-toolkit-cuda-v10-2">
+<h4>1.2 Cuda will be installed at <code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files\NVIDIA</span> <span class="pre">GPU</span> <span class="pre">Computing</span> <span class="pre">Toolkit\CUDA\v10.2</span></code><a class="headerlink" href="#cuda-will-be-installed-at-c-program-files-nvidia-gpu-computing-toolkit-cuda-v10-2" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><div class="line-block">
+<div class="line">You can test the installation by running <code class="docutils literal notranslate"><span class="pre">nvcc</span> <span class="pre">-V</span></code> to check the</div>
+</div>
+<p>Version on the instalation. If the call to nvcc don’t work, make
+sure to add this link to the PATH:
+<code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files\NVIDIA</span> <span class="pre">GPU</span> <span class="pre">Computing</span> <span class="pre">Toolkit\CUDA\v10.2\bin</span></code>
+| You can even compile some of the tests codes at
+<code class="docutils literal notranslate"><span class="pre">C:\ProgramData\NVIDIA</span> <span class="pre">Corporation\CUDA</span> <span class="pre">Samples\v10.2</span></code>
+| the .exe will be built at
+<code class="docutils literal notranslate"><span class="pre">C:\ProgramData\NVIDIA</span> <span class="pre">Corporation\CUDA</span> <span class="pre">Samples\v10.2\bin\win64</span></code></p>
+</div></blockquote>
+</div>
+<div class="section" id="create-a-new-folder-ex-prismatic-master-build64gpu-where-the-library-will-be-compiled">
+<h4>2. Create a new folder (ex: <em>prismatic-master/Build64GPU</em>) where the library will be compiled<a class="headerlink" href="#create-a-new-folder-ex-prismatic-master-build64gpu-where-the-library-will-be-compiled" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">D</span><span class="p">:</span>\<span class="n">Libraries</span>\<span class="n">prismatic</span>\<span class="n">Build64GPU</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id19">
+<h4>2.1 Open <strong>prismatic-master.pro</strong> (D:\Libraries\prismatic\Qt\prismatic-master.pro) in a text editor:<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">notepad</span> <span class="n">D</span><span class="p">:</span>\<span class="n">Libraries</span>\<span class="n">prismatic</span>\<span class="n">Qt</span>\<span class="n">prismatic</span><span class="o">-</span><span class="n">gui</span><span class="o">.</span><span class="n">pro</span>
+</pre></div>
+</div>
+<p>Then add at the end</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CONFIG</span> <span class="o">+=</span> <span class="n">console</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id20">
+<h4>3. Open the CMake GUI<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id21">
+<h4>3.1 Complete the links with the code source directory and the build directory<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Where is the source code: <code class="docutils literal notranslate"><span class="pre">D:/Libraries/prismatic</span></code></p></li>
+<li><p>Where to build the binaries: <code class="docutils literal notranslate"><span class="pre">D:/Libraries/prismatic/Build64GPU</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="id22">
+<h4>3.2 Click on <em>Configure</em> and select <em>Visual Studio 15 2017</em><a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="check-grouped-and-advanced-then-check-prismatic-enable-gpu-prismatic-enable-gui-and-prismatic-enable-cli">
+<h4>3.3 Check <strong>Grouped</strong> and <strong>Advanced</strong>, then check <strong>PRISMATIC_ENABLE_GPU</strong>, <strong>PRISMATIC_ENABLE_GUI</strong> and <strong>PRISMATIC_ENABLE_CLI</strong><a class="headerlink" href="#check-grouped-and-advanced-then-check-prismatic-enable-gpu-prismatic-enable-gui-and-prismatic-enable-cli" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="click-on-configure-then-complete-the-missing-links-to-the-compiled-libraries">
+<h4>3.4 <strong>Click on Configure</strong> Then complete the missing links to the compiled libraries:<a class="headerlink" href="#click-on-configure-then-complete-the-missing-links-to-the-compiled-libraries" title="Permalink to this headline">¶</a></h4>
+<p><strong>BOOST</strong></p>
+<ul class="simple">
+<li><p><em>Boost_INCLUDE_DIR</em> =&gt; <code class="docutils literal notranslate"><span class="pre">D:\Libraries\boost_1_72_0</span></code></p></li>
+</ul>
+<p><strong>Click on Configure</strong></p>
+<p><strong>FFTW:</strong></p>
+<ul class="simple">
+<li><p><em>FFTW_INCLUDE_DIR</em> =&gt; <code class="docutils literal notranslate"><span class="pre">D:\Libraries\fftw-3.3.8\api</span></code></p></li>
+<li><p><em>FFTW_LIBRARY</em> =&gt; <code class="docutils literal notranslate"><span class="pre">D:\Libraries\fftw-3.3.8</span></code></p></li>
+</ul>
+<p><strong>HDF5:</strong></p>
+<ul class="simple">
+<li><p><em>HDF5_CXX_INCLUDE_DIR</em> =&gt;
+<code class="docutils literal notranslate"><span class="pre">D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\include</span></code></p></li>
+<li><p><em>HDF5_hdf5_LIBRARY_DEBUG</em> =&gt;
+<code class="docutils literal notranslate"><span class="pre">D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64</span></code></p></li>
+<li><p><em>HDF5_hdf5_LIBRARY_RELEASE</em> =&gt;
+<code class="docutils literal notranslate"><span class="pre">D:\Libraries\hdf5-1.12.0\Build64\_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64</span></code></p></li>
+</ul>
+<p><strong>Click on Configure</strong></p>
+<p><strong>Ungouped Entries (QT5):</strong></p>
+<ul class="simple">
+<li><p><em>QT5Widgets_DIR</em> =&gt;
+<code class="docutils literal notranslate"><span class="pre">D:\Libraries\Qt\5.14.2\msvc2017_64\lib\cmake\Qt5Widgets</span></code></p></li>
+</ul>
+<p><strong>Click on Configure</strong></p>
+<p><strong>CUDA:</strong></p>
+<ul class="simple">
+<li><p><em>CUDA_64_BITS_DEVICE_CODE</em> =&gt; make sure that it’s checked if you
+build in x64</p></li>
+</ul>
+<p><strong>Click on Configure</strong></p>
+</div>
+<div class="section" id="id23">
+<h4>3.5 Click again on Configure and if nothing is still red, click on Generate<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>You may again have an error message, but it’s ok if you have
+<em>Generating done</em> at the end of the process, it’s only warning about
+the DIR-NOTFOUND but we will edit every links maually in the
+project.</p>
+</div></blockquote>
+</div>
+<div class="section" id="id24">
+<h4>4. Open the project in Visual Studio 2017<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>You can click on the <em>Open Project</em> button in CMake</p>
+</div></blockquote>
+</div>
+<div class="section" id="id25">
+<h4>4.1 Select both <strong>prismatic</strong> and <strong>prismatic-gui</strong> with <em>Ctrl</em> + <em>Click</em><a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id26">
+<h4>4.2 Right Click on a project and go to Properties/General:<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h4>
+<p>Make sure to select <strong>Select All Configurations</strong> and the right
+<strong>Plateform</strong></p>
+<ul>
+<li><p><em>Configuration Property/General/Windows SDK Version</em> =&gt;
+<code class="docutils literal notranslate"><span class="pre">10.0.17763.0</span></code></p></li>
+<li><p><em>Configuration Property/General/Plateform tools</em> =&gt;
+<code class="docutils literal notranslate"><span class="pre">Visual</span> <span class="pre">Studio</span> <span class="pre">2017</span> <span class="pre">(v141)</span></code></p></li>
+<li><div class="line-block">
+<div class="line"><em>C C++/General/Additionnal Include Directories</em> =&gt;</div>
+<div class="line">```</div>
+<div class="line">C:\Program Files\NVIDIA GPU Computing</div>
+</div>
+<p>Toolkit\CUDA\v10.2\include;</p>
+</li>
+</ul>
+<div class="line-block">
+<div class="line">D:\Libraries\prismatic\include;</div>
+<div class="line">D:\Libraries\fftw-3.3.8\api;</div>
+<div class="line">D:\Libraries\hdf5-1.12.0\Build64_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\include;</div>
+<div class="line">D:\Libraries\boost_1_72_0;</div>
+</div>
+<div class="line-block">
+<div class="line">D:\Libraries\prismatic;</div>
+<div class="line">D:\Libraries\prismatic\include;</div>
+<div class="line">D:\Libraries\prismatic\Qt;</div>
+</div>
+<div class="line-block">
+<div class="line">D:\Libraries\Qt\5.14.2\msvc2017_64;</div>
+<div class="line">D:\Libraries\Qt\5.14.2\msvc2017_64\lib;</div>
+<div class="line">D:\Libraries\Qt\5.14.2\msvc2017_64\include;</div>
+<div class="line">D:\Libraries\Qt\5.14.2\msvc2017_64\include\QtWidgets;</div>
+<div class="line">D:\Libraries\Qt\5.14.2\msvc2017_64\include\QtGui;</div>
+<div class="line">D:\Libraries\Qt\5.14.2\msvc2017_64\include\QtCore;</div>
+</div>
+<div class="line-block">
+<div class="line">D:\Libraries\prismatic\Build64GPU;</div>
+<div class="line">D:\Libraries\prismatic\Build64GPU\prismatic-gui_autogen\include_Release;</div>
+<div class="line">%(AdditionalIncludeDirectories)</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">For</span> <span class="n">fast</span> <span class="n">copy</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">kbd</span><span class="o">&gt;</span><span class="n">CTRL</span><span class="o">+</span><span class="n">C</span><span class="o">&lt;/</span><span class="n">kbd</span><span class="o">&gt;</span> <span class="n">this</span> <span class="n">line</span> <span class="n">then</span> <span class="n">click</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">VS</span> <span class="n">textbox</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">kbd</span><span class="o">&gt;</span><span class="n">CTRL</span><span class="o">+</span><span class="n">A</span><span class="o">&lt;/</span><span class="n">kbd</span><span class="o">&gt;</span> <span class="ow">and</span> <span class="o">&lt;</span><span class="n">kbd</span><span class="o">&gt;</span><span class="n">CTRL</span><span class="o">+</span><span class="n">V</span><span class="o">&lt;/</span><span class="n">kbd</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\include;
+D:\Libraries\prismatic\include; D:\Libraries\fftw-3.3.8\api;
+D:\Libraries\hdf5-1.12.0\Build64_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\include;
+D:\Libraries\boost_1_72_0; D:\Libraries\prismatic;
+D:\Libraries\prismatic\include; D:\Libraries\prismatic\Qt;
+D:\Libraries\Qt\5.14.2\msvc2017_64;
+D:\Libraries\Qt\5.14.2\msvc2017_64\lib;
+D:\Libraries\Qt\5.14.2\msvc2017_64\include;
+D:\Libraries\Qt\5.14.2\msvc2017_64\include\QtWidgets;
+D:\Libraries\Qt\5.14.2\msvc2017_64\include\QtGui;
+D:\Libraries\Qt\5.14.2\msvc2017_64\include\QtCore;
+D:\Libraries\prismatic\Build64GPU;
+D:\Libraries\prismatic\Build64GPU\prismatic-gui_autogen\include_Release;
+%(AdditionalIncludeDirectories)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="o">*</span><span class="n">Linker</span><span class="o">/</span><span class="n">Input</span><span class="o">/</span><span class="n">Additionnal</span> <span class="n">Dependency</span><span class="o">*</span> <span class="o">=&gt;</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">cudart_static.lib;</div>
+<div class="line">cufft.lib;</div>
+<div class="line">fftw3f.lib;</div>
+<div class="line">libhdf5_hl.lib;</div>
+<div class="line">libhdf5.lib;</div>
+<div class="line">libhdf5_hl_cpp.lib;</div>
+<div class="line">libhdf5_cpp.lib;</div>
+<div class="line">Qt5Widgets.lib;</div>
+<div class="line">Qt5Gui.lib;</div>
+<div class="line">Qt5Core.lib;</div>
+<div class="line">qtmain.lib;</div>
+<div class="line">shell32.lib;</div>
+<div class="line">WindowsApp.lib;</div>
+<div class="line">%(AdditionalDependencies)</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">For</span> <span class="n">fast</span> <span class="n">copy</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">kbd</span><span class="o">&gt;</span><span class="n">CTRL</span><span class="o">+</span><span class="n">C</span><span class="o">&lt;/</span><span class="n">kbd</span><span class="o">&gt;</span> <span class="n">this</span> <span class="n">line</span> <span class="n">then</span> <span class="n">click</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">VS</span> <span class="n">textbox</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">kbd</span><span class="o">&gt;</span><span class="n">CTRL</span><span class="o">+</span><span class="n">A</span><span class="o">&lt;/</span><span class="n">kbd</span><span class="o">&gt;</span> <span class="ow">and</span> <span class="o">&lt;</span><span class="n">kbd</span><span class="o">&gt;</span><span class="n">CTRL</span><span class="o">+</span><span class="n">V</span><span class="o">&lt;/</span><span class="n">kbd</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>cudart_static.lib;cufft.lib;fftw3f.lib;libhdf5_hl.lib;libhdf5.lib;libhdf5_hl_cpp.lib;libhdf5_cpp.lib;Qt5Widgets.lib;Qt5Gui.lib;Qt5Core.lib;qtmain.lib;shell32.lib;WindowsApp.lib;%(AdditionalDependencies)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt; The order in wich the libraries are linked is realy important, that&#39;s even more true when you have like here a program with many links to others libraries, and that these libraries use the base functions of others libraries.
+
+* **Win32 system**
+* *Linker/Input/Advanced/Target computer* =&gt; ```MachineX86 (/MACHINE:X86)```
+* *Link editor/Command line/Additional options* =&gt; Remove ```/machine:X64```
+
+* **Win64 system**
+* *Linker/Input/Advanced/Target computer* =&gt; ```MachineX64 (/MACHINE:X64)```
+* *Link editor/Command line/Additional options* =&gt; Remove ```/machine:X86```
+
+Click on **Apply** and select **Release:** in Configuration
+
+* *Linker/General/Additionnal Library Directories* =&gt;
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">C:\Program Files\NVIDIA GPU Computing</div>
+</div>
+<p>Toolkit\CUDA\v10.2\lib\x64;
+| D:\Libraries\boost_1_72_0\stage\lib;
+| D:\Libraries\fftw-3.3.8\Build64\Release;
+| D:\Libraries\hdf5-1.12.0\Build64_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\lib;
+| D:\Libraries\Qt\5.14.2\msvc2017_64\lib;</p>
+<p>%(AdditionalLibraryDirectories)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">For</span> <span class="n">fast</span> <span class="n">copy</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">kbd</span><span class="o">&gt;</span><span class="n">CTRL</span><span class="o">+</span><span class="n">C</span><span class="o">&lt;/</span><span class="n">kbd</span><span class="o">&gt;</span> <span class="n">this</span> <span class="n">line</span> <span class="n">then</span> <span class="n">click</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">VS</span> <span class="n">textbox</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">kbd</span><span class="o">&gt;</span><span class="n">CTRL</span><span class="o">+</span><span class="n">A</span><span class="o">&lt;/</span><span class="n">kbd</span><span class="o">&gt;</span> <span class="ow">and</span> <span class="o">&lt;</span><span class="n">kbd</span><span class="o">&gt;</span><span class="n">CTRL</span><span class="o">+</span><span class="n">V</span><span class="o">&lt;/</span><span class="n">kbd</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\lib\x64;
+D:\Libraries\boost_1_72_0\stage\lib;
+D:\Libraries\fftw-3.3.8\Build64\Release;
+D:\Libraries\hdf5-1.12.0\Build64_CPack_Packages\win64\ZIP\HDF5-1.12.0-win64\lib;
+D:\Libraries\Qt\5.14.2\msvc2017_64\lib;
+%(AdditionalLibraryDirectories)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="o">*</span><span class="n">Builds</span> <span class="n">Events</span><span class="o">/</span><span class="n">Post</span><span class="o">-</span><span class="n">Build</span> <span class="n">Event</span><span class="o">/</span><span class="n">Command</span> <span class="n">line</span><span class="o">*</span> <span class="o">=&gt;</span>
+</pre></div>
+</div>
+<p>xcopy /d /y “D:\Libraries\fftw-3.3.8\Build64\Debug*.dll”
+“$(TargetDir)”</p>
+<div class="line-block">
+<div class="line">xcopy /d /y</div>
+</div>
+<p>“D:\Libraries\Qt\5.14.2\msvc2017_64\bin\Qt5Core.dll”
+“$(TargetDir)”
+| xcopy /d /y “D:\Libraries\Qt\5.14.2\msvc2017_64\bin\Qt5Gui.dll”
+“$(TargetDir)”
+| xcopy /d /y
+“D:\Libraries\Qt\5.14.2\msvc2017_64\bin\Qt5Widgets.dll”
+“$(TargetDir)”</p>
+<div class="line-block">
+<div class="line">mkdir “$(TargetDir)\platforms”</div>
+<div class="line">xcopy /d /y “D:\Libraries\Qt\Tools\QtCreator\bin\libEGL.dll”</div>
+</div>
+<p>“$(TargetDir)\platforms”
+| xcopy /d /y
+“D:\Libraries\Qt\5.14.2\msvc2017_64\plugins\platforms\qwindows.dll”
+“$(TargetDir)\platforms”</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Click on **Apply**
+
+**Select only the properties for prismatic-gui and check that these parameters are good:**
+* *Linker/System/Sub-System* =&gt; Windows (/SUBSYSTEM:WINDOWS)
+* *Linker/Advanced/Importation libraries* =&gt; D:/Documents/Projets/CEA Grenoble Project/PrismaticGUI/Release/prismatic-gui.lib
+* *C/C++/Preprocessor/Preprocessor definition* =&gt; ```WIN32;_WINDOWS;NDEBUG;PRISMATIC_BUILDING_GUI=1;PRISMATIC_ENABLE_GUI;PRISMATIC_ENABLE_CLI;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;CMAKE_INTDIR=&quot;Release&quot;;```
+
+#### 5. Make sure to desactivate the antivirus because it can block some files and corrupt the process
+
+#### 5.1 If you use CUDA 10.0, you may have an error with mutex.h, go in this file and replace the line 133:
+</pre></div>
+</div>
+<p>constexpr QMutex() = default;</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">with</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">const QMutex() = default;</div>
+<div class="line">```</div>
+</div>
+</div>
+<div class="section" id="id27">
+<h4>5.2 In the top bar, make sure to select Release and the right Plateform, then Click on Run<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><div class="line-block">
+<div class="line">You may have an error popup when the project try to run the ALL</div>
+</div>
+<p>BUILD version, just run manually the build file with
+| <code class="docutils literal notranslate"><span class="pre">D:\Libraries\prismatic\Build64\Release\prismatic.exe</span></code></p>
+</div></blockquote>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Music/Music.html" class="btn btn-neutral float-right" title="Music" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../Docker/Docker.html" class="btn btn-neutral float-left" title="Docker" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, LHOUTELLIER Maël
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+    
+        <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+            <span class="rst-current-version" data-toggle="rst-current-version">
+                <span class="fa fa-book"> Help Sheet</span>
+                    v: latest
+                <span class="fa fa-caret-down"></span>
+            </span>
+            
+            <div class="rst-other-versions">
+                <dl>
+                    <dt>Versions</dt>
+                    
+                        <dd><a href="#">latest</a></dd>
+                        <dd><a href="#">1.0</a></dd>
+                        <dd><a href="#">1.1</a></dd>
+                    
+                </dl>
+
+                 <dl>
+                    <dt>Downloads</dt>
+                    <dd><a href="#">PDF</a></dd>
+                    <dd><a href="#">ePub</a></dd>
+                    <dd><a href="#">HTML</a></dd>
+                </dl>
+                
+                <dl>
+                    <dt>Informations</dt>
+                    <dd><a href="https://github.com/mlhoutel/Help-Sheet">Project Git</a></dd>
+                    <dd><a href="https://mlhoutel.github.io/maellhoutellier.com/">My website</a></dd>
+                </dl>
+
+                <dl>
+                    <dt>Debug</dt>
+                    <dd><a href="#" data-toggle="rst-debug-badge">Swap badge position</a></dd>
+                </dl>
+            </div>
+        </div>
+    
+    
+    <style>
+        :root {
+            --c-blue: #2980B9;     /* Black    [31;  39;  45]  */
+            --c-grey: #24313A;
+        }
+
+        /* Sidebar header (and topbar for mobile) */
+        .wy-side-nav-search, .wy-nav-top {
+            background: var(--c-blue);
+        }
+        /* Sidebar */
+        .wy-nav-side {
+            background: var(--c-grey);
+        }
+    </style>
+
+
+
+</body>
+</html>
