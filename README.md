@@ -1,6 +1,6 @@
 # Welcome to my HelpSheets !
 
-https://mlhoutel.github.io/Help-Sheet/html/index.html
+https://www.sigma-help-sheets.ml
 
 That’s my help sheets, where I put all the usefull commands, tips and tricks that I find on the subjects that I study, and even more…
 
