@@ -53,8 +53,8 @@ html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 html_js_files = ['debug.js']
 
-html_title = "Long Title"
-html_short_title = "Short Title"
+html_title = "Sigma Help Sheets"
+html_short_title = "Sigma HS"
 html_logo = "_static/sigmwhite.svg"
 html_favicon = "_static/sumblack.ico"
 
