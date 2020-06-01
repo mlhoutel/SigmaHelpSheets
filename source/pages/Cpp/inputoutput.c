@@ -6,7 +6,7 @@ int main() {
 	int age; 
 
 	// We use printf to output a line of text from a string
-	printf("Enter an integer for your age:"); 
+	printf("Enter an integer for your age: "); 
 	
 	// Scanf convert the input variable and put it in age by reference. 
 	// It will not stop until scanf detect a non null "string" input.

@@ -389,11 +389,46 @@ Input Output
           :language: cpp
           :linenos:
 
+.. code-block:: 
+
+	Enter an integer for your age: 19
+	You are 19 years old.
+	Great!
+
+.. Note:: 
+	
+	If you input ``a`` you will have an output of ``4194432``. That's because scanf don't convert the string to an int. 
+	When the value is not in the right format, it will get the ``memory location``.
+
+	For the boundaries, an input of ``2147483647`` will output ``2147483647``, but if you try to enter a 
+	value of ``2147483648`` you will have an output of ``-2147483648``. Thats because the signed value is greater than 
+	:math:`2^{31}-1`. The default int boundaries are ``32bits`` on my ``x64 processor`` 
+
+
+Tests and Loops
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
 Structures
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. literalinclude:: structure.c
+          :language: cpp
+          :linenos:
+
+.. code-block:: 
+
+	structure: Rectangle
+	 + Position: [10.000000, 2.000000]
+	 + Size: [3.700000, 6.500000]
+	 + Area: 24.050000
+
 Pointers and Smart pointers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. literalinclude:: pointer.c
+          :language: cpp
+          :linenos:
 
 Basic C++ Cheat Sheet
 ---------------------------
@@ -408,7 +443,7 @@ Virtual classes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 SFML
----------------------------
+============================
 
 +---------------------+---------------------------+
 | Instruction         | Command                   |
@@ -421,8 +456,6 @@ SFML
 Qt
 ============================
 
-SFML
-============================
 
 CMake and Builds
 ============================

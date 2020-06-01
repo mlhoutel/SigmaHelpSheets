@@ -124,6 +124,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#basic-c-cheat-sheet">Basic C Cheat Sheet</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#types-and-variables">Types and Variables</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#input-output">Input Output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tests-and-loops">Tests and Loops</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#structures">Structures</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#pointers-and-smart-pointers">Pointers and Smart pointers</a></li>
 </ul>
@@ -134,11 +135,10 @@
 <li class="toctree-l4"><a class="reference internal" href="#virtual-classes">Virtual classes</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#sfml">SFML</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#sfml">SFML</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#qt">Qt</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">SFML</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#cmake-and-builds">CMake and Builds</a></li>
 </ul>
 </li>
@@ -236,35 +236,36 @@
 <div class="contents local topic" id="table-of-contents">
 <p class="topic-title">Table of Contents</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#introduction" id="id4">Introduction</a></p>
+<li><p><a class="reference internal" href="#introduction" id="id3">Introduction</a></p>
 <ul>
-<li><p><a class="reference internal" href="#history-of-the-c-language" id="id5">History of the C language</a></p></li>
-<li><p><a class="reference internal" href="#evolution-toward-c" id="id6">Evolution toward C++</a></p></li>
+<li><p><a class="reference internal" href="#history-of-the-c-language" id="id4">History of the C language</a></p></li>
+<li><p><a class="reference internal" href="#evolution-toward-c" id="id5">Evolution toward C++</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#programming-in-c" id="id7">Programming in C</a></p>
+<li><p><a class="reference internal" href="#programming-in-c" id="id6">Programming in C</a></p>
 <ul>
-<li><p><a class="reference internal" href="#first-program-helloworld-c" id="id8">First Program : helloworld.c</a></p></li>
-<li><p><a class="reference internal" href="#compiling" id="id9">Compiling</a></p>
+<li><p><a class="reference internal" href="#first-program-helloworld-c" id="id7">First Program : helloworld.c</a></p></li>
+<li><p><a class="reference internal" href="#compiling" id="id8">Compiling</a></p>
 <ul>
-<li><p><a class="reference internal" href="#setup-gcc-and-compiling-a-basic-program" id="id10">Setup GCC and compiling a basic program</a></p></li>
-<li><p><a class="reference internal" href="#compilator-settings-and-flags" id="id11">Compilator settings and flags</a></p></li>
+<li><p><a class="reference internal" href="#setup-gcc-and-compiling-a-basic-program" id="id9">Setup GCC and compiling a basic program</a></p></li>
+<li><p><a class="reference internal" href="#compilator-settings-and-flags" id="id10">Compilator settings and flags</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#import-and-use-libraries" id="id12">Import and use Libraries</a></p>
+<li><p><a class="reference internal" href="#import-and-use-libraries" id="id11">Import and use Libraries</a></p>
 <ul>
-<li><p><a class="reference internal" href="#includes-and-dependancies" id="id13">Includes and Dependancies</a></p></li>
-<li><p><a class="reference internal" href="#namespace-and-utilities" id="id14">Namespace and utilities</a></p></li>
+<li><p><a class="reference internal" href="#includes-and-dependancies" id="id12">Includes and Dependancies</a></p></li>
+<li><p><a class="reference internal" href="#namespace-and-utilities" id="id13">Namespace and utilities</a></p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#cheat-sheets" id="id15">Cheat Sheets</a></p>
+<li><p><a class="reference internal" href="#cheat-sheets" id="id14">Cheat Sheets</a></p>
 <ul>
-<li><p><a class="reference internal" href="#basic-c-cheat-sheet" id="id16">Basic C Cheat Sheet</a></p>
+<li><p><a class="reference internal" href="#basic-c-cheat-sheet" id="id15">Basic C Cheat Sheet</a></p>
 <ul>
-<li><p><a class="reference internal" href="#types-and-variables" id="id17">Types and Variables</a></p></li>
-<li><p><a class="reference internal" href="#input-output" id="id18">Input Output</a></p></li>
+<li><p><a class="reference internal" href="#types-and-variables" id="id16">Types and Variables</a></p></li>
+<li><p><a class="reference internal" href="#input-output" id="id17">Input Output</a></p></li>
+<li><p><a class="reference internal" href="#tests-and-loops" id="id18">Tests and Loops</a></p></li>
 <li><p><a class="reference internal" href="#structures" id="id19">Structures</a></p></li>
 <li><p><a class="reference internal" href="#pointers-and-smart-pointers" id="id20">Pointers and Smart pointers</a></p></li>
 </ul>
@@ -276,18 +277,17 @@
 <li><p><a class="reference internal" href="#virtual-classes" id="id24">Virtual classes</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#sfml" id="id25">SFML</a></p></li>
 </ul>
 </li>
+<li><p><a class="reference internal" href="#sfml" id="id25">SFML</a></p></li>
 <li><p><a class="reference internal" href="#qt" id="id26">Qt</a></p></li>
-<li><p><a class="reference internal" href="#id3" id="id27">SFML</a></p></li>
-<li><p><a class="reference internal" href="#cmake-and-builds" id="id28">CMake and Builds</a></p></li>
+<li><p><a class="reference internal" href="#cmake-and-builds" id="id27">CMake and Builds</a></p></li>
 </ul>
 </div>
 <div class="section" id="introduction">
-<h2><a class="toc-backref" href="#id4">Introduction</a><a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id3">Introduction</a><a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="history-of-the-c-language">
-<h3><a class="toc-backref" href="#id5">History of the C language</a><a class="headerlink" href="#history-of-the-c-language" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id4">History of the C language</a><a class="headerlink" href="#history-of-the-c-language" title="Permalink to this headline">¶</a></h3>
 <p>C is an <code class="docutils literal notranslate"><span class="pre">imperative</span> <span class="pre">procedural</span> <span class="pre">language</span></code>. It was designed to be  <code class="docutils literal notranslate"><span class="pre">compiled</span></code> to provide  <code class="docutils literal notranslate"><span class="pre">low-level</span> <span class="pre">access</span> <span class="pre">to</span> <span class="pre">memory</span></code>.</p>
 <p>It was developed between 1972 and 1973 by  <code class="docutils literal notranslate"><span class="pre">Dennis</span> <span class="pre">Ritchie</span></code>, initially to construct utilities running on the  <code class="docutils literal notranslate"><span class="pre">Unix</span></code> operating system.
 During the 1980s, C gradually gained popularity and became one of the most widely used programming languages.</p>
@@ -295,16 +295,16 @@ During the 1980s, C gradually gained popularity and became one of the most widel
 Moreover, it is realy  <code class="docutils literal notranslate"><span class="pre">fast</span> <span class="pre">and</span> <span class="pre">light</span></code> and permit to manage the low level datas with the  <code class="docutils literal notranslate"><span class="pre">pointers</span></code>, one thing that most of the high level languages can’t.</p>
 </div>
 <div class="section" id="evolution-toward-c">
-<h3><a class="toc-backref" href="#id6">Evolution toward C++</a><a class="headerlink" href="#evolution-toward-c" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id5">Evolution toward C++</a><a class="headerlink" href="#evolution-toward-c" title="Permalink to this headline">¶</a></h3>
 <p>C++ was developped in 1979 by  <code class="docutils literal notranslate"><span class="pre">Bjarne</span> <span class="pre">Stroustrup</span></code>. It was firstly named  <code class="docutils literal notranslate"><span class="pre">C</span> <span class="pre">with</span> <span class="pre">Classes</span></code> by it’s creator, then renamed in 1983.
 It is an evolution toward an more  <code class="docutils literal notranslate"><span class="pre">Object</span> <span class="pre">Oriented</span> <span class="pre">programming</span> <span class="pre">language</span></code>, that it implements with Classes, Inheritance and many others functionnalities.</p>
 <p>The current version of it is  <code class="docutils literal notranslate"><span class="pre">C++17</span></code> (2017). A new one is standardized by the ISO every 3 years since 2011, the next versions is  <code class="docutils literal notranslate"><span class="pre">C++20</span></code>, already released but not every functionnality are supported yet on the compilators.</p>
 </div>
 </div>
 <div class="section" id="programming-in-c">
-<h2><a class="toc-backref" href="#id7">Programming in C</a><a class="headerlink" href="#programming-in-c" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id6">Programming in C</a><a class="headerlink" href="#programming-in-c" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="first-program-helloworld-c">
-<h3><a class="toc-backref" href="#id8">First Program : helloworld.c</a><a class="headerlink" href="#first-program-helloworld-c" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id7">First Program : helloworld.c</a><a class="headerlink" href="#first-program-helloworld-c" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -323,7 +323,7 @@ It is an evolution toward an more  <code class="docutils literal notranslate"><s
 To put it simply, we get the <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">code</span></code> (<em>helloworld.c</em>) and put it into a <code class="docutils literal notranslate"><span class="pre">compiler</span></code> with the right settings and dependancies, and this compiler output and <code class="docutils literal notranslate"><span class="pre">executable</span></code> (<em>helloworld.exe</em>) that you can run from your machine. We will use the <code class="docutils literal notranslate"><span class="pre">command</span> <span class="pre">line</span></code> to build and run this file, it’s realy easy.</p>
 </div>
 <div class="section" id="compiling">
-<h3><a class="toc-backref" href="#id9">Compiling</a><a class="headerlink" href="#compiling" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id8">Compiling</a><a class="headerlink" href="#compiling" title="Permalink to this headline">¶</a></h3>
 <p>But first of all, you will need a compiler. That’s a piece of software that transform your file from <code class="docutils literal notranslate"><span class="pre">readable</span> <span class="pre">instructions</span></code> (in english) into a language that your machine can understand: <code class="docutils literal notranslate"><span class="pre">binaries</span></code> (0 and 1), that’s what an <code class="docutils literal notranslate"><span class="pre">.exe</span></code> file is (if you open it with and text editor, you will see some stranges charaters).</p>
 <p>Many C compiler exists, (<a class="reference external" href="https://en.wikipedia.org/wiki/List_of_compilers#C_compilers">See all</a>), I recommand these ones:</p>
 <table class="docutils align-default">
@@ -346,7 +346,7 @@ To put it simply, we get the <code class="docutils literal notranslate"><span cl
 <p>I recommand to install GCC by MinGW instead of compiling it yourself, you will find explanations on how to proceed <a class="reference external" href="http://mingw.org/wiki/Getting_Started">HERE</a></p>
 </div>
 <div class="section" id="setup-gcc-and-compiling-a-basic-program">
-<h4><a class="toc-backref" href="#id10">Setup GCC and compiling a basic program</a><a class="headerlink" href="#setup-gcc-and-compiling-a-basic-program" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id9">Setup GCC and compiling a basic program</a><a class="headerlink" href="#setup-gcc-and-compiling-a-basic-program" title="Permalink to this headline">¶</a></h4>
 <ol class="arabic">
 <li><p>If you are on windows, you can press <code class="docutils literal notranslate"><span class="pre">Windows</span></code> + <code class="docutils literal notranslate"><span class="pre">Q</span></code> then type <code class="docutils literal notranslate"><span class="pre">cmd</span></code> to open the command line.</p>
 <blockquote>
@@ -388,7 +388,7 @@ To put it simply, we get the <code class="docutils literal notranslate"><span cl
 <p class="centered">
 <strong>Good luck!</strong></p></div>
 <div class="section" id="compilator-settings-and-flags">
-<h4><a class="toc-backref" href="#id11">Compilator settings and flags</a><a class="headerlink" href="#compilator-settings-and-flags" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id10">Compilator settings and flags</a><a class="headerlink" href="#compilator-settings-and-flags" title="Permalink to this headline">¶</a></h4>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>You can call the compiler by <code class="docutils literal notranslate"><span class="pre">gcc</span></code> for the <strong>C compiler</strong> and <code class="docutils literal notranslate"><span class="pre">g++</span></code> for the <strong>C++ compiler</strong>. I explain here the flags that I use and find the <strong>most important</strong>, but you can find all the gcc flags <a class="reference external" href="https://gcc.gnu.org/onlinedocs/gcc/Option-Summary.html">HERE</a>. If you want, you can even create a <code class="docutils literal notranslate"><span class="pre">.bat</span></code> file to automate the command and launch the compilations.</p>
@@ -520,9 +520,9 @@ To put it simply, we get the <code class="docutils literal notranslate"><span cl
 </div>
 </div>
 <div class="section" id="import-and-use-libraries">
-<h3><a class="toc-backref" href="#id12">Import and use Libraries</a><a class="headerlink" href="#import-and-use-libraries" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id11">Import and use Libraries</a><a class="headerlink" href="#import-and-use-libraries" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="includes-and-dependancies">
-<h4><a class="toc-backref" href="#id13">Includes and Dependancies</a><a class="headerlink" href="#includes-and-dependancies" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id12">Includes and Dependancies</a><a class="headerlink" href="#includes-and-dependancies" title="Permalink to this headline">¶</a></h4>
 <p>To <strong>include a library</strong> we use the <code class="docutils literal notranslate"><span class="pre">#include</span></code> command.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&lt;library.h&gt;</span></code> when the headers folder is already linked in the compiler</p></li>
@@ -543,7 +543,7 @@ To put it simply, we get the <code class="docutils literal notranslate"><span cl
 <p><em>informations from https://en.cppreference.com/w/cpp/header</em></p>
 </div>
 <div class="section" id="namespace-and-utilities">
-<h4><a class="toc-backref" href="#id14">Namespace and utilities</a><a class="headerlink" href="#namespace-and-utilities" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id13">Namespace and utilities</a><a class="headerlink" href="#namespace-and-utilities" title="Permalink to this headline">¶</a></h4>
 <p>When you use multiple libraries, it could be some <code class="docutils literal notranslate"><span class="pre">conflicts</span></code> under names between some libraries, that’s why we use <code class="docutils literal notranslate"><span class="pre">namespaces</span></code>.</p>
 <p class="centered">
 <strong>“Namespaces provide a method for preventing name conflicts in large projects.” <a class="reference external" href="https://en.cppreference.com/w/cpp/language/namespace">source</a></strong></p><dl class="field-list simple">
@@ -583,11 +583,11 @@ To put it simply, we get the <code class="docutils literal notranslate"><span cl
 </div>
 <hr class="docutils" />
 <div class="section" id="cheat-sheets">
-<h2><a class="toc-backref" href="#id15">Cheat Sheets</a><a class="headerlink" href="#cheat-sheets" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id14">Cheat Sheets</a><a class="headerlink" href="#cheat-sheets" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="basic-c-cheat-sheet">
-<h3><a class="toc-backref" href="#id16">Basic C Cheat Sheet</a><a class="headerlink" href="#basic-c-cheat-sheet" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id15">Basic C Cheat Sheet</a><a class="headerlink" href="#basic-c-cheat-sheet" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="types-and-variables">
-<h4><a class="toc-backref" href="#id17">Types and Variables</a><a class="headerlink" href="#types-and-variables" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id16">Types and Variables</a><a class="headerlink" href="#types-and-variables" title="Permalink to this headline">¶</a></h4>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><code class="docutils literal notranslate"><span class="pre">/s/</span></code> stand for <strong>Signed</strong> and <code class="docutils literal notranslate"><span class="pre">/u/</span></code> for <strong>Unsigned</strong></p>
@@ -1245,7 +1245,7 @@ wchar_t</p>
 </dl>
 </div>
 <div class="section" id="input-output">
-<h4><a class="toc-backref" href="#id18">Input Output</a><a class="headerlink" href="#input-output" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id17">Input Output</a><a class="headerlink" href="#input-output" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -1275,7 +1275,7 @@ wchar_t</p>
 	<span class="kt">int</span> <span class="n">age</span><span class="p">;</span> 
 
 	<span class="c1">// We use printf to output a line of text from a string</span>
-	<span class="n">printf</span><span class="p">(</span><span class="s">&quot;Enter an integer for your age:&quot;</span><span class="p">);</span> 
+	<span class="n">printf</span><span class="p">(</span><span class="s">&quot;Enter an integer for your age: &quot;</span><span class="p">);</span> 
 	
 	<span class="c1">// Scanf convert the input variable and put it in age by reference. </span>
 	<span class="c1">// It will not stop until scanf detect a non null &quot;string&quot; input.</span>
@@ -1291,12 +1291,116 @@ wchar_t</p>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Enter an integer for your age: 19
+You are 19 years old.
+Great!
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you input <code class="docutils literal notranslate"><span class="pre">a</span></code> you will have an output of <code class="docutils literal notranslate"><span class="pre">4194432</span></code>. That’s because scanf don’t convert the string to an int.
+When the value is not in the right format, it will get the <code class="docutils literal notranslate"><span class="pre">memory</span> <span class="pre">location</span></code>.</p>
+<p>For the boundaries, an input of <code class="docutils literal notranslate"><span class="pre">2147483647</span></code> will output <code class="docutils literal notranslate"><span class="pre">2147483647</span></code>, but if you try to enter a
+value of <code class="docutils literal notranslate"><span class="pre">2147483648</span></code> you will have an output of <code class="docutils literal notranslate"><span class="pre">-2147483648</span></code>. Thats because the signed value is greater than
+<span class="math notranslate nohighlight">\(2^{31}-1\)</span>. The default int boundaries are <code class="docutils literal notranslate"><span class="pre">32bits</span></code> on my <code class="docutils literal notranslate"><span class="pre">x64</span> <span class="pre">processor</span></code></p>
+</div>
+</div>
+<div class="section" id="tests-and-loops">
+<h4><a class="toc-backref" href="#id18">Tests and Loops</a><a class="headerlink" href="#tests-and-loops" title="Permalink to this headline">¶</a></h4>
 </div>
 <div class="section" id="structures">
 <h4><a class="toc-backref" href="#id19">Structures</a><a class="headerlink" href="#structures" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="c1">// We define the Rectangle structure. </span>
+<span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
+
+	<span class="c1">// It contains some of it&#39;s Properties like the position (x,y) and the size (height, width)</span>
+	<span class="kt">float</span> <span class="n">x</span><span class="p">;</span>
+	<span class="kt">float</span> <span class="n">y</span><span class="p">;</span>
+	<span class="kt">float</span> <span class="n">height</span><span class="p">;</span>
+	<span class="kt">float</span> <span class="n">width</span><span class="p">;</span>
+
+	<span class="c1">// Structs are not like Classes, wecannot create functions inside it.</span>
+
+<span class="p">}</span> <span class="n">Rectangle</span><span class="p">;</span>
+
+<span class="c1">// We create a function to calculate the area of a Rectangle</span>
+<span class="kt">float</span> <span class="nf">calcArea</span><span class="p">(</span><span class="n">Rectangle</span> <span class="n">r</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="n">r</span><span class="p">.</span><span class="n">height</span> <span class="o">*</span> <span class="n">r</span><span class="p">.</span><span class="n">width</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// We alse create a function to print the properties of the struct, it call the precedent function to compute the area</span>
+<span class="kt">void</span> <span class="nf">toString</span><span class="p">(</span><span class="n">Rectangle</span> <span class="n">r</span><span class="p">)</span> <span class="p">{</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">&quot;structure: Rectangle</span><span class="se">\n</span><span class="s"> + Position: [%f, %f]</span><span class="se">\n</span><span class="s"> + Size: [%f, %f]</span><span class="se">\n</span><span class="s"> + Area: %f&quot;</span><span class="p">,</span> <span class="n">r</span><span class="p">.</span><span class="n">x</span><span class="p">,</span> <span class="n">r</span><span class="p">.</span><span class="n">y</span><span class="p">,</span> <span class="n">r</span><span class="p">.</span><span class="n">height</span><span class="p">,</span> <span class="n">r</span><span class="p">.</span><span class="n">width</span><span class="p">,</span> <span class="n">calcArea</span><span class="p">(</span><span class="n">r</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+
+	<span class="c1">// We instantiate a Rectangle with the name rectangle</span>
+	<span class="n">Rectangle</span> <span class="n">rectangle</span><span class="p">;</span>
+
+	<span class="c1">// We edit it&#39;s properties</span>
+	<span class="n">rectangle</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="mf">10.0</span><span class="p">;</span>
+	<span class="n">rectangle</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">;</span>
+	<span class="n">rectangle</span><span class="p">.</span><span class="n">height</span> <span class="o">=</span> <span class="mf">3.7</span><span class="p">;</span>
+	<span class="n">rectangle</span><span class="p">.</span><span class="n">width</span> <span class="o">=</span> <span class="mf">6.5</span><span class="p">;</span>
+
+	<span class="c1">// We call the toString function to see if the properties have changed</span>
+	<span class="n">toString</span><span class="p">(</span><span class="n">rectangle</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">structure</span><span class="p">:</span> <span class="n">Rectangle</span>
+ <span class="o">+</span> <span class="n">Position</span><span class="p">:</span> <span class="p">[</span><span class="mf">10.000000</span><span class="p">,</span> <span class="mf">2.000000</span><span class="p">]</span>
+ <span class="o">+</span> <span class="n">Size</span><span class="p">:</span> <span class="p">[</span><span class="mf">3.700000</span><span class="p">,</span> <span class="mf">6.500000</span><span class="p">]</span>
+ <span class="o">+</span> <span class="n">Area</span><span class="p">:</span> <span class="mf">24.050000</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="pointers-and-smart-pointers">
 <h4><a class="toc-backref" href="#id20">Pointers and Smart pointers</a><a class="headerlink" href="#pointers-and-smart-pointers" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span>
+</pre></div>
+</td></tr></table></div>
 </div>
 </div>
 <div class="section" id="id2">
@@ -1311,8 +1415,9 @@ wchar_t</p>
 <h4><a class="toc-backref" href="#id24">Virtual classes</a><a class="headerlink" href="#virtual-classes" title="Permalink to this headline">¶</a></h4>
 </div>
 </div>
+</div>
 <div class="section" id="sfml">
-<h3><a class="toc-backref" href="#id25">SFML</a><a class="headerlink" href="#sfml" title="Permalink to this headline">¶</a></h3>
+<h2><a class="toc-backref" href="#id25">SFML</a><a class="headerlink" href="#sfml" title="Permalink to this headline">¶</a></h2>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 44%" />
@@ -1333,15 +1438,11 @@ wchar_t</p>
 </tbody>
 </table>
 </div>
-</div>
 <div class="section" id="qt">
 <h2><a class="toc-backref" href="#id26">Qt</a><a class="headerlink" href="#qt" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="id3">
-<h2><a class="toc-backref" href="#id27">SFML</a><a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
-</div>
 <div class="section" id="cmake-and-builds">
-<h2><a class="toc-backref" href="#id28">CMake and Builds</a><a class="headerlink" href="#cmake-and-builds" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id27">CMake and Builds</a><a class="headerlink" href="#cmake-and-builds" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
