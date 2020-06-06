@@ -5,6 +5,16 @@
 ============================
 Sphinx
 ============================
+ sphinx-quickstart
+
+pip install pypandoc
+
+import pypandoc
+output = pypandoc.convert_file('PRISMATIC.md', 'rst')
+
+with open("prismatic.rst", "w", encoding="utf-8") as f:
+    f.write(output)
+
 
 https://stackoverflow.com/questions/11315504/sphinx-list-of-supported-languages-for-highlighting
 

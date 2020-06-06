@@ -107,7 +107,7 @@ Table of the sheets by Subject
 
 	pages/Sphinx/Sphinx.rst
 	pages/Docker/Docker.rst
-	pages/Prismatic/Prismatic.rst
+	pages/Prismatic/Prismatic.md
 
 .. admonition:: Caution
 
@@ -181,6 +181,8 @@ Table of the sheets by Subject
 | | `Website Cmder`_                        | | `Website Screen to Gif`_                | | `Website Sublime Text`_                 |
 | | `GitHub Cmder`_                         | | `GitHub Screen to Gif`_                 | | `GitHub Packages Sublime Text`_         |
 +-------------------------------------------+-------------------------------------------+-------------------------------------------+
+
+https://squoosh.app/
 
 .. |logo| image:: _static/placeholder.png
 	:width: 30%

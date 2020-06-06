@@ -32,3 +32,12 @@ Graphs Theory
 
 Cellular Automata
 ============================
+
+
+https://codegolf.stackexchange.com/questions/88783/build-a-digital-clock-in-conways-game-of-life
+
+Regex
+============================
+
+https://www.regextester.com/
+https://javascript.info/regexp-quantifiers

@@ -124,21 +124,29 @@
 <li class="toctree-l3"><a class="reference internal" href="#basic-c-cheat-sheet">Basic C Cheat Sheet</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#types-and-variables">Types and Variables</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#input-output">Input Output</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#tests-and-loops">Tests and Loops</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#variables-tests-and-loops">Variables, Tests and Loops</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#random-numbers">Random numbers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#arrays">Arrays</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#functions">Functions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#structures">Structures</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#pointers-and-smart-pointers">Pointers and Smart pointers</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#id2">Basic C++ Cheat Sheet</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">Basic C++ Cheat Sheet</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id5">Input Output</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#classes-and-properties">Classes and Properties</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#inheritances">Inheritances</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#virtual-classes">Virtual classes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">Pointers and Smart pointers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vectors">Vectors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#threads">Threads</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#sfml">SFML</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#qt">Qt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cuda">CUDA</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#cmake-and-builds">CMake and Builds</a></li>
 </ul>
 </li>
@@ -236,58 +244,66 @@
 <div class="contents local topic" id="table-of-contents">
 <p class="topic-title">Table of Contents</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#introduction" id="id3">Introduction</a></p>
+<li><p><a class="reference internal" href="#introduction" id="id7">Introduction</a></p>
 <ul>
-<li><p><a class="reference internal" href="#history-of-the-c-language" id="id4">History of the C language</a></p></li>
-<li><p><a class="reference internal" href="#evolution-toward-c" id="id5">Evolution toward C++</a></p></li>
+<li><p><a class="reference internal" href="#history-of-the-c-language" id="id8">History of the C language</a></p></li>
+<li><p><a class="reference internal" href="#evolution-toward-c" id="id9">Evolution toward C++</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#programming-in-c" id="id6">Programming in C</a></p>
+<li><p><a class="reference internal" href="#programming-in-c" id="id10">Programming in C</a></p>
 <ul>
-<li><p><a class="reference internal" href="#first-program-helloworld-c" id="id7">First Program : helloworld.c</a></p></li>
-<li><p><a class="reference internal" href="#compiling" id="id8">Compiling</a></p>
+<li><p><a class="reference internal" href="#first-program-helloworld-c" id="id11">First Program : helloworld.c</a></p></li>
+<li><p><a class="reference internal" href="#compiling" id="id12">Compiling</a></p>
 <ul>
-<li><p><a class="reference internal" href="#setup-gcc-and-compiling-a-basic-program" id="id9">Setup GCC and compiling a basic program</a></p></li>
-<li><p><a class="reference internal" href="#compilator-settings-and-flags" id="id10">Compilator settings and flags</a></p></li>
+<li><p><a class="reference internal" href="#setup-gcc-and-compiling-a-basic-program" id="id13">Setup GCC and compiling a basic program</a></p></li>
+<li><p><a class="reference internal" href="#compilator-settings-and-flags" id="id14">Compilator settings and flags</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#import-and-use-libraries" id="id11">Import and use Libraries</a></p>
+<li><p><a class="reference internal" href="#import-and-use-libraries" id="id15">Import and use Libraries</a></p>
 <ul>
-<li><p><a class="reference internal" href="#includes-and-dependancies" id="id12">Includes and Dependancies</a></p></li>
-<li><p><a class="reference internal" href="#namespace-and-utilities" id="id13">Namespace and utilities</a></p></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#cheat-sheets" id="id14">Cheat Sheets</a></p>
-<ul>
-<li><p><a class="reference internal" href="#basic-c-cheat-sheet" id="id15">Basic C Cheat Sheet</a></p>
-<ul>
-<li><p><a class="reference internal" href="#types-and-variables" id="id16">Types and Variables</a></p></li>
-<li><p><a class="reference internal" href="#input-output" id="id17">Input Output</a></p></li>
-<li><p><a class="reference internal" href="#tests-and-loops" id="id18">Tests and Loops</a></p></li>
-<li><p><a class="reference internal" href="#structures" id="id19">Structures</a></p></li>
-<li><p><a class="reference internal" href="#pointers-and-smart-pointers" id="id20">Pointers and Smart pointers</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#id2" id="id21">Basic C++ Cheat Sheet</a></p>
-<ul>
-<li><p><a class="reference internal" href="#classes-and-properties" id="id22">Classes and Properties</a></p></li>
-<li><p><a class="reference internal" href="#inheritances" id="id23">Inheritances</a></p></li>
-<li><p><a class="reference internal" href="#virtual-classes" id="id24">Virtual classes</a></p></li>
+<li><p><a class="reference internal" href="#includes-and-dependancies" id="id16">Includes and Dependancies</a></p></li>
+<li><p><a class="reference internal" href="#namespace-and-utilities" id="id17">Namespace and utilities</a></p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#sfml" id="id25">SFML</a></p></li>
-<li><p><a class="reference internal" href="#qt" id="id26">Qt</a></p></li>
-<li><p><a class="reference internal" href="#cmake-and-builds" id="id27">CMake and Builds</a></p></li>
+<li><p><a class="reference internal" href="#cheat-sheets" id="id18">Cheat Sheets</a></p>
+<ul>
+<li><p><a class="reference internal" href="#basic-c-cheat-sheet" id="id19">Basic C Cheat Sheet</a></p>
+<ul>
+<li><p><a class="reference internal" href="#types-and-variables" id="id20">Types and Variables</a></p></li>
+<li><p><a class="reference internal" href="#input-output" id="id21">Input Output</a></p></li>
+<li><p><a class="reference internal" href="#variables-tests-and-loops" id="id22">Variables, Tests and Loops</a></p></li>
+<li><p><a class="reference internal" href="#random-numbers" id="id23">Random numbers</a></p></li>
+<li><p><a class="reference internal" href="#arrays" id="id24">Arrays</a></p></li>
+<li><p><a class="reference internal" href="#functions" id="id25">Functions</a></p></li>
+<li><p><a class="reference internal" href="#structures" id="id26">Structures</a></p></li>
+<li><p><a class="reference internal" href="#pointers-and-smart-pointers" id="id27">Pointers and Smart pointers</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#id4" id="id28">Basic C++ Cheat Sheet</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id5" id="id29">Input Output</a></p></li>
+<li><p><a class="reference internal" href="#classes-and-properties" id="id30">Classes and Properties</a></p></li>
+<li><p><a class="reference internal" href="#inheritances" id="id31">Inheritances</a></p></li>
+<li><p><a class="reference internal" href="#virtual-classes" id="id32">Virtual classes</a></p></li>
+<li><p><a class="reference internal" href="#id6" id="id33">Pointers and Smart pointers</a></p></li>
+<li><p><a class="reference internal" href="#vectors" id="id34">Vectors</a></p></li>
+<li><p><a class="reference internal" href="#threads" id="id35">Threads</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#sfml" id="id36">SFML</a></p></li>
+<li><p><a class="reference internal" href="#qt" id="id37">Qt</a></p></li>
+<li><p><a class="reference internal" href="#cuda" id="id38">CUDA</a></p></li>
+<li><p><a class="reference internal" href="#cmake-and-builds" id="id39">CMake and Builds</a></p></li>
 </ul>
 </div>
 <div class="section" id="introduction">
-<h2><a class="toc-backref" href="#id3">Introduction</a><a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id7">Introduction</a><a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="history-of-the-c-language">
-<h3><a class="toc-backref" href="#id4">History of the C language</a><a class="headerlink" href="#history-of-the-c-language" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id8">History of the C language</a><a class="headerlink" href="#history-of-the-c-language" title="Permalink to this headline">¶</a></h3>
 <p>C is an <code class="docutils literal notranslate"><span class="pre">imperative</span> <span class="pre">procedural</span> <span class="pre">language</span></code>. It was designed to be  <code class="docutils literal notranslate"><span class="pre">compiled</span></code> to provide  <code class="docutils literal notranslate"><span class="pre">low-level</span> <span class="pre">access</span> <span class="pre">to</span> <span class="pre">memory</span></code>.</p>
 <p>It was developed between 1972 and 1973 by  <code class="docutils literal notranslate"><span class="pre">Dennis</span> <span class="pre">Ritchie</span></code>, initially to construct utilities running on the  <code class="docutils literal notranslate"><span class="pre">Unix</span></code> operating system.
 During the 1980s, C gradually gained popularity and became one of the most widely used programming languages.</p>
@@ -295,16 +311,16 @@ During the 1980s, C gradually gained popularity and became one of the most widel
 Moreover, it is realy  <code class="docutils literal notranslate"><span class="pre">fast</span> <span class="pre">and</span> <span class="pre">light</span></code> and permit to manage the low level datas with the  <code class="docutils literal notranslate"><span class="pre">pointers</span></code>, one thing that most of the high level languages can’t.</p>
 </div>
 <div class="section" id="evolution-toward-c">
-<h3><a class="toc-backref" href="#id5">Evolution toward C++</a><a class="headerlink" href="#evolution-toward-c" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id9">Evolution toward C++</a><a class="headerlink" href="#evolution-toward-c" title="Permalink to this headline">¶</a></h3>
 <p>C++ was developped in 1979 by  <code class="docutils literal notranslate"><span class="pre">Bjarne</span> <span class="pre">Stroustrup</span></code>. It was firstly named  <code class="docutils literal notranslate"><span class="pre">C</span> <span class="pre">with</span> <span class="pre">Classes</span></code> by it’s creator, then renamed in 1983.
 It is an evolution toward an more  <code class="docutils literal notranslate"><span class="pre">Object</span> <span class="pre">Oriented</span> <span class="pre">programming</span> <span class="pre">language</span></code>, that it implements with Classes, Inheritance and many others functionnalities.</p>
 <p>The current version of it is  <code class="docutils literal notranslate"><span class="pre">C++17</span></code> (2017). A new one is standardized by the ISO every 3 years since 2011, the next versions is  <code class="docutils literal notranslate"><span class="pre">C++20</span></code>, already released but not every functionnality are supported yet on the compilators.</p>
 </div>
 </div>
 <div class="section" id="programming-in-c">
-<h2><a class="toc-backref" href="#id6">Programming in C</a><a class="headerlink" href="#programming-in-c" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id10">Programming in C</a><a class="headerlink" href="#programming-in-c" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="first-program-helloworld-c">
-<h3><a class="toc-backref" href="#id7">First Program : helloworld.c</a><a class="headerlink" href="#first-program-helloworld-c" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id11">First Program : helloworld.c</a><a class="headerlink" href="#first-program-helloworld-c" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -323,7 +339,7 @@ It is an evolution toward an more  <code class="docutils literal notranslate"><s
 To put it simply, we get the <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">code</span></code> (<em>helloworld.c</em>) and put it into a <code class="docutils literal notranslate"><span class="pre">compiler</span></code> with the right settings and dependancies, and this compiler output and <code class="docutils literal notranslate"><span class="pre">executable</span></code> (<em>helloworld.exe</em>) that you can run from your machine. We will use the <code class="docutils literal notranslate"><span class="pre">command</span> <span class="pre">line</span></code> to build and run this file, it’s realy easy.</p>
 </div>
 <div class="section" id="compiling">
-<h3><a class="toc-backref" href="#id8">Compiling</a><a class="headerlink" href="#compiling" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id12">Compiling</a><a class="headerlink" href="#compiling" title="Permalink to this headline">¶</a></h3>
 <p>But first of all, you will need a compiler. That’s a piece of software that transform your file from <code class="docutils literal notranslate"><span class="pre">readable</span> <span class="pre">instructions</span></code> (in english) into a language that your machine can understand: <code class="docutils literal notranslate"><span class="pre">binaries</span></code> (0 and 1), that’s what an <code class="docutils literal notranslate"><span class="pre">.exe</span></code> file is (if you open it with and text editor, you will see some stranges charaters).</p>
 <p>Many C compiler exists, (<a class="reference external" href="https://en.wikipedia.org/wiki/List_of_compilers#C_compilers">See all</a>), I recommand these ones:</p>
 <table class="docutils align-default">
@@ -346,7 +362,7 @@ To put it simply, we get the <code class="docutils literal notranslate"><span cl
 <p>I recommand to install GCC by MinGW instead of compiling it yourself, you will find explanations on how to proceed <a class="reference external" href="http://mingw.org/wiki/Getting_Started">HERE</a></p>
 </div>
 <div class="section" id="setup-gcc-and-compiling-a-basic-program">
-<h4><a class="toc-backref" href="#id9">Setup GCC and compiling a basic program</a><a class="headerlink" href="#setup-gcc-and-compiling-a-basic-program" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id13">Setup GCC and compiling a basic program</a><a class="headerlink" href="#setup-gcc-and-compiling-a-basic-program" title="Permalink to this headline">¶</a></h4>
 <ol class="arabic">
 <li><p>If you are on windows, you can press <code class="docutils literal notranslate"><span class="pre">Windows</span></code> + <code class="docutils literal notranslate"><span class="pre">Q</span></code> then type <code class="docutils literal notranslate"><span class="pre">cmd</span></code> to open the command line.</p>
 <blockquote>
@@ -388,7 +404,7 @@ To put it simply, we get the <code class="docutils literal notranslate"><span cl
 <p class="centered">
 <strong>Good luck!</strong></p></div>
 <div class="section" id="compilator-settings-and-flags">
-<h4><a class="toc-backref" href="#id10">Compilator settings and flags</a><a class="headerlink" href="#compilator-settings-and-flags" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id14">Compilator settings and flags</a><a class="headerlink" href="#compilator-settings-and-flags" title="Permalink to this headline">¶</a></h4>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>You can call the compiler by <code class="docutils literal notranslate"><span class="pre">gcc</span></code> for the <strong>C compiler</strong> and <code class="docutils literal notranslate"><span class="pre">g++</span></code> for the <strong>C++ compiler</strong>. I explain here the flags that I use and find the <strong>most important</strong>, but you can find all the gcc flags <a class="reference external" href="https://gcc.gnu.org/onlinedocs/gcc/Option-Summary.html">HERE</a>. If you want, you can even create a <code class="docutils literal notranslate"><span class="pre">.bat</span></code> file to automate the command and launch the compilations.</p>
@@ -520,9 +536,9 @@ To put it simply, we get the <code class="docutils literal notranslate"><span cl
 </div>
 </div>
 <div class="section" id="import-and-use-libraries">
-<h3><a class="toc-backref" href="#id11">Import and use Libraries</a><a class="headerlink" href="#import-and-use-libraries" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id15">Import and use Libraries</a><a class="headerlink" href="#import-and-use-libraries" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="includes-and-dependancies">
-<h4><a class="toc-backref" href="#id12">Includes and Dependancies</a><a class="headerlink" href="#includes-and-dependancies" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id16">Includes and Dependancies</a><a class="headerlink" href="#includes-and-dependancies" title="Permalink to this headline">¶</a></h4>
 <p>To <strong>include a library</strong> we use the <code class="docutils literal notranslate"><span class="pre">#include</span></code> command.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&lt;library.h&gt;</span></code> when the headers folder is already linked in the compiler</p></li>
@@ -539,11 +555,12 @@ To put it simply, we get the <code class="docutils literal notranslate"><span cl
 <li><p><strong>C</strong> Strings library: <code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&lt;string.h&gt;</span></code></p></li>
 <li><p><strong>C</strong> Time library: <code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&lt;time.h&gt;</span></code></p></li>
 <li><p><strong>C++</strong> Time library: <code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&lt;chrono&gt;</span></code></p></li>
+<li><p><strong>C++</strong> Treads library: <code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&lt;thread&gt;</span></code></p></li>
 </ul>
 <p><em>informations from https://en.cppreference.com/w/cpp/header</em></p>
 </div>
 <div class="section" id="namespace-and-utilities">
-<h4><a class="toc-backref" href="#id13">Namespace and utilities</a><a class="headerlink" href="#namespace-and-utilities" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id17">Namespace and utilities</a><a class="headerlink" href="#namespace-and-utilities" title="Permalink to this headline">¶</a></h4>
 <p>When you use multiple libraries, it could be some <code class="docutils literal notranslate"><span class="pre">conflicts</span></code> under names between some libraries, that’s why we use <code class="docutils literal notranslate"><span class="pre">namespaces</span></code>.</p>
 <p class="centered">
 <strong>“Namespaces provide a method for preventing name conflicts in large projects.” <a class="reference external" href="https://en.cppreference.com/w/cpp/language/namespace">source</a></strong></p><dl class="field-list simple">
@@ -583,11 +600,11 @@ To put it simply, we get the <code class="docutils literal notranslate"><span cl
 </div>
 <hr class="docutils" />
 <div class="section" id="cheat-sheets">
-<h2><a class="toc-backref" href="#id14">Cheat Sheets</a><a class="headerlink" href="#cheat-sheets" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id18">Cheat Sheets</a><a class="headerlink" href="#cheat-sheets" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="basic-c-cheat-sheet">
-<h3><a class="toc-backref" href="#id15">Basic C Cheat Sheet</a><a class="headerlink" href="#basic-c-cheat-sheet" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id19">Basic C Cheat Sheet</a><a class="headerlink" href="#basic-c-cheat-sheet" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="types-and-variables">
-<h4><a class="toc-backref" href="#id16">Types and Variables</a><a class="headerlink" href="#types-and-variables" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id20">Types and Variables</a><a class="headerlink" href="#types-and-variables" title="Permalink to this headline">¶</a></h4>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><code class="docutils literal notranslate"><span class="pre">/s/</span></code> stand for <strong>Signed</strong> and <code class="docutils literal notranslate"><span class="pre">/u/</span></code> for <strong>Unsigned</strong></p>
@@ -783,20 +800,24 @@ wchar_t</p>
 </dl>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 3%" />
-<col style="width: 3%" />
-<col style="width: 8%" />
-<col style="width: 17%" />
 <col style="width: 2%" />
-<col style="width: 3%" />
-<col style="width: 3%" />
-<col style="width: 8%" />
-<col style="width: 17%" />
 <col style="width: 2%" />
-<col style="width: 3%" />
-<col style="width: 3%" />
-<col style="width: 8%" />
-<col style="width: 17%" />
+<col style="width: 6%" />
+<col style="width: 13%" />
+<col style="width: 1%" />
+<col style="width: 2%" />
+<col style="width: 2%" />
+<col style="width: 6%" />
+<col style="width: 13%" />
+<col style="width: 1%" />
+<col style="width: 2%" />
+<col style="width: 2%" />
+<col style="width: 6%" />
+<col style="width: 13%" />
+<col style="width: 2%" />
+<col style="width: 2%" />
+<col style="width: 6%" />
+<col style="width: 13%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>DEC</p></th>
@@ -813,6 +834,10 @@ wchar_t</p>
 <th class="head"><p>HEX</p></th>
 <th class="head"><p>BIN</p></th>
 <th class="head"><p>CHAR</p></th>
+<th class="head"><p>DEC</p></th>
+<th class="head"><p>HEX</p></th>
+<th class="head"><p>BIN</p></th>
+<th class="head"><p>CHAR</p></th>
 </tr>
 </thead>
 <tbody>
@@ -820,16 +845,20 @@ wchar_t</p>
 <td><p>00</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0000</span> <span class="pre">0000</span></code></p></td>
 <td><p>NUL (null)</p></td>
-<td rowspan="31"></td>
+<td rowspan="32"></td>
 <td><p>32</p></td>
 <td><p>20</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0010</span> <span class="pre">0000</span></code></p></td>
-<td></td>
-<td rowspan="31"></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">(space)</span></code></p></td>
+<td rowspan="32"></td>
 <td><p>64</p></td>
 <td><p>40</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0100</span> <span class="pre">0000</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&#64;</span></code></p></td>
+<td><p>96</p></td>
+<td><p>60</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0110</span> <span class="pre">0000</span></code></p></td>
+<td><p><a href="#id2"><span class="problematic" id="id3">`</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p>1</p></td>
 <td><p>01</p></td>
@@ -838,11 +867,15 @@ wchar_t</p>
 <td><p>33</p></td>
 <td><p>21</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0010</span> <span class="pre">0001</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">!</span></code></p></td>
 <td><p>65</p></td>
 <td><p>41</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0100</span> <span class="pre">0001</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">A</span></code></p></td>
+<td><p>97</p></td>
+<td><p>61</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0110</span> <span class="pre">0001</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">a</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p>2</p></td>
 <td><p>02</p></td>
@@ -851,11 +884,15 @@ wchar_t</p>
 <td><p>34</p></td>
 <td><p>22</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0010</span> <span class="pre">0010</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;</span></code></p></td>
 <td><p>66</p></td>
 <td><p>42</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0100</span> <span class="pre">0010</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">B</span></code></p></td>
+<td><p>98</p></td>
+<td><p>62</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0110</span> <span class="pre">0010</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">b</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p>3</p></td>
 <td><p>03</p></td>
@@ -864,11 +901,15 @@ wchar_t</p>
 <td><p>35</p></td>
 <td><p>23</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0010</span> <span class="pre">0011</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">#</span></code></p></td>
 <td><p>67</p></td>
 <td><p>43</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0100</span> <span class="pre">0011</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">C</span></code></p></td>
+<td><p>99</p></td>
+<td><p>63</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0110</span> <span class="pre">0011</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">c</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p>4</p></td>
 <td><p>04</p></td>
@@ -877,364 +918,474 @@ wchar_t</p>
 <td><p>36</p></td>
 <td><p>24</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0010</span> <span class="pre">0100</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">$</span></code></p></td>
 <td><p>68</p></td>
 <td><p>44</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0100</span> <span class="pre">0100</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">D</span></code></p></td>
+<td><p>100</p></td>
+<td><p>64</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0110</span> <span class="pre">0100</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">d</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p>5</p></td>
 <td><p>05</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0000</span> <span class="pre">0101</span></code></p></td>
-<td></td>
+<td><p>ENQ (enquiry)</p></td>
 <td><p>37</p></td>
 <td><p>25</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0010</span> <span class="pre">0101</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">%</span></code></p></td>
 <td><p>69</p></td>
 <td><p>45</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0100</span> <span class="pre">0101</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">E</span></code></p></td>
+<td><p>101</p></td>
+<td><p>65</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0110</span> <span class="pre">0101</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">e</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p>6</p></td>
 <td><p>06</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0000</span> <span class="pre">0110</span></code></p></td>
-<td></td>
+<td><p>ACK (acknowledge)</p></td>
 <td><p>38</p></td>
 <td><p>26</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0010</span> <span class="pre">0110</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&amp;</span></code></p></td>
 <td><p>70</p></td>
 <td><p>46</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0100</span> <span class="pre">0110</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">F</span></code></p></td>
+<td><p>102</p></td>
+<td><p>66</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0110</span> <span class="pre">0110</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">f</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p>7</p></td>
 <td><p>07</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0000</span> <span class="pre">0111</span></code></p></td>
-<td></td>
+<td><p>EL (bell)</p></td>
 <td><p>39</p></td>
 <td><p>27</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0010</span> <span class="pre">0111</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">'</span></code></p></td>
 <td><p>71</p></td>
 <td><p>47</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0100</span> <span class="pre">0111</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">G</span></code></p></td>
+<td><p>103</p></td>
+<td><p>67</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0110</span> <span class="pre">0111</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">g</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p>8</p></td>
 <td><p>08</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0000</span> <span class="pre">1000</span></code></p></td>
-<td></td>
+<td><p>BS (backspace)</p></td>
 <td><p>40</p></td>
 <td><p>28</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0010</span> <span class="pre">1000</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">(</span></code></p></td>
 <td><p>72</p></td>
 <td><p>48</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0100</span> <span class="pre">1000</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">H</span></code></p></td>
+<td><p>104</p></td>
+<td><p>68</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0110</span> <span class="pre">1000</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">h</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p>9</p></td>
 <td><p>09</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0000</span> <span class="pre">1001</span></code></p></td>
-<td></td>
+<td><p>HT (horizontal tab)</p></td>
 <td><p>41</p></td>
 <td><p>29</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0010</span> <span class="pre">1001</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">)</span></code></p></td>
 <td><p>73</p></td>
 <td><p>49</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0100</span> <span class="pre">1001</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">I</span></code></p></td>
+<td><p>105</p></td>
+<td><p>69</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0110</span> <span class="pre">1001</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">i</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p>10</p></td>
 <td><p>0A</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0000</span> <span class="pre">1010</span></code></p></td>
-<td></td>
+<td><p>LF (line feed - new line)</p></td>
 <td><p>42</p></td>
 <td><p>2A</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0010</span> <span class="pre">1010</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">*</span></code></p></td>
 <td><p>74</p></td>
 <td><p>4A</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0100</span> <span class="pre">1010</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">J</span></code></p></td>
+<td><p>106</p></td>
+<td><p>6A</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0110</span> <span class="pre">1010</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">j</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p>11</p></td>
 <td><p>0B</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0000</span> <span class="pre">1011</span></code></p></td>
-<td></td>
+<td><p>VT (vertical tab)</p></td>
 <td><p>43</p></td>
 <td><p>2B</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0010</span> <span class="pre">1011</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">+</span></code></p></td>
 <td><p>75</p></td>
 <td><p>4B</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0100</span> <span class="pre">1011</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">K</span></code></p></td>
+<td><p>107</p></td>
+<td><p>6B</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0110</span> <span class="pre">1011</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">k</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p>12</p></td>
 <td><p>0C</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0000</span> <span class="pre">1100</span></code></p></td>
-<td></td>
+<td><p>FF (form feed - new page)</p></td>
 <td><p>44</p></td>
 <td><p>2C</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0010</span> <span class="pre">1100</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">,</span></code></p></td>
 <td><p>76</p></td>
 <td><p>4C</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0100</span> <span class="pre">1100</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">L</span></code></p></td>
+<td><p>108</p></td>
+<td><p>6C</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0110</span> <span class="pre">1100</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">l</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p>13</p></td>
 <td><p>0D</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0000</span> <span class="pre">1101</span></code></p></td>
-<td></td>
+<td><p>CR (carriage return)</p></td>
 <td><p>45</p></td>
 <td><p>2D</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0010</span> <span class="pre">1101</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">-</span></code></p></td>
 <td><p>77</p></td>
 <td><p>4D</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0100</span> <span class="pre">1101</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">M</span></code></p></td>
+<td><p>109</p></td>
+<td><p>6D</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0110</span> <span class="pre">1101</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">m</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p>14</p></td>
 <td><p>0E</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0000</span> <span class="pre">1110</span></code></p></td>
-<td></td>
+<td><p>SO (shift out)</p></td>
 <td><p>46</p></td>
 <td><p>2E</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0010</span> <span class="pre">1110</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.</span></code></p></td>
 <td><p>78</p></td>
 <td><p>4E</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0100</span> <span class="pre">1110</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">N</span></code></p></td>
+<td><p>110</p></td>
+<td><p>6E</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0110</span> <span class="pre">1110</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">n</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p>15</p></td>
 <td><p>0F</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0000</span> <span class="pre">1111</span></code></p></td>
-<td></td>
+<td><p>SI (shift in)</p></td>
 <td><p>47</p></td>
 <td><p>2F</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0010</span> <span class="pre">1111</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">/</span></code></p></td>
 <td><p>79</p></td>
 <td><p>4F</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0100</span> <span class="pre">1111</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">O</span></code></p></td>
+<td><p>111</p></td>
+<td><p>6F</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0110</span> <span class="pre">1111</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">o</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p>16</p></td>
 <td><p>10</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0001</span> <span class="pre">0000</span></code></p></td>
-<td></td>
+<td><p>DLE (data link escape)</p></td>
 <td><p>48</p></td>
 <td><p>30</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0011</span> <span class="pre">0000</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p></td>
 <td><p>80</p></td>
 <td><p>50</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0101</span> <span class="pre">0000</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">P</span></code></p></td>
+<td><p>112</p></td>
+<td><p>70</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0111</span> <span class="pre">0000</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">p</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p>17</p></td>
 <td><p>11</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0001</span> <span class="pre">0001</span></code></p></td>
-<td></td>
+<td><p>DC1 (device control 1)</p></td>
 <td><p>49</p></td>
 <td><p>31</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0011</span> <span class="pre">0001</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">1</span></code></p></td>
 <td><p>81</p></td>
 <td><p>51</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0101</span> <span class="pre">0001</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Q</span></code></p></td>
+<td><p>113</p></td>
+<td><p>71</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0111</span> <span class="pre">0001</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">q</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p>18</p></td>
 <td><p>12</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0001</span> <span class="pre">0010</span></code></p></td>
-<td></td>
+<td><p>DC2 (device control 2)</p></td>
 <td><p>50</p></td>
 <td><p>32</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0011</span> <span class="pre">0010</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">2</span></code></p></td>
 <td><p>82</p></td>
 <td><p>52</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0101</span> <span class="pre">0010</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">R</span></code></p></td>
+<td><p>114</p></td>
+<td><p>72</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0111</span> <span class="pre">0010</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">r</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p>19</p></td>
 <td><p>13</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0001</span> <span class="pre">0011</span></code></p></td>
-<td></td>
+<td><p>DC3 (device control 3)</p></td>
 <td><p>51</p></td>
 <td><p>33</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0011</span> <span class="pre">0011</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">3</span></code></p></td>
 <td><p>83</p></td>
 <td><p>53</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0101</span> <span class="pre">0011</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">S</span></code></p></td>
+<td><p>115</p></td>
+<td><p>73</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0111</span> <span class="pre">0011</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">s</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p>20</p></td>
 <td><p>14</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0001</span> <span class="pre">0100</span></code></p></td>
-<td></td>
+<td><p>DC4 (device control 4)</p></td>
 <td><p>52</p></td>
 <td><p>34</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0011</span> <span class="pre">0100</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">4</span></code></p></td>
 <td><p>84</p></td>
 <td><p>54</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0101</span> <span class="pre">0100</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">T</span></code></p></td>
+<td><p>116</p></td>
+<td><p>74</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0111</span> <span class="pre">0100</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">t</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p>21</p></td>
 <td><p>15</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0001</span> <span class="pre">0101</span></code></p></td>
-<td></td>
+<td><p>NAK (negative acknowledge)</p></td>
 <td><p>53</p></td>
 <td><p>35</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0011</span> <span class="pre">0101</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">5</span></code></p></td>
 <td><p>85</p></td>
 <td><p>55</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0101</span> <span class="pre">0101</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">U</span></code></p></td>
+<td><p>117</p></td>
+<td><p>75</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0111</span> <span class="pre">0101</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">u</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p>22</p></td>
 <td><p>16</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0001</span> <span class="pre">0110</span></code></p></td>
-<td></td>
+<td><p>SYN (synchronous idle)</p></td>
 <td><p>54</p></td>
 <td><p>36</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0011</span> <span class="pre">0110</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">6</span></code></p></td>
 <td><p>86</p></td>
 <td><p>56</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0101</span> <span class="pre">0110</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">V</span></code></p></td>
+<td><p>118</p></td>
+<td><p>76</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0111</span> <span class="pre">0110</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">v</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p>23</p></td>
 <td><p>17</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0001</span> <span class="pre">0111</span></code></p></td>
-<td></td>
+<td><p>ETB (EOF transmitionblock)</p></td>
 <td><p>55</p></td>
 <td><p>37</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0011</span> <span class="pre">0111</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">7</span></code></p></td>
 <td><p>87</p></td>
 <td><p>57</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0101</span> <span class="pre">0111</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">W</span></code></p></td>
+<td><p>119</p></td>
+<td><p>77</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0111</span> <span class="pre">0111</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">w</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p>24</p></td>
 <td><p>18</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0001</span> <span class="pre">1000</span></code></p></td>
-<td></td>
+<td><p>CAN (cancel)</p></td>
 <td><p>56</p></td>
 <td><p>38</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0011</span> <span class="pre">1000</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">8</span></code></p></td>
 <td><p>88</p></td>
 <td><p>58</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0101</span> <span class="pre">1000</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">X</span></code></p></td>
+<td><p>120</p></td>
+<td><p>78</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0111</span> <span class="pre">1000</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">x</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p>25</p></td>
 <td><p>19</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0001</span> <span class="pre">1001</span></code></p></td>
-<td></td>
+<td><p>EM (end of medium)</p></td>
 <td><p>57</p></td>
 <td><p>39</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0011</span> <span class="pre">1001</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">9</span></code></p></td>
 <td><p>89</p></td>
 <td><p>59</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0101</span> <span class="pre">1001</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Y</span></code></p></td>
+<td><p>121</p></td>
+<td><p>79</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0111</span> <span class="pre">1001</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">y</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p>26</p></td>
 <td><p>1A</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0001</span> <span class="pre">1010</span></code></p></td>
-<td></td>
+<td><p>SUB (substitute)</p></td>
 <td><p>58</p></td>
 <td><p>3A</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0011</span> <span class="pre">1010</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">:</span></code></p></td>
 <td><p>90</p></td>
 <td><p>5A</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0101</span> <span class="pre">1010</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Z</span></code></p></td>
+<td><p>122</p></td>
+<td><p>7A</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0111</span> <span class="pre">1010</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">z</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p>27</p></td>
 <td><p>1B</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0001</span> <span class="pre">1011</span></code></p></td>
-<td></td>
+<td><p>ESC (escape)</p></td>
 <td><p>59</p></td>
 <td><p>3B</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0011</span> <span class="pre">1011</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">;</span></code></p></td>
 <td><p>91</p></td>
 <td><p>5B</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0101</span> <span class="pre">1011</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">[</span></code></p></td>
+<td><p>123</p></td>
+<td><p>7B</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0111</span> <span class="pre">1011</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">{</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p>28</p></td>
 <td><p>1C</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0001</span> <span class="pre">1100</span></code></p></td>
-<td></td>
+<td><p>FS (file separator)</p></td>
 <td><p>60</p></td>
 <td><p>3C</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0011</span> <span class="pre">1100</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code></p></td>
 <td><p>92</p></td>
 <td><p>5C</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0101</span> <span class="pre">1100</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">\</span></code></p></td>
+<td><p>124</p></td>
+<td><p>7C</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0111</span> <span class="pre">1100</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">|</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p>29</p></td>
 <td><p>1D</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0001</span> <span class="pre">1101</span></code></p></td>
-<td></td>
+<td><p>GS (group separator)</p></td>
 <td><p>61</p></td>
 <td><p>3D</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0011</span> <span class="pre">1101</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">=</span></code></p></td>
 <td><p>93</p></td>
 <td><p>5D</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0101</span> <span class="pre">1101</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">]</span></code></p></td>
+<td><p>125</p></td>
+<td><p>7D</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0111</span> <span class="pre">1101</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">}</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p>30</p></td>
 <td><p>1E</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0001</span> <span class="pre">1110</span></code></p></td>
-<td></td>
+<td><p>RS (record separator)</p></td>
 <td><p>62</p></td>
 <td><p>3E</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0011</span> <span class="pre">1110</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code></p></td>
 <td><p>94</p></td>
 <td><p>5E</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0101</span> <span class="pre">1110</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">^</span></code></p></td>
+<td><p>126</p></td>
+<td><p>7E</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0111</span> <span class="pre">1110</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">~</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p>31</p></td>
 <td><p>1F</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0001</span> <span class="pre">1111</span></code></p></td>
-<td></td>
-<td></td>
+<td><p>US (unit separator)</p></td>
 <td><p>63</p></td>
 <td><p>3F</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0011</span> <span class="pre">1111</span></code></p></td>
-<td></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">?</span></code></p></td>
 <td><p>95</p></td>
 <td><p>5F</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0101</span> <span class="pre">1111</span></code></p></td>
-<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">_</span></code></p></td>
+<td><p>127</p></td>
+<td><p>7F</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0111</span> <span class="pre">1111</span></code></p></td>
+<td><p>DEL (delete)</p></td>
 </tr>
 </tbody>
 </table>
@@ -1245,8 +1396,8 @@ wchar_t</p>
 </dl>
 </div>
 <div class="section" id="input-output">
-<h4><a class="toc-backref" href="#id17">Input Output</a><a class="headerlink" href="#input-output" title="Permalink to this headline">¶</a></h4>
-<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<h4><a class="toc-backref" href="#id21">Input Output</a><a class="headerlink" href="#input-output" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-c notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
  4
@@ -1305,12 +1456,374 @@ value of <code class="docutils literal notranslate"><span class="pre">2147483648
 <span class="math notranslate nohighlight">\(2^{31}-1\)</span>. The default int boundaries are <code class="docutils literal notranslate"><span class="pre">32bits</span></code> on my <code class="docutils literal notranslate"><span class="pre">x64</span> <span class="pre">processor</span></code></p>
 </div>
 </div>
-<div class="section" id="tests-and-loops">
-<h4><a class="toc-backref" href="#id18">Tests and Loops</a><a class="headerlink" href="#tests-and-loops" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="variables-tests-and-loops">
+<h4><a class="toc-backref" href="#id22">Variables, Tests and Loops</a><a class="headerlink" href="#variables-tests-and-loops" title="Permalink to this headline">¶</a></h4>
+<dl class="field-list simple">
+<dt class="field-odd">VARIABLES DECLARATIONS</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="highlight-c notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+
+	<span class="c1">// Variable declaration and Operators</span>
+	<span class="kt">int</span> <span class="n">value</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+
+	<span class="n">value</span> <span class="o">+=</span> <span class="mi">5</span><span class="p">;</span> <span class="c1">// 10+5 = 15</span>
+	<span class="n">value</span> <span class="o">-=</span> <span class="mi">3</span><span class="p">;</span> <span class="c1">// 15-3 = 12</span>
+	<span class="n">value</span> <span class="o">*=</span> <span class="mi">2</span><span class="p">;</span> <span class="c1">// 12*2 = 24</span>
+	<span class="n">value</span> <span class="o">/=</span> <span class="mi">4</span><span class="p">;</span> <span class="c1">// 24/4 = 6</span>
+
+	<span class="n">value</span><span class="o">++</span><span class="p">;</span> <span class="c1">// 6+1 = 7</span>
+	<span class="o">++</span><span class="n">value</span><span class="p">;</span> <span class="c1">// 7+1 = 8</span>
+
+	<span class="n">value</span><span class="o">--</span><span class="p">;</span> <span class="c1">// 8-1 = 7</span>
+	<span class="o">--</span><span class="n">value</span><span class="p">;</span> <span class="c1">// 7-1 = 6</span>
+
+	<span class="c1">// Binary Operators</span>
+	<span class="kt">int</span> <span class="n">binA</span> <span class="o">=</span> <span class="mi">60</span><span class="p">,</span> <span class="n">binB</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+
+	<span class="n">binA</span> <span class="o">&amp;</span> <span class="n">binB</span> <span class="c1">// 60 AND 6 = 4</span>
+	<span class="c1">// 0011 1100 (60)</span>
+	<span class="c1">// 0000 0110 (6)</span>
+	<span class="c1">// ---------------</span>
+	<span class="c1">// 0000 0100 (4)</span>
+	
+	<span class="n">binA</span> <span class="o">|</span> <span class="n">binB</span> <span class="c1">// 60 OR 6 = 62</span>
+	<span class="c1">// 0011 1100 (60)</span>
+	<span class="c1">// 0000 0110 (6)</span>
+	<span class="c1">// ---------------</span>
+	<span class="c1">// 0011 1110 (62)</span>
+
+	<span class="n">binA</span> <span class="o">^</span> <span class="n">binB</span> <span class="c1">// 60 XOR 6 = 58</span>
+	<span class="c1">// 0011 1100 (60)</span>
+	<span class="c1">// 0000 0110 (6)</span>
+	<span class="c1">// ---------------</span>
+	<span class="c1">// 0011 1010 (58)</span>
+
+	<span class="o">~</span><span class="n">binB</span> <span class="c1">// NOT 6 = -9</span>
+	<span class="c1">// (0) 0110 (6)</span>
+	<span class="c1">// ---------------</span>
+	<span class="c1">// (1) 1001 (-9)</span>
+	
+	<span class="n">binB</span> <span class="o">&lt;&lt;=</span> <span class="mi">3</span> <span class="c1">// 6 LEFT-SHIFTED BY 3 = 48</span>
+	<span class="c1">// 0000 0110 (6)</span>
+	<span class="c1">// ---------------</span>
+	<span class="c1">// 0011 0000 (48)</span>
+
+	<span class="n">binA</span> <span class="o">=</span> <span class="n">binA</span> <span class="o">&gt;&gt;</span> <span class="mi">2</span> <span class="c1">// 60 RIGHT-SHIFTED BY 2 = 15</span>
+	<span class="c1">// 0011 1100 (60)</span>
+	<span class="c1">// ---------------</span>
+	<span class="c1">// 0000 1111 (15)</span>
+
+	<span class="c1">// Tests</span>
+	<span class="kt">bool</span> <span class="n">A</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span> <span class="c1">// A=true=1</span>
+	<span class="kt">bool</span> <span class="n">B</span> <span class="o">=</span> <span class="o">!</span><span class="n">A</span><span class="p">;</span> <span class="c1">// B=false=0</span>
+
+	<span class="k">if</span> <span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* (IS) TRUE */</span> <span class="p">}</span>
+	<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">A</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* (IS NOT) FALSE */</span> <span class="p">}</span>
+
+	<span class="k">if</span> <span class="p">(</span><span class="n">A</span> <span class="o">&amp;&amp;</span> <span class="n">B</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* (AND) FALSE */</span> <span class="p">}</span>
+	<span class="k">if</span> <span class="p">(</span><span class="n">A</span> <span class="o">||</span> <span class="n">B</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* (OR) TRUE */</span> <span class="p">}</span>
+	<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">A</span> <span class="o">!=</span> <span class="o">!</span><span class="n">B</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* (XOR) TRUE */</span> <span class="p">}</span>
+
+	<span class="k">if</span> <span class="p">(</span><span class="n">A</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* (EQUAL) TRUE */</span> <span class="p">}</span>
+	<span class="k">if</span> <span class="p">(</span><span class="n">A</span><span class="o">!=</span><span class="mi">42</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* (NOT EQUAL) TRUE */</span> <span class="p">}</span>
+	<span class="k">if</span> <span class="p">(</span><span class="n">A</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* (GREATER THAN) FALSE */</span> <span class="p">}</span>
+	<span class="k">if</span> <span class="p">(</span><span class="n">A</span><span class="o">&gt;=</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* (GREATER OR EQUAL) TRUE*/</span> <span class="p">}</span>
+	<span class="k">if</span> <span class="p">(</span><span class="n">A</span><span class="o">&lt;-</span><span class="mi">2</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* (LOWER THAN) FALSE*/</span> <span class="p">}</span>
+	<span class="k">if</span> <span class="p">(</span><span class="n">A</span><span class="o">&lt;=</span><span class="n">B</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* (LOWER OR EQUAL) FALSE*/</span> <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<dl class="field-list simple">
+<dt class="field-odd">TESTS IF</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">Condition</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Action</span>
+<span class="p">}</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">Condition</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Action</span>
+<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">Condition</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Action</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="c1">// Action</span>
+<span class="p">}</span>
+
+<span class="k">if</span><span class="p">(</span><span class="n">Condition</span><span class="p">)</span>
+        <span class="c1">// Action</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">SWITCH</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">switch</span> <span class="p">(</span><span class="n">variable</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="mi">1</span><span class="o">:</span> <span class="c1">// Action</span>
+                <span class="k">break</span><span class="p">;</span>
+        <span class="k">case</span> <span class="mi">2</span><span class="o">:</span> <span class="c1">// Action</span>
+                <span class="k">break</span><span class="p">;</span>
+        <span class="k">default</span><span class="o">:</span> <span class="c1">// Action</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">LOOPS</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">do</span> <span class="p">{</span>
+        <span class="c1">// Action</span>
+<span class="p">}</span> <span class="k">while</span><span class="p">(</span><span class="n">conditions</span><span class="p">);</span>
+
+<span class="k">while</span> <span class="p">(</span><span class="n">conditions</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Action</span>
+<span class="p">}</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Action</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can use <code class="docutils literal notranslate"><span class="pre">break;</span></code> to stop a loop.</p>
+</div>
+</div>
+<div class="section" id="random-numbers">
+<h4><a class="toc-backref" href="#id23">Random numbers</a><a class="headerlink" href="#random-numbers" title="Permalink to this headline">¶</a></h4>
+<dl class="field-list simple">
+<dt class="field-odd">RANDOMS</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="highlight-c notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt; 	// NULL</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt; //srand, rand</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;time.h&gt; 	// time</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;math.h&gt;	// pow</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	
+	<span class="n">rand</span><span class="p">()</span><span class="o">%</span><span class="mi">100</span><span class="p">;</span> <span class="c1">// Rand integer from 0 to 99</span>
+
+	<span class="n">srand</span><span class="p">(</span><span class="n">time</span><span class="p">(</span><span class="nb">NULL</span><span class="p">));</span> <span class="c1">// Initialise the random generator with the internal clock as a Seed</span>
+	<span class="n">rand</span><span class="p">()</span><span class="o">%</span><span class="mi">100</span><span class="p">;</span> <span class="c1">// This one is a more random number (current seed is quite special)</span>
+
+	<span class="n">srand</span> <span class="p">(</span><span class="mi">1</span><span class="p">);</span> <span class="c1">// The random generator&#39;s seed is 1 by default, go put it back to see</span>
+	<span class="n">rand</span><span class="p">()</span><span class="o">%</span><span class="mi">100</span><span class="p">;</span> <span class="c1">// This next random number should be the SAME as the first one</span>
+	
+	<span class="c1">// To have a delimited random number, you can use this:</span>
+	<span class="kt">int</span> <span class="n">max</span><span class="o">=</span><span class="mi">112</span><span class="p">,</span> <span class="n">min</span><span class="o">=</span><span class="mi">75</span><span class="p">;</span>
+	<span class="n">srand</span><span class="p">(</span><span class="n">time</span><span class="p">(</span><span class="nb">NULL</span><span class="p">));</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="kt">int</span> <span class="n">random</span> <span class="o">=</span> <span class="p">(</span><span class="n">rand</span><span class="p">()</span><span class="o">%</span><span class="p">(</span><span class="n">max</span><span class="o">-</span><span class="n">min</span><span class="p">))</span><span class="o">+</span><span class="n">min</span><span class="p">;</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">&quot;%i &quot;</span><span class="p">,</span> <span class="n">random</span><span class="p">);</span> <span class="c1">// (ex: 110 109 98 89 105 94 79 103 93 101)</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can see the max of <code class="docutils literal notranslate"><span class="pre">rand()</span></code> with <code class="docutils literal notranslate"><span class="pre">RAND_MAX</span></code> (32767+). For betters randoms number you can use the BOOST library.</p>
+</div>
+</div>
+<div class="section" id="arrays">
+<h4><a class="toc-backref" href="#id24">Arrays</a><a class="headerlink" href="#arrays" title="Permalink to this headline">¶</a></h4>
+<dl class="field-list simple">
+<dt class="field-odd">ARRAYS</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">float</span> <span class="n">numbers</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">};</span>
+<span class="n">numbers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span> <span class="c1">// {20,10,6,8}</span>
+<span class="n">numbers</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="c1">// {20,10,6,10}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">STRINGS</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="highlight-c notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="c1">// The end delimiter of an array of chars is always &#39;\0&#39;</span>
+	<span class="kt">char</span> <span class="n">word</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="sc">&#39;G&#39;</span><span class="p">,</span><span class="sc">&#39;u&#39;</span><span class="p">,</span><span class="sc">&#39;i&#39;</span><span class="p">,</span><span class="sc">&#39;t&#39;</span><span class="p">,</span><span class="sc">&#39;a&#39;</span><span class="p">,</span><span class="sc">&#39;r&#39;</span><span class="p">};</span>
+
+	<span class="c1">// We can define multi-dimentionnal arrays like that</span>
+	<span class="kt">char</span> <span class="n">week</span><span class="p">[</span><span class="mi">7</span><span class="p">][</span><span class="mi">9</span><span class="p">];</span>
+
+	<span class="n">strcpy</span><span class="p">(</span><span class="n">week</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s">&quot;Lundi&quot;</span><span class="p">);</span>
+	<span class="n">strcpy</span><span class="p">(</span><span class="n">week</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">&quot;Mardi&quot;</span><span class="p">);</span>
+	<span class="n">strcpy</span><span class="p">(</span><span class="n">week</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="s">&quot;Mercredi&quot;</span><span class="p">);</span>
+	<span class="n">strcpy</span><span class="p">(</span><span class="n">week</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="s">&quot;Jeudi&quot;</span><span class="p">);</span>
+	<span class="n">strcpy</span><span class="p">(</span><span class="n">week</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="s">&quot;Vendredi&quot;</span><span class="p">);</span>
+	<span class="n">strcpy</span><span class="p">(</span><span class="n">week</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="s">&quot;Samedi&quot;</span><span class="p">);</span>
+	<span class="n">strcpy</span><span class="p">(</span><span class="n">week</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="s">&quot;Dimanche&quot;</span><span class="p">);</span>
+
+	<span class="n">strlen</span><span class="p">(</span><span class="n">word</span><span class="p">);</span> <span class="c1">// The length of word is 6</span>
+
+	<span class="k">switch</span><span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">week</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">week</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span> <span class="p">{</span>
+
+		<span class="k">case</span> <span class="mi">0</span><span class="o">:</span> <span class="c1">// week[0] == week[1]</span>
+			<span class="k">break</span><span class="p">;</span>
+		<span class="k">case</span> <span class="o">-</span><span class="mi">1</span><span class="o">:</span> <span class="c1">// week[0] &lt; week[1]</span>
+			<span class="k">break</span><span class="p">;</span>
+		<span class="k">case</span> <span class="mi">1</span><span class="o">:</span> <span class="c1">// week[0] &gt; week[1]</span>
+			<span class="k">break</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+	
+</pre></div>
+</td></tr></table></div>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">string</span> <span class="n">entry</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">test</span><span class="p">;</span>
+<span class="k">do</span> <span class="p">{</span>
+        <span class="c1">// Test if the input string is composed of chars bewteen &#39;a&#39; and &#39;z&#39;</span>
+        <span class="n">test</span> <span class="o">=</span> <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%1[a-z]c&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">entry</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">while</span><span class="p">(</span><span class="n">test</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="functions">
+<h4><a class="toc-backref" href="#id25">Functions</a><a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">random</span><span class="p">(</span><span class="kt">int</span> <span class="n">min</span><span class="p">,</span> <span class="kt">int</span> <span class="n">max</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">rand</span><span class="p">()</span><span class="o">%</span><span class="p">(</span><span class="n">max</span><span class="o">-</span><span class="n">min</span><span class="p">))</span> <span class="o">+</span> <span class="n">min</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">nothing</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">//return nothing ...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="structures">
-<h4><a class="toc-backref" href="#id19">Structures</a><a class="headerlink" href="#structures" title="Permalink to this headline">¶</a></h4>
-<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<h4><a class="toc-backref" href="#id26">Structures</a><a class="headerlink" href="#structures" title="Permalink to this headline">¶</a></h4>
+<dl class="field-list simple">
+<dt class="field-odd">RECTANGLE STRUCTURE EXAMPLE</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="highlight-c notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
  4
@@ -1397,27 +1910,129 @@ value of <code class="docutils literal notranslate"><span class="pre">2147483648
 </div>
 </div>
 <div class="section" id="pointers-and-smart-pointers">
-<h4><a class="toc-backref" href="#id20">Pointers and Smart pointers</a><a class="headerlink" href="#pointers-and-smart-pointers" title="Permalink to this headline">¶</a></h4>
-<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span>
+<h4><a class="toc-backref" href="#id27">Pointers and Smart pointers</a><a class="headerlink" href="#pointers-and-smart-pointers" title="Permalink to this headline">¶</a></h4>
+<dl class="field-list simple">
+<dt class="field-odd">POINTERS</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="highlight-c notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span>
 </pre></div>
 </td></tr></table></div>
 </div>
 </div>
-<div class="section" id="id2">
-<h3><a class="toc-backref" href="#id21">Basic C++ Cheat Sheet</a><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id4">
+<h3><a class="toc-backref" href="#id28">Basic C++ Cheat Sheet</a><a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id5">
+<h4><a class="toc-backref" href="#id29">Input Output</a><a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+</div>
 <div class="section" id="classes-and-properties">
-<h4><a class="toc-backref" href="#id22">Classes and Properties</a><a class="headerlink" href="#classes-and-properties" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id30">Classes and Properties</a><a class="headerlink" href="#classes-and-properties" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=V-BFlMrBtqQ">https://www.youtube.com/watch?v=V-BFlMrBtqQ</a></p>
 </div>
 <div class="section" id="inheritances">
-<h4><a class="toc-backref" href="#id23">Inheritances</a><a class="headerlink" href="#inheritances" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id31">Inheritances</a><a class="headerlink" href="#inheritances" title="Permalink to this headline">¶</a></h4>
 </div>
 <div class="section" id="virtual-classes">
-<h4><a class="toc-backref" href="#id24">Virtual classes</a><a class="headerlink" href="#virtual-classes" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id32">Virtual classes</a><a class="headerlink" href="#virtual-classes" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id6">
+<h4><a class="toc-backref" href="#id33">Pointers and Smart pointers</a><a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=IzoFn3dfsPA">https://www.youtube.com/watch?v=IzoFn3dfsPA</a>
+<a class="reference external" href="https://www.youtube.com/watch?v=DTxHyVn0ODg">https://www.youtube.com/watch?v=DTxHyVn0ODg</a>
+<a class="reference external" href="https://www.youtube.com/watch?v=UOB7-B2MfwA">https://www.youtube.com/watch?v=UOB7-B2MfwA</a></p>
+</div>
+<div class="section" id="vectors">
+<h4><a class="toc-backref" href="#id34">Vectors</a><a class="headerlink" href="#vectors" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=PocJ5jXv8No">https://www.youtube.com/watch?v=PocJ5jXv8No</a>
+<a class="reference external" href="https://www.youtube.com/watch?v=HcESuwmlHEY">https://www.youtube.com/watch?v=HcESuwmlHEY</a></p>
+</div>
+<div class="section" id="threads">
+<h4><a class="toc-backref" href="#id35">Threads</a><a class="headerlink" href="#threads" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=wXBcwHwIt_I">https://www.youtube.com/watch?v=wXBcwHwIt_I</a></p>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;thread&gt;</span><span class="cp"></span>
+
+<span class="k">static</span> <span class="kt">bool</span> <span class="n">s_Finished</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+
+<span class="c1">// Just print a line of text</span>
+<span class="kt">void</span> <span class="nf">DoWork</span><span class="p">()</span> <span class="p">{</span>
+
+	<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="o">::</span><span class="n">literals</span><span class="o">::</span><span class="n">chrono_literals</span><span class="p">;</span>
+
+	<span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Function thread id=&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">this_thread</span><span class="o">::</span><span class="n">get_id</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+	<span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="n">s_Finished</span><span class="p">)</span> <span class="p">{</span>
+		<span class="c1">// \n is performance wise better than endl, unless flushing of stream is required</span>
+		<span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Working...</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+
+		<span class="c1">// Prevent the thread to be CPU Usage 100% (if it print as fast as he can)</span>
+		<span class="n">std</span><span class="o">::</span><span class="n">this_thread</span><span class="o">::</span><span class="n">sleep_for</span><span class="p">(</span><span class="mi">1</span><span class="n">s</span><span class="p">);</span> 
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Main thread id=&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">this_thread</span><span class="o">::</span><span class="n">get_id</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+	<span class="c1">// This worker will just print Working as fast as it can until we press Enter</span>
+	<span class="n">std</span><span class="o">::</span><span class="kr">thread</span> <span class="n">worker</span><span class="p">(</span><span class="n">DoWork</span><span class="p">);</span>
+
+	<span class="c1">// When whe press Enter, set s_Finished to true and stop the function printing by the otehr thread</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="p">.</span><span class="n">get</span><span class="p">();</span>
+	<span class="n">s_Finished</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+	
+	<span class="c1">// Tell the main thread to wait that the thread worker finish his task before it run the next ones</span>
+	<span class="n">worker</span><span class="p">.</span><span class="n">join</span><span class="p">();</span>
+
+	<span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Finished.&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+	<span class="c1">// Dont do cin.get() while the otehr thread is running</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="p">.</span><span class="n">get</span><span class="p">();</span>
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
 </div>
 </div>
 </div>
 <div class="section" id="sfml">
-<h2><a class="toc-backref" href="#id25">SFML</a><a class="headerlink" href="#sfml" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id36">SFML</a><a class="headerlink" href="#sfml" title="Permalink to this headline">¶</a></h2>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 44%" />
@@ -1439,10 +2054,13 @@ value of <code class="docutils literal notranslate"><span class="pre">2147483648
 </table>
 </div>
 <div class="section" id="qt">
-<h2><a class="toc-backref" href="#id26">Qt</a><a class="headerlink" href="#qt" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id37">Qt</a><a class="headerlink" href="#qt" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="cuda">
+<h2><a class="toc-backref" href="#id38">CUDA</a><a class="headerlink" href="#cuda" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="cmake-and-builds">
-<h2><a class="toc-backref" href="#id27">CMake and Builds</a><a class="headerlink" href="#cmake-and-builds" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id39">CMake and Builds</a><a class="headerlink" href="#cmake-and-builds" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 

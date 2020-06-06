@@ -194,6 +194,16 @@
 </div>
 <div class="section" id="sphinx">
 <h1>Sphinx<a class="headerlink" href="#sphinx" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p>sphinx-quickstart</p>
+</div></blockquote>
+<p>pip install pypandoc</p>
+<p>import pypandoc
+output = pypandoc.convert_file(‘PRISMATIC.md’, ‘rst’)</p>
+<dl class="simple">
+<dt>with open(“prismatic.rst”, “w”, encoding=”utf-8”) as f:</dt><dd><p>f.write(output)</p>
+</dd>
+</dl>
 <p><a class="reference external" href="https://stackoverflow.com/questions/11315504/sphinx-list-of-supported-languages-for-highlighting">https://stackoverflow.com/questions/11315504/sphinx-list-of-supported-languages-for-highlighting</a></p>
 <p>pygmentize -L lexers</p>
 <div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span>
