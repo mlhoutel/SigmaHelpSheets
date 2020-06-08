@@ -48,6 +48,16 @@ conda install constructor
 Create Packages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+CONDA FORGE
+https://conda-forge.org/docs/user/introduction.html#what-is-conda-forge
+
+STRUCTURE
+https://conda-forge.org/docs/user/ci-skeleton.html
+
+AZURE PIPELINES
+https://www.youtube.com/watch?v=7pzBwuMjpP0
+
+
 https://www.youtube.com/watch?v=HSK-6dCnYVQ
 
 3 files min:

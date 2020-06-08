@@ -20,6 +20,11 @@ https://stackoverflow.com/questions/11315504/sphinx-list-of-supported-languages-
 
 pygmentize -L lexers
 
+https://docs.typo3.org/m/typo3/docs-how-to-document/master/en-us/WritingReST/Codeblocks.html
+
+https://pygments.org/docs/lexers/
+
+https://stylishthemes.github.io/Syntax-Themes/pygments/
 
 
 .. code-block:: objective-c

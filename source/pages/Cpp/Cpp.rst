@@ -116,7 +116,7 @@ Compilator settings and flags
 
 :Command Syntax:
 
-.. parsed-literal::
+.. code-block:: console
 
 	gcc [options] [source files] [object files] -o output file
 
@@ -124,7 +124,7 @@ If you don't put ``-o output file``, the output file will be ``a.exe`` per defau
 
 :Add libraries: 
 
-.. parsed-literal::
+.. code-block:: console
 
 	 -I %libpath%\include -L %libpath%\lib -l libfileA -l libfileB
 
@@ -144,7 +144,7 @@ The **Errors Flags** begin with a ``-W`` (for Warning):
 
 .. admonition:: Debug Flags
 	
-	.. parsed-literal::
+	.. code-block:: console
 
 		-Wall -Wextra -Wold-style-cast -Woverloaded-virtual -Wfloat-equal -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wconversion -Wshadow -Weffc++ -Wredundant-decls -Wdouble-promotion -Winit-self -Wswitch-default -Wswitch-enum -Wundef -Wlogical-op -Winline
 
@@ -152,7 +152,7 @@ The **Errors Flags** begin with a ``-W`` (for Warning):
 
 .. admonition:: Release Flags
 
-	.. parsed-literal::
+	.. code-block:: console
 
 		-Werror -Wfatal-errors
 
@@ -171,21 +171,21 @@ The **Debug Flags** begin with a ``-g`` (for Generate debug informations)
 
 The **Optimisation Flags** begin with a ``-O`` (for Optimisation)
 
-+--------+--------------------+----------------+-----------+--------------+-------------------+
-| Option | Optimization Level | Execution Time | Code Size | Memory Usage | Compilation Time  |
-+========+====================+================+===========+==============+===================+
-| -O0    | compilation time   |	       \+      |    \+     |      \-      |        \-         |
-+--------+--------------------+----------------+-----------+--------------+-------------------+
-| -O1/-O | code size/exe time |	      \-       |    \-     |      \+      |        \+         |
-+--------+--------------------+----------------+-----------+--------------+-------------------+
-| -O2    | code size/exe time |	     \- \-     |    \=     |      \+      |       \+ \+       |
-+--------+--------------------+----------------+-----------+--------------+-------------------+
-| -O3    | code size/exe time |	   \- \- \-    |    \=     |      \+      |      \+ \+ \+     |
-+--------+--------------------+----------------+-----------+--------------+-------------------+
-| -Os    | code size          |	      \=       |   \- \-   |      \=      |      \+ \+        |
-+--------+--------------------+----------------+-----------+--------------+-------------------+
-| -Ofast | imprecise fast math|	   \- \- \-    |    \=     |      \+      |     \+ \+ \+      |
-+--------+--------------------+----------------+-----------+--------------+-------------------+
++----------+--------------------+----------------+-----------+--------------+-------------------+
+| Option   | Optimization Level | Execution Time | Code Size | Memory Usage | Compilation Time  |
++==========+====================+================+===========+==============+===================+
+|``-O0``   | compilation time   |        \+      |    \+     |      \-      |        \-         |
++----------+--------------------+----------------+-----------+--------------+-------------------+
+|``-O1/-O``| code size/exe time |       \-       |    \-     |      \+      |        \+         |
++----------+--------------------+----------------+-----------+--------------+-------------------+
+|``-O2``   | code size/exe time |      \- \-     |    \=     |      \+      |       \+ \+       |
++----------+--------------------+----------------+-----------+--------------+-------------------+
+|``-O3``   | code size/exe time |    \- \- \-    |    \=     |      \+      |      \+ \+ \+     |
++----------+--------------------+----------------+-----------+--------------+-------------------+
+|``-Os``   | code size          |       \=       |   \- \-   |      \=      |      \+ \+        |
++----------+--------------------+----------------+-----------+--------------+-------------------+
+|``-Ofast``| imprecise fast math|    \- \- \-    |    \=     |      \+      |     \+ \+ \+      |
++----------+--------------------+----------------+-----------+--------------+-------------------+
 
 *informations from https://www.rapidtables.com/code/linux/gcc/gcc-o.html#optimization*
 
@@ -220,25 +220,26 @@ When you use multiple libraries, it could be some ``conflicts`` under names betw
 
 :We can use namespaces like that: ``sf::...``
 
-.. code-block:: objective-c
+.. code-block:: cpp
 
 	sf::RectangleShape rectangle(sf::Vector2f(120,50));
 
+
 :Or like that: ``namespace sf { ... }``
 
-.. code-block:: objective-c
+.. code-block:: cpp
 
 	namespace sf {
-		Rectangle Shape rectangle(Vector2f(120,50));
+		RectangleShape rectangle(Vector2f(120,50));
 	}
 
 :Or even like that: ``using namespace sf;``
 
-.. code-block:: objective-c
+.. code-block:: cpp
 
 	using namespace sf;
 
-	Rectangle Shape rectangle(Vector2f(120,50));
+	RectangleShape rectangle(Vector2f(120,50));
 
 
 .. tip:: **I recommand the first two methods**, the problem with the last one is that you ``loose all the purpose`` of the namespace, and it's ``confusing`` when you want to use both functions from libraries that would be in conflict, you will have to mix the third and the first method...
@@ -299,11 +300,18 @@ Types and Variables
 | Char ``/u/``      | ``unsigned     | ``8+ bits``  | 0                 | 255               | ``%hh``|                |
 |                   | char``         |              | :math:`(0)`       | :math:`(2^{8}-1)` |        |                |
 +-------------------+----------------+--------------+-------------------+-------------------+--------+----------------+
-
-char8_t
-char16_t
-char32_t
-wchar_t
+| char8_t ``/u/``   | ``unsigned     | ``8+ bits``  | 0                 | 255               | ``%hh``|                |
+|                   | char``         |              | :math:`(0)`       | :math:`(2^{8}-1)` |        |                |
++-------------------+----------------+--------------+-------------------+-------------------+--------+----------------+
+| char16_t ``/u/``  | ``unsigned     | ``8+ bits``  | 0                 | 255               | ``%hh``|                |
+|                   | char``         |              | :math:`(0)`       | :math:`(2^{8}-1)` |        |                |
++-------------------+----------------+--------------+-------------------+-------------------+--------+----------------+
+| char32_t ``/u/``  | ``unsigned     | ``8+ bits``  | 0                 | 255               | ``%hh``|                |
+|                   | char``         |              | :math:`(0)`       | :math:`(2^{8}-1)` |        |                |
++-------------------+----------------+--------------+-------------------+-------------------+--------+----------------+
+| wchar_t ``/u/``   | ``unsigned     | ``8+ bits``  | 0                 | 255               | ``%hh``|                |
+|                   | char``         |              | :math:`(0)`       | :math:`(2^{8}-1)` |        |                |
++-------------------+----------------+--------------+-------------------+-------------------+--------+----------------+
 
 
 .. tip:: Chars are just integers linked to an characted by the ascii table.
@@ -381,6 +389,27 @@ wchar_t
 
 :FLOATS:
 
++-------------------+----------------+--------------+-------------------+-------------------+--------+----------------+
+| Name              | Syntax         | Size         | Min               | Max               | Letter | Aliases        |
++===================+================+==============+===================+===================+========+================+
+| Char ``/s/``      | ``char``       | ``8+ bits``  | -128              | 127               | ``%hh``|``signed char`` |
+|                   |                |              | :math:`(-2^{7})`  | :math:`(2^{7}-1)` |        |                |
++-------------------+----------------+--------------+-------------------+-------------------+--------+----------------+
+| Char ``/u/``      | ``unsigned     | ``8+ bits``  | 0                 | 255               | ``%hh``|                |
+|                   | char``         |              | :math:`(0)`       | :math:`(2^{8}-1)` |        |                |
++-------------------+----------------+--------------+-------------------+-------------------+--------+----------------+
+| char8_t ``/u/``   | ``unsigned     | ``8+ bits``  | 0                 | 255               | ``%hh``|                |
+|                   | char``         |              | :math:`(0)`       | :math:`(2^{8}-1)` |        |                |
++-------------------+----------------+--------------+-------------------+-------------------+--------+----------------+
+| char16_t ``/u/``  | ``unsigned     | ``8+ bits``  | 0                 | 255               | ``%hh``|                |
+|                   | char``         |              | :math:`(0)`       | :math:`(2^{8}-1)` |        |                |
++-------------------+----------------+--------------+-------------------+-------------------+--------+----------------+
+| char32_t ``/u/``  | ``unsigned     | ``8+ bits``  | 0                 | 255               | ``%hh``|                |
+|                   | char``         |              | :math:`(0)`       | :math:`(2^{8}-1)` |        |                |
++-------------------+----------------+--------------+-------------------+-------------------+--------+----------------+
+| wchar_t ``/u/``   | ``unsigned     | ``8+ bits``  | 0                 | 255               | ``%hh``|                |
+|                   | char``         |              | :math:`(0)`       | :math:`(2^{8}-1)` |        |                |
++-------------------+----------------+--------------+-------------------+-------------------+--------+----------------+
 
 Input Output
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -417,6 +446,7 @@ Variables, Tests and Loops
 :TESTS IF:
 
 .. code-block:: c
+	:linenos:
 
 	if (Condition) {
 		// Action
@@ -436,6 +466,7 @@ Variables, Tests and Loops
 :SWITCH:
 
 .. code-block:: c
+	:linenos:
 
 	switch (variable) {
 		case 1: // Action
@@ -448,6 +479,7 @@ Variables, Tests and Loops
 :LOOPS:
 
 .. code-block:: c
+	:linenos:
 
 	do {
 		// Action
@@ -479,11 +511,10 @@ Arrays
 
 :ARRAYS:
 
-.. code-block:: c
+.. literalinclude:: arrays.c
+          :language: c
+          :linenos:
 
-	float numbers[4] = {0,10,6,8};
-	numbers[0] = 20; // {20,10,6,8}
-	numbers[3] = 10; // {20,10,6,10}
 
 :STRINGS:
 
@@ -492,6 +523,7 @@ Arrays
           :linenos:
 
 .. code-block:: c
+	:linenos:
 
 	string entry;
 	int test;
@@ -505,7 +537,8 @@ Functions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: c
-	
+	:linenos:
+
 	int random(int min, int max) {
 		return (rand()%(max-min)) + min;
 	}
@@ -533,6 +566,14 @@ Structures
 Pointers and Smart pointers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+https://www.youtube.com/watch?v=IzoFn3dfsPA
+https://www.youtube.com/watch?v=DTxHyVn0ODg
+https://www.youtube.com/watch?v=UOB7-B2MfwA
+
+HEAP vs STACK
+Passing by reference ...
+
+
 :POINTERS:
 
 .. literalinclude:: pointer.c
@@ -550,6 +591,15 @@ Input Output
           :language: cpp
           :linenos:
 
+Arrays
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+:ARRAYS:
+
+.. literalinclude:: arrays.cpp
+          :language: c
+          :linenos:
+
 Classes and Properties
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -560,13 +610,6 @@ Inheritances
 
 Virtual classes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Pointers and Smart pointers
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-https://www.youtube.com/watch?v=IzoFn3dfsPA
-https://www.youtube.com/watch?v=DTxHyVn0ODg
-https://www.youtube.com/watch?v=UOB7-B2MfwA
 
 Vectors
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -587,13 +630,9 @@ https://www.youtube.com/watch?v=wXBcwHwIt_I
 SFML
 ============================
 
-+---------------------+---------------------------+
-| Instruction         | Command                   |
-+=====================+===========================+
-| **Namespace**       | ``using namespace sf;``   |
-+---------------------+---------------------------+
-| **main function**   | ``int main() { }``        |
-+---------------------+---------------------------+
+.. literalinclude:: sfml.cpp
+          :language: cpp
+          :linenos:
 
 Qt
 ============================

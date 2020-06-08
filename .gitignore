@@ -1,2 +1,2 @@
-# ignore all exe from source\pages
-source/pages/*.exe
+# ignore all exe files
+*.exe
