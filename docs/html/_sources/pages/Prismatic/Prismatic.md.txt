@@ -482,7 +482,7 @@ D:/Libraries/fftw-3.3.8/Build64/Release;D:/Libraries/hdf5-1.12.0/Build64/_CPack_
 
 #### 5. In the top bar, make sure to select Release and the right Plateform, then Click on Run
 > You may have an error popup when the project try to run the ALL BUILD version, just run manually the build file with ```D:/Libraries/prismatic/Build64/Release/prismatic.exe```   
-#### 6. Get the **prismatic.exe** and **fftwf.dll** files at Path/to/prismatic/compiled/x64/Release
+#### 6. You can get the **prismatic.exe** and **fftwf.dll** files at D:\Libraries\prismatic\Build64\Release and move them to another directory, if at least these files are in the same folder the program will work
 
 ### Test:  
 #### 7. Copy the **prismatic.exe** and **fftwf.dll** files in a new directory
@@ -707,7 +707,7 @@ Click on **Apply**
 
 **Select only the properties for prismatic-gui and check that these parameters are good:**
 * *Linker/System/Sub-System* => Windows (/SUBSYSTEM:WINDOWS)
-* *Linker/Advanced/Importation libraries* => D:/Documents/Projets/CEA Grenoble Project/PrismaticGUI/Release/prismatic-gui.lib
+* *Linker/Advanced/Importation libraries* => D:/Libraries/prismatic/Build64GUI/Release/prismatic-gui.lib
 * *C/C++/Preprocessor/Preprocessor definition* => 
 ```
 WIN32;_WINDOWS;NDEBUG;PRISMATIC_BUILDING_GUI=1;PRISMATIC_ENABLE_GUI;PRISMATIC_ENABLE_CLI;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;CMAKE_INTDIR="Release";
@@ -924,7 +924,7 @@ Click on **Apply**
 
 **Select only the properties for prismatic-gui and check that these parameters are good:**
 * *Linker/System/Sub-System* => Windows (/SUBSYSTEM:WINDOWS)
-* *Linker/Advanced/Importation libraries* => D:/Documents/Projets/CEA Grenoble Project/PrismaticGUI/Release/prismatic-gui.lib
+* *Linker/Advanced/Importation libraries* => D:/Libraries/prismatic/Build64GUI/Release/prismatic-gui.lib
 * *C/C++/Preprocessor/Preprocessor definition* => 
 ```
 WIN32;_WINDOWS;NDEBUG;PRISMATIC_BUILDING_GUI=1;PRISMATIC_ENABLE_GUI;PRISMATIC_ENABLE_CLI;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;CMAKE_INTDIR="Release";

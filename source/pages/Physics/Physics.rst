@@ -15,6 +15,12 @@ Verlet Integration
 Fluids
 ============================
 
+https://www.youtube.com/watch?v=5zI9sG3pjVU
+
+Simulation aile d'avion et portanc
+https://www.youtube.com/watch?v=imdJBd88AcA
+effect magnus
+
 Boids
 ============================
 

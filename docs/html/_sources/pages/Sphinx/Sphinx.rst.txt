@@ -32,3 +32,5 @@ https://stylishthemes.github.io/Syntax-Themes/pygments/
 .. centered:: "Namespaces provide a method for preventing name conflicts in large projects." `source <https://en.cppreference.com/w/cpp/language/namespace>`_
 
 .. tip:: 
+
+	https://nbsphinx.readthedocs.io/en/0.7.0/installation.html

@@ -107,7 +107,9 @@ Table of the sheets by Subject
 
 	pages/Sphinx/Sphinx.rst
 	pages/Docker/Docker.rst
-	pages/Prismatic/Prismatic.md
+
+.. pages/Prismatic/Prismatic.md
+.. pages/Prismatic/Multislice.ipynb
 
 .. admonition:: Caution
 
@@ -183,6 +185,38 @@ Table of the sheets by Subject
 +-------------------------------------------+-------------------------------------------+-------------------------------------------+
 
 https://squoosh.app/
+
+https://app.diagrams.net/
+
+https://app.clickup.com/
+
+https://devdocs.io/
+https://libraries.io/
+http://eradman.com/entrproject/
+https://devhints.io/
+https://tldr.sh/
+Obtenir un accès gratuit à la majorité des papiers payants : https://sci-hub.tw
+
+# Front-End
+https://animista.net/ 
+https://bennettfeely.com/clippy/
+
+
+
+# Useless
+http://www.ouaismaisbon.ch/
+http://www.staggeringbeauty.com/
+http://www.omfgdogs.com/
+
+https://www.reddit.com/r/learnprogramming/comments/h10ooq/tools_i_wish_i_had_known_about_when_i_started/
+
+https://free-for.dev/#/
+
+https://raidforums.com/Announcement-Database-Index-CLICK-ME
+
+https://haveibeenpwned.com/
+
+https://cdnjs.com/libraries/
 
 .. |logo| image:: _static/placeholder.png
 	:width: 30%

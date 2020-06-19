@@ -10,3 +10,11 @@
 .wy-side-nav-search img {
 	padding: 0px !important;
 }
+
+.highlight-ipython3 .highlight {
+	background: #272822 !important;
+}
+
+.output_area .highlight {
+	background: #272822 !important;
+}

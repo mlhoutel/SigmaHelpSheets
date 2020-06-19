@@ -640,5 +640,7 @@ Qt
 CUDA
 ============================
 
+https://matehickey.github.io/Projet-CUDA-M2/site/cuda/
+
 CMake and Builds
 ============================

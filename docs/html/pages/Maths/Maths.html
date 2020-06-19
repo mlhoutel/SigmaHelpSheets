@@ -29,7 +29,9 @@
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/language_data.js"></script>
         <script src="../../_static/debug.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -93,8 +95,17 @@
               <p class="caption"><span class="caption-text">Sciences</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Maths</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#nubers-theory">Nubers Theory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#basis">Basis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#triangle">Triangle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#circles">Circles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#temp">TEMP</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#derivatives-and-primitives">Derivatives and Primitives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#trigonometry">Trigonometry</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#complex-numbers">Complex numbers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#vectors">Vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tensors">Tensors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#matrix">Matrix</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#quaternions">Quaternions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#probabilitys">Probabilitys</a></li>
@@ -131,7 +142,6 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Sphinx/Sphinx.html">Sphinx</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Docker/Docker.html">Docker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Prismatic/Prismatic.html">Prismatic</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Miscellaneous</span></p>
 <ul>
@@ -201,18 +211,447 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="toctree-wrapper compound">
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="toctree-wrapper compound">
 </div>
 <div class="section" id="maths">
 <h1>Maths<a class="headerlink" href="#maths" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="nubers-theory">
-<h2>Nubers Theory<a class="headerlink" href="#nubers-theory" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="basis">
+<h2>Basis<a class="headerlink" href="#basis" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="triangle">
+<h3>Triangle<a class="headerlink" href="#triangle" title="Permalink to this headline">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Pythagorean Theorem</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p>Rectangle Triangle</p>
+<p><span class="math notranslate nohighlight">\(a^2+b^2=c^2\)</span></p>
+<div class="figure align-default">
+<a class="reference internal image-reference" href="https://www.mathsisfun.com/geometry/images/pythagoras-abc.svg"><img alt="https://www.mathsisfun.com/geometry/images/pythagoras-abc.svg" src="https://www.mathsisfun.com/geometry/images/pythagoras-abc.svg" width="200px" /></a>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Thales Theorem</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p><span class="math notranslate nohighlight">\(\frac{AD}{AB}=\frac{AE}{AC}=\frac{DE}{BC}\)</span></p>
+<div class="figure align-default">
+<a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Thales_theorem_1.svg/118px-Thales_theorem_1.svg.png"><img alt="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Thales_theorem_1.svg/118px-Thales_theorem_1.svg.png" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Thales_theorem_1.svg/118px-Thales_theorem_1.svg.png" style="width: 200px;" /></a>
+</div>
+</div>
+<div class="section" id="circles">
+<h3>Circles<a class="headerlink" href="#circles" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="temp">
+<h3>TEMP<a class="headerlink" href="#temp" title="Permalink to this headline">¶</a></h3>
+<p><span class="math notranslate nohighlight">\((a+b)^2=a^2+2ab+b^2\)</span>
+<span class="math notranslate nohighlight">\((a-b)^2=a^2-2ab+b^2\)</span>
+<span class="math notranslate nohighlight">\(a^2-b^2=(a-b)(a+b)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\ln{e}=1\)</span>
+<span class="math notranslate nohighlight">\(\ln{1}=0\)</span></p>
+<p>display focntions exp and log10</p>
+<p>fonction injectives/surjectives et bijectives</p>
+<p>Parité:
+<span class="math notranslate nohighlight">\(f(-x)=f(x)\)</span> Paire
+<span class="math notranslate nohighlight">\(f(-x)=-f(x)\)</span> Impaire</p>
+<p>Tangentes
+<span class="math notranslate nohighlight">\(f'(a)(x-a)+f(a)=y\)</span></p>
+<p><span class="math notranslate nohighlight">\(\lim_{x \to a} \frac{f(x)-f(a)}{x-a} = f'(a)\)</span></p>
+<p>ex:
+<span class="math notranslate nohighlight">\(\lim_{x \to 0} \frac{\sin{x}}{x}=\frac{\sin{x}-\sin{0}}{x-0}=\sin'(0)=\cos(0)=1\)</span></p>
+<p><span class="math notranslate nohighlight">\((f \circ u)'(x)=u'(x)f(u(x))\)</span></p>
+<p><span class="math notranslate nohighlight">\(f(x)=y \Leftrightarrow x=f^{-1}(y)\)</span></p>
+<p><span class="math notranslate nohighlight">\((f^{-1})'(y)=\frac{1}{f'(x)}\)</span> and <span class="math notranslate nohighlight">\(y=f(x)\)</span></p>
+</div>
+</div>
+<div class="section" id="derivatives-and-primitives">
+<h2>Derivatives and Primitives<a class="headerlink" href="#derivatives-and-primitives" title="Permalink to this headline">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Derivatives</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 38%" />
+<col style="width: 37%" />
+<col style="width: 26%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(Function\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(Derivative\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(Domain\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(a\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(ax\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(a\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(x^n\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(nx^{n-1}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\frac{1}{x^n}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(-\frac{n}{x^{n+1}}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\sqrt{x}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{1}{2 \sqrt{x}}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\ln{x}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{1}{x}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(e^x\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(e^x\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\sin{x}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\cos{x}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\cos{x}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(-\sin{x}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\tan{x}=\frac{\sin{x}}{\cos{x}}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{1}{\cos^2(x)}=1+\tan^2(x)\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\arcsin{x}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{1}{\sqrt{1-x^2}}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\arccos{x}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(-\frac{1}{\sqrt{1-x^2}}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\arctan{x}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{1}{\sqrt{1+x^2}}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\sinh{x}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\cosh{x}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\cosh{x}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\sinh{x}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\tanh{x}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{1}{cosh^2(x)}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(ku\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(ku'\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(u+v\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(u'+v'\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(uv\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(u'v+uv'\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\frac{u}{v}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{u'v-uv'}{v^2}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(u^n\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(nu'u^{n-1}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\sqrt{u}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{u'}{2\sqrt{u}}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(e^u\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(u'e^u\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\ln{u}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{u'}{u}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\arctan{u}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{u'}{1+u^2}\)</span></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<dl class="field-list simple">
+<dt class="field-odd">Primitives</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 38%" />
+<col style="width: 37%" />
+<col style="width: 26%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(Function\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(Primitive+C\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(Domain\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(x^n\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{1}{n+1}x^{n+1}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\frac{1}{x}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\ln{x}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(u'e^u\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(e^u\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(u'u^n\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{1}{n+1}u^{n+1}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\frac{u'}{u}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\ln{|u|}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\frac{1}{2\sqrt{x}}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\sqrt{x}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\frac{1}{\sqrt{1-u^2}}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\arcsin{u}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\frac{-1}{\sqrt{1-u^2}}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\arccos{u}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\frac{1}{1+u^2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\arctan{u}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(u'\cos{u}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\sin{u}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(u'\sin{u}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(-\cos{u}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\frac{u'}{\cos^2(u)}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\tan{u}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\frac{-u'}{u^2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{1}{u}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\ln{x}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(x\ln{x}-x\)</span></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="trigonometry">
+<h2>Trigonometry<a class="headerlink" href="#trigonometry" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 15%" />
+<col style="width: 18%" />
+<col style="width: 18%" />
+<col style="width: 18%" />
+<col style="width: 18%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(\theta\)</span>
+<span class="math notranslate nohighlight">\((deg)\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(0\)</span>
+<span class="math notranslate nohighlight">\((0^\circ)\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\frac{\pi}{6}\)</span>
+<span class="math notranslate nohighlight">\((30^\circ)\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\frac{\pi}{4}\)</span>
+<span class="math notranslate nohighlight">\((45^\circ)\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\frac{\pi}{3}\)</span>
+<span class="math notranslate nohighlight">\((60^\circ)\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\frac{\pi}{2}\)</span>
+<span class="math notranslate nohighlight">\((90^\circ)\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\cos\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{\sqrt{3}}{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{\sqrt{2}}{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{1}{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\sin\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{1}{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{\sqrt{2}}{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{\sqrt{3}}{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\tan\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{\sqrt{3}}{3}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\sqrt{3}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(+\infty\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<div class="figure align-default">
+<a class="reference internal image-reference" href="https://i.pinimg.com/originals/1d/89/0d/1d890d831b0f9b8e24124a7bc6a61afb.gif"><img alt="https://i.pinimg.com/originals/1d/89/0d/1d890d831b0f9b8e24124a7bc6a61afb.gif" src="https://i.pinimg.com/originals/1d/89/0d/1d890d831b0f9b8e24124a7bc6a61afb.gif" style="width: 200px;" /></a>
+</div>
+<p><span class="math notranslate nohighlight">\(\cos^2(x)+\sin^2(x)=1\)</span></p>
+<p><span class="math notranslate nohighlight">\(\cos(x+y)=\cos(x)*\cos(y) - \sin(x)*\sin(y)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\sin(x+y)=\sin(x)*\cos(y) + \cos(x)*\sin(y)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\cos^2(x) - \sin^2(x)=\cos(2x)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\cos^2(x) = \frac{1+\cos(2x)}{2}\)</span></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 49%" />
+<col style="width: 51%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\cos{x}=\frac{e^{ix}+e^{-ix}}{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\sin{x}=\frac{e^{ix}-e^{-ix}}{2i}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 43%" />
+<col style="width: 57%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\cosh{x}=\frac{e^x+e^{-x}}{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\arccos{\cos{x}}=x [0;\pi]\)</span>
+<span class="math notranslate nohighlight">\(\cos{\arccos{x}}=x [-1;1]\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\sinh{x}=\frac{e^x-e^{-x}}{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\arcsin{\sin{x}}=x [-\frac{/pi}{2};\frac{pi}{2}]\)</span>
+<span class="math notranslate nohighlight">\(\sin{x}=\frac{e^{ix}-e^{-ix}}{2i}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\tanh{x}=\frac{e^{2x}-1}{e^{2x}+1}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\arctan{\tan{x}}=x [-\frac{/pi}{2};\frac{pi}{2}]\)</span>
+<span class="math notranslate nohighlight">\(\tan{\arctan{x}}=x \mathbb{R}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 40%" />
+<col style="width: 30%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\cosh{x}=\frac{e^x+e^{-x}}{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\arccos(\cos{x})=x [0;\pi]\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\cos(\arccos{x})=x [-1;1]\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\sinh{x}=\frac{e^x-e^{-x}}{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\arcsin(\sin{x})=x [-\frac{\pi}{2};\frac{\pi}{2}]\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\sin(\arcsin{x})=x [-1;1]\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\tanh{x}=\frac{e^{2x}-1}{e^{2x}+1}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\arctan(\tan{x})=x [-\frac{\pi}{2};\frac{\pi}{2}]\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\tan(\arctan{x})=x \mathbb{R}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>Linéarisation:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(cos^2(x)=\frac{1-\cos{2x}}{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(sin^2(x)=\frac{1-\cos{2x}}{2}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 38%" />
+<col style="width: 38%" />
+<col style="width: 24%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\arcsin{0}=0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\arccos{0}=\frac{\pi}{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\arctan{0}=0\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\arcsin{\frac{3\pi}{4}}=\frac{\pi}{4}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\arccos{-1}=\pi\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\arctan{1}=\frac{\pi}{4}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\arcsin{-1}=-\frac{\pi}{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\arccos{1}=0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\arctan{-1}=-\frac{\pi}{4}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\arcsin{\sin{\frac{15\pi}{4}}}=-\frac{\pi}{4}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\arccos{\frac{-\sqrt{3}}{2}}=\frac{5\pi}{6}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\arcsin{\frac{1}{2}}=\frac{\pi}{6}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\arccos{\frac{1}{2}}=\frac{\pi}{3}\)</span></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<p><span class="math notranslate nohighlight">\((\cosh+\sinh)(\cosh-\sinh)=1\)</span></p>
+<p><span class="math notranslate nohighlight">\(\cosh^2(x)=\sinh^2(x)=1 \Leftrightarrow \cosh(x)+\sinh(x)=e^x \Leftrightarrow \cosh(x)-\sinh(x)=e^{-x}\)</span></p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=9Hpy6MKM-J8">https://www.youtube.com/watch?v=9Hpy6MKM-J8</a></p>
 </div>
 <div class="section" id="complex-numbers">
 <h2>Complex numbers<a class="headerlink" href="#complex-numbers" title="Permalink to this headline">¶</a></h2>
 </div>
+<div class="section" id="vectors">
+<h2>Vectors<a class="headerlink" href="#vectors" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tensors">
+<h2>Tensors<a class="headerlink" href="#tensors" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=TvxmkZmBa-k">https://www.youtube.com/watch?v=TvxmkZmBa-k</a></p>
+</div>
 <div class="section" id="matrix">
 <h2>Matrix<a class="headerlink" href="#matrix" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=rowWM-MijXU">https://www.youtube.com/watch?v=rowWM-MijXU</a></p>
 </div>
 <div class="section" id="quaternions">
 <h2>Quaternions<a class="headerlink" href="#quaternions" title="Permalink to this headline">¶</a></h2>
@@ -335,6 +774,12 @@
             background: var(--c-grey);
         }
     </style>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
+
+    <script type="text/javascript" charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.3.5/jsxgraphcore.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.3.5/jsxgraph.css" />
 
 
 

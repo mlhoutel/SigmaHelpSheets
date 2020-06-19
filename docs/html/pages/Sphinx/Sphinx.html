@@ -29,7 +29,9 @@
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/language_data.js"></script>
         <script src="../../_static/debug.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -121,6 +123,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Sphinx</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Docker/Docker.html">Docker</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Prismatic/Prismatic.html">Prismatic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Prismatic/Multislice.html">Multislice method for STEM</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Miscellaneous</span></p>
 <ul>
@@ -190,7 +193,31 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="toctree-wrapper compound">
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="toctree-wrapper compound">
 </div>
 <div class="section" id="sphinx">
 <h1>Sphinx<a class="headerlink" href="#sphinx" title="Permalink to this headline">¶</a></h1>
@@ -213,7 +240,11 @@ output = pypandoc.convert_file(‘PRISMATIC.md’, ‘rst’)</p>
 </pre></div>
 </div>
 <p class="centered">
-<strong>“Namespaces provide a method for preventing name conflicts in large projects.” <a class="reference external" href="https://en.cppreference.com/w/cpp/language/namespace">source</a></strong></p></div>
+<strong>“Namespaces provide a method for preventing name conflicts in large projects.” <a class="reference external" href="https://en.cppreference.com/w/cpp/language/namespace">source</a></strong></p><div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><a class="reference external" href="https://nbsphinx.readthedocs.io/en/0.7.0/installation.html">https://nbsphinx.readthedocs.io/en/0.7.0/installation.html</a></p>
+</div>
+</div>
 
 
            </div>
@@ -316,6 +347,12 @@ output = pypandoc.convert_file(‘PRISMATIC.md’, ‘rst’)</p>
             background: var(--c-grey);
         }
     </style>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
+
+    <script type="text/javascript" charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.3.5/jsxgraphcore.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.3.5/jsxgraph.css" />
 
 
 

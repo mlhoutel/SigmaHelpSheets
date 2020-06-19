@@ -29,7 +29,9 @@
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/language_data.js"></script>
         <script src="../../_static/debug.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -40,7 +42,7 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Music" href="../Music/Music.html" />
+    <link rel="next" title="Multislice method for STEM" href="Multislice.html" />
     <link rel="prev" title="Docker" href="../Docker/Docker.html" />
     <link href="../../_static/style.css" rel="stylesheet" type="text/css">
 
@@ -190,7 +192,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#open-the-project-in-visual-studio-2017">4. Open the project in Visual Studio 2017</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#right-click-on-the-prismatic-project-and-go-to-properties-general">4.1 Right Click on the <strong>prismatic</strong> project and go to Properties/General:</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#in-the-top-bar-make-sure-to-select-release-and-the-right-plateform-then-click-on-run">5. In the top bar, make sure to select Release and the right Plateform, then Click on Run</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#get-the-prismatic-exe-and-fftwf-dll-files-at-path-to-prismatic-compiled-x64-release">6. Get the <strong>prismatic.exe</strong> and <strong>fftwf.dll</strong> files at Path/to/prismatic/compiled/x64/Release</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#you-can-get-the-prismatic-exe-and-fftwf-dll-files-at-d-libraries-prismatic-build64-release-and-move-them-to-another-directory-if-at-least-these-files-are-in-the-same-folder-the-program-will-work">6. You can get the <strong>prismatic.exe</strong> and <strong>fftwf.dll</strong> files at D:\Libraries\prismatic\Build64\Release and move them to another directory, if at least these files are in the same folder the program will work</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#test">Test:</a><ul>
@@ -253,6 +255,7 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="Multislice.html">Multislice method for STEM</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Miscellaneous</span></p>
 <ul>
@@ -322,7 +325,31 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <script>
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<script>
     var currentpath = "D:/Libraries"
     var newpath = "D:/Libraries"
 
@@ -912,8 +939,8 @@ D:/Libraries/hdf5-1.12.0/Build64/_CPack_Packages/win64/ZIP/HDF5-1.12.0-win64/lib
 <div><p>You may have an error popup when the project try to run the ALL BUILD version, just run manually the build file with <code class="docutils literal notranslate"><span class="pre">D:/Libraries/prismatic/Build64/Release/prismatic.exe</span></code></p>
 </div></blockquote>
 </div>
-<div class="section" id="get-the-prismatic-exe-and-fftwf-dll-files-at-path-to-prismatic-compiled-x64-release">
-<h4>6. Get the <strong>prismatic.exe</strong> and <strong>fftwf.dll</strong> files at Path/to/prismatic/compiled/x64/Release<a class="headerlink" href="#get-the-prismatic-exe-and-fftwf-dll-files-at-path-to-prismatic-compiled-x64-release" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="you-can-get-the-prismatic-exe-and-fftwf-dll-files-at-d-libraries-prismatic-build64-release-and-move-them-to-another-directory-if-at-least-these-files-are-in-the-same-folder-the-program-will-work">
+<h4>6. You can get the <strong>prismatic.exe</strong> and <strong>fftwf.dll</strong> files at D:\Libraries\prismatic\Build64\Release and move them to another directory, if at least these files are in the same folder the program will work<a class="headerlink" href="#you-can-get-the-prismatic-exe-and-fftwf-dll-files-at-d-libraries-prismatic-build64-release-and-move-them-to-another-directory-if-at-least-these-files-are-in-the-same-folder-the-program-will-work" title="Permalink to this headline">¶</a></h4>
 </div>
 </div>
 <div class="section" id="test">
@@ -1194,7 +1221,7 @@ xcopy /d /y <span class="s2">&quot;D:/Libraries/Qt/5.14.2/msvc2017_64/plugins/pl
 <p><strong>Select only the properties for prismatic-gui and check that these parameters are good:</strong></p>
 <ul class="simple">
 <li><p><em>Linker/System/Sub-System</em> =&gt; Windows (/SUBSYSTEM:WINDOWS)</p></li>
-<li><p><em>Linker/Advanced/Importation libraries</em> =&gt; D:/Documents/Projets/CEA Grenoble Project/PrismaticGUI/Release/prismatic-gui.lib</p></li>
+<li><p><em>Linker/Advanced/Importation libraries</em> =&gt; D:/Libraries/prismatic/Build64GUI/Release/prismatic-gui.lib</p></li>
 <li><p><em>C/C++/Preprocessor/Preprocessor definition</em> =&gt;</p></li>
 </ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">WIN32</span><span class="p">;</span><span class="n">_WINDOWS</span><span class="p">;</span><span class="n">NDEBUG</span><span class="p">;</span><span class="n">PRISMATIC_BUILDING_GUI</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">PRISMATIC_ENABLE_GUI</span><span class="p">;</span><span class="n">PRISMATIC_ENABLE_CLI</span><span class="p">;</span><span class="n">QT_WIDGETS_LIB</span><span class="p">;</span><span class="n">QT_GUI_LIB</span><span class="p">;</span><span class="n">QT_CORE_LIB</span><span class="p">;</span><span class="n">QT_NO_DEBUG</span><span class="p">;</span><span class="n">CMAKE_INTDIR</span><span class="o">=</span><span class="s2">&quot;Release&quot;</span><span class="p">;</span>
@@ -1455,7 +1482,7 @@ xcopy /d /y <span class="s2">&quot;D:/Libraries/Qt/5.14.2/msvc2017_64/plugins/pl
 <p><strong>Select only the properties for prismatic-gui and check that these parameters are good:</strong></p>
 <ul class="simple">
 <li><p><em>Linker/System/Sub-System</em> =&gt; Windows (/SUBSYSTEM:WINDOWS)</p></li>
-<li><p><em>Linker/Advanced/Importation libraries</em> =&gt; D:/Documents/Projets/CEA Grenoble Project/PrismaticGUI/Release/prismatic-gui.lib</p></li>
+<li><p><em>Linker/Advanced/Importation libraries</em> =&gt; D:/Libraries/prismatic/Build64GUI/Release/prismatic-gui.lib</p></li>
 <li><p><em>C/C++/Preprocessor/Preprocessor definition</em> =&gt;</p></li>
 </ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">WIN32</span><span class="p">;</span><span class="n">_WINDOWS</span><span class="p">;</span><span class="n">NDEBUG</span><span class="p">;</span><span class="n">PRISMATIC_BUILDING_GUI</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">PRISMATIC_ENABLE_GUI</span><span class="p">;</span><span class="n">PRISMATIC_ENABLE_CLI</span><span class="p">;</span><span class="n">QT_WIDGETS_LIB</span><span class="p">;</span><span class="n">QT_GUI_LIB</span><span class="p">;</span><span class="n">QT_CORE_LIB</span><span class="p">;</span><span class="n">QT_NO_DEBUG</span><span class="p">;</span><span class="n">CMAKE_INTDIR</span><span class="o">=</span><span class="s2">&quot;Release&quot;</span><span class="p">;</span>
@@ -1494,7 +1521,7 @@ xcopy /d /y <span class="s2">&quot;D:/Libraries/Qt/5.14.2/msvc2017_64/plugins/pl
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../Music/Music.html" class="btn btn-neutral float-right" title="Music" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="Multislice.html" class="btn btn-neutral float-right" title="Multislice method for STEM" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../Docker/Docker.html" class="btn btn-neutral float-left" title="Docker" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -1587,6 +1614,12 @@ xcopy /d /y <span class="s2">&quot;D:/Libraries/Qt/5.14.2/msvc2017_64/plugins/pl
             background: var(--c-grey);
         }
     </style>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
+
+    <script type="text/javascript" charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.3.5/jsxgraphcore.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.3.5/jsxgraph.css" />
 
 
 

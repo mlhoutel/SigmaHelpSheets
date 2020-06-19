@@ -58,6 +58,10 @@ AZURE PIPELINES
 https://www.youtube.com/watch?v=7pzBwuMjpP0
 
 
+Create structure: yaml
+then build (locally or from remote like azure pipelines)?
+
+
 https://www.youtube.com/watch?v=HSK-6dCnYVQ
 
 3 files min:

@@ -107,7 +107,7 @@ Use SSH
 
 ::
 
-    ssh docker@192.168.99.103
+    ssh docker@ip_machine
 
 Tutorial
 --------
@@ -118,7 +118,7 @@ Install nginx server
 ::
 
     install nginx server: docker run -d -p 8080:80 nginx
-    open webpage: http://192.168.99.103:8080/
+    open webpage: http://ip_machine:8080/
 
 Edit nginx webpage:
 ~~~~~~~~~~~~~~~~~~~

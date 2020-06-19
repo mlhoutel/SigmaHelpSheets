@@ -29,7 +29,9 @@
         <script src="_static/doctools.js"></script>
         <script src="_static/language_data.js"></script>
         <script src="_static/debug.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -119,7 +121,6 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="pages/Sphinx/Sphinx.html">Sphinx</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pages/Docker/Docker.html">Docker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pages/Prismatic/Prismatic.html">Prismatic</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Miscellaneous</span></p>
 <ul>
@@ -189,7 +190,31 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="welcome-to-my-help-sheets">
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="welcome-to-my-help-sheets">
 <h1>Welcome to my Help-Sheets !<a class="headerlink" href="#welcome-to-my-help-sheets" title="Permalink to this headline">¶</a></h1>
 <p>That’s my <code class="docutils literal notranslate"><span class="pre">help</span> <span class="pre">sheet</span></code> where I put all the <strong>usefull commands</strong>, <strong>tips</strong> and <strong>tricks</strong> that I find on the subjects that I study, and even more…</p>
 <hr class="docutils" />
@@ -233,8 +258,12 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.”</p>
 <p class="caption"><span class="caption-text">Sciences</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="pages/Maths/Maths.html">Maths</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="pages/Maths/Maths.html#nubers-theory">Nubers Theory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/Maths/Maths.html#basis">Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/Maths/Maths.html#derivatives-and-primitives">Derivatives and Primitives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/Maths/Maths.html#trigonometry">Trigonometry</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pages/Maths/Maths.html#complex-numbers">Complex numbers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/Maths/Maths.html#vectors">Vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/Maths/Maths.html#tensors">Tensors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pages/Maths/Maths.html#matrix">Matrix</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pages/Maths/Maths.html#quaternions">Quaternions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pages/Maths/Maths.html#probabilitys">Probabilitys</a></li>
@@ -408,16 +437,6 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.”</p>
 <li class="toctree-l2"><a class="reference internal" href="pages/Docker/Docker.html#fast-help">Fast Help</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="pages/Prismatic/Prismatic.html">Prismatic</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="pages/Prismatic/Prismatic.html#introduction">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pages/Prismatic/Prismatic.html#boost">Boost</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pages/Prismatic/Prismatic.html#fftw3">Fftw3</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pages/Prismatic/Prismatic.html#hdf5">Hdf5</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pages/Prismatic/Prismatic.html#prismatic-cmd">Prismatic CMD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pages/Prismatic/Prismatic.html#prismatic-gui">Prismatic GUI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pages/Prismatic/Prismatic.html#prismatic-gpu">Prismatic GPU</a></li>
-</ul>
-</li>
 </ul>
 </div>
 <div class="admonition-caution admonition">
@@ -565,6 +584,26 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.”</p>
 </tbody>
 </table>
 <p><a class="reference external" href="https://squoosh.app/">https://squoosh.app/</a></p>
+<p><a class="reference external" href="https://app.diagrams.net/">https://app.diagrams.net/</a></p>
+<p><a class="reference external" href="https://app.clickup.com/">https://app.clickup.com/</a></p>
+<p><a class="reference external" href="https://devdocs.io/">https://devdocs.io/</a>
+<a class="reference external" href="https://libraries.io/">https://libraries.io/</a>
+<a class="reference external" href="http://eradman.com/entrproject/">http://eradman.com/entrproject/</a>
+<a class="reference external" href="https://devhints.io/">https://devhints.io/</a>
+<a class="reference external" href="https://tldr.sh/">https://tldr.sh/</a>
+Obtenir un accès gratuit à la majorité des papiers payants : <a class="reference external" href="https://sci-hub.tw">https://sci-hub.tw</a></p>
+<p># Front-End
+<a class="reference external" href="https://animista.net/">https://animista.net/</a>
+<a class="reference external" href="https://bennettfeely.com/clippy/">https://bennettfeely.com/clippy/</a></p>
+<p># Useless
+<a class="reference external" href="http://www.ouaismaisbon.ch/">http://www.ouaismaisbon.ch/</a>
+<a class="reference external" href="http://www.staggeringbeauty.com/">http://www.staggeringbeauty.com/</a>
+<a class="reference external" href="http://www.omfgdogs.com/">http://www.omfgdogs.com/</a></p>
+<p><a class="reference external" href="https://www.reddit.com/r/learnprogramming/comments/h10ooq/tools_i_wish_i_had_known_about_when_i_started/">https://www.reddit.com/r/learnprogramming/comments/h10ooq/tools_i_wish_i_had_known_about_when_i_started/</a></p>
+<p><a class="reference external" href="https://free-for.dev/#/">https://free-for.dev/#/</a></p>
+<p><a class="reference external" href="https://raidforums.com/Announcement-Database-Index-CLICK-ME">https://raidforums.com/Announcement-Database-Index-CLICK-ME</a></p>
+<p><a class="reference external" href="https://haveibeenpwned.com/">https://haveibeenpwned.com/</a></p>
+<p><a class="reference external" href="https://cdnjs.com/libraries/">https://cdnjs.com/libraries/</a></p>
 <p><a class="reference internal" href="_images/placeholder.png"><img alt="Alternative text" src="_images/placeholder.png" style="width: 30%;" /></a> <a class="reference internal" href="_images/placeholder.png"><img alt="Alternative text" src="_images/placeholder.png" style="width: 30%;" /></a> <a class="reference internal" href="_images/placeholder.png"><img alt="Alternative text" src="_images/placeholder.png" style="width: 30%;" /></a></p>
 </div>
 </div>
@@ -668,6 +707,12 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.”</p>
             background: var(--c-grey);
         }
     </style>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
+
+    <script type="text/javascript" charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.3.5/jsxgraphcore.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.3.5/jsxgraph.css" />
 
 
 

@@ -1,0 +1,1084 @@
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Multislice method for STEM &mdash; Sigma Help Sheets</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/sumblack.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/debug.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Music" href="../Music/Music.html" />
+    <link rel="prev" title="Prismatic" href="Prismatic.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html">
+          
+
+          
+            
+            <img src="../../_static/sigmwhite.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Sciences</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Maths/Maths.html">Maths</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Physics/Physics.html">Physics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chemistry/Chemistry.html">Chemistry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Computer Science/Computer Science.html">Computer Science</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Algorithms/Algorithms.html">Algorithms</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Desktop Languages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Cpp/Cpp.html">C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Python/Python.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Csharp/Csharp.html">C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Java/Java.html">Java</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Web Languages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../JavaScript/JavaScript.html">JavaScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Php/Php.html">Php</a></li>
+</ul>
+<p class="caption"><span class="caption-text">System</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Windows/Windows.html">Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Unix/Unix.html">Unix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Database/Database.html">DataBases</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Miscellaneous</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Sphinx/Sphinx.html">Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docker/Docker.html">Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Prismatic.html">Prismatic</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Multislice method for STEM</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#This-method-consists-of-two-main-steps:">This method consists of two main steps:</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#1.-Calculation-of-the-Projected-Potentials">1. Calculation of the Projected Potentials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#2.-Initialisation-and-propagation-of-the-electron-waves-throug-the-sample">2. Initialisation and propagation of the electron waves throug the sample</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#2.1-First-the-complex-electron-wave-\psi-representing-the-initial-converged-probe-is-defined,-typically-as-an-Airy-disk-function-[c].-This-probe-is-positioned-at-the-desired-location-on-the-sample-surface-in-realspace-[d].">2.1 First the complex electron wave <span class="math notranslate nohighlight">\(\psi\)</span> representing the initial converged probe is defined, typically as an Airy disk function [c]. This probe is positioned at the desired location on the sample surface in realspace [d].</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Espace-direct-et-réciproque-?">Espace direct et réciproque ?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#2.2-Next,-this-probe-is-propagated-through-the-sample’s-potential-slices-by-alternating-two-steps">2.2 Next, this probe is propagated through the sample’s potential slices by alternating two steps</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#3.-Next,-the-simulated-output-is-computed">3. Next, the simulated output is computed</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Miscellaneous</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Music/Music.html">Music</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Cooking/Cooking.html">Cooking</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Help-Sheet</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Multislice method for STEM</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/pages/Prismatic/Multislice.ipynb.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="Multislice-method-for-STEM">
+<h1>Multislice method for STEM<a class="headerlink" href="#Multislice-method-for-STEM" title="Permalink to this headline">¶</a></h1>
+<p><em>From the paper</em><strong>“A Streaming Multi-GPU Implementation ofImage Simulation Algorithms for Scanning Transmission Electron Microscopy”</strong>*
+of Alan Pryor Jr., Colin Ophus and Jianwei Miao*</p>
+<p><a class="reference external" href="https://ascimaging.springeropen.com/articles/10.1186/s40679-017-0048-z">Source Paper 1</a> <a class="reference external" href="https://ascimaging.springeropen.com/articles/10.1186/s40679-017-0046-1">Source Paper 2</a></p>
+<div class="section" id="This-method-consists-of-two-main-steps:">
+<h2>This method consists of two main steps:<a class="headerlink" href="#This-method-consists-of-two-main-steps:" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>The multislice method is straightforward to implement and is quite efficient for plane-wave or single-probe diffraction simulations.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>The first is <strong>calculation of the projected potentials</strong> from all atoms into a series of 2D slices.</p></li>
+<li><p>Second, the <strong>electron wave is initialized and propagated</strong> through the sample.</p></li>
+</ul>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">pyprismatic</span> <span class="k">as</span> <span class="nn">pr</span>
+<span class="kn">import</span> <span class="nn">h5py</span> <span class="k">as</span> <span class="nn">h5</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="kn">from</span> <span class="nn">numpy.fft</span> <span class="kn">import</span> <span class="n">fft</span><span class="p">,</span> <span class="n">ifft</span><span class="p">,</span> <span class="n">fft2</span><span class="p">,</span> <span class="n">ifft2</span><span class="p">,</span> <span class="n">fftshift</span><span class="p">,</span> <span class="n">ifftshift</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="1.-Calculation-of-the-Projected-Potentials">
+<h3>1. Calculation of the Projected Potentials<a class="headerlink" href="#1.-Calculation-of-the-Projected-Potentials" title="Permalink to this headline">¶</a></h3>
+<p>There we use pyprismatic to do a simulation, then export the ppotentials from the resulting file.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">INPUTLINK</span>     <span class="o">=</span> <span class="s2">&quot;SI100.XYZ&quot;</span> <span class="c1"># link to the .XYZ file with the structure&#39;s atoms coordinates</span>
+<span class="n">OUTPUTLINK</span>    <span class="o">=</span> <span class="s2">&quot;output.h5&quot;</span> <span class="c1"># link to the hdf output of the simulation</span>
+<span class="n">PARAMETERLINK</span> <span class="o">=</span> <span class="s2">&quot;parameters.txt&quot;</span> <span class="c1"># link to save the file with the parameters of the simulation</span>
+
+<span class="c1"># We initialize the meta object with all the simulations parameters</span>
+<span class="n">meta</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">Metadata</span><span class="p">(</span><span class="n">filenameAtoms</span><span class="o">=</span><span class="n">INPUTLINK</span><span class="p">,</span> <span class="n">filenameOutput</span><span class="o">=</span><span class="n">OUTPUTLINK</span><span class="p">)</span>
+
+<span class="c1"># Then we edit some of the parameters to save the simulation datas</span>
+<span class="n">meta</span><span class="o">.</span><span class="n">readParameters</span><span class="p">(</span><span class="n">PARAMETERLINK</span><span class="p">)</span>
+<span class="c1"># meta.writeParameters(PARAMETERLINK)</span>
+<span class="n">meta</span><span class="o">.</span><span class="n">savePotentialSlices</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">meta</span><span class="o">.</span><span class="n">saveDPC_CoM</span>  <span class="o">=</span> <span class="mi">1</span>
+<span class="n">meta</span><span class="o">.</span><span class="n">save2DOutput</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">meta</span><span class="o">.</span><span class="n">save3DOutput</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">meta</span><span class="o">.</span><span class="n">save4DOutput</span> <span class="o">=</span> <span class="mi">0</span>
+
+
+<span class="c1"># We save the acceleration voltage of the electron beams (in V)</span>
+<span class="n">acc_</span> <span class="o">=</span> <span class="n">meta</span><span class="o">.</span><span class="n">E0</span>
+
+<span class="c1"># You can call the toString() method of the metadata object to see all it&#39;s parameters</span>
+<span class="c1"># meta.toString()</span>
+
+<span class="c1"># Finally we run the simulation</span>
+<span class="n">meta</span><span class="o">.</span><span class="n">go</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Simulation from the atomic structure (</span><span class="si">{}</span><span class="s2">) done.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">INPUTLINK</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Output datas saved in </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">OUTPUTLINK</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Simulation parameters saved in </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">PARAMETERLINK</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Simulation Acceleration Voltage = </span><span class="si">{}</span><span class="s2"> kiloVolt&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">acc_</span><span class="o">/</span><span class="mi">1000</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Simulation from the atomic structure (SI100.XYZ) done.
+Output datas saved in output.h5
+Simulation parameters saved in parameters.txt
+
+Simulation Acceleration Voltage = 90.0 kiloVolt
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1">#Recursively find the subfiles and display the structure like the tree function</span>
+<span class="k">def</span> <span class="nf">recursiveHDF</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">pathstring</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
+    <span class="c1">#Test if it is an hdf subfolder</span>
+    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="s1">&#39;keys&#39;</span><span class="p">):</span>
+
+        <span class="c1">#List the subkeys of this folder</span>
+        <span class="n">subkeys</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+        <span class="c1">#Test if it is empty</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">subkeys</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">pathstring</span> <span class="o">+</span> <span class="s1">&#39;└─── empty&#39;</span> <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1">#Print every subdirectory</span>
+            <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">subkeys</span><span class="p">)):</span>
+                <span class="n">subkey</span> <span class="o">=</span> <span class="n">subkeys</span><span class="p">[</span><span class="n">s</span><span class="p">]</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">s</span><span class="o">+</span><span class="mi">1</span><span class="o">==</span><span class="nb">len</span><span class="p">(</span><span class="n">subkeys</span><span class="p">)):</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="n">pathstring</span> <span class="o">+</span> <span class="s1">&#39;└─── &#39;</span> <span class="o">+</span> <span class="n">subkey</span><span class="p">)</span>
+                    <span class="n">recursiveHDF</span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="n">subkey</span><span class="p">],</span> <span class="n">pathstring</span><span class="o">+</span><span class="s1">&#39;     &#39;</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="n">pathstring</span> <span class="o">+</span> <span class="s1">&#39;├─── &#39;</span> <span class="o">+</span> <span class="n">subkey</span><span class="p">)</span>
+                    <span class="n">recursiveHDF</span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="n">subkey</span><span class="p">],</span> <span class="n">pathstring</span><span class="o">+</span><span class="s1">&#39;│    &#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">pathstring</span> <span class="o">+</span> <span class="s1">&#39;└─── matrix&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
+
+<span class="c1">#Display multiple images on the same line</span>
+<span class="k">def</span> <span class="nf">displayLine</span><span class="p">(</span><span class="n">images</span><span class="p">,</span> <span class="n">labels</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">images</span><span class="p">)</span>
+    <span class="n">fig</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">15</span><span class="o">/</span><span class="n">n</span><span class="p">))</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">labels</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">images</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># We open the output file for reading with the H5py library (HDF5 file)</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">h5</span><span class="o">.</span><span class="n">File</span><span class="p">(</span><span class="n">OUTPUTLINK</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+
+<span class="c1"># We use the recursiveHDF function to recursively read the file</span>
+<span class="c1"># recursiveHDF(f)</span>
+
+<span class="c1"># We then read the datas stored from the Projected potential computation</span>
+<span class="n">potential</span> <span class="o">=</span> <span class="n">f</span><span class="p">[</span><span class="s1">&#39;4DSTEM_simulation/data/realslices/ppotential/realslice&#39;</span><span class="p">][()]</span> <span class="c1"># computed slices of the atoms potential</span>
+
+<span class="c1"># We also get the axis of the datas, X and Y for the 2D plane coordinates position, and Z for the slice position (thickness)</span>
+<span class="n">Xaxis</span> <span class="o">=</span> <span class="n">f</span><span class="p">[</span><span class="s1">&#39;4DSTEM_simulation/data/realslices/ppotential/dim1&#39;</span><span class="p">][()]</span> <span class="c1"># potential slice X axis (in Å)</span>
+<span class="n">Yaxis</span> <span class="o">=</span> <span class="n">f</span><span class="p">[</span><span class="s1">&#39;4DSTEM_simulation/data/realslices/ppotential/dim2&#39;</span><span class="p">][()]</span> <span class="c1"># potential slice Y axis (in Å)</span>
+<span class="n">Zaxis</span> <span class="o">=</span> <span class="n">f</span><span class="p">[</span><span class="s1">&#39;4DSTEM_simulation/data/realslices/ppotential/dim3&#39;</span><span class="p">][()]</span> <span class="c1"># potential slice Z axis (in Å)</span>
+
+<span class="c1"># We get the size of the potential slice dimensions (in Px)</span>
+<span class="n">Xdim</span><span class="p">,</span> <span class="n">Ydim</span><span class="p">,</span> <span class="n">Zdim</span> <span class="o">=</span> <span class="n">potential</span><span class="o">.</span><span class="n">shape</span>
+
+<span class="c1"># We get the scale of the pixels for the slice dimensions in the direct space (in Å)</span>
+<span class="n">Xscale</span><span class="p">,</span> <span class="n">Yscale</span><span class="p">,</span> <span class="n">Zscale</span> <span class="o">=</span> <span class="p">[(</span><span class="n">Xaxis</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">Xaxis</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="p">(</span><span class="n">Yaxis</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">Yaxis</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="p">(</span><span class="n">Zaxis</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">Zaxis</span><span class="p">[</span><span class="mi">0</span><span class="p">])]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Potentials for: </span><span class="si">{}</span><span class="s2"> slices&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Zdim</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Thickness:      </span><span class="si">{}</span><span class="s2">Å&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Zscale</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pixels size:    </span><span class="si">{}</span><span class="s2">Åx</span><span class="si">{}</span><span class="s2">Å&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Xscale</span><span class="p">,</span> <span class="n">Yscale</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dimension:      </span><span class="si">{}</span><span class="s2">x</span><span class="si">{}</span><span class="s2"> (</span><span class="si">{}</span><span class="s2"> pixels)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Xdim</span><span class="p">,</span> <span class="n">Ydim</span><span class="p">,</span> <span class="n">Xdim</span><span class="o">*</span><span class="n">Ydim</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dimension:      </span><span class="si">{}</span><span class="s2">Åx</span><span class="si">{}</span><span class="s2">Å&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Xscale</span><span class="o">*</span><span class="n">Ydim</span><span class="p">,</span> <span class="n">Yscale</span><span class="o">*</span><span class="n">Ydim</span><span class="p">))</span>
+
+<span class="c1"># We display the projected potential slices</span>
+<span class="n">displayLine</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="n">potential</span><span class="p">[:,:,</span><span class="n">i</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">Zdim</span><span class="p">)],</span> <span class="p">[</span><span class="s2">&quot;Potential Slice </span><span class="si">{}</span><span class="s2"> </span><span class="se">\n</span><span class="s2"> min = </span><span class="si">{}</span><span class="s2">;  max = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">potential</span><span class="p">[:,:,</span><span class="n">i</span><span class="p">]),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">potential</span><span class="p">[:,:,</span><span class="n">i</span><span class="p">]))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">Zdim</span><span class="p">)])</span>
+
+<span class="c1"># We close the .h5 file to avoid conflits</span>
+<span class="n">f</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Potentials for: 3 slices
+Thickness:      2.0Å
+Pixels size:    0.10181249678134918Åx0.10181249678134918Å
+Dimension:      160x160 (25600 pixels)
+Dimension:      16.28999948501587Åx16.28999948501587Å
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/pages_Prismatic_Multislice_4_1.png" src="../../_images/pages_Prismatic_Multislice_4_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="2.-Initialisation-and-propagation-of-the-electron-waves-throug-the-sample">
+<h3>2. Initialisation and propagation of the electron waves throug the sample<a class="headerlink" href="#2.-Initialisation-and-propagation-of-the-electron-waves-throug-the-sample" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">m0</span> <span class="o">=</span> <span class="mf">9.109383e-31</span> <span class="c1"># Electron mass (in kg)</span>
+<span class="n">e_</span> <span class="o">=</span> <span class="mf">1.602177e-19</span> <span class="c1"># Elementary charge (in coulomb)</span>
+<span class="n">c_</span> <span class="o">=</span> <span class="mi">299792458</span> <span class="c1"># Light speed (in m/s)</span>
+<span class="n">h_</span> <span class="o">=</span> <span class="mf">6.62607e-34</span> <span class="c1"># Planck constant in (m2 kg/s)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;beam acceleration = </span><span class="si">{}</span><span class="s2"> kV&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">acc_</span><span class="o">/</span><span class="mi">1000</span><span class="p">))</span>
+
+<span class="c1"># We compute the electron beam energy with the electrong beam voltage</span>
+<span class="n">E0</span> <span class="o">=</span> <span class="n">m0</span> <span class="o">*</span> <span class="n">c_</span> <span class="o">*</span> <span class="n">c_</span>
+<span class="n">E1</span> <span class="o">=</span> <span class="n">e_</span> <span class="o">*</span> <span class="n">acc_</span>
+
+<span class="c1"># We compute the Wave length (in Å)</span>
+<span class="n">lambda_</span> <span class="o">=</span> <span class="n">h_</span> <span class="o">*</span> <span class="n">c_</span><span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">E0</span><span class="o">*</span><span class="n">E1</span> <span class="o">+</span> <span class="n">E1</span><span class="o">*</span><span class="n">E1</span><span class="p">)</span> <span class="o">*</span> <span class="mf">1e10</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;lambda_ = </span><span class="si">{}</span><span class="s2">Å&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">lambda_</span><span class="p">))</span>
+
+<span class="c1"># Beam interaction (in V-1 A-1)</span>
+<span class="c1"># I prefer to write sigma_ like this because, the unit of sigma are then straightforward.</span>
+<span class="n">sigma_</span> <span class="o">=</span> <span class="mf">2.</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="n">lambda_</span><span class="o">/</span><span class="n">acc_</span> <span class="o">*</span> <span class="p">(</span><span class="n">E0</span><span class="o">+</span><span class="n">E1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">E0</span><span class="o">+</span><span class="n">E1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;sigma_ = </span><span class="si">{}</span><span class="s2">V-1 A-1&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sigma_</span><span class="p">))</span>
+
+<span class="c1"># We initialize the waves functions as a matrix of the same shape as the slices</span>
+<span class="c1"># https://en.wikipedia.org/wiki/Wave_function</span>
+<span class="n">electronWaves</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">Xdim</span><span class="p">,</span> <span class="n">Ydim</span><span class="p">,</span> <span class="n">Zdim</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">complex</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="2.1-First-the-complex-electron-wave-\psi-representing-the-initial-converged-probe-is-defined,-typically-as-an-Airy-disk-function-[c].-This-probe-is-positioned-at-the-desired-location-on-the-sample-surface-in-realspace-[d].">
+<h2>2.1 First the complex electron wave <span class="math notranslate nohighlight">\(\psi\)</span> representing the initial converged probe is defined, typically as an Airy disk function [c]. This probe is positioned at the desired location on the sample surface in realspace [d].<a class="headerlink" href="#2.1-First-the-complex-electron-wave-\psi-representing-the-initial-converged-probe-is-defined,-typically-as-an-Airy-disk-function-[c].-This-probe-is-positioned-at-the-desired-location-on-the-sample-surface-in-realspace-[d]." title="Permalink to this headline">¶</a></h2>
+<p><img alt="4bb24ed82e3e48d48bf497b01de765f2" src="../../_images/figure1.png" /></p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># We compute the input probe in the condenser aperture plane</span>
+<span class="c1"># rec_inputProbe is the input wave function in the condensor aperture plane. Radius is linked to the condensor aperture radius</span>
+<span class="c1"># TAKE CARE OF THE UNITS : indeed there is a &#39;demagnification&#39; between the condensor aperture and the &#39;sample&#39; conjugated plane</span>
+<span class="c1"># Without this demagnification radius, to go from the condensor aperture plane to the input plane of the sample, one should apply</span>
+<span class="c1"># an inverse Fourier Transform</span>
+<span class="c1"># For the units, the easiest is to work with angles (radian is in fact no physical units !) and take for reference the angles</span>
+<span class="c1"># without demagnification i.e. a demagnification equal to 1, i.e. use the sample (direct space) and its reciprocal space (</span>
+<span class="c1">#  calibrated in radian using the relationship between reciprocal vectors and angles ( lambda g = alpha )</span>
+
+<span class="c1"># Radius is linked to the condensor aperture radius</span>
+<span class="n">HradiusMrad</span><span class="p">,</span> <span class="n">KradiusMrad</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span> <span class="c1"># in mrad</span>
+
+<span class="c1"># TAKE CARE OF THE UNITS : indeed there is a &#39;demagnification&#39; between the condensor aperture and the &#39;sample&#39; conjugated plane</span>
+<span class="c1"># Without this demagnification radius, to go from the condensor aperture plane to the input plane of the sample,</span>
+<span class="c1"># one should apply an inverse Fourier Transform</span>
+<span class="c1"># IN FACT THE EASIEST SOLUTION FOR THE UNIT ISSUE IS TO USE THE pixel_size of the direct space !!!</span>
+<span class="c1">#    a) from the dir_pixel_size compute the rec_pixel_size    b) knowing the convergence angle (in fact this is the conjugated aperture condensor size in the reciprocal space of the sample )</span>
+<span class="c1">#   compute the radius in pixel</span>
+<span class="c1"># JLR a oublié les conventions de prismatic et trouve plus rapide pour l&#39;instant de redéfinir les siennes</span>
+<span class="c1"># MAEL : --&gt; cherche à uniformiser les 2 en écrivant dir_pixel_size = prismatic_value</span>
+
+<span class="n">Hscale</span><span class="p">,</span> <span class="n">Kscale</span><span class="p">,</span> <span class="n">Lscale</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">Xdim</span> <span class="o">*</span> <span class="n">Xscale</span><span class="p">),</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">Ydim</span> <span class="o">*</span> <span class="n">Yscale</span><span class="p">),</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">Zdim</span> <span class="o">*</span> <span class="n">Zscale</span><span class="p">)]</span> <span class="c1"># in Angstrom-1</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Reciprocal pixel size = </span><span class="si">{}</span><span class="s2">Å-1 x </span><span class="si">{}</span><span class="s2">Å-1 x </span><span class="si">{}</span><span class="s2">Å-1&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Hscale</span><span class="p">,</span> <span class="n">Kscale</span><span class="p">,</span> <span class="n">Lscale</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Direct_pixel_size = </span><span class="si">{}</span><span class="s2">Å x </span><span class="si">{}</span><span class="s2">Å x </span><span class="si">{}</span><span class="s2">Å)</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Xscale</span><span class="p">,</span> <span class="n">Yscale</span><span class="p">,</span> <span class="n">Zscale</span><span class="p">))</span>
+
+<span class="n">HscaleRad</span><span class="p">,</span> <span class="n">KscaleRad</span>    <span class="o">=</span> <span class="p">[</span><span class="n">lambda_</span> <span class="o">*</span> <span class="n">Hscale</span><span class="p">,</span> <span class="n">lambda_</span> <span class="o">*</span> <span class="n">Kscale</span><span class="p">]</span>  <span class="c1"># the reciprocal pixel size in radian</span>
+<span class="n">Hradius</span><span class="p">,</span> <span class="n">Kradius</span> <span class="o">=</span> <span class="p">[</span><span class="n">HradiusMrad</span> <span class="o">*</span> <span class="mf">1e-3</span><span class="o">/</span><span class="n">lambda_</span><span class="p">,</span> <span class="n">KradiusMrad</span> <span class="o">*</span> <span class="mf">1e-3</span><span class="o">/</span><span class="n">lambda_</span><span class="p">]</span>
+<span class="n">HradiusPix</span><span class="p">,</span> <span class="n">KradiusPix</span> <span class="o">=</span> <span class="p">[</span><span class="n">Hradius</span> <span class="o">/</span> <span class="n">HscaleRad</span><span class="p">,</span> <span class="n">Kradius</span> <span class="o">/</span> <span class="n">KscaleRad</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Radius in pixel = </span><span class="si">{}</span><span class="s2"> x </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">HradiusPix</span><span class="p">,</span> <span class="n">KradiusPix</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Radius in mrad = </span><span class="si">{}</span><span class="s2"> x </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">HradiusMrad</span><span class="p">,</span> <span class="n">KradiusMrad</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Radius in Å-1 = </span><span class="si">{}</span><span class="s2"> x </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Hradius</span><span class="p">,</span> <span class="n">Kradius</span><span class="p">))</span>
+
+<span class="c1">#  JLR prefers to use meshgrid as it is done in several programs working with 2D images</span>
+<span class="c1">#  xx, yy will be 2D arrays representing the column and row indexes of the images, the index origin being at the center of the image</span>
+<span class="c1">#  these arrays can then be used both in real and reciprocal spaces and pixel size values have to be used to have the correct units</span>
+<span class="c1"># next line is a typical short python equality. JLR is not sure that this one line is better than 2 lines of codes</span>
+<span class="c1">#  it should be better to define x, y as signed integer</span>
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span>    <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">Xdim</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;float32&quot;</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">Xdim</span><span class="o">/</span><span class="mi">2</span><span class="p">)),</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">Ydim</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;float32&quot;</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">Ydim</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">xx</span><span class="p">,</span> <span class="n">yy</span>  <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="n">fx</span><span class="p">,</span> <span class="n">fy</span>  <span class="o">=</span> <span class="n">xx</span><span class="o">*</span><span class="n">Hscale</span><span class="p">,</span> <span class="n">yy</span><span class="o">*</span><span class="n">Hscale</span>
+
+<span class="c1">#aperture_ = fx**2 + fy**2 &lt; Hradius**2 # condensor aperture</span>
+<span class="n">aperture_</span> <span class="o">=</span> <span class="p">(</span><span class="n">fx</span><span class="o">/</span><span class="n">Hradius</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">fy</span><span class="o">/</span><span class="n">Kradius</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="c1"># condensor aperture</span>
+<span class="n">rec_inputProbe</span> <span class="o">=</span> <span class="n">aperture_</span> <span class="o">+</span> <span class="mi">0</span><span class="n">j</span>
+
+<span class="c1"># apparently when doing an FFT in numpy, the origin should be be at the top,left corner and not at the center of the image</span>
+<span class="c1"># so we have to apply an ifftshift or fftshift (JLR does not see the difference ? ) to correct for that.</span>
+<span class="n">inputProbe</span>  <span class="o">=</span> <span class="n">fftshift</span><span class="p">(</span><span class="n">ifft2</span><span class="p">(</span><span class="n">ifftshift</span><span class="p">(</span><span class="n">rec_inputProbe</span><span class="p">)))</span>
+<span class="n">norm</span>        <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">inputProbe</span><span class="p">)</span>
+<span class="n">inputProbe</span> <span class="o">/=</span> <span class="n">norm</span>
+
+<span class="c1"># il serait egalement bien de normaliser la fonction d&#39;onde (normalement elle devrait aller à 0 en bord de boite sinon le nombre de pixel est pas suffisant ...)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">max_probe = </span><span class="si">{}</span><span class="se">\n</span><span class="si">{}</span><span class="s2"> norm = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">inputProbe</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">inputProbe</span><span class="p">),</span> <span class="n">norm</span><span class="p">))</span>
+
+<span class="n">displayLine</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">rec_inputProbe</span><span class="p">),</span>  <span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">inputProbe</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">imag</span><span class="p">(</span><span class="n">inputProbe</span><span class="p">)],</span>
+            <span class="p">[</span><span class="s2">&quot;Probe (Reciprocal Space-condensor Plane)&quot;</span><span class="p">,</span> <span class="s2">&quot;Input Probe (Real Space) &quot;</span><span class="p">,</span> <span class="s2">&quot;probe (imaginary) &quot;</span><span class="p">])</span>
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+beam acceleration = 90.0 kV
+lambda_ = 0.039191605264512826Å
+sigma_ = 0.0009627511851912703V-1 A-1
+Reciprocal pixel size = 0.06138735614570376Å-1 x 0.06138735614570376Å-1 x 0.16666666666666666Å-1
+Direct_pixel_size = 0.10181249678134918Å x 0.10181249678134918Å x 2.0Å)
+
+Radius in pixel = 106.05593229234358 x 106.05593229234358
+Radius in mrad = 10 x 10
+Radius in Å-1 = 0.25515668298115846 x 0.25515668298115846
+
+max_probe = (0.04718646522044221+0j)
+0.9999999999999999 norm = 0.047186465220442175
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/pages_Prismatic_Multislice_8_1.png" src="../../_images/pages_Prismatic_Multislice_8_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="Espace-direct-et-réciproque-?">
+<h2>Espace direct et réciproque ?<a class="headerlink" href="#Espace-direct-et-réciproque-?" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>1</p></th>
+<th class="head"><p>2</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><img alt="4e18510a59b14a5fbde4a8bb6a010697" src="../../_images/reciproque.png" /></p></td>
+<td><p><img alt="e4143a6c523d416ea9abf4d33e9a8417" src="../../_images/reciproque.gif" /></p></td>
+</tr>
+</tbody>
+</table>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=KOfJhj_IF0Y">Source vidéo</a></p>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://www.youtube.com/watch?v=spUNpyF58BY">Fourier Transform course</a></div>
+<div class="line"><a class="reference external" href="https://www.youtube.com/watch?v=MBnnXbOM5S4">Fourier transfrom and Heisenberg incertitude notions for quantum physic</a></div>
+<div class="line"><a class="reference external" href="https://www.youtube.com/watch?v=MzRCDLre1b4">Light quantum mechanics</a></div>
+<div class="line"><a class="reference external" href="https://www.youtube.com/watch?v=WIyTZDHuarQ">Quantum particle analogy</a></div>
+<div class="line"><a class="reference external" href="https://www.youtube.com/watch?v=4XCSoFLFLNE">La transformation de fourier et ses applications en physique</a></div>
+</div>
+<blockquote>
+<div><p>“En diffraction, le réseau réciproque apparaît comme le transformé de Fourier de l’espace réel” <a class="reference external" href="http://ressources.univ-lemans.fr/AccesLibre/UM/Pedago/physique/02/cristallo/reciproque.html">Explications réciproque cristallo</a></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://www.youtube.com/watch?v=IUaqeoMK5y4">FFT vidéo</a></div>
+<div class="line"><a class="reference external" href="https://fr.wikipedia.org/wiki/Espace_r%C3%A9ciproque">Espace réciproque</a></div>
+<div class="line"><a class="reference external" href="https://fr.wikipedia.org/wiki/R%C3%A9seau_r%C3%A9ciproque">Réseau réciproque</a></div>
+<div class="line"><a class="reference external" href="http://calistry.org/viz/direct-and-reciprocal-lattice-visualizer">Direct and Reciprocal Lattice Visualizer 3D</a></div>
+</div>
+</div>
+<div class="section" id="2.2-Next,-this-probe-is-propagated-through-the-sample’s-potential-slices-by-alternating-two-steps">
+<h2>2.2 Next, this probe is propagated through the sample’s potential slices by alternating two steps<a class="headerlink" href="#2.2-Next,-this-probe-is-propagated-through-the-sample’s-potential-slices-by-alternating-two-steps" title="Permalink to this headline">¶</a></h2>
+<div class="math notranslate nohighlight">
+\[\psi_{p+1}(\overrightarrow{r}) = \psi_{p}(\overrightarrow{r}) \exp [ i \sigma V^{2D}_{p} (\overrightarrow{r}) ]\]</div>
+<p>where <span class="math notranslate nohighlight">\(\sigma\)</span> is the beam-sample interaction constant, and <span class="math notranslate nohighlight">\(V^{2D}_{p} (\overrightarrow{r})\)</span> is the 2D electrostatic potential of all atoms inside slice <span class="math notranslate nohighlight">\(p\)</span>, integrated over the slice along the beam direction from the 3D potential.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Interaction with potential</span>
+<span class="c1"># https://fr.wikipedia.org/wiki/Espace_réciproque</span>
+<span class="c1"># https://fr.wikipedia.org/wiki/Réseau_réciproque</span>
+
+<span class="c1"># complex(0,1) = 1j = 1.0j</span>
+
+<span class="c1"># Transmission of the input probe in the slice with the potentials</span>
+<span class="k">def</span> <span class="nf">transmission</span><span class="p">(</span><span class="n">inputProbes</span><span class="p">,</span> <span class="n">projectedPotential</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">inputProbes</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">sigma_</span><span class="o">*</span><span class="n">projectedPotential</span><span class="p">)</span>
+
+<span class="n">electronWaves</span><span class="p">[:,:,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">transmission</span><span class="p">(</span><span class="n">inputProbe</span><span class="p">,</span> <span class="n">potential</span><span class="p">[:,:,</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="n">displayLine</span><span class="p">([</span><span class="n">electronWaves</span><span class="p">[:,:,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">real</span><span class="p">,</span> <span class="n">electronWaves</span><span class="p">[:,:,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">imag</span><span class="p">],</span>
+            <span class="p">[</span><span class="s2">&quot;Real Part&quot;</span>              <span class="p">,</span> <span class="s2">&quot;Imaginary Part&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/pages_Prismatic_Multislice_11_0.png" src="../../_images/pages_Prismatic_Multislice_11_0.png" />
+</div>
+</div>
+<div class="math notranslate nohighlight">
+\[\Psi_{p+1}(\overrightarrow{q}) = \Psi_{p}(\overrightarrow{q}) exp( −i \pi \lambda {\mid \overrightarrow{q} \mid}^2 t )\]</div>
+<p>where <span class="math notranslate nohighlight">\(\lambda\)</span> is the electron wavelength, <span class="math notranslate nohighlight">\(\Psi(q)=F \{ \psi(r)\}\)</span> is the Fourier transform of <span class="math notranslate nohighlight">\(\psi(\overrightarrow{r})\)</span>, <span class="math notranslate nohighlight">\(\overrightarrow{q} =(q_{x}, q_{y})\)</span> is the 2D coordinate vector for Fourier space, and the subscript <span class="math notranslate nohighlight">\(p\)</span> refers to the slice index.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Propagation in vacuum over the distance t_</span>
+<span class="c1"># wave_in is the initial wave funtion expressed in the direct space</span>
+<span class="c1"># It seems better to store the wave function only in the direct space</span>
+<span class="c1"># (apparently prismatic has 2 arrays for the wavefunctions:</span>
+<span class="c1"># one in the direct space and one in the reciprocal space (to check) )</span>
+
+<span class="n">propagator</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">lambda_</span><span class="o">*</span><span class="p">(</span><span class="n">fx</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">fy</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">Zscale</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">propagate</span><span class="p">(</span><span class="n">wave_in</span><span class="p">):</span>
+    <span class="n">wave_out</span>   <span class="o">=</span> <span class="n">ifft2</span><span class="p">(</span><span class="n">fftshift</span><span class="p">(</span><span class="n">fft2</span><span class="p">(</span><span class="n">wave_in</span><span class="p">)</span> <span class="o">*</span> <span class="n">propagator</span><span class="p">)</span> <span class="p">)</span>
+    <span class="n">displayLine</span><span class="p">([</span><span class="n">propagator</span><span class="o">.</span><span class="n">real</span><span class="p">,</span> <span class="n">propagator</span><span class="o">.</span><span class="n">imag</span><span class="p">,</span> <span class="n">wave_out</span><span class="o">.</span><span class="n">real</span><span class="p">,</span> <span class="n">wave_out</span><span class="o">.</span><span class="n">imag</span><span class="p">],</span>
+            <span class="p">[</span><span class="s2">&quot;Propagator real&quot;</span><span class="p">,</span> <span class="s2">&quot;Propagator imag&quot;</span><span class="p">,</span> <span class="s2">&quot;Wave real&quot;</span><span class="p">,</span><span class="s2">&quot;Wave imag&quot;</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">wave_out</span>
+
+<span class="n">electronWaves</span><span class="p">[:,:,</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">propagate</span><span class="p">(</span><span class="n">electronWaves</span><span class="p">[:,:,</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="n">displayLine</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">electronWaves</span><span class="p">[:,:,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">real</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">electronWaves</span><span class="p">[:,:,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">imag</span><span class="p">)],</span>
+            <span class="p">[</span><span class="s2">&quot;Absolute slice Real&quot;</span>                 <span class="p">,</span> <span class="s2">&quot;Absolute slice Imag&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/pages_Prismatic_Multislice_13_0.png" src="../../_images/pages_Prismatic_Multislice_13_0.png" />
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/pages_Prismatic_Multislice_13_1.png" src="../../_images/pages_Prismatic_Multislice_13_1.png" />
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Recompute all</span>
+<span class="n">electronWaves</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">Xdim</span><span class="p">,</span> <span class="n">Ydim</span><span class="p">,</span> <span class="n">Zdim</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">complex</span><span class="p">)</span>
+
+<span class="n">electronWaves</span><span class="p">[:,:,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">transmission</span><span class="p">(</span><span class="n">inputProbe</span><span class="p">,</span> <span class="n">potential</span><span class="p">[:,:,</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">displayLine</span><span class="p">([</span><span class="n">electronWaves</span><span class="p">[:,:,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">real</span><span class="p">,</span> <span class="n">electronWaves</span><span class="p">[:,:,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">imag</span><span class="p">],</span>
+            <span class="p">[</span><span class="s2">&quot;Real Part&quot;</span><span class="p">,</span> <span class="s2">&quot;Imaginary Part&quot;</span><span class="p">])</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">Zdim</span><span class="p">):</span>
+    <span class="n">electronWaves</span><span class="p">[:,:,</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">propagate</span><span class="p">(</span><span class="n">electronWaves</span><span class="p">[:,:,</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">displayLine</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">electronWaves</span><span class="p">[:,:,</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">real</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">electronWaves</span><span class="p">[:,:,</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">imag</span><span class="p">)],</span>
+                <span class="p">[</span><span class="s2">&quot;Real Part&quot;</span><span class="p">,</span> <span class="s2">&quot;Imaginary Part&quot;</span><span class="p">])</span>
+    <span class="n">electronWaves</span><span class="p">[:,:,</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">transmission</span><span class="p">(</span><span class="n">potential</span><span class="p">[:,:,</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">potential</span><span class="p">[:,:,</span><span class="n">i</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/pages_Prismatic_Multislice_15_0.png" src="../../_images/pages_Prismatic_Multislice_15_0.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/pages_Prismatic_Multislice_15_1.png" src="../../_images/pages_Prismatic_Multislice_15_1.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/pages_Prismatic_Multislice_15_2.png" src="../../_images/pages_Prismatic_Multislice_15_2.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/pages_Prismatic_Multislice_15_3.png" src="../../_images/pages_Prismatic_Multislice_15_3.png" />
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/pages_Prismatic_Multislice_15_4.png" src="../../_images/pages_Prismatic_Multislice_15_4.png" />
+</div>
+</div>
+<div class="section" id="3.-Next,-the-simulated-output-is-computed">
+<h3>3. Next, the simulated output is computed<a class="headerlink" href="#3.-Next,-the-simulated-output-is-computed" title="Permalink to this headline">¶</a></h3>
+<p>which is typically a subset of the probe’s intensity summed in Fourier space as shown in Fig. 1e. The steps given in Figs. 1c-e are repeated for the desired probe positions, typically a 2D grid. The simulation result can be a single virtual detector, an array of annular ring virtual detectors or the entire probe diffraction pattern for each probe location, giving a 2D, 3D or 4D output respectively.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">displayLine</span><span class="p">([</span><span class="n">electronWaves</span><span class="p">[:,:,</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">real</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">Zdim</span><span class="p">)],</span> <span class="p">[</span><span class="s2">&quot;Electron Wave </span><span class="si">{}</span><span class="s2"> Real Part&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">Zdim</span><span class="p">)])</span>
+<span class="n">displayLine</span><span class="p">([</span><span class="n">electronWaves</span><span class="p">[:,:,</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">imag</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">Zdim</span><span class="p">)],</span> <span class="p">[</span><span class="s2">&quot;Electron Wave </span><span class="si">{}</span><span class="s2"> Imag Part&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">Zdim</span><span class="p">)])</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/pages_Prismatic_Multislice_17_0.png" src="../../_images/pages_Prismatic_Multislice_17_0.png" />
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/pages_Prismatic_Multislice_17_1.png" src="../../_images/pages_Prismatic_Multislice_17_1.png" />
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Music/Music.html" class="btn btn-neutral float-right" title="Music" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Prismatic.html" class="btn btn-neutral float-left" title="Prismatic" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, LHOUTELLIER Maël
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+    
+        <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+            <span class="rst-current-version" data-toggle="rst-current-version">
+                <span class="fa fa-book"> Help Sheet</span>
+                    v: latest
+                <span class="fa fa-caret-down"></span>
+            </span>
+            
+            <div class="rst-other-versions">
+                <dl>
+                    <dt>Versions</dt>
+                    
+                        <dd><a href="#">latest</a></dd>
+                        <dd><a href="#">1.0</a></dd>
+                        <dd><a href="#">1.1</a></dd>
+                    
+                </dl>
+
+                 <dl>
+                    <dt>Downloads</dt>
+                    <dd><a href="#">PDF</a></dd>
+                    <dd><a href="#">ePub</a></dd>
+                    <dd><a href="#">HTML</a></dd>
+                </dl>
+                
+                <dl>
+                    <dt>Informations</dt>
+                    <dd><a href="https://github.com/mlhoutel/Help-Sheet">Project Git</a></dd>
+                    <dd><a href="https://mlhoutel.github.io/maellhoutellier.com/">My website</a></dd>
+                </dl>
+
+                <dl>
+                    <dt>Debug</dt>
+                    <dd><a href="#" data-toggle="rst-debug-badge">Swap badge position</a></dd>
+                </dl>
+            </div>
+        </div>
+    
+    
+    <style>
+        :root {
+            --c-blue: #2980B9;     /* Black    [31;  39;  45]  */
+            --c-grey: #24313A;
+        }
+
+        /* Sidebar header (and topbar for mobile) */
+        .wy-side-nav-search, .wy-nav-top {
+            background: var(--c-blue);
+        }
+        /* Sidebar */
+        .wy-nav-side {
+            background: var(--c-grey);
+        }
+    </style>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
+
+    <script type="text/javascript" charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.3.5/jsxgraphcore.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.3.5/jsxgraph.css" />
+
+
+
+</body>
+</html>
