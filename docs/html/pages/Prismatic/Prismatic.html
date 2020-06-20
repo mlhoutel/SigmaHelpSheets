@@ -42,8 +42,6 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Multislice method for STEM" href="Multislice.html" />
-    <link rel="prev" title="Docker" href="../Docker/Docker.html" />
     <link href="../../_static/style.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -119,143 +117,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../Database/Database.html">DataBases</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Miscellaneous</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../Sphinx/Sphinx.html">Sphinx</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Docker/Docker.html">Docker</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Prismatic</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#tools">Tools</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#folder-organisation">Folder organisation</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#boost">Boost</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#ressources">Ressources</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#compiling-boost">Compiling BOOST</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#download-boost-1-72-0-zip">1. Download boost_1_72_0.zip</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#unzip-the-file-and-put-it-in-d-libraries">2. Unzip the file and put it in <code class="docutils literal notranslate"><span class="pre">D:/Libraries/</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#open-a-cmd-in-the-boost-directory">3. Open a cmd in the <em>Boost</em> directory</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#testing-boost">Testing BOOST</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#open-visual-studio-2017-and-create-a-new-c-console-application-project-into-a-new-directory">4. Open Visual Studio 2017 and create a new C++ console application project into a new directory</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#add-the-test-code-from-here-at-the-point-6-link-your-program-to-a-boost-library">4.1 Add the test code from here at the point 6 (Link Your Program to a Boost Library)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#edit-the-project-properties">4.2 Edit the project properties</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#fftw3">Fftw3</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id1">Ressources</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#compiling-fftw">Compiling FFTW</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#download-fftw-3-3-8-tar-gz">1. Download fftw-3.3.8.tar.gz</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#open-a-cmd-in-the-downloaded-file-directory">2. Open a cmd in the downloaded file directory</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#use-this-command-to-extract-the-file-then-untar-it-in-d-libraries">2.1 Use this command to Extract the file then Untar it in <code class="docutils literal notranslate"><span class="pre">D:/Libraries</span></code>:</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#open-a-cmd-in-this-folder">3. Open a cmd in this folder</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#testing-fftw">Testing FFTW</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id2">4. Open Visual Studio 2017 and create a new C++ console application project into a new directory</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#add-the-test-code-from-here">4.1 Add the test code from here</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id3">4.2 Edit the project properties</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#hdf5">Hdf5</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id4">Ressources</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#compiling-hdf5">Compiling HDF5</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#download-hdf5-1-12-0-zip">1. Download hdf5-1.12.0.zip</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id5">2. Unzip the file and put it in <code class="docutils literal notranslate"><span class="pre">D:/Libraries/</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#open-a-cmd-in-this-directory">2.1 Open a cmd in this directory</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#now-we-will-use-the-cpack-tool-to-build-a-package-with-the-compiled-library">2.2 Now, we will use the cpack tool to build a Package with the compiled library:</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#testing-hdf5">Testing HDF5</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#open-a-cmd-in-the-compiled-directory">3. Open a cmd in the compiled directory</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#check-that-all-tests-are-passed">3.1 Check that all Tests are <em>Passed</em></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id6">4. Open Visual Studio 2017 and create a new C++ console application project into a new directory</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id7">4.1 Add the test code from here</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id8">4.2 Edit the project properties</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#prismatic-cmd">Prismatic CMD</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id9">Ressources</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#download-prismatic">1. Download prismatic</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#create-a-new-folder-ex-prismatic-master-build64-where-the-library-will-be-compiled">2. Create a new folder (ex: <em>prismatic-master/Build64</em>) where the library will be compiled</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#open-the-cmake-gui">3. Open the CMake GUI</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#complete-the-links-with-the-code-source-directory-and-the-build-directory">3.1 Complete the links with the code source directory and the build directory</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#click-on-configure-and-select-visual-studio-15-2017">3.2 Click on <em>Configure</em> and select <em>Visual Studio 15 2017</em></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#check-grouped-and-advanced-then-complete-the-missing-links-to-the-compiled-libraries">3.3 Check Grouped and Advanced then complete the missing links to the compiled libraries:</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#click-again-on-configure-and-if-nothing-is-red-click-on-generate">3.4 Click again on <em>Configure</em> and if nothing is red, click on <em>Generate</em></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#open-the-project-in-visual-studio-2017">4. Open the project in Visual Studio 2017</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#right-click-on-the-prismatic-project-and-go-to-properties-general">4.1 Right Click on the <strong>prismatic</strong> project and go to Properties/General:</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#in-the-top-bar-make-sure-to-select-release-and-the-right-plateform-then-click-on-run">5. In the top bar, make sure to select Release and the right Plateform, then Click on Run</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#you-can-get-the-prismatic-exe-and-fftwf-dll-files-at-d-libraries-prismatic-build64-release-and-move-them-to-another-directory-if-at-least-these-files-are-in-the-same-folder-the-program-will-work">6. You can get the <strong>prismatic.exe</strong> and <strong>fftwf.dll</strong> files at D:\Libraries\prismatic\Build64\Release and move them to another directory, if at least these files are in the same folder the program will work</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#test">Test:</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#copy-the-prismatic-exe-and-fftwf-dll-files-in-a-new-directory">7. Copy the <strong>prismatic.exe</strong> and <strong>fftwf.dll</strong> files in a new directory</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#create-a-new-file-si100-xyz-in-this-directory">7.1 Create a new file “SI100.XYZ” in this directory</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#open-it-and-paste-these-datas">7.1 Open it and paste these datas:</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#open-a-cmd-in-the-directory">8. Open a cmd in the directory</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#wait-for-the-prism-calculation-complete-message-to-be-displayed">8.1 Wait for the <em>PRISM Calculation complete</em> message to be displayed</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#if-you-have-python-with-the-hdf5-library-you-can-use-this-to-explore-the-hdf-file">8.2 If you have python with the hdf5 library, you can use this to explore the HDF file</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#prismatic-gui">Prismatic GUI</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id10">Ressources:</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#download-qt">1. Download Qt</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#create-an-qt-account-here">1.1 Create an Qt account here</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#select-in-the-installer-the-qt-path-at-d-libraries-qt-and-select-the-right-version-for-the-compilation">1.2 Select in the installer the Qt path at <code class="docutils literal notranslate"><span class="pre">D:/Libraries/Qt</span></code> and select the right version for the compilation:</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#create-a-new-folder-ex-prismatic-master-build64gui-where-the-library-will-be-compiled">2. Create a new folder (ex: <em>prismatic-master/Build64GUI</em>) where the library will be compiled</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#open-prismatic-master-pro-d-libraries-prismatic-qt-prismatic-master-pro-in-a-text-editor">2.1 Open <strong>prismatic-master.pro</strong> (D:/Libraries/prismatic/Qt/prismatic-master.pro) in a text editor:</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#optional-open-cmakelists-txt-in-the-prismatic-master-source-code-and-check-that-the-paths-to-the-icons-are-good-if-not-replace-qt-by-qt">2.2 (Optional) Open CMakeLists.txt in the prismatic-master source code and check that the paths to the icons are good (if not replace ../Qt by Qt).</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#you-can-also-add-the-link-to-qt-to-the-path-d-libraries-qt">2.3 You can also add the link to Qt to the PATH: <code class="docutils literal notranslate"><span class="pre">D:/Libraries/Qt</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id11">3. Open the CMake GUI</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id12">3.1 Complete the links with the code source directory and the build directory</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id13">3.2 Click on <em>Configure</em> and select <em>Visual Studio 15 2017</em></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#check-grouped-and-advanced-then-check-prismatic-enable-gui-and-prismatic-enable-cli">3.3 Check <strong>Grouped</strong> and <strong>Advanced</strong>, then check <strong>PRISMATIC_ENABLE_GUI</strong> and <strong>PRISMATIC_ENABLE_CLI</strong></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#complete-the-missing-links-to-the-compiled-libraries">3.4 Complete the missing links to the compiled libraries:</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#click-again-on-configure-and-if-nothing-is-still-red-click-on-generate">3.5 Click again on Configure and if nothing is still red, click on Generate</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id14">4. Open the project in Visual Studio 2017</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#select-both-prismatic-and-prismatic-gui-with-ctrl-click">4.1 Select both <strong>prismatic</strong> and <strong>prismatic-gui</strong> with <em>Ctrl</em> + <em>Click</em></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#right-click-on-a-project-and-go-to-properties-general">4.2 Right Click on a project and go to Properties/General:</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id15">5. In the top bar, make sure to select Release and the right Plateform, then Click on Run</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#test-prismatic-performances">Test Prismatic Performances:</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#prismatic-gpu">Prismatic GPU</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id16">Ressources:</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#download-the-cuda-toolkit-10-2-for-windows-v10">1. Download the CUDA Toolkit 10.2 for Windows (v10)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#make-sure-that-you-have-a-graphical-card-compatible-with-cuda">1.1 Make sure that you have a Graphical card compatible with CUDA</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#cuda-will-be-installed-at-c-program-files-nvidia-gpu-computing-toolkit-cuda-v10-2">1.2 Cuda will be installed at <code class="docutils literal notranslate"><span class="pre">C:/Program</span> <span class="pre">Files/NVIDIA</span> <span class="pre">GPU</span> <span class="pre">Computing</span> <span class="pre">Toolkit/CUDA/v10.2</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#create-a-new-folder-ex-prismatic-master-build64gpu-where-the-library-will-be-compiled">2. Create a new folder (ex: <em>prismatic-master/Build64GPU</em>) where the library will be compiled</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id17">2.1 Open <strong>prismatic-master.pro</strong> (D:/Libraries/prismatic/Qt/prismatic-master.pro) in a text editor:</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id18">3. Open the CMake GUI</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id19">3.1 Complete the links with the code source directory and the build directory</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id20">3.2 Click on <em>Configure</em> and select <em>Visual Studio 15 2017</em></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#check-grouped-and-advanced-then-check-prismatic-enable-gpu-prismatic-enable-gui-and-prismatic-enable-cli">3.3 Check <strong>Grouped</strong> and <strong>Advanced</strong>, then check <strong>PRISMATIC_ENABLE_GPU</strong>, <strong>PRISMATIC_ENABLE_GUI</strong> and <strong>PRISMATIC_ENABLE_CLI</strong></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#click-on-configure-then-complete-the-missing-links-to-the-compiled-libraries">3.4 <strong>Click on Configure</strong> Then complete the missing links to the compiled libraries:</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id21">3.5 Click again on Configure and if nothing is still red, click on Generate</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id22">4. Open the project in Visual Studio 2017</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id23">4.1 Select both <strong>prismatic</strong> and <strong>prismatic-gui</strong> with <em>Ctrl</em> + <em>Click</em></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id24">4.2 Right Click on a project and go to Properties/General:</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#make-sure-to-desactivate-the-antivirus-because-it-can-block-some-files-and-corrupt-the-process">5. Make sure to desactivate the antivirus because it can block some files and corrupt the process</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#if-you-use-cuda-10-0-you-may-have-an-error-with-mutex-h-go-in-this-file-and-replace-the-line-133">5.1 If you use CUDA 10.0, you may have an error with mutex.h, go in this file and replace the line 133:</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id25">5.2 In the top bar, make sure to select Release and the right Plateform, then Click on Run</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Multislice.html">Multislice method for STEM</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Miscellaneous</span></p>
 <ul>
@@ -1518,15 +1382,6 @@ xcopy /d /y <span class="s2">&quot;D:/Libraries/Qt/5.14.2/msvc2017_64/plugins/pl
            
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="Multislice.html" class="btn btn-neutral float-right" title="Multislice method for STEM" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="../Docker/Docker.html" class="btn btn-neutral float-left" title="Docker" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>

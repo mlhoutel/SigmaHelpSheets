@@ -33,6 +33,7 @@ Graphs Theory
 Cellular Automata
 ============================
 
+https://www.youtube.com/watch?v=9Hpy6MKM-J8
 
 https://codegolf.stackexchange.com/questions/88783/build-a-digital-clock-in-conways-game-of-life
 
