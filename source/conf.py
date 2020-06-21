@@ -54,7 +54,9 @@ pygments_style = 'monokai'
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
-html_js_files = ['debug.js']
+
+html_css_files = ['https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.3.5/jsxgraph.css']
+html_js_files = ['debug.js', 'https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.3.5/jsxgraphcore.js', 'https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js']
 
 html_title = "Sigma Help Sheets"
 html_short_title = "Sigma HS"

@@ -51,19 +51,39 @@ Triangle
 
 :Pythagorean Theorem:
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
 .. admonition:: Pythagorean Theorem (Rectangle Triangle)
 	
 	:math:`a^2+b^2=c^2`
 
 .. figure:: https://www.mathsisfun.com/geometry/images/pythagoras-abc.svg
 	:width: 200px  
+
+.. raw:: html
+	
+	<div id="box" class="jxgbox" style="width:500px; height:500px;"></div>
+	<script type="text/javascript">
+	 	var board = JXG.JSXGraph.initBoard('box', {boundingbox: [-10, 10, 10, -10], axis:true});
+	 	var p1 = board.create('point',[-1,1], {name:'A',size:4});
+		var p2 = board.create('point',[2,-1], {name:'B',size:4});
+	 	var li2 = board.create('line',[p1,p2], {straightFirst:false, straightLast:false, strokeWidth:2, dash:0});
+	</script>
+	
+	<div id="jxgbox" class="jxgbox" style="width:500px; height:500px;"></div>
+	<script type="text/javascript">
+	 	var brd = JXG.JSXGraph.initBoard('jxgbox',{boundingbox:[-3,3,3,-3]});
+		var p1 = brd.create('point',[-1,-1]);
+
+		var c1 = brd.create('circle',[p1,3],{strokeOpacity:0.1});      // 
+		var p2 = brd.create('glider',[2,-1,c1]);                       // p2 glides on circle c1
+
+		var rot = brd.create('transform',[function(){ return Math.PI/4;},p1],{type:'rotate'});  // rot is defined by the angle BAC
+		var p3 = brd.create('point',[p2,rot],{fixed:true,size:1,name:'h1'});                    // h1: B rotated around A with angle rot
+		var line = brd.create('line',[p1,p3],{strokeOpacity:0.1});                              // line through A and h1
+
+		var p4 = brd.create('glider',[0,0.5,line],{fixed:true});                                // C is on the line with a fixed distance from A
+		var poly = brd.create('polygon',[p1,p2,p4], {fillOpacity:0.05});
+	</script>
+
 
 :Thales Theorem:
 
@@ -461,7 +481,7 @@ Fourier Series
 :Fourier Transform:
 
 
-Probabilitys
+Probability
 ============================
 
 .. admonition:: Conditional probability
@@ -474,12 +494,9 @@ Probabilitys
 
 Discrete Variable
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-:math:`E(X)=\sum_{i=1}^{n}[xi \times P(xi)]`
-
-:math:`V(X)=\sum_{i=1}^{n}[xi-E(X)]^2`
-
-:math:`\sigma(X)=\sqrt{V(X)}`
++------------------------------------------------+------------------------------------------------+------------------------------------------------+
+| :math:`E(X)=\sum_{i=1}^{n}[xi \times P(xi)]`   | :math:`V(X)=\sum_{i=1}^{n}[xi-E(X)]^2`         | :math:`\sigma(X)=\sqrt{V(X)}`                  |
++------------------------------------------------+------------------------------------------------+------------------------------------------------+
 
 :Bernouilli:
 
@@ -492,11 +509,9 @@ We have two exclusive values, success :math:`A` (favorable) and failure :math:`\
 
 According to the statement [...], X therefore follows a binomial distribution of parameters p = ... and n = ...
 
-:math:`E(X)=np`
-
-:math:`V(X)=npq`
-
-:math:`\sigma(X)=\sqrt{V(X)}`
++------------------------------------------------+------------------------------------------------+------------------------------------------------+
+| :math:`E(X)=np`                                | :math:`V(X)=npq`                               | :math:`\sigma(X)=\sqrt{V(X)}`                  |
++------------------------------------------------+------------------------------------------------+------------------------------------------------+
 
 :Exemple, We Roll 3 dice. What is the chance to have 2 times the 1?:
 
@@ -508,11 +523,9 @@ According to the statement [...], X therefore follows a binomial distribution of
 
 	:math:`P(k)=P(X=k)=e^{-\lambda} \times \frac{\lambda^k}{k!}`
 
-:math:`E(X)=\lambda`
-
-:math:`V(X)=\lambda`
-
-:math:`\sigma(X)=\sqrt{V(X)}`
++------------------------------------------------+------------------------------------------------+------------------------------------------------+
+| :math:`E(X)=\lambda`                           | :math:`V(X)=\lambda`                           | :math:`\sigma(X)=\sqrt{V(X)}`                  |
++------------------------------------------------+------------------------------------------------+------------------------------------------------+
 
 :Exemple, one more person every 40 seconds. What is the chance to have 4 persons in 2 minutes?:
 
@@ -528,11 +541,9 @@ Continuous Variable
 
 	:math:`P(0 \geq X \geq x)=1-e^{-\lambda x}\\P(X\leq x)=e^{-\lambda x}`
 
-:math:`E(X)=\frac{1}{\lambda}`
-
-:math:`V(X)=\frac{1}{\lambda^2}`
-
-:math:`\sigma(X)=\frac{1}{\lambda}`
++------------------------------------------------+------------------------------------------------+------------------------------------------------+
+| :math:`E(X)=\frac{1}{\lambda}`                 | :math:`V(X)=\frac{1}{\lambda^2}`               | :math:`\sigma(X)=\frac{1}{\lambda}`            |
++------------------------------------------------+------------------------------------------------+------------------------------------------------+
 
 :Exemple, Lambda=6.116x10^(-4), Probability that T > 1000?:
 
@@ -540,15 +551,13 @@ Continuous Variable
 
 :Uniform:
 
-.. admonition:: Uniform Formula
+.. admonition:: Reduced Centered Uniform Formula
 
 	:math:`f(t)=\frac{1}{b-a}` if :math:`(t \in [a,b])`, else :math:`0`
 
-:math:`E(X)=\frac{a+b}{2}`
-
-:math:`V(X)=\frac{(b-a)^2}{12}`
-
-:math:`\sigma(X)=\sqrt{V(X)}`
++------------------------------------------------+------------------------------------------------+------------------------------------------------+
+| :math:`E(X)=\frac{a+b}{2}`                     | :math:`V(X)=\frac{(b-a)^2}{12}`                | :math:`\sigma(X)=\sqrt{V(X)}`                  |
++------------------------------------------------+------------------------------------------------+------------------------------------------------+
 
 :Reduced Centered Normal:
 
@@ -556,17 +565,16 @@ Continuous Variable
 
 	:math:`T=\frac{X-m}{\sigma} N(0,1)`
 
++-----------+------+------+------+
+|           | 95%  | 98%  | 99%  |
++-----------+------+------+------+
+|           | 1.96 | 2.33 | 2.58 |
++-----------+------+------+------+
+
 :math:`f(t)=\frac{1}{\sqrt{2\pi}} \times e^{-\frac{t^2}{2}}`
 
 :math:`\prod(t)=P(T<t)=\int_{-\infty}^{t} (\frac{1}{2\pi} \times e^{-\frac{t^2}{2}})dt`
 
-+-----+------+
-| 95% | 1.96 |
-+-----+------+
-| 98% | 2.33 |
-+-----+------+
-| 99% | 2.58 |
-+-----+------+
 
 Comparison
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -590,29 +598,114 @@ Approximation
 
 	:math:`T=\frac{X-np}{\sqrt{npq}}`
 
-:math:`E(Y)=np`
-
-:math:`V(X)=npq`
-
-:math:`\sigma(Y)=\sqrt{V(X)}`
++------------------------------------------------+------------------------------------------------+------------------------------------------------+
+| :math:`E(Y)=np`                                | :math:`V(X)=npq`                               | :math:`\sigma(Y)=\sqrt{V(X)}`                  |
++------------------------------------------------+------------------------------------------------+------------------------------------------------+
 
 :Binomial by Poisson:
 
 .. admonition:: Poisson Formula
 
-	:math:`\lambda=np`
+	:math:`\lambda=np` :math:`(n \geqslant 30, p \leqslant 0.10, np \leqslant 5)`
+
++------------------------------------------------+------------------------------------------------+------------------------------------------------+
+| :math:`E(X)=\lambda`                           | :math:`V(X)=\lambda`                           | :math:`\sigma(X)=\sqrt{V(X)}`                  |
++------------------------------------------------+------------------------------------------------+------------------------------------------------+
 
 :Poisson by Normal:
 
 .. admonition:: Normal Formula
 
-	:math:`T=\frac{X-\lambda}{\sqrt{\lambda}}`, 
+	:math:`T=\frac{X-\lambda}{\sqrt{\lambda}}`
 
-:math:`E(X)=\lambda` 
++------------------------------------------------+------------------------------------------------+------------------------------------------------+
+| :math:`E(X)=\lambda`                           | :math:`V(X)=\lambda`                           | :math:`\sigma(X)=\sqrt(\lambda)`               |
++------------------------------------------------+------------------------------------------------+------------------------------------------------+
 
-:math:`V(X)=\lambda`
 
-:math:`\sigma(X)=\sqrt(\lambda)`
+Distribution
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Normal Median
+
+	:math:`\overline{X} \Rightarrow N(\mu, \frac{\sigma}{\sqrt{n}})` for an infinite population, else :math:`m=\frac{\sigma}{\sqrt{n}} \times \sqrt{\frac{N-n}{N-1}}`
+
+:Exemple, 5 machines, 500g packages with sigma=5g and 20 packages collected per machine. What is the probability of 499g or under?:
+
+:math:`(\mu=500, \sigma=5) \Rightarrow N(500, \frac{5}{\sqrt{20 \times 5}})`
+
+:math:`T=\frac{X-n}{\sigma}=\frac{499-500}{0.5}=-2 \Leftrightarrow P(X \leqslant 499)=2.28`
+
+.. admonition:: Sample Proportion
+
+	:math:`F(p, \sqrt{\frac{pq}{n}}` for :math:`n \geqslant 30`
+
+:Exemple, 1% defective and 5000 pieces collected, certitude if < 1.2% ?:
+
+:math:`\sigma=\sqrt{\frac{0.01 \times 0.99}{5000}} = 0.0014 \Rightarrow N(0.01, 0.0014)`
+
+:math:`P(f<1.2)=P(T<\frac{0.012-0.01}{0.0014})=P(T<1.42)=92.22\%`
+
+
+Average Estimation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Ponctual Estimation
+
+	:math:`X(\mu=?, \sigma=?) \Rightarrow` sample of size n :math:`(\mu e, \sigma e)`
+
+	:math:`m=\mu e, s=\sqrt{\frac{n}{n-1}}\sigma e`
+
+:Exemple, 13L/day for 21 days, sigma=2L. What would be an average estimation?:
+
+:math:`m=13, s=\sqrt{\frac{21}{20}} \times 2 = 2.049`
+
+.. admonition:: Confidence Interval 
+
+	confidence coefficient = :math:`\alpha`, degree of freedom(khi2) = :math:`\chi^2=\frac{(sample-effective)^2}{effective}`
+
+	+---------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+	|                           | Central Limit :math:`\Rightarrow` Normal Law :math:`(m, \frac{\sigma}{\sqrt{n}})`                                                         |
+	| if :math:`n \geqslant 30` |                                                                                                                                           |
+	|                           | :math:`P(m \in (a,b))=P(\overline{X}-t \times \frac{\sigma}{\sqrt{n}} < m < \overline{X}+t \times \frac{\sigma}{\sqrt{n}})=\alpha`        |
+	+---------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+	|                           | Read Table :math:`\Rightarrow` Student Fisher                                                                                             |
+	| if :math:`n < 30`         |                                                                                                                                           |
+	|                           | :math:`P(m \in (a,b))=P(\overline{X}-t \times \frac{s}{\sqrt{n}} < m < \overline{X}+t \times \frac{s}{\sqrt{n}})=\alpha`                  |
+	+---------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+
+Proportion Estimation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Ponctual Estimation
+	
+	:math:`\sigma(D)=\sqrt{\frac{\sigma 1}{n1}^2 + \frac{\sigma 2}{n2}^2}`
+
+	:math:`N(p,\sqrt{\frac{pq}{n}}) \Rightarrow f=pe \times \sigma p = \sqrt{\frac{n}{n-1}} \sigma e`
+
+	+---------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+	| if :math:`n \geqslant 30` | :math:`\sigma p = \sqrt{\frac{pe(1-pe)}{n}}`                                                                                              |
+	+---------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+	| if :math:`n < 30`         | :math:`\sigma p = \sqrt{\frac{pe(1-pe)}{n-1}}`                                                                                            |
+	+---------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+
+:Exemple, We have a survey with a sample of 160 persons, 40 agree. What is the estimated proportion?:
+
+:math:`N(\frac{1}{4}, \sqrt{\frac{\frac{1}{4} \times \frac{3}{4}}{160}})=N(0.25, 0.03423)`
+
+
+Confidence Interval
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Confidence Interval
+
+	:math:`P(p \in (a,b))=P(f-t \sqrt{\frac{f(1-f)}{n}} < p < f+t \sqrt{\frac{f(1-f)}{n}}) = \alpha`
+
+	:math:`\sigma(X)=\sqrt{V(\overline{X})}, \sigma(\overline{X})=\frac{\sigma(X)}{\sqrt{N}} \Rightarrow \mu e = [E(\overline{X}) \pm 1.96 \times \sigma(\overline{X})]`
+
+:Exemple, We have 64 clients, with an average of 60min, sigma=9.27. What would be an confidence interval at 5% ?:
+
+:math:`\sigma(\overline{X})=\frac{9.27}{\sqrt{64}}=1.159 \Rightarrow \mu e = [60-1.96 \times 1.159; 60+1.96 \times 1.159]`
 
 Vectors
 ============================
