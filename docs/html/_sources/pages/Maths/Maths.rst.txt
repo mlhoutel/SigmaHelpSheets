@@ -119,11 +119,75 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 	
 	:math:`\Large\frac{AD}{AB}=\frac{AE}{AC}=\frac{DE}{BC}`
 
-.. figure:: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Thales_theorem_1.svg/118px-Thales_theorem_1.svg.png
-   :width: 200px  
+.. raw:: html
+	
+	<div id="thales_jxgbox" class="jxgbox" style="width:400px; height:400px;"></div>
+	<script type="text/javascript">
+	 	var board = JXG.JSXGraph.initBoard('thales_jxgbox', {boundingbox: [-10, 20, 20, -10], axis:true});
 
-Circles
+	 	var pA = board.create('point', [5, 10], {name:'A'});
+
+	 	// Create a parallel
+		var pB = board.create('point', [0, 0], {name:'B'});
+		var pC = board.create('point', [10, 0], {name:'C'});
+
+
+		var line_BC = board.create('line', [pB, pC], { strokecolor:'red' });
+
+		var line_BA = board.create('line', [pB, pA]);
+		var line_CA = board.create('line', [pC, pA]);
+
+		var pParallel = board.create('point', [5, 3], { visible:false , name:' '});
+		var line_DE = board.create('parallel', [line_BC, pParallel], { strokecolor:'red' });
+
+		var pD = board.create('intersection', [line_DE, line_BA, 0], { name:'D'});
+		var pE = board.create('intersection', [line_DE, line_CA, 0], { name:'E'});
+
+	</script>
+
+
+Circles and Ellipse
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Circle Equation	
+
+	:math:`(x-a)^2+(y-b)^2=r^2 \Leftrightarrow \sqrt{(x-a)^2+(y-b)^2}=r`
+
++---------------+---------------------------------+
+| Diameter      | :math:`D=2 \times r`            |
++---------------+---------------------------------+
+| Circumference | :math:`C=2 \times \pi \times r` |
++---------------+---------------------------------+
+| Area          | :math:`A=\pi \times r^2`        |
++---------------+---------------------------------+
+
+.. raw:: html
+	
+	<div id="circle_jxgbox" class="jxgbox" style="width:200px; height:200px;"></div>
+	<script type="text/javascript">
+	 	var board = JXG.JSXGraph.initBoard('circle_jxgbox', {boundingbox: [0, 10, 10, 0], axis:true})
+	 	var p1 = board.create('point', [4.0, 4.0])
+	    var p2 = board.create('point', [2.0, 2.0])
+	    var c1 = board.create('circle', [p1, p2])
+	</script>
+
+.. admonition:: Ellipse Equation	
+
+	:math:`(\frac{(x-a)}{Hrad})^2+\frac{(y-b)}{Vrad})^2=1 \Leftrightarrow \sqrt{(\frac{(x-a)}{Hrad})^2+\frac{(y-b)}{Vrad})^2}=1`
+
+.. raw:: html
+	
+	<div id="ellipse_jxgbox" class="jxgbox" style="width:200px; height:200px;"></div>
+	<script type="text/javascript">
+	 	var board = JXG.JSXGraph.initBoard('ellipse_jxgbox', {boundingbox: [-10, 10, 10, -10], axis:true})
+
+		// Create an Ellipse by three points
+		var ellipse_A = board.create('point', [-1,4]);
+		var ellipse_B = board.create('point', [-1,-4]);
+		var ellipse_C = board.create('point', [1,1]);
+		var ellipse_el = board.create('ellipse',[ellipse_A,ellipse_B,ellipse_C]);
+
+	</script>
 
 Remarkable Identities
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -527,11 +591,11 @@ Taylor Series
 		var degree = board.create('slider',[[10,90],[100,90],[1,1,30]],{name:'degree', snapWidth:1});     
 		var number = board.create('slider',[[10,80],[100,80],[3,10,30]],{name:'number', snapWidth:1});     
 		
-		for (i=0; i<number.Value();i++) { pointlist.push(board.create('point', [200*Math.random() , 30*Math.random()+20 ], { style:4, strokecolor:"#0000a0", name:" "})); }
+		for (i=0; i<number.Value();i++) { pointlist.push(board.create('point', [200*Math.random() , 30*Math.random()+20 ], { style:4, strokecolor:"blue", name:" "})); }
 		board.unsuspendUpdate();
 
 		var regression = JXG.Math.Numerics.regressionPolynomial(degree, pointlist); 
-		var reg = board.create('functiongraph',[regression],{strokeColor:'green'});
+		var reg = board.create('functiongraph',[regression],{strokeColor:'red'});
 
 		var t = board.create('text',[20,-40, function(){ return "r(x) = " + regression.getTerm();} ],{strokeColor:'black',fontSize:'14px'});
 
@@ -544,11 +608,11 @@ Taylor Series
 				for (i=0; i<pointlist.length; i++){ board.removeObject(pointlist[i]) }
 				pointlist = [];
 
-				for (i=0; i<number.Value();i++) { pointlist.push(board.create('point', [200*Math.random() , 30*Math.random()+20 ], { style:4, strokecolor:"#0000a0", name:" "})); }
+				for (i=0; i<number.Value();i++) { pointlist.push(board.create('point', [200*Math.random() , 30*Math.random()+20 ], { style:4, strokecolor:"blue", name:" "})); }
 			
 				regression = JXG.Math.Numerics.regressionPolynomial(degree, pointlist);
 				board.removeObject(reg)
-				reg = board.create('functiongraph',[regression],{strokeColor:'green'});
+				reg = board.create('functiongraph',[regression],{strokeColor:'red'});
 			}
 
 			board.unsuspendUpdate();
