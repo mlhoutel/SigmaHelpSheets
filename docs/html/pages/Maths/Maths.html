@@ -28,6 +28,8 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/clipboard.min.js"></script>
+        <script src="../../_static/copybutton.js"></script>
         <script src="../../_static/debug.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.3.5/jsxgraphcore.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
@@ -42,6 +44,7 @@
   
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.3.5/jsxgraph.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -241,6 +244,15 @@
   </ul>
 
   
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="../Physics/Physics.html" class="btn btn-neutral float-right" title="Physics" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../../index.html" class="btn btn-neutral float-left" title="Welcome to my Help-Sheets !" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -382,14 +394,16 @@ Bijection</p>
 </div>
 <table class="docutils align-default">
 <colgroup>
+<col style="width: 11%" />
 <col style="width: 20%" />
-<col style="width: 38%" />
-<col style="width: 42%" />
+<col style="width: 22%" />
+<col style="width: 47%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\Delta &gt; 0\)</span></p></td>
 <td><p>2 solutions in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(\frac{-b\pm\sqrt{\Delta}}{2a}\)</span></p></td>
+<td rowspan="3"><div id="quadratic_jxgbox" class="jxgbox" style="width:400px; height:200px;"></div></td>
 </tr>
 <tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\Delta = 0\)</span></p></td>
 <td><p>1 solution in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span></p></td>
@@ -401,7 +415,13 @@ Bijection</p>
 </tr>
 </tbody>
 </table>
-</div>
+<script type="text/javascript">
+        var brd = JXG.JSXGraph.initBoard('quadratic_jxgbox', {boundingbox: [-10, 10, 10, -10], axis:true})
+    var quadratic_a = brd.create('slider',[[2,-3],[7,-3],[-10,1,10]], {name:'a', snapWidth:0.1})
+    var quadratic_b = brd.create('slider',[[2,-5],[7,-5],[-10,0,10]], {name:'b', snapWidth:0.1})
+    var quadratic_c = brd.create('slider',[[2,-7],[7,-7],[-10,0,10]], {name:'c', snapWidth:0.1})
+    f = brd.create('functiongraph',[function(quadratic_x){ return quadratic_a.Value()*quadratic_x*quadratic_x + quadratic_b.Value()*quadratic_x + quadratic_c.Value(); }]);
+</script></div>
 <div class="section" id="sequences">
 <h3><a class="toc-backref" href="#id6">Sequences</a><a class="headerlink" href="#sequences" title="Permalink to this headline">¶</a></h3>
 </div>
@@ -413,33 +433,44 @@ Bijection</p>
 </dl>
 <div class="admonition-pythagorean-theorem-rectangle-triangle admonition">
 <p class="admonition-title">Pythagorean Theorem (Rectangle Triangle)</p>
-<p><span class="math notranslate nohighlight">\(a^2+b^2=c^2\)</span></p>
+<p><span class="math notranslate nohighlight">\(c^2=a^2+b^2 \Leftrightarrow c=\sqrt{a^2+b^2}\)</span></p>
 </div>
-<div class="figure align-default">
-<a class="reference internal image-reference" href="https://www.mathsisfun.com/geometry/images/pythagoras-abc.svg"><img alt="https://www.mathsisfun.com/geometry/images/pythagoras-abc.svg" src="https://www.mathsisfun.com/geometry/images/pythagoras-abc.svg" width="200px" /></a>
-</div>
-<div id="box" class="jxgbox" style="width:500px; height:500px;"></div>
+<div id="pythagor_jxgbox" class="jxgbox" style="width:400px; height:400px;"></div>
 <script type="text/javascript">
-        var board = JXG.JSXGraph.initBoard('box', {boundingbox: [-10, 10, 10, -10], axis:true});
-        var p1 = board.create('point',[-1,1], {name:'A',size:4});
-        var p2 = board.create('point',[2,-1], {name:'B',size:4});
-        var li2 = board.create('line',[p1,p2], {straightFirst:false, straightLast:false, strokeWidth:2, dash:0});
-</script>
+        var board = JXG.JSXGraph.initBoard('pythagor_jxgbox', {boundingbox: [-10, 20, 20, -10], axis:true});
 
-<div id="jxgbox" class="jxgbox" style="width:500px; height:500px;"></div>
-<script type="text/javascript">
-        var brd = JXG.JSXGraph.initBoard('jxgbox',{boundingbox:[-3,3,3,-3]});
-        var p1 = brd.create('point',[-1,-1]);
+        var p1 = board.create('point',[4, 0], {name:'', size:4, fixed:false, snapSizeY: 100, snapToGrid: true});
+        var p2 = board.create('point',[0, 0], {name:'', size:4, fixed:true, color: 'blue'});
+        var p3 = board.create('point',[0, 3], {name:'', size:4, fixed:false, snapSizeX: 100, snapToGrid: true});
 
-        var c1 = brd.create('circle',[p1,3],{strokeOpacity:0.1});      //
-        var p2 = brd.create('glider',[2,-1,c1]);                       // p2 glides on circle c1
+        a = board.create('angle',[p1, p2, p3], {radius:0.5});
 
-        var rot = brd.create('transform',[function(){ return Math.PI/4;},p1],{type:'rotate'});  // rot is defined by the angle BAC
-        var p3 = brd.create('point',[p2,rot],{fixed:true,size:1,name:'h1'});                    // h1: B rotated around A with angle rot
-        var line = brd.create('line',[p1,p3],{strokeOpacity:0.1});                              // line through A and h1
+        // a.setAngle(function() {return Math.PI / 2; });
 
-        var p4 = brd.create('glider',[0,0.5,line],{fixed:true});                                // C is on the line with a fixed distance from A
-        var poly = brd.create('polygon',[p1,p2,p4], {fillOpacity:0.05});
+        var triangle = board.create('polygon',[p1,p2,p3], {fillOpacity:0.05});
+
+        var p1_12 = board.create('point',[p1, board.create('transform', [-Math.PI/2, p2], {type:'rotate'})], {name:'', size:0});
+        var p2_12 = board.create('point',[p2, board.create('transform', [Math.PI/2, p1], {type:'rotate'})], {name:'', size:0});
+        var square_12 = board.create('polygon',[p1, p2, p1_12, p2_12], {fillOpacity:0.5, name:'B^2', withLabel: true, fillColor: 'blue'});
+
+
+        var p1_13 = board.create('point',[p1, board.create('transform', [Math.PI/2, p3], {type:'rotate'})], {name:'', size:0});
+        var p2_13 = board.create('point',[p3, board.create('transform', [-Math.PI/2, p1], {type:'rotate'})], {name:'', size:0});
+        var square_13 = board.create('polygon',[p1, p3, p1_13, p2_13], {fillOpacity:0.5, name:'C^2', withLabel: true, fillColor: 'green'});
+
+
+        var p1_23 = board.create('point',[p2, board.create('transform', [-Math.PI/2, p3], {type:'rotate'})], {name:'', size:0});
+        var p2_23 = board.create('point',[p3, board.create('transform', [Math.PI/2, p2], {type:'rotate'})], {name:'', size:0});
+        var square_23 = board.create('polygon',[p2, p3, p1_23, p2_23], {fillOpacity:0.5, name:'A^2', withLabel: true, fillColor: 'yellow'});
+
+        board.update()
+        board.on('update', function(e, i){
+                square_12.name='B^2='+Math.round(square_12.Area())
+                square_13.name='C^2='+Math.round(square_13.Area())
+                square_23.name='A^2='+Math.round(square_23.Area())
+        });
+
+        board.update()
 </script><dl class="field-list simple">
 <dt class="field-odd">Thales Theorem</dt>
 <dd class="field-odd"><p></p></dd>
@@ -467,7 +498,59 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 <p><span class="math notranslate nohighlight">\((a-b)^2=a^2-2ab+b^2\)</span></p>
 <p><span class="math notranslate nohighlight">\(a^2-b^2=(a-b)(a+b)\)</span></p>
 <p><span class="math notranslate nohighlight">\(\ln{e}=1\)</span></p>
-<p><span class="math notranslate nohighlight">\(\ln{1}=0\)</span></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 31%" />
+<col style="width: 16%" />
+<col style="width: 43%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(e^x\)</span></p></td>
+<td><ul class="simple">
+<li><p><span class="math notranslate nohighlight">\((e^x)' = e^x\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim\limits_{\substack{x \to +\infty}} e^x = +\infty\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim\limits_{\substack{x \to -\infty}} e^x = 0\)</span></p></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(exp(ln(x))=x\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(exp(0)=1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(exp(1)=e=2.71828182846\)</span></p></li>
+</ul>
+</td>
+<td rowspan="2"><div id="exp_jxgbox" class="jxgbox" style="width:400px; height:200px;"></div></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(ln(x)\)</span></p></td>
+<td><ul class="simple">
+<li><p><span class="math notranslate nohighlight">\((ln(x))' = \frac{1}{x}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim\limits_{\substack{x \to +\infty}} ln(x) = +\infty\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim\limits_{\substack{x \to 0}} ln(x) = -\infty\)</span></p></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(ln(exp(x))=x\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(ln(0)=undefined\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(ln(1)=0\)</span></p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<script type="text/javascript">
+        var brd = JXG.JSXGraph.initBoard('exp_jxgbox', {boundingbox: [-10, 10, 10, -10], axis:true})
+    var exp = brd.create('functiongraph',[function(x){ return Math.exp(x); }],{strokecolor: 'red'});
+    exp.setLabel('f(x)=exp(x)')
+    exp.labelColor('red')
+
+    var line = brd.create('functiongraph',[function(x){ return x; }],{strokecolor: 'grey', dash:1});
+    line.setLabel('y=x')
+    line.labelColor('grey')
+
+    var log = brd.create('functiongraph',[function(x){ return Math.log(x); }],{strokecolor: 'blue'});
+    log.setLabel('g(x)=ln(x)')
+    log.labelColor('blue')
+</script><p><span class="math notranslate nohighlight">\(\ln{1}=0\)</span></p>
 <p>display focntions exp and log10</p>
 </div>
 <div class="section" id="congruence">
@@ -999,7 +1082,42 @@ S (sin, cos, tan)
 <div class="figure align-default">
 <img alt="https://miro.medium.com/max/2250/1*6vPGzBNppqMHllg1o_se8Q.png" src="https://miro.medium.com/max/2250/1*6vPGzBNppqMHllg1o_se8Q.png" />
 </div>
-</div>
+<div id="regression_jxgbox" class="jxgbox" style="width:800px; height:400px;"></div>
+<script type="text/javascript">
+        board = JXG.JSXGraph.initBoard('regression_jxgbox', {boundingbox:[-2, 100, 220, -70], grid: false, axis:true});
+
+        board.suspendUpdate();
+        var pointlist = [];
+        var degree = board.create('slider',[[10,90],[100,90],[1,1,30]],{name:'degree', snapWidth:1});
+        var number = board.create('slider',[[10,80],[100,80],[3,10,30]],{name:'number', snapWidth:1});
+
+        for (i=0; i<number.Value();i++) { pointlist.push(board.create('point', [200*Math.random() , 30*Math.random()+20 ], { style:4, strokecolor:"#0000a0", name:" "})); }
+        board.unsuspendUpdate();
+
+        var regression = JXG.Math.Numerics.regressionPolynomial(degree, pointlist);
+        var reg = board.create('functiongraph',[regression],{strokeColor:'green'});
+
+        var t = board.create('text',[20,-40, function(){ return "r(x) = " + regression.getTerm();} ],{strokeColor:'black',fontSize:'14px'});
+
+        number.on('drag', function() { numberPoints(); });
+
+        function numberPoints() {
+                board.suspendUpdate();
+
+                if (!(number.Value() == 2 && degree.Value() >= 1)) {
+                        for (i=0; i<pointlist.length; i++){ board.removeObject(pointlist[i]) }
+                        pointlist = [];
+
+                        for (i=0; i<number.Value();i++) { pointlist.push(board.create('point', [200*Math.random() , 30*Math.random()+20 ], { style:4, strokecolor:"#0000a0", name:" "})); }
+
+                        regression = JXG.Math.Numerics.regressionPolynomial(degree, pointlist);
+                        board.removeObject(reg)
+                        reg = board.create('functiongraph',[regression],{strokeColor:'green'});
+                }
+
+                board.unsuspendUpdate();
+        }
+</script></div>
 <div class="section" id="fourier-series">
 <h3><a class="toc-backref" href="#id25">Fourier Series</a><a class="headerlink" href="#fourier-series" title="Permalink to this headline">¶</a></h3>
 <div class="admonition-fourier-coefficients-formula admonition">
@@ -1430,6 +1548,7 @@ bn=\frac{2}{T}\int_{0}^{T} f(t)\sin(\frac{2\pi}{T}n^t)dt
   
     
   
+
     
         <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
             <span class="rst-current-version" data-toggle="rst-current-version">

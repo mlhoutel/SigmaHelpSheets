@@ -35,13 +35,23 @@ Quadratic Function
 
 	:math:`ax^2+bx+c=0 \Leftrightarrow \Delta=b^2-4ac`
 
-+--------------------+--------------------------------------+------------------------------------------+
-| :math:`\Delta > 0` | 2 solutions in :math:`\mathbb{R}`    | :math:`\frac{-b\pm\sqrt{\Delta}}{2a}`    |
-+--------------------+--------------------------------------+------------------------------------------+
-| :math:`\Delta = 0` | 1 solution in :math:`\mathbb{R}`     | :math:`\frac{-b}{2a}`                    |
-+--------------------+--------------------------------------+------------------------------------------+
-| :math:`\Delta < 0` | 2 solutions in :math:`\mathbb{C}`    | :math:`\frac{-b\pm i\sqrt{-\Delta}}{2a}` |
-+--------------------+--------------------------------------+------------------------------------------+
++--------------------+--------------------------------------+------------------------------------------+------------------------------------------------------------------------------------------+
+| :math:`\Delta > 0` | 2 solutions in :math:`\mathbb{R}`    | :math:`\frac{-b\pm\sqrt{\Delta}}{2a}`    | .. raw:: html                                                                            |
++--------------------+--------------------------------------+------------------------------------------+                                                                                          |
+| :math:`\Delta = 0` | 1 solution in :math:`\mathbb{R}`     | :math:`\frac{-b}{2a}`                    |     <div id="quadratic_jxgbox" class="jxgbox" style="width:400px; height:200px;"></div>  |
++--------------------+--------------------------------------+------------------------------------------+                                                                                          |
+| :math:`\Delta < 0` | 2 solutions in :math:`\mathbb{C}`    | :math:`\frac{-b\pm i\sqrt{-\Delta}}{2a}` |                                                                                          |
++--------------------+--------------------------------------+------------------------------------------+------------------------------------------------------------------------------------------+
+
+.. raw:: html
+	
+	<script type="text/javascript">
+		var brd = JXG.JSXGraph.initBoard('quadratic_jxgbox', {boundingbox: [-10, 10, 10, -10], axis:true})
+	    var quadratic_a = brd.create('slider',[[2,-3],[7,-3],[-10,1,10]], {name:'a', snapWidth:0.1})
+	    var quadratic_b = brd.create('slider',[[2,-5],[7,-5],[-10,0,10]], {name:'b', snapWidth:0.1})
+	    var quadratic_c = brd.create('slider',[[2,-7],[7,-7],[-10,0,10]], {name:'c', snapWidth:0.1})
+	    f = brd.create('functiongraph',[function(quadratic_x){ return quadratic_a.Value()*quadratic_x*quadratic_x + quadratic_b.Value()*quadratic_x + quadratic_c.Value(); }]);
+	</script>
 
 Sequences
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -53,37 +63,48 @@ Triangle
 
 .. admonition:: Pythagorean Theorem (Rectangle Triangle)
 	
-	:math:`a^2+b^2=c^2`
-
-.. figure:: https://www.mathsisfun.com/geometry/images/pythagoras-abc.svg
-	:width: 200px  
+	:math:`c^2=a^2+b^2 \Leftrightarrow c=\sqrt{a^2+b^2}`
+ 
 
 .. raw:: html
 	
-	<div id="box" class="jxgbox" style="width:500px; height:500px;"></div>
+	<div id="pythagor_jxgbox" class="jxgbox" style="width:400px; height:400px;"></div>
 	<script type="text/javascript">
-	 	var board = JXG.JSXGraph.initBoard('box', {boundingbox: [-10, 10, 10, -10], axis:true});
-	 	var p1 = board.create('point',[-1,1], {name:'A',size:4});
-		var p2 = board.create('point',[2,-1], {name:'B',size:4});
-	 	var li2 = board.create('line',[p1,p2], {straightFirst:false, straightLast:false, strokeWidth:2, dash:0});
-	</script>
+	 	var board = JXG.JSXGraph.initBoard('pythagor_jxgbox', {boundingbox: [-10, 20, 20, -10], axis:true});
+
+	 	var p1 = board.create('point',[4, 0], {name:'', size:4, fixed:false, snapSizeY: 100, snapToGrid: true});
+		var p2 = board.create('point',[0, 0], {name:'', size:4, fixed:true, color: 'blue'});
+		var p3 = board.create('point',[0, 3], {name:'', size:4, fixed:false, snapSizeX: 100, snapToGrid: true});
+
+		a = board.create('angle',[p1, p2, p3], {radius:0.5});
+		
+		// a.setAngle(function() {return Math.PI / 2; });
+
+	 	var triangle = board.create('polygon',[p1,p2,p3], {fillOpacity:0.05});
+
+		var p1_12 = board.create('point',[p1, board.create('transform', [-Math.PI/2, p2], {type:'rotate'})], {name:'', size:0});
+		var p2_12 = board.create('point',[p2, board.create('transform', [Math.PI/2, p1], {type:'rotate'})], {name:'', size:0});
+	 	var square_12 = board.create('polygon',[p1, p2, p1_12, p2_12], {fillOpacity:0.5, name:'B^2', withLabel: true, fillColor: 'blue'});
+	 	
+	 	
+		var p1_13 = board.create('point',[p1, board.create('transform', [Math.PI/2, p3], {type:'rotate'})], {name:'', size:0});
+		var p2_13 = board.create('point',[p3, board.create('transform', [-Math.PI/2, p1], {type:'rotate'})], {name:'', size:0});
+	 	var square_13 = board.create('polygon',[p1, p3, p1_13, p2_13], {fillOpacity:0.5, name:'C^2', withLabel: true, fillColor: 'green'});
+		
 	
-	<div id="jxgbox" class="jxgbox" style="width:500px; height:500px;"></div>
-	<script type="text/javascript">
-	 	var brd = JXG.JSXGraph.initBoard('jxgbox',{boundingbox:[-3,3,3,-3]});
-		var p1 = brd.create('point',[-1,-1]);
+		var p1_23 = board.create('point',[p2, board.create('transform', [-Math.PI/2, p3], {type:'rotate'})], {name:'', size:0});
+		var p2_23 = board.create('point',[p3, board.create('transform', [Math.PI/2, p2], {type:'rotate'})], {name:'', size:0});
+	 	var square_23 = board.create('polygon',[p2, p3, p1_23, p2_23], {fillOpacity:0.5, name:'A^2', withLabel: true, fillColor: 'yellow'});
 
-		var c1 = brd.create('circle',[p1,3],{strokeOpacity:0.1});      // 
-		var p2 = brd.create('glider',[2,-1,c1]);                       // p2 glides on circle c1
-
-		var rot = brd.create('transform',[function(){ return Math.PI/4;},p1],{type:'rotate'});  // rot is defined by the angle BAC
-		var p3 = brd.create('point',[p2,rot],{fixed:true,size:1,name:'h1'});                    // h1: B rotated around A with angle rot
-		var line = brd.create('line',[p1,p3],{strokeOpacity:0.1});                              // line through A and h1
-
-		var p4 = brd.create('glider',[0,0.5,line],{fixed:true});                                // C is on the line with a fixed distance from A
-		var poly = brd.create('polygon',[p1,p2,p4], {fillOpacity:0.05});
+	 	board.update()
+		board.on('update', function(e, i){
+			square_12.name='B^2='+Math.round(square_12.Area())
+			square_13.name='C^2='+Math.round(square_13.Area())
+			square_23.name='A^2='+Math.round(square_23.Area())
+		});
+	 	
+		board.update()
 	</script>
-
 
 :Thales Theorem:
 
@@ -114,6 +135,35 @@ Remarkable Identities
 :math:`a^2-b^2=(a-b)(a+b)`
 
 :math:`\ln{e}=1`
+
+
++--------------------+------------------------------------------------------------------+----------------------------------+------------------------------------------------------------------------------------------+
+|                    | - :math:`(e^x)' = e^x`                                           | - :math:`exp(ln(x))=x`           | .. raw:: html                                                                            |
+| :math:`e^x`        | - :math:`\lim\limits_{\substack{x \to +\infty}} e^x = +\infty`   | - :math:`exp(0)=1`               |                                                                                          |
+|                    | - :math:`\lim\limits_{\substack{x \to -\infty}} e^x = 0`         | - :math:`exp(1)=e=2.71828182846` |      <div id="exp_jxgbox" class="jxgbox" style="width:400px; height:200px;"></div>       |
++--------------------+------------------------------------------------------------------+----------------------------------+                                                                                          |
+|                    | - :math:`(ln(x))' = \frac{1}{x}`                                 | - :math:`ln(exp(x))=x`           |                                                                                          |
+| :math:`ln(x)`      | - :math:`\lim\limits_{\substack{x \to +\infty}} ln(x) = +\infty` | - :math:`ln(0)=undefined`        |                                                                                          |
+|                    | - :math:`\lim\limits_{\substack{x \to 0}} ln(x) = -\infty`       | - :math:`ln(1)=0`                |                                                                                          |
++--------------------+------------------------------------------------------------------+----------------------------------+------------------------------------------------------------------------------------------+
+
+.. raw:: html
+	
+	
+	<script type="text/javascript">
+		var brd = JXG.JSXGraph.initBoard('exp_jxgbox', {boundingbox: [-10, 10, 10, -10], axis:true})
+	    var exp = brd.create('functiongraph',[function(x){ return Math.exp(x); }],{strokecolor: 'red'});
+	    exp.setLabel('f(x)=exp(x)')
+	    exp.labelColor('red')
+
+	    var line = brd.create('functiongraph',[function(x){ return x; }],{strokecolor: 'grey', dash:1});
+	    line.setLabel('y=x')
+	    line.labelColor('grey')
+
+	    var log = brd.create('functiongraph',[function(x){ return Math.log(x); }],{strokecolor: 'blue'});
+	    log.setLabel('g(x)=ln(x)')
+	    log.labelColor('blue')
+	</script>
 
 :math:`\ln{1}=0`
 
@@ -465,6 +515,45 @@ Taylor Series
 :Overfittingt and Underfitting:
 
 .. figure:: https://miro.medium.com/max/2250/1*6vPGzBNppqMHllg1o_se8Q.png
+
+.. raw:: html
+	
+	<div id="regression_jxgbox" class="jxgbox" style="width:800px; height:400px;"></div>
+	<script type="text/javascript">
+		board = JXG.JSXGraph.initBoard('regression_jxgbox', {boundingbox:[-2, 100, 220, -70], grid: false, axis:true});
+
+		board.suspendUpdate();
+		var pointlist = [];
+		var degree = board.create('slider',[[10,90],[100,90],[1,1,30]],{name:'degree', snapWidth:1});     
+		var number = board.create('slider',[[10,80],[100,80],[3,10,30]],{name:'number', snapWidth:1});     
+		
+		for (i=0; i<number.Value();i++) { pointlist.push(board.create('point', [200*Math.random() , 30*Math.random()+20 ], { style:4, strokecolor:"#0000a0", name:" "})); }
+		board.unsuspendUpdate();
+
+		var regression = JXG.Math.Numerics.regressionPolynomial(degree, pointlist); 
+		var reg = board.create('functiongraph',[regression],{strokeColor:'green'});
+
+		var t = board.create('text',[20,-40, function(){ return "r(x) = " + regression.getTerm();} ],{strokeColor:'black',fontSize:'14px'});
+
+		number.on('drag', function() { numberPoints(); });
+
+		function numberPoints() {
+			board.suspendUpdate();
+
+			if (!(number.Value() == 2 && degree.Value() >= 1)) {
+				for (i=0; i<pointlist.length; i++){ board.removeObject(pointlist[i]) }
+				pointlist = [];
+
+				for (i=0; i<number.Value();i++) { pointlist.push(board.create('point', [200*Math.random() , 30*Math.random()+20 ], { style:4, strokecolor:"#0000a0", name:" "})); }
+			
+				regression = JXG.Math.Numerics.regressionPolynomial(degree, pointlist);
+				board.removeObject(reg)
+				reg = board.create('functiongraph',[regression],{strokeColor:'green'});
+			}
+
+			board.unsuspendUpdate();
+		}
+	</script>
 
 Fourier Series
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -30,7 +30,7 @@ release = '1.0.0'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['recommonmark','sphinx_rtd_theme','nbsphinx']
+extensions = ['recommonmark','sphinx_rtd_theme','nbsphinx','sphinx_copybutton']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -64,5 +64,6 @@ html_logo = "_static/sigmwhite.svg"
 html_favicon = "_static/sumblack.ico"
 
 html_theme_options = {
-    'logo_only': True
+    'logo_only': True,
+    'prev_next_buttons_location': 'both'
 }
