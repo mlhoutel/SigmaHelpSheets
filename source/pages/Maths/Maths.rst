@@ -140,8 +140,8 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 		var pParallel = board.create('point', [5, 3], { visible:false , name:' '});
 		var line_DE = board.create('parallel', [line_BC, pParallel], { strokecolor:'red' });
 
-		var pD = board.create('intersection', [line_DE, line_BA, 0], { name:'D'});
-		var pE = board.create('intersection', [line_DE, line_CA, 0], { name:'E'});
+		var pD = board.create('intersection', [line_DE, line_BA, 0], { name:'D', fillColor: 'blue'});
+		var pE = board.create('intersection', [line_DE, line_CA, 0], { name:'E', fillColor: 'blue'});
 
 	</script>
 
@@ -198,9 +198,6 @@ Remarkable Identities
 
 :math:`a^2-b^2=(a-b)(a+b)`
 
-:math:`\ln{e}=1`
-
-
 +--------------------+------------------------------------------------------------------+----------------------------------+------------------------------------------------------------------------------------------+
 |                    | - :math:`(e^x)' = e^x`                                           | - :math:`exp(ln(x))=x`           | .. raw:: html                                                                            |
 | :math:`e^x`        | - :math:`\lim\limits_{\substack{x \to +\infty}} e^x = +\infty`   | - :math:`exp(0)=1`               |                                                                                          |
@@ -228,11 +225,6 @@ Remarkable Identities
 	    log.setLabel('g(x)=ln(x)')
 	    log.labelColor('blue')
 	</script>
-
-:math:`\ln{1}=0`
-
-display focntions exp and log10
-
 
 Congruence
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -282,12 +274,58 @@ Arccos, Arcsin, Arctan
 | :math:`\arcsin{\frac{1}{2}}=\frac{\pi}{6}`           | :math:`\arccos{\frac{1}{2}}=\frac{\pi}{3}`          |                                  |
 +------------------------------------------------------+-----------------------------------------------------+----------------------------------+
 
++------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+
+| .. raw:: html                                                                      | .. raw:: html                                                                      | .. raw:: html                                                                      |
+|                                                                                    |                                                                                    |                                                                                    |
+|      <div id="cos_jxgbox" class="jxgbox" style="width:200px; height:200px;"></div> |      <div id="sin_jxgbox" class="jxgbox" style="width:200px; height:200px;"></div> |      <div id="tan_jxgbox" class="jxgbox" style="width:200px; height:200px;"></div> |
+|                                                                                    |                                                                                    |                                                                                    |
++------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+
 
-arcsin graph
+.. raw:: html
+	
+	<script type="text/javascript">
+		var cos_board = JXG.JSXGraph.initBoard('cos_jxgbox', {boundingbox: [-1, Math.PI, Math.PI, -1], axis:true})
 
-arcos graph
+	    var cos = cos_board.create('functiongraph',[function(x){ return Math.cos(x); }, 0, Math.PI],{strokecolor: 'red'});
+	    cos.setLabel('cos')
+	    cos.labelColor('red')
 
-arctan graph
+	    var cos_line = cos_board.create('functiongraph',[function(x){ return x; }, -1, Math.PI],{strokecolor: 'grey', dash:1});
+	    cos_line.setLabel('y=x')
+	    cos_line.labelColor('grey')
+
+	    var arccos = cos_board.create('functiongraph',[function(x){ return Math.acos(x); }, -1, Math.PI],{strokecolor: 'blue'});
+	    arccos.setLabel('arccos')
+	    arccos.labelColor('blue')
+
+	    var sin_board = JXG.JSXGraph.initBoard('sin_jxgbox', {boundingbox: [-Math.PI/2, Math.PI/2, Math.PI/2, -Math.PI/2], axis:true})
+
+	    var sin = sin_board.create('functiongraph',[function(x){ return Math.sin(x); }, -Math.PI/2, Math.PI/2],{strokecolor: 'red'});
+	    sin.setLabel('sin')
+	    sin.labelColor('red')
+
+	    var sin_line = sin_board.create('functiongraph',[function(x){ return x; }, -Math.PI/2, Math.PI/2],{strokecolor: 'grey', dash:1});
+	    sin_line.setLabel('y=x')
+	    sin_line.labelColor('grey')
+
+	    var arcsin = sin_board.create('functiongraph',[function(x){ return Math.asin(x); }, -Math.PI/2, Math.PI/2],{strokecolor: 'blue'});
+	    arcsin.setLabel('arcsin')
+	    arcsin.labelColor('blue')
+
+	    var tan_board = JXG.JSXGraph.initBoard('tan_jxgbox', {boundingbox: [-3, 3, 3, -3], axis:true})
+
+	    var tan = tan_board.create('functiongraph',[function(x){ return Math.tan(x); }, -Math.PI/2, Math.PI/2],{strokecolor: 'red'});
+	    tan.setLabel('tan')
+	    tan.labelColor('red')
+
+	    var cos_line = tan_board.create('functiongraph',[function(x){ return x; }, -3, 3],{strokecolor: 'grey', dash:1});
+	    cos_line.setLabel('y=x')
+	    cos_line.labelColor('grey')
+
+	    var arctan = tan_board.create('functiongraph',[function(x){ return Math.atan(x); }, -3, 3],{strokecolor: 'blue'});
+	    arctan.setLabel('arctan')
+	    arctan.labelColor('blue')
+	</script>
 
 Hcos, Hsin, Htan
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
