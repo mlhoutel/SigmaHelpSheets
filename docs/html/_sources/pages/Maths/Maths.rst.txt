@@ -46,7 +46,7 @@ Quadratic Function
 .. raw:: html
 	
 	<script type="text/javascript">
-		var brd = JXG.JSXGraph.initBoard('quadratic_jxgbox', {boundingbox: [-10, 10, 10, -10], axis:true})
+		var brd = JXG.JSXGraph.initBoard('quadratic_jxgbox', {boundingbox: [-10, 10, 10, -10], axis:true, pan: {enabled: false}, showCopyright:false, showNavigation:false})
 	    var quadratic_a = brd.create('slider',[[2,-3],[7,-3],[-10,1,10]], {name:'a', snapWidth:0.1})
 	    var quadratic_b = brd.create('slider',[[2,-5],[7,-5],[-10,0,10]], {name:'b', snapWidth:0.1})
 	    var quadratic_c = brd.create('slider',[[2,-7],[7,-7],[-10,0,10]], {name:'c', snapWidth:0.1})
@@ -70,7 +70,7 @@ Triangle
 	
 	<div id="pythagor_jxgbox" class="jxgbox" style="width:400px; height:400px;"></div>
 	<script type="text/javascript">
-	 	var board = JXG.JSXGraph.initBoard('pythagor_jxgbox', {boundingbox: [-10, 20, 20, -10], axis:true});
+	 	var board = JXG.JSXGraph.initBoard('pythagor_jxgbox', {boundingbox: [-10, 20, 20, -10], axis:true, pan: {enabled: false}, showCopyright:false, showNavigation:false});
 
 	 	var p1 = board.create('point',[4, 0], {name:'', size:4, fixed:false, snapSizeY: 100, snapToGrid: true});
 		var p2 = board.create('point',[0, 0], {name:'', size:4, fixed:true, color: 'blue'});
@@ -123,7 +123,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 	
 	<div id="thales_jxgbox" class="jxgbox" style="width:400px; height:400px;"></div>
 	<script type="text/javascript">
-	 	var board = JXG.JSXGraph.initBoard('thales_jxgbox', {boundingbox: [-10, 20, 20, -10], axis:true});
+	 	var board = JXG.JSXGraph.initBoard('thales_jxgbox', {boundingbox: [-10, 20, 20, -10], axis:true, pan: {enabled: false}, showCopyright:false, showNavigation:false});
 
 	 	var pA = board.create('point', [5, 10], {name:'A'});
 
@@ -165,7 +165,7 @@ Circles and Ellipse
 	
 	<div id="circle_jxgbox" class="jxgbox" style="width:200px; height:200px;"></div>
 	<script type="text/javascript">
-	 	var board = JXG.JSXGraph.initBoard('circle_jxgbox', {boundingbox: [0, 10, 10, 0], axis:true})
+	 	var board = JXG.JSXGraph.initBoard('circle_jxgbox', {boundingbox: [0, 10, 10, 0], axis:true, pan: {enabled: false}, showCopyright:false, showNavigation:false})
 	 	var p1 = board.create('point', [4.0, 4.0])
 	    var p2 = board.create('point', [2.0, 2.0])
 	    var c1 = board.create('circle', [p1, p2])
@@ -179,7 +179,7 @@ Circles and Ellipse
 	
 	<div id="ellipse_jxgbox" class="jxgbox" style="width:200px; height:200px;"></div>
 	<script type="text/javascript">
-	 	var board = JXG.JSXGraph.initBoard('ellipse_jxgbox', {boundingbox: [-10, 10, 10, -10], axis:true})
+	 	var board = JXG.JSXGraph.initBoard('ellipse_jxgbox', {boundingbox: [-10, 10, 10, -10], axis:true, pan: {enabled: false}, showCopyright:false, showNavigation:false})
 
 		// Create an Ellipse by three points
 		var ellipse_A = board.create('point', [-1,4]);
@@ -212,7 +212,7 @@ Remarkable Identities
 	
 	
 	<script type="text/javascript">
-		var brd = JXG.JSXGraph.initBoard('exp_jxgbox', {boundingbox: [-10, 10, 10, -10], axis:true})
+		var brd = JXG.JSXGraph.initBoard('exp_jxgbox', {boundingbox: [-10, 10, 10, -10], axis:true, pan: {enabled: false}, showCopyright:false, showNavigation:false})
 	    var exp = brd.create('functiongraph',[function(x){ return Math.exp(x); }],{strokecolor: 'red'});
 	    exp.setLabel('f(x)=exp(x)')
 	    exp.labelColor('red')
@@ -284,7 +284,7 @@ Arccos, Arcsin, Arctan
 .. raw:: html
 	
 	<script type="text/javascript">
-		var cos_board = JXG.JSXGraph.initBoard('cos_jxgbox', {boundingbox: [-1, Math.PI, Math.PI, -1], axis:true})
+		var cos_board = JXG.JSXGraph.initBoard('cos_jxgbox', {boundingbox: [-1, Math.PI, Math.PI, -1], axis:true, pan: {enabled: false}, showCopyright:false, showNavigation:false})
 
 	    var cos = cos_board.create('functiongraph',[function(x){ return Math.cos(x); }, 0, Math.PI],{strokecolor: 'red'});
 	    cos.setLabel('cos')
@@ -298,7 +298,7 @@ Arccos, Arcsin, Arctan
 	    arccos.setLabel('arccos')
 	    arccos.labelColor('blue')
 
-	    var sin_board = JXG.JSXGraph.initBoard('sin_jxgbox', {boundingbox: [-Math.PI/2, Math.PI/2, Math.PI/2, -Math.PI/2], axis:true})
+	    var sin_board = JXG.JSXGraph.initBoard('sin_jxgbox', {boundingbox: [-Math.PI/2, Math.PI/2, Math.PI/2, -Math.PI/2], axis:true, pan: {enabled: false}, showCopyright:false, showNavigation:false})
 
 	    var sin = sin_board.create('functiongraph',[function(x){ return Math.sin(x); }, -Math.PI/2, Math.PI/2],{strokecolor: 'red'});
 	    sin.setLabel('sin')
@@ -312,7 +312,7 @@ Arccos, Arcsin, Arctan
 	    arcsin.setLabel('arcsin')
 	    arcsin.labelColor('blue')
 
-	    var tan_board = JXG.JSXGraph.initBoard('tan_jxgbox', {boundingbox: [-3, 3, 3, -3], axis:true})
+	    var tan_board = JXG.JSXGraph.initBoard('tan_jxgbox', {boundingbox: [-3, 3, 3, -3], axis:true, pan: {enabled: false}, showCopyright:false, showNavigation:false})
 
 	    var tan = tan_board.create('functiongraph',[function(x){ return Math.tan(x); }, -Math.PI/2, Math.PI/2],{strokecolor: 'red'});
 	    tan.setLabel('tan')
@@ -622,7 +622,7 @@ Taylor Series
 	
 	<div id="regression_jxgbox" class="jxgbox" style="width:800px; height:400px;"></div>
 	<script type="text/javascript">
-		board = JXG.JSXGraph.initBoard('regression_jxgbox', {boundingbox:[-2, 100, 220, -70], grid: false, axis:true});
+		board = JXG.JSXGraph.initBoard('regression_jxgbox', {boundingbox:[-2, 100, 220, -70], grid: false ,axis:true, pan: {enabled: false}, showCopyright:false, showNavigation:false, showFullscreen:true});
 
 		board.suspendUpdate();
 		var pointlist = [];
