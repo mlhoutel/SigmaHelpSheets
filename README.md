@@ -2,8 +2,8 @@
 
 [![Go to the website](https://github.com/mlhoutel/SigmaHelpSheets/blob/master/screenshot.png)](https://www.sigma-help-sheets.ml)
 
-<a href="https://www.sigma-help-sheets.ml">
-         <img alt="Browse Website" src="https://github.com/mlhoutel/SigmaHelpSheets/blob/master/browse_website.png" style="text-align:center">
+<a href="https://www.sigma-help-sheets.ml" style="text-align:center">
+         <img alt="Browse Website" src="https://github.com/mlhoutel/SigmaHelpSheets/blob/master/browse_website.png">
 </a>
 
 [![Browse Website](https://github.com/mlhoutel/SigmaHelpSheets/blob/master/browse_website.png)](https://www.sigma-help-sheets.ml)
