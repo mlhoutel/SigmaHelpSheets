@@ -62,7 +62,7 @@ html_title = "Sigma Help Sheets"
 html_short_title = "Sigma HS"
 html_logo = "_static/sigmwhite.svg"
 html_favicon = "_static/sumblack.ico"
-
+html_show_sourcelink = False
 html_theme_options = {
     'logo_only': True,
     'prev_next_buttons_location': 'both'

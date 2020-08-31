@@ -116,21 +116,6 @@ Table of the sheets by Subject
 
 	These sheets are not courses, but more like reminders and notes that you can fast check if you are unsure, or maybe find solutions of some problems that you are stuck on. 
 
-:Hobbies:
-	"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-
-.. toctree::
-	:maxdepth: 2
-	:caption: Miscellaneous
-
-	pages/Music/Music.rst
-	pages/Cooking/Cooking.rst
-
 .. _Website Make Text: https://maketext.io/
 .. _Website Loading: https://loading.io/
 
@@ -148,6 +133,9 @@ Table of the sheets by Subject
 
 .. _Website Sublime Text: https://www.sublimetext.com/
 .. _GitHub Packages Sublime Text: https://github.com/SublimeText
+
+Miscellanious
+===============================
 
 :Usefull Tools:
 
@@ -185,44 +173,49 @@ Table of the sheets by Subject
 | | `GitHub Cmder`_                         | | `GitHub Screen to Gif`_                 | | `GitHub Packages Sublime Text`_         |
 +-------------------------------------------+-------------------------------------------+-------------------------------------------+
 
-https://squoosh.app/
+:Other usefull websites:
 
-https://app.diagrams.net/
++--------------------------------------------------------------+-------------------------------------------+
+| https://www.clickminded.com/button-generator/                | Generate buttons images (.png)            |
++--------------------------------------------------------------+-------------------------------------------+
+| https://squoosh.app/                                         | Optimize/Resize images for web            |
++--------------------------------------------------------------+-------------------------------------------+
+| https://app.diagrams.net/                                    | Online diagrams creator/editor            |
++--------------------------------------------------------------+-------------------------------------------+
+| https://app.clickup.com/                                     | Online Gantt chart creator                |
++--------------------------------------------------------------+-------------------------------------------+
+| https://devdocs.io/                                          | Fast Documentation for IT languages etc   |
++--------------------------------------------------------------+-------------------------------------------+
+| https://libraries.io/                                        | Find open source packages                 |
++--------------------------------------------------------------+-------------------------------------------+
+| https://devhints.io/                                         | Fast web sheets/code snippets             |
++--------------------------------------------------------------+-------------------------------------------+
+| https://tldr.sh/                                             | Simplified version of man (Unix commands) |
++--------------------------------------------------------------+-------------------------------------------+
+| https://sci-hub.now.sh/                                      | Free access to scientifics papers         |
++--------------------------------------------------------------+-------------------------------------------+
+| https://animista.net/                                        | CSS animations online                     |
++--------------------------------------------------------------+-------------------------------------------+
+| https://bennettfeely.com/clippy/                             | CSS clip-path maker                       |
++--------------------------------------------------------------+-------------------------------------------+
+| https://unsplash.com/                                        | Free-to-use image stock                   |
++--------------------------------------------------------------+-------------------------------------------+
+| https://www.cssportal.com/css-optimize/                      | CSS Optimizer                             |
++--------------------------------------------------------------+-------------------------------------------+
+| https://haveibeenpwned.com/                                  | Test for pwned email address              |
++--------------------------------------------------------------+-------------------------------------------+
+| https://raidforums.com/Announcement-Database-Index-CLICK-ME  | Databases leaks                           |
++--------------------------------------------------------------+-------------------------------------------+
+| https://cdnjs.com/libraries/                                 | JS Libraries distribution                 |
++--------------------------------------------------------------+-------------------------------------------+
+| https://anaconda.org/anaconda/repo                           | Python packages distribution              |
++--------------------------------------------------------------+-------------------------------------------+
+| https://free-for.dev/#/                                      | Browse free softwares                     |
++--------------------------------------------------------------+-------------------------------------------+
 
-https://app.clickup.com/
+.. _More tools: https://www.reddit.com/r/learnprogramming/comments/h10ooq/tools_i_wish_i_had_known_about_when_i_started/
 
-https://devdocs.io/
-https://libraries.io/
-http://eradman.com/entrproject/
-https://devhints.io/
-https://tldr.sh/
-Obtenir un accès gratuit à la majorité des papiers payants : https://sci-hub.tw
-
-# Front-End
-https://animista.net/ 
-
-https://bennettfeely.com/clippy/
-
-# Image stock
-https://unsplash.com/
-
-#Optimisation
-https://www.cssportal.com/css-optimize/
-
-# Useless
-http://www.ouaismaisbon.ch/
-http://www.staggeringbeauty.com/
-http://www.omfgdogs.com/
-
-https://www.reddit.com/r/learnprogramming/comments/h10ooq/tools_i_wish_i_had_known_about_when_i_started/
-
-https://free-for.dev/#/
-
-https://raidforums.com/Announcement-Database-Index-CLICK-ME
-
-https://haveibeenpwned.com/
-
-https://cdnjs.com/libraries/
+`More tools`_ ?
 
 .. |logo| image:: _static/placeholder.png
 	:width: 30%
