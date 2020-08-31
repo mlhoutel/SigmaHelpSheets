@@ -2,11 +2,7 @@
 
 [![Go to the website](https://github.com/mlhoutel/SigmaHelpSheets/blob/master/screenshot.png)](https://www.sigma-help-sheets.ml)
 
-<a href="https://www.sigma-help-sheets.ml" style="text-align:center">
-         <img alt="Browse Website" src="https://github.com/mlhoutel/SigmaHelpSheets/blob/master/browse_website.png">
-</a>
-
-[![Browse Website](https://github.com/mlhoutel/SigmaHelpSheets/blob/master/browse_website.png)](https://www.sigma-help-sheets.ml)
+<a href="https://www.sigma-help-sheets.ml" align="center"><img alt="Browse Website" src="https://github.com/mlhoutel/SigmaHelpSheets/blob/master/browse_website.png"></a>
 
 That’s my help sheets, where I put all the usefull commands, tips and tricks that I find on the subjects that I study, and even more…
 
