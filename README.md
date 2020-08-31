@@ -1,6 +1,7 @@
 # Welcome to my HelpSheets !
 
-https://www.sigma-help-sheets.ml
+[![Go to the website](https://www.sigma-help-sheets.ml/html/_static/sigmwhite.svg)](https://www.sigma-help-sheets.ml)
+
 
 That’s my help sheets, where I put all the usefull commands, tips and tricks that I find on the subjects that I study, and even more…
 
