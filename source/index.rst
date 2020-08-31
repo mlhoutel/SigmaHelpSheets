@@ -59,6 +59,7 @@ Table of the sheets by Subject
 
 	pages/Cpp/Cpp.rst
 	pages/Python/Python.rst
+	pages/Python/Package.rst
 	pages/Csharp/Csharp.rst
 	pages/Java/Java.rst
 
@@ -199,9 +200,14 @@ Obtenir un accès gratuit à la majorité des papiers payants : https://sci-hub.
 
 # Front-End
 https://animista.net/ 
+
 https://bennettfeely.com/clippy/
 
+# Image stock
+https://unsplash.com/
 
+#Optimisation
+https://www.cssportal.com/css-optimize/
 
 # Useless
 http://www.ouaismaisbon.ch/
