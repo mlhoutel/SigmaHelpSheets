@@ -1,3 +1,9 @@
+.. role::  raw-html(raw)
+    :format: html
+
+.. role:: underline
+    :class: underline
+
 ============================
 Welcome to my Help-Sheets !
 ============================
@@ -15,6 +21,7 @@ That's my ``help sheet`` where I put all the **usefull commands**, **tips** and 
 	.. admonition:: You can reach me and see my website
 
 		| `maellhoutellier.com <https://mlhoutel.github.io/maellhoutellier.com/>`_
+		| `github profile <https://github.com/mlhoutel>`_
 		| mlhoutel@gmail.com
 
 
@@ -27,16 +34,12 @@ This website is **primarly built** for me to check the things I may have forgot,
 Table of the sheets by Subject
 ===============================
 
-:Sciences:
-	"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+:Sciences [Maths Physics Chemistry CS Algorithmy]:
+	
+	Fundamental sciences are very important to me, I am really interested in understanding the mechanisms and rules governing the world. As a hobby, I make small simulations and visualizations of physical systems, mainly at the macroscopic level. :raw-html:`&#128516;`
 
 .. toctree::
-	:maxdepth: 2
+	:maxdepth: 1
 	:caption: Sciences
 	
 	pages/Maths/Maths.rst
@@ -45,16 +48,20 @@ Table of the sheets by Subject
 	pages/Computer Science/Computer Science.rst
 	pages/Algorithms/Algorithms.rst
 
-:Desktop Languages:
-	"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+
+:Desktop Languages [C Cpp Python Csharp Java]:
+
+	I describle desktop languages as languages which are mainly used to create application software on computer / mobile platforms independently of web (warning, not exclusive: for example, python can be used for the web, like currently this website :raw-html:`&#128521;` )
+
+	:underline:`That include languages that:`
+
+	* need to be compiled in machine language for the plateform (like C, C++, C# ...)
+	* need to be compiled on the fly by a virtual machine (like Java, Scala ...) 
+	* are translated in read time, or scripting languages (like Python, Ruby ...)
 	
 .. toctree::
-	:maxdepth: 2
+	:maxdepth: 1
 	:caption: Desktop Languages
 
 	pages/Cpp/Cpp.rst
@@ -63,31 +70,25 @@ Table of the sheets by Subject
 	pages/Csharp/Csharp.rst
 	pages/Java/Java.rst
 
-:Web Languages:
-	"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+:Web Languages [Js Php]:
+	
+	I describle web languages as frontend/backend languages which are mainly used to create web application
 	
 .. toctree::
-	:maxdepth: 2
+	:maxdepth: 1
 	:caption: Web Languages
 
 	pages/JavaScript/JavaScript.rst
 	pages/Php/Php.rst
 
 :System:
-	"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+	
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+
 
 .. toctree::
-	:maxdepth: 2
+	:maxdepth: 1
 	:caption: System
 
 	pages/Windows/Windows.rst
@@ -95,15 +96,12 @@ Table of the sheets by Subject
 	pages/Database/Database.rst
 
 :Miscellaneous:
-	"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
 
 .. toctree::
-	:maxdepth: 2
+	:maxdepth: 1
 	:caption: Miscellaneous
 
 	pages/Sphinx/Sphinx.rst
@@ -203,8 +201,6 @@ Miscellanious
 | https://www.cssportal.com/css-optimize/                      | CSS Optimizer                             |
 +--------------------------------------------------------------+-------------------------------------------+
 | https://haveibeenpwned.com/                                  | Test for pwned email address              |
-+--------------------------------------------------------------+-------------------------------------------+
-| https://raidforums.com/Announcement-Database-Index-CLICK-ME  | Databases leaks                           |
 +--------------------------------------------------------------+-------------------------------------------+
 | https://cdnjs.com/libraries/                                 | JS Libraries distribution                 |
 +--------------------------------------------------------------+-------------------------------------------+
