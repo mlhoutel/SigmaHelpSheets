@@ -64,7 +64,6 @@ Table of the sheets by Subject
 
 	pages/Cpp/Cpp.rst
 	pages/Python/Python.rst
-	pages/Python/Package.rst
 	pages/Csharp/Csharp.rst
 	pages/Java/Java.rst
 

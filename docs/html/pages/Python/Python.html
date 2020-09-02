@@ -48,7 +48,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.3.5/jsxgraph.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Packages Conda" href="Package.html" />
+    <link rel="next" title="C#" href="../Csharp/Csharp.html" />
     <link rel="prev" title="C++" href="../Cpp/Cpp.html" />
     <link href="../../_static/style.css" rel="stylesheet" type="text/css">  
 
@@ -124,9 +124,16 @@
 <li class="toctree-l2"><a class="reference internal" href="#pyfftw">pyFFTW</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pyhdf">pyHdf</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tensorflow">Tensorflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#package-conda-forge">Package Conda-Forge</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#package-structure">Package Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-a-precompiled-package">Install a Precompiled Package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#build-locally-a-package">Build Locally a Package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#build-for-remote">Build for Remote</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Package.html">Packages Conda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#temp">TEMP</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../Csharp/Csharp.html">C#</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Java/Java.html">Java</a></li>
 </ul>
@@ -204,7 +211,7 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="Package.html" class="btn btn-neutral float-right" title="Packages Conda" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../Csharp/Csharp.html" class="btn btn-neutral float-right" title="C#" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../Cpp/Cpp.html" class="btn btn-neutral float-left" title="C++" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -310,6 +317,200 @@ cross plateform, create installer for linux, os, windows</p>
 <div class="section" id="tensorflow">
 <h2>Tensorflow<a class="headerlink" href="#tensorflow" title="Permalink to this headline">¶</a></h2>
 </div>
+<div class="section" id="package-conda-forge">
+<h2>Package Conda-Forge<a class="headerlink" href="#package-conda-forge" title="Permalink to this headline">¶</a></h2>
+<p>Conda-Forge docs:
+<a class="reference external" href="https://conda-forge.org/docs/maintainer/infrastructure.html">https://conda-forge.org/docs/maintainer/infrastructure.html</a></p>
+<p>Smithy:
+<a class="reference external" href="https://github.com/conda-forge/conda-smithy">https://github.com/conda-forge/conda-smithy</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">n</span> <span class="n">root</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">conda</span><span class="o">-</span><span class="n">smithy</span>
+</pre></div>
+</div>
+<p>Generating the Package skeletton:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">skeleton</span> <span class="n">pypi</span> <span class="n">your_package_name</span>
+</pre></div>
+</div>
+<p>Source code must be availlable <code class="docutils literal notranslate"><span class="pre">as</span> <span class="pre">one</span> <span class="pre">file</span></code> (as an archive [.tar.gz, .zip, .tar.bz2, .tar.xz] or tagged on GitHub)</p>
+<div class="section" id="package-structure">
+<h3>Package Structure<a class="headerlink" href="#package-structure" title="Permalink to this headline">¶</a></h3>
+<p>Base Template:
+<a class="reference external" href="https://github.com/conda-forge/staged-recipes">https://github.com/conda-forge/staged-recipes</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">conda</span><span class="o">-</span><span class="n">forge</span><span class="o">/</span><span class="n">staged</span><span class="o">-</span><span class="n">recipes</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>meta.yaml (description, version, source code, requirements)</p></li>
+</ul>
+<p><a class="reference external" href="https://conda-forge.org/docs/maintainer/adding_pkgs.html#meta-yaml">https://conda-forge.org/docs/maintainer/adding_pkgs.html#meta-yaml</a></p>
+<p>selecteur <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">[linux]</span> <span class="pre">[win]</span></code></p>
+<ul class="simple">
+<li><p>bld.bat (Windows build package)</p></li>
+<li><p>build.sh (Unix build package)</p></li>
+</ul>
+<p>Conda constructor (env bootstrapper)</p>
+<p>conda install constructor
+installer settings in construct.yaml
+cross plateform, create installer for linux, os, windows</p>
+</div>
+<div class="section" id="install-a-precompiled-package">
+<h3>Install a Precompiled Package<a class="headerlink" href="#install-a-precompiled-package" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Search package on the Anaconda Cloud: <a class="reference external" href="https://anaconda.org/conda-forge">https://anaconda.org/conda-forge</a></p></li>
+<li><p>Install the package: <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">prismatic_gui</span></code></p></li>
+<li><p>It will Download and Extract all the packages that the program need to run (in <code class="docutils literal notranslate"><span class="pre">Anaconda3\envs\env_name\Library</span></code>)</p></li>
+<li><p>You can find the binaries in <code class="docutils literal notranslate"><span class="pre">Anaconda3\envs\env_name\Library\bin</span></code></p></li>
+</ol>
+</div>
+<div class="section" id="build-locally-a-package">
+<h3>Build Locally a Package<a class="headerlink" href="#build-locally-a-package" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Install conda-build: <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">conda-build</span> <span class="pre">[--use-local]</span></code></p></li>
+<li><p>Make your package, or get a package source code (ex: <a class="reference external" href="https://github.com/ericpre/prismatic_split-feedstock">https://github.com/ericpre/prismatic_split-feedstock</a>)</p></li>
+<li><p>Lanch the build conda build recipe -c conda-forge</p></li>
+<li><p>You can find the build in <code class="docutils literal notranslate"><span class="pre">Anaconda3\conda-bld</span></code></p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">build</span> <span class="n">recipe</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="o">--</span><span class="n">variants</span> <span class="s2">&quot;{&#39;cuda_compiler_version&#39;:&#39;10.2&#39;}“</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="build-for-remote">
+<h3>Build for Remote<a class="headerlink" href="#build-for-remote" title="Permalink to this headline">¶</a></h3>
+<p>Todo (Azure pipeline)</p>
+</div>
+</div>
+<div class="section" id="temp">
+<h2>TEMP<a class="headerlink" href="#temp" title="Permalink to this headline">¶</a></h2>
+<p>cd D:Librariescuda_toolkitcudatoolkit-dev-feedstock
+conda build recipe -c conda-forge&gt;output.txt
+conda install cudatoolkit-dev –use-local</p>
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt>Disable the windows skip:</dt><dd><p>skip: True  # [win]</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Error with wget x64:</dt><dd><p>conda_build.exceptions.DependencyNeedsBuildingError: Unsatisfiable dependencies for platform win-64: {‘wget’}
+=&gt; switch to python-wget (win only, I don’t want to edit linux  create errors)</p>
+</dd>
+</dl>
+</li>
+</ol>
+<p><a class="reference external" href="https://github.com/ericpre/prismatic">https://github.com/ericpre/prismatic</a></p>
+<p>CONDA FORGE
+<a class="reference external" href="https://conda-forge.org/docs/">https://conda-forge.org/docs/</a>
+<a class="reference external" href="https://conda-forge.org/docs/user/introduction.html#what-is-conda-forge">https://conda-forge.org/docs/user/introduction.html#what-is-conda-forge</a></p>
+<p>STRUCTURE
+<a class="reference external" href="https://conda-forge.org/docs/user/ci-skeleton.html">https://conda-forge.org/docs/user/ci-skeleton.html</a></p>
+<p>AZURE PIPELINES
+<a class="reference external" href="https://www.youtube.com/watch?v=7pzBwuMjpP0">https://www.youtube.com/watch?v=7pzBwuMjpP0</a></p>
+<p>Build package: conda-build
+<a class="reference external" href="https://docs.conda.io/projects/conda-build/">https://docs.conda.io/projects/conda-build/</a></p>
+<p>Receipe: conda-smithy
+<a class="reference external" href="https://conda-forge.org/docs">https://conda-forge.org/docs</a></p>
+<p>Create structure: yaml
+configd: <a class="reference external" href="https://github.com/conda-forge/conda-forge-pinning-feedstock/blob/master/recipe/conda_build_config.yaml">https://github.com/conda-forge/conda-forge-pinning-feedstock/blob/master/recipe/conda_build_config.yaml</a></p>
+<p>then build (locally or from remote with azure pipelines)</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=HSK-6dCnYVQ">https://www.youtube.com/watch?v=HSK-6dCnYVQ</a></p>
+<dl class="simple">
+<dt>3 files min:</dt><dd><p>meta.yaml (description, version, source code, requirements)
+bld.bat (Windows build package)
+build.sh (Unix build package)</p>
+</dd>
+</dl>
+<p>Conda constructor (env bootstrapper)</p>
+<p>conda install constructor
+installer settings in construct.yaml
+cross plateform, create installer for linux, os, windows</p>
+<p>Build locally:</p>
+<p>Source code</p>
+<p>Processus assez long (30 minutes)</p>
+<p>Then upload on the Anaconda Cloud…</p>
+<p>Installation:
+conda install prismatic=*=gpu* -c ericpre</p>
+<p>NVIDIA: /!Pas sur windows
+conda install cudatoolkit-dev -c conda-forge
+<a class="reference external" href="https://github.com/conda-forge/cudatoolkit-dev-feedstock">https://github.com/conda-forge/cudatoolkit-dev-feedstock</a></p>
+<dl class="simple">
+<dt>Two options:</dt><dd><ul class="simple">
+<li><p>Converge conda-forge/cudatoolkit-dev-feedstock with AnacondaRecipes/cudatoolkit-feedstock</p></li>
+<li><p>Tweak the recipe scripts</p></li>
+</ul>
+</dd>
+</dl>
+<p>Option 1 will be more future proof but may a bigger and better change</p>
+<p>Questions:</p>
+<p>Compilation: conda build recipe -c conda-forge…</p>
+<p>Récuperation des dépendance (ressources de bases puis compilateur et librairies)
+=&gt; librairies dépendances pré compilées?
+Ou récuperation des ressources sur l’ordinateur (ex VS, CUDA etc)</p>
+<p>Seulement le code source compilé et lié aux dépendances</p>
+<p>Prismatic cli OK/ GUI OK/
+Tests prismatic simple/double OK
+Erreur</p>
+<p>cudatoolkit-dev Non fonctionnel Windows (tous les scripts en .sh)
+AnacondaRecipes/cudatoolkit-feedstock</p>
+<p>/ ————————————————————————- /</p>
+<p>Recupere librairies/ressources dans caches
+Definies (déjà packages conda faites pour conda, tout est compatible)</p>
+<p>Pour windows
+Compiler cuda-toolkit (restriction, pas open source)
+Anaconda arrangement avec Nvidia (pour pouvoir distribuer le toolkit 1 packages)
+Docker base conda toolkit/ jsute détails, regler paths etc</p>
+<p>Conda-build gere version (dans conda forge, package qui existe mais problèmes actuellement avec CUDA10.2
+et ne supporte pas windows) =&gt; Il faut l’adapter pour Windows
+cudatoolkit-dev package feedtock:
+Chaque recette = repository
+Les pakcages sont fait a partir des repository (code source)
+Fichiers configuration (parametres par toucher)</p>
+<p>doc conda forge <a class="reference external" href="https://conda-forge.org/docs/user/ci-skeleton.html">https://conda-forge.org/docs/user/ci-skeleton.html</a></p>
+<p>Seulement modifier meta (recette) Puis build: sript: voir le script executé</p>
+<p>Compilation =&gt; anaconda cloud =&gt; téléchargement (fichier python et binaries compilés)</p>
+<p>cudatoolkit spécial: Coquille vide, quand installe télécharge cuda toolkit et installe localement (pas habituel)
+Utile pour compiler du code (pas pour utiliser cuda toolkit indépendemment)</p>
+<p>channel défault (Anaconda) et conda-forge (communauté conda-forge, open source/gratuit)</p>
+<p>cudatoolkit-feedstock (Anaconda): <a class="reference external" href="https://github.com/AnacondaRecipes/cudatoolkit-feedstock">https://github.com/AnacondaRecipes/cudatoolkit-feedstock</a>
+=&gt; Utilisatuer final(build.py, recette du package Windows et Linux)</p>
+<p>cuda_toolkit-dev (copie a l’installation)
+=&gt; Ancinne version du script (maintenant divergence =&gt; QUE POUR LINUX)
+script cuda toolkit dev ne marche pas avec la dernière ? (10.2 a verifier)</p>
+<p>(historique en commun)</p>
+<p>But:
+Principalement modifier build.py:
+=&gt; télécharger la distribution cuda depuis le site officiel</p>
+<p>Fork puis pull request…</p>
+<p>post_install car pas le dorit de distribuer (vraiment similaire nbuild conda toolkit)
+post-link après installation après copié packages</p>
+<p>conda build recipe -c conda-forge 2&amp;1&gt; output.txt
+recipe = folder</p>
+<p>packages dans dossier distribution miniconda3 conda-build en .tarball
+conda install cudatoolkit-dev –use-local</p>
+<p>build: comopiler cuda
+Ajoute automatiquement cudatioolkit
+automatisé</p>
+<p>host:
+Librairies necessaire a l’instalation</p>
+<p>run: librairies necessaires lors du focntionnement</p>
+<p>/ —————————————————————————————– /
+Ressources:</p>
+<p>Aide creation package: <a class="reference external" href="https://docs.conda.io/projects/conda-build/en/latest/user-guide/tutorials/build-pkgs.html">https://docs.conda.io/projects/conda-build/en/latest/user-guide/tutorials/build-pkgs.html</a>
+Build dans: D:ProgrammesAnaconda3conda-bld</p>
+<p>cd D:Librariescuda_toolkitcudatoolkit-dev-feedstock
+conda build recipe -c conda-forge&gt;output.txt
+conda install cudatoolkit-dev –use-local</p>
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt>Disable the windows skip:</dt><dd><p>skip: True  # [win]</p>
+</dd>
+</dl>
+</li>
+</ol>
+<dl class="simple">
+<dt>1.1 Error with wget x64:</dt><dd><p>conda_build.exceptions.DependencyNeedsBuildingError: Unsatisfiable dependencies for platform win-64: {‘wget’}
+=&gt; switch to python-wget (win only, I don’t want to edit linux  create errors)</p>
+</dd>
+</dl>
+</div>
 </div>
 
 
@@ -320,7 +521,7 @@ cross plateform, create installer for linux, os, windows</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Package.html" class="btn btn-neutral float-right" title="Packages Conda" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../Csharp/Csharp.html" class="btn btn-neutral float-right" title="C#" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../Cpp/Cpp.html" class="btn btn-neutral float-left" title="C++" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
