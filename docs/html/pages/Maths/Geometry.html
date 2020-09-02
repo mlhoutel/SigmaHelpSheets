@@ -1,0 +1,506 @@
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Maths - Geometry &mdash; Sigma Help Sheets</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/sumblack.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/clipboard.min.js"></script>
+        <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/debug.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.3.5/jsxgraphcore.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.3.5/jsxgraph.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Physics" href="../Physics/Physics.html" />
+    <link rel="prev" title="Maths - Discrete" href="Discrete.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">  
+
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html">
+          
+
+          
+            
+            <img src="../../_static/sigmwhite.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Sciences</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="Maths.html">Maths</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Analysis.html">Maths - Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Discrete.html">Maths - Discrete</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Maths - Geometry</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#triangle">Triangle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#circles-and-ellipse">Circles and Ellipse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vectors">Vectors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tensors">Tensors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#matrix">Matrix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#quaternions">Quaternions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Maths.html#latex">Latex</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Physics/Physics.html">Physics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chemistry/Chemistry.html">Chemistry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Computer Science/Computer Science.html">Computer Science</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Algorithms/Algorithms.html">Algorithms</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Desktop Languages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Cpp/Cpp.html">C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Python/Python.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Python/Package.html">Packages Conda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Csharp/Csharp.html">C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Java/Java.html">Java</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Web Languages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../JavaScript/JavaScript.html">JavaScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Php/Php.html">PHP</a></li>
+</ul>
+<p class="caption"><span class="caption-text">System</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Windows/Windows.html">Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Unix/Unix.html">Unix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Database/Database.html">DataBases</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Miscellaneous</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Sphinx/Sphinx.html">Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docker/Docker.html">Docker</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Help-Sheet</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="Maths.html">Maths</a> &raquo;</li>
+        
+      <li>Maths - Geometry</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="../Physics/Physics.html" class="btn btn-neutral float-right" title="Physics" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Discrete.html" class="btn btn-neutral float-left" title="Maths - Discrete" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="maths-geometry">
+<h1>Maths - Geometry<a class="headerlink" href="#maths-geometry" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="table-of-contents">
+<p class="topic-title">Table of Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#triangle" id="id1">Triangle</a></p></li>
+<li><p><a class="reference internal" href="#circles-and-ellipse" id="id2">Circles and Ellipse</a></p></li>
+<li><p><a class="reference internal" href="#vectors" id="id3">Vectors</a></p></li>
+<li><p><a class="reference internal" href="#tensors" id="id4">Tensors</a></p></li>
+<li><p><a class="reference internal" href="#matrix" id="id5">Matrix</a></p></li>
+<li><p><a class="reference internal" href="#quaternions" id="id6">Quaternions</a></p></li>
+</ul>
+</div>
+<div class="section" id="triangle">
+<h2><a class="toc-backref" href="#id1">Triangle</a><a class="headerlink" href="#triangle" title="Permalink to this headline">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Pythagorean Theorem</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="admonition-pythagorean-theorem-rectangle-triangle admonition">
+<p class="admonition-title">Pythagorean Theorem (Rectangle Triangle)</p>
+<p><span class="math notranslate nohighlight">\(c^2=a^2+b^2 \Leftrightarrow c=\sqrt{a^2+b^2}\)</span></p>
+</div>
+<div id="pythagor_jxgbox" class="jxgbox" style="width:400px; height:400px;"></div>
+<script type="text/javascript">
+        var board = JXG.JSXGraph.initBoard('pythagor_jxgbox', {boundingbox: [-10, 20, 20, -10], axis:true, pan: {enabled: false}, showCopyright:false, showNavigation:false});
+
+        var p1 = board.create('point',[4, 0], {name:'', size:4, fixed:false, snapSizeY: 100, snapToGrid: true});
+        var p2 = board.create('point',[0, 0], {name:'', size:4, fixed:true, color: 'blue'});
+        var p3 = board.create('point',[0, 3], {name:'', size:4, fixed:false, snapSizeX: 100, snapToGrid: true});
+
+        a = board.create('angle',[p1, p2, p3], {radius:0.5});
+
+        // a.setAngle(function() {return Math.PI / 2; });
+
+        var triangle = board.create('polygon',[p1,p2,p3], {fillOpacity:0.05});
+
+        var p1_12 = board.create('point',[p1, board.create('transform', [-Math.PI/2, p2], {type:'rotate'})], {name:'', size:0});
+        var p2_12 = board.create('point',[p2, board.create('transform', [Math.PI/2, p1], {type:'rotate'})], {name:'', size:0});
+        var square_12 = board.create('polygon',[p1, p2, p1_12, p2_12], {fillOpacity:0.5, name:'B^2', withLabel: true, fillColor: 'blue'});
+
+
+        var p1_13 = board.create('point',[p1, board.create('transform', [Math.PI/2, p3], {type:'rotate'})], {name:'', size:0});
+        var p2_13 = board.create('point',[p3, board.create('transform', [-Math.PI/2, p1], {type:'rotate'})], {name:'', size:0});
+        var square_13 = board.create('polygon',[p1, p3, p1_13, p2_13], {fillOpacity:0.5, name:'C^2', withLabel: true, fillColor: 'green'});
+
+
+        var p1_23 = board.create('point',[p2, board.create('transform', [-Math.PI/2, p3], {type:'rotate'})], {name:'', size:0});
+        var p2_23 = board.create('point',[p3, board.create('transform', [Math.PI/2, p2], {type:'rotate'})], {name:'', size:0});
+        var square_23 = board.create('polygon',[p2, p3, p1_23, p2_23], {fillOpacity:0.5, name:'A^2', withLabel: true, fillColor: 'yellow'});
+
+        board.update()
+        board.on('update', function(e, i){
+                square_12.name='B^2='+Math.round(square_12.Area())
+                square_13.name='C^2='+Math.round(square_13.Area())
+                square_23.name='A^2='+Math.round(square_23.Area())
+        });
+
+        board.update()
+</script><dl class="field-list simple">
+<dt class="field-odd">Thales Theorem</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<div class="admonition-thales-theorem-homothety admonition">
+<p class="admonition-title">Thales Theorem (Homothety)</p>
+<p><span class="math notranslate nohighlight">\(\Large\frac{AD}{AB}=\frac{AE}{AC}=\frac{DE}{BC}\)</span></p>
+</div>
+<div id="thales_jxgbox" class="jxgbox" style="width:400px; height:400px;"></div>
+<script type="text/javascript">
+        var board = JXG.JSXGraph.initBoard('thales_jxgbox', {boundingbox: [-10, 20, 20, -10], axis:true, pan: {enabled: false}, showCopyright:false, showNavigation:false});
+
+        var pA = board.create('point', [5, 10], {name:'A'});
+
+        // Create a parallel
+        var pB = board.create('point', [0, 0], {name:'B'});
+        var pC = board.create('point', [10, 0], {name:'C'});
+
+
+        var line_BC = board.create('line', [pB, pC], { strokecolor:'red' });
+
+        var line_BA = board.create('line', [pB, pA]);
+        var line_CA = board.create('line', [pC, pA]);
+
+        var pParallel = board.create('point', [5, 3], { visible:false , name:' '});
+        var line_DE = board.create('parallel', [line_BC, pParallel], { strokecolor:'red' });
+
+        var pD = board.create('intersection', [line_DE, line_BA, 0], { name:'D', fillColor: 'blue'});
+        var pE = board.create('intersection', [line_DE, line_CA, 0], { name:'E', fillColor: 'blue'});
+
+</script></div>
+<div class="section" id="circles-and-ellipse">
+<h2><a class="toc-backref" href="#id2">Circles and Ellipse</a><a class="headerlink" href="#circles-and-ellipse" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-circle-equation admonition">
+<p class="admonition-title">Circle Equation</p>
+<p><span class="math notranslate nohighlight">\((x-a)^2+(y-b)^2=r^2 \Leftrightarrow \sqrt{(x-a)^2+(y-b)^2}=r\)</span></p>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 31%" />
+<col style="width: 69%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Diameter</p></td>
+<td><p><span class="math notranslate nohighlight">\(D=2 \times r\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Circumference</p></td>
+<td><p><span class="math notranslate nohighlight">\(C=2 \times \pi \times r\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Area</p></td>
+<td><p><span class="math notranslate nohighlight">\(A=\pi \times r^2\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<div id="circle_jxgbox" class="jxgbox" style="width:200px; height:200px;"></div>
+<script type="text/javascript">
+        var board = JXG.JSXGraph.initBoard('circle_jxgbox', {boundingbox: [0, 10, 10, 0], axis:true, pan: {enabled: false}, showCopyright:false, showNavigation:false})
+        var p1 = board.create('point', [4.0, 4.0])
+    var p2 = board.create('point', [2.0, 2.0])
+    var c1 = board.create('circle', [p1, p2])
+</script><div class="admonition-ellipse-equation admonition">
+<p class="admonition-title">Ellipse Equation</p>
+<p><span class="math notranslate nohighlight">\((\frac{(x-a)}{Hrad})^2+\frac{(y-b)}{Vrad})^2=1 \Leftrightarrow \sqrt{(\frac{(x-a)}{Hrad})^2+\frac{(y-b)}{Vrad})^2}=1\)</span></p>
+</div>
+<div id="ellipse_jxgbox" class="jxgbox" style="width:200px; height:200px;"></div>
+<script type="text/javascript">
+        var board = JXG.JSXGraph.initBoard('ellipse_jxgbox', {boundingbox: [-10, 10, 10, -10], axis:true, pan: {enabled: false}, showCopyright:false, showNavigation:false})
+
+        // Create an Ellipse by three points
+        var ellipse_A = board.create('point', [-1,4]);
+        var ellipse_B = board.create('point', [-1,-4]);
+        var ellipse_C = board.create('point', [1,1]);
+        var ellipse_el = board.create('ellipse',[ellipse_A,ellipse_B,ellipse_C]);
+
+</script></div>
+<div class="section" id="vectors">
+<h2><a class="toc-backref" href="#id3">Vectors</a><a class="headerlink" href="#vectors" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tensors">
+<h2><a class="toc-backref" href="#id4">Tensors</a><a class="headerlink" href="#tensors" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=TvxmkZmBa-k">https://www.youtube.com/watch?v=TvxmkZmBa-k</a></p>
+</div>
+<div class="section" id="matrix">
+<h2><a class="toc-backref" href="#id5">Matrix</a><a class="headerlink" href="#matrix" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=rowWM-MijXU">https://www.youtube.com/watch?v=rowWM-MijXU</a></p>
+</div>
+<div class="section" id="quaternions">
+<h2><a class="toc-backref" href="#id6">Quaternions</a><a class="headerlink" href="#quaternions" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Physics/Physics.html" class="btn btn-neutral float-right" title="Physics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Discrete.html" class="btn btn-neutral float-left" title="Maths - Discrete" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, LHOUTELLIER Maël
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+
+    
+        <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+            <span class="rst-current-version" data-toggle="rst-current-version">
+                <span class="fa fa-book"> Help Sheet</span>
+                    v: latest
+                <span class="fa fa-caret-down"></span>
+            </span>
+            
+            <div class="rst-other-versions">
+                <dl>
+                    <dt>Versions</dt>
+                    
+                        <dd><a href="#">latest</a></dd>
+                        <dd><a href="#">1.0</a></dd>
+                        <dd><a href="#">1.1</a></dd>
+                    
+                </dl>
+
+                 <dl>
+                    <dt>Downloads</dt>
+                    <dd><a href="#">PDF</a></dd>
+                    <dd><a href="#">ePub</a></dd>
+                    <dd><a href="#">HTML</a></dd>
+                </dl>
+                
+                <dl>
+                    <dt>Informations</dt>
+                    <dd><a href="https://github.com/mlhoutel/Help-Sheet">Project Git</a></dd>
+                    <dd><a href="https://mlhoutel.github.io/maellhoutellier.com/">My website</a></dd>
+                </dl>
+
+                <dl>
+                    <dt>Debug</dt>
+                    <dd><a href="#" data-toggle="rst-debug-badge">Swap badge position</a></dd>
+                </dl>
+            </div>
+        </div>
+    
+    
+    <style>
+        :root {
+            --c-blue: #2980B9;     /* Black    [31;  39;  45]  */
+            --c-grey: #24313A;
+        }
+
+        /* Sidebar header (and topbar for mobile) */
+        .wy-side-nav-search, .wy-nav-top {
+            background: var(--c-blue);
+        }
+        /* Sidebar */
+        .wy-nav-side {
+            background: var(--c-grey);
+        }
+    </style>
+
+
+
+</body>
+</html>

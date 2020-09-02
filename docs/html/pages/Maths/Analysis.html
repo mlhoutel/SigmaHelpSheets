@@ -1,0 +1,1144 @@
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Maths - Analysis &mdash; Sigma Help Sheets</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/sumblack.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/clipboard.min.js"></script>
+        <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/debug.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.3.5/jsxgraphcore.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.3.5/jsxgraph.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Maths - Discrete" href="Discrete.html" />
+    <link rel="prev" title="Maths" href="Maths.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">  
+
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html">
+          
+
+          
+            
+            <img src="../../_static/sigmwhite.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Sciences</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="Maths.html">Maths</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Maths - Analysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#variables-and-functions">Variables and Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#quadratic-function">Quadratic Function</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#remarkable-identities">Remarkable Identities</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#temp">TEMP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#congruence">Congruence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cos-sin-tan">Cos, Sin, Tan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#arccos-arcsin-arctan">Arccos, Arcsin, Arctan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hcos-hsin-htan">Hcos, Hsin, Htan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#complex-numbers">Complex numbers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#linearisation">Linearisation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#integration-help">Integration Help</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#limits">Limits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#integration-by-parts">Integration by Parts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#integration-by-change-of-variables">Integration by Change of Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#integrability-and-comparison">Integrability and Comparison</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#taylor-series">Taylor Series</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fourier-series">Fourier Series</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Discrete.html">Maths - Discrete</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Geometry.html">Maths - Geometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Maths.html#latex">Latex</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Physics/Physics.html">Physics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chemistry/Chemistry.html">Chemistry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Computer Science/Computer Science.html">Computer Science</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Algorithms/Algorithms.html">Algorithms</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Desktop Languages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Cpp/Cpp.html">C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Python/Python.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Python/Package.html">Packages Conda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Csharp/Csharp.html">C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Java/Java.html">Java</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Web Languages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../JavaScript/JavaScript.html">JavaScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Php/Php.html">PHP</a></li>
+</ul>
+<p class="caption"><span class="caption-text">System</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Windows/Windows.html">Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Unix/Unix.html">Unix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Database/Database.html">DataBases</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Miscellaneous</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Sphinx/Sphinx.html">Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docker/Docker.html">Docker</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Help-Sheet</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="Maths.html">Maths</a> &raquo;</li>
+        
+      <li>Maths - Analysis</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="Discrete.html" class="btn btn-neutral float-right" title="Maths - Discrete" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Maths.html" class="btn btn-neutral float-left" title="Maths" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="maths-analysis">
+<h1>Maths - Analysis<a class="headerlink" href="#maths-analysis" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="table-of-contents">
+<p class="topic-title">Table of Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#variables-and-functions" id="id1">Variables and Functions</a></p></li>
+<li><p><a class="reference internal" href="#quadratic-function" id="id2">Quadratic Function</a></p>
+<ul>
+<li><p><a class="reference internal" href="#remarkable-identities" id="id3">Remarkable Identities</a></p></li>
+<li><p><a class="reference internal" href="#temp" id="id4">TEMP</a></p></li>
+<li><p><a class="reference internal" href="#congruence" id="id5">Congruence</a></p>
+<ul>
+<li><p><a class="reference internal" href="#trigonometry" id="id6">Trigonometry</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#cos-sin-tan" id="id7">Cos, Sin, Tan</a></p></li>
+<li><p><a class="reference internal" href="#arccos-arcsin-arctan" id="id8">Arccos, Arcsin, Arctan</a></p></li>
+<li><p><a class="reference internal" href="#hcos-hsin-htan" id="id9">Hcos, Hsin, Htan</a></p></li>
+<li><p><a class="reference internal" href="#complex-numbers" id="id10">Complex numbers</a></p></li>
+<li><p><a class="reference internal" href="#linearisation" id="id11">Linearisation</a></p>
+<ul>
+<li><p><a class="reference internal" href="#integration" id="id12">Integration</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#integration-help" id="id13">Integration Help</a></p></li>
+<li><p><a class="reference internal" href="#limits" id="id14">Limits</a></p></li>
+<li><p><a class="reference internal" href="#integration-by-parts" id="id15">Integration by Parts</a></p></li>
+<li><p><a class="reference internal" href="#integration-by-change-of-variables" id="id16">Integration by Change of Variables</a></p></li>
+<li><p><a class="reference internal" href="#integrability-and-comparison" id="id17">Integrability and Comparison</a></p>
+<ul>
+<li><p><a class="reference internal" href="#series" id="id18">Series</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#taylor-series" id="id19">Taylor Series</a></p></li>
+<li><p><a class="reference internal" href="#fourier-series" id="id20">Fourier Series</a></p>
+<ul>
+<li><p><a class="reference internal" href="#differential-equations" id="id21">Differential Equations</a></p></li>
+<li><p><a class="reference internal" href="#fractals" id="id22">Fractals</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="variables-and-functions">
+<h2><a class="toc-backref" href="#id1">Variables and Functions</a><a class="headerlink" href="#variables-and-functions" title="Permalink to this headline">¶</a></h2>
+<p>Todo</p>
+</div>
+<div class="section" id="quadratic-function">
+<h2><a class="toc-backref" href="#id2">Quadratic Function</a><a class="headerlink" href="#quadratic-function" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-resolve-the-quadratic-equation admonition">
+<p class="admonition-title">Resolve the Quadratic Equation</p>
+<p><span class="math notranslate nohighlight">\(ax^2+bx+c=0 \Leftrightarrow \Delta=b^2-4ac\)</span></p>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 38%" />
+<col style="width: 42%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\Delta &gt; 0\)</span></p></td>
+<td><p>2 solutions in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{-b\pm\sqrt{\Delta}}{2a}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\Delta = 0\)</span></p></td>
+<td><p>1 solution in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{-b}{2a}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\Delta &lt; 0\)</span></p></td>
+<td><p>2 solutions in <span class="math notranslate nohighlight">\(\mathbb{C}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{-b\pm i\sqrt{-\Delta}}{2a}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<div id="quadratic_jxgbox" class="jxgbox" style="width:400px; height:400px;"></div>
+
+<script type="text/javascript">
+        var brd = JXG.JSXGraph.initBoard('quadratic_jxgbox', {boundingbox: [-10, 10, 10, -10], axis:true, pan: {enabled: false}, showCopyright:false, showNavigation:false})
+    var quadratic_a = brd.create('slider',[[2,-3],[7,-3],[-10,1,10]], {name:'a', snapWidth:0.1})
+    var quadratic_b = brd.create('slider',[[2,-5],[7,-5],[-10,0,10]], {name:'b', snapWidth:0.1})
+    var quadratic_c = brd.create('slider',[[2,-7],[7,-7],[-10,0,10]], {name:'c', snapWidth:0.1})
+    f = brd.create('functiongraph',[function(quadratic_x){ return quadratic_a.Value()*quadratic_x*quadratic_x + quadratic_b.Value()*quadratic_x + quadratic_c.Value(); }]);
+</script><div class="section" id="remarkable-identities">
+<h3><a class="toc-backref" href="#id3">Remarkable Identities</a><a class="headerlink" href="#remarkable-identities" title="Permalink to this headline">¶</a></h3>
+<p><span class="math notranslate nohighlight">\((a+b)^2=a^2+2ab+b^2\)</span></p>
+<p><span class="math notranslate nohighlight">\((a-b)^2=a^2-2ab+b^2\)</span></p>
+<p><span class="math notranslate nohighlight">\(a^2-b^2=(a-b)(a+b)\)</span></p>
+</div>
+<div class="section" id="temp">
+<h3><a class="toc-backref" href="#id4">TEMP</a><a class="headerlink" href="#temp" title="Permalink to this headline">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 31%" />
+<col style="width: 16%" />
+<col style="width: 43%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(e^x\)</span></p></td>
+<td><ul class="simple">
+<li><p><span class="math notranslate nohighlight">\((e^x)' = e^x\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim\limits_{\substack{x \to +\infty}} e^x = +\infty\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim\limits_{\substack{x \to -\infty}} e^x = 0\)</span></p></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(exp(ln(x))=x\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(exp(0)=1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(exp(1)=e=2.71828182846\)</span></p></li>
+</ul>
+</td>
+<td rowspan="2"><div id="exp_jxgbox" class="jxgbox" style="width:400px; height:200px;"></div></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(ln(x)\)</span></p></td>
+<td><ul class="simple">
+<li><p><span class="math notranslate nohighlight">\((ln(x))' = \frac{1}{x}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim\limits_{\substack{x \to +\infty}} ln(x) = +\infty\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim\limits_{\substack{x \to 0}} ln(x) = -\infty\)</span></p></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(ln(exp(x))=x\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(ln(0)=undefined\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(ln(1)=0\)</span></p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<script type="text/javascript">
+        var brd = JXG.JSXGraph.initBoard('exp_jxgbox', {boundingbox: [-10, 10, 10, -10], axis:true, pan: {enabled: false}, showCopyright:false, showNavigation:false})
+    var exp = brd.create('functiongraph',[function(x){ return Math.exp(x); }],{strokecolor: 'red'});
+    exp.setLabel('f(x)=exp(x)')
+    exp.labelColor('red')
+
+    var line = brd.create('functiongraph',[function(x){ return x; }],{strokecolor: 'grey', dash:1});
+    line.setLabel('y=x')
+    line.labelColor('grey')
+
+    var log = brd.create('functiongraph',[function(x){ return Math.log(x); }],{strokecolor: 'blue'});
+    log.setLabel('g(x)=ln(x)')
+    log.labelColor('blue')
+</script></div>
+<div class="section" id="congruence">
+<h3><a class="toc-backref" href="#id5">Congruence</a><a class="headerlink" href="#congruence" title="Permalink to this headline">¶</a></h3>
+<p>TODO</p>
+<div class="section" id="trigonometry">
+<h4><a class="toc-backref" href="#id6">Trigonometry</a><a class="headerlink" href="#trigonometry" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+<div class="section" id="cos-sin-tan">
+<h3><a class="toc-backref" href="#id7">Cos, Sin, Tan</a><a class="headerlink" href="#cos-sin-tan" title="Permalink to this headline">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 15%" />
+<col style="width: 18%" />
+<col style="width: 18%" />
+<col style="width: 18%" />
+<col style="width: 18%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\theta\)</span>
+<span class="math notranslate nohighlight">\((deg)\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0\)</span>
+<span class="math notranslate nohighlight">\((0^\circ)\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{\pi}{6}\)</span>
+<span class="math notranslate nohighlight">\((30^\circ)\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{\pi}{4}\)</span>
+<span class="math notranslate nohighlight">\((45^\circ)\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{\pi}{3}\)</span>
+<span class="math notranslate nohighlight">\((60^\circ)\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{\pi}{2}\)</span>
+<span class="math notranslate nohighlight">\((90^\circ)\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\cos\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{\sqrt{3}}{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{\sqrt{2}}{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{1}{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\sin\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{1}{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{\sqrt{2}}{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{\sqrt{3}}{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\tan\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{\sqrt{3}}{3}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\sqrt{3}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(+\infty\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p><span class="math notranslate nohighlight">\(\cos^2(x)+\sin^2(x)=1\)</span></p>
+<p><span class="math notranslate nohighlight">\(\cos(x+y)=\cos(x)*\cos(y) - \sin(x)*\sin(y)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\sin(x+y)=\sin(x)*\cos(y) + \cos(x)*\sin(y)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\cos^2(x) - \sin^2(x)=\cos(2x)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\cos^2(x) = \frac{1+\cos(2x)}{2}\)</span></p>
+</div>
+<div class="section" id="arccos-arcsin-arctan">
+<h3><a class="toc-backref" href="#id8">Arccos, Arcsin, Arctan</a><a class="headerlink" href="#arccos-arcsin-arctan" title="Permalink to this headline">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 38%" />
+<col style="width: 38%" />
+<col style="width: 24%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\arcsin{0}=0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\arccos{0}=\frac{\pi}{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\arctan{0}=0\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\arcsin{\frac{3\pi}{4}}=\frac{\pi}{4}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\arccos{-1}=\pi\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\arctan{1}=\frac{\pi}{4}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\arcsin{-1}=-\frac{\pi}{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\arccos{1}=0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\arctan{-1}=-\frac{\pi}{4}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\arcsin{\sin{\frac{15\pi}{4}}}=-\frac{\pi}{4}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\arccos{\frac{-\sqrt{3}}{2}}=\frac{5\pi}{6}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\arcsin{\frac{1}{2}}=\frac{\pi}{6}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\arccos{\frac{1}{2}}=\frac{\pi}{3}\)</span></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div id="cos_jxgbox" class="jxgbox" style="width:200px; height:200px;"></div></td>
+<td><div id="sin_jxgbox" class="jxgbox" style="width:200px; height:200px;"></div></td>
+<td><div id="tan_jxgbox" class="jxgbox" style="width:200px; height:200px;"></div></td>
+</tr>
+</tbody>
+</table>
+<script type="text/javascript">
+        var cos_board = JXG.JSXGraph.initBoard('cos_jxgbox', {boundingbox: [-1, Math.PI, Math.PI, -1], axis:true, pan: {enabled: false}, showCopyright:false, showNavigation:false})
+
+    var cos = cos_board.create('functiongraph',[function(x){ return Math.cos(x); }, 0, Math.PI],{strokecolor: 'red'});
+    cos.setLabel('cos')
+    cos.labelColor('red')
+
+    var cos_line = cos_board.create('functiongraph',[function(x){ return x; }, -1, Math.PI],{strokecolor: 'grey', dash:1});
+    cos_line.setLabel('y=x')
+    cos_line.labelColor('grey')
+
+    var arccos = cos_board.create('functiongraph',[function(x){ return Math.acos(x); }, -1, Math.PI],{strokecolor: 'blue'});
+    arccos.setLabel('arccos')
+    arccos.labelColor('blue')
+
+    var sin_board = JXG.JSXGraph.initBoard('sin_jxgbox', {boundingbox: [-Math.PI/2, Math.PI/2, Math.PI/2, -Math.PI/2], axis:true, pan: {enabled: false}, showCopyright:false, showNavigation:false})
+
+    var sin = sin_board.create('functiongraph',[function(x){ return Math.sin(x); }, -Math.PI/2, Math.PI/2],{strokecolor: 'red'});
+    sin.setLabel('sin')
+    sin.labelColor('red')
+
+    var sin_line = sin_board.create('functiongraph',[function(x){ return x; }, -Math.PI/2, Math.PI/2],{strokecolor: 'grey', dash:1});
+    sin_line.setLabel('y=x')
+    sin_line.labelColor('grey')
+
+    var arcsin = sin_board.create('functiongraph',[function(x){ return Math.asin(x); }, -Math.PI/2, Math.PI/2],{strokecolor: 'blue'});
+    arcsin.setLabel('arcsin')
+    arcsin.labelColor('blue')
+
+    var tan_board = JXG.JSXGraph.initBoard('tan_jxgbox', {boundingbox: [-3, 3, 3, -3], axis:true, pan: {enabled: false}, showCopyright:false, showNavigation:false})
+
+    var tan = tan_board.create('functiongraph',[function(x){ return Math.tan(x); }, -Math.PI/2, Math.PI/2],{strokecolor: 'red'});
+    tan.setLabel('tan')
+    tan.labelColor('red')
+
+    var cos_line = tan_board.create('functiongraph',[function(x){ return x; }, -3, 3],{strokecolor: 'grey', dash:1});
+    cos_line.setLabel('y=x')
+    cos_line.labelColor('grey')
+
+    var arctan = tan_board.create('functiongraph',[function(x){ return Math.atan(x); }, -3, 3],{strokecolor: 'blue'});
+    arctan.setLabel('arctan')
+    arctan.labelColor('blue')
+</script></div>
+<div class="section" id="hcos-hsin-htan">
+<h3><a class="toc-backref" href="#id9">Hcos, Hsin, Htan</a><a class="headerlink" href="#hcos-hsin-htan" title="Permalink to this headline">¶</a></h3>
+<p><span class="math notranslate nohighlight">\((\cosh+\sinh)(\cosh-\sinh)=1\)</span></p>
+<p><span class="math notranslate nohighlight">\(\cosh^2(x)=\sinh^2(x)=1\)</span></p>
+<p><span class="math notranslate nohighlight">\(\cosh(x)+\sinh(x)=e^x\)</span></p>
+<p><span class="math notranslate nohighlight">\(\cosh(x)-\sinh(x)=e^{-x}\)</span></p>
+<p>hyperbolic cos and sin graph</p>
+</div>
+<div class="section" id="complex-numbers">
+<h3><a class="toc-backref" href="#id10">Complex numbers</a><a class="headerlink" href="#complex-numbers" title="Permalink to this headline">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Euler formula</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p><span class="math notranslate nohighlight">\(e^{i\pi}=-1\)</span></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 49%" />
+<col style="width: 51%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\cos{x}=\frac{e^{ix}+e^{-ix}}{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\sin{x}=\frac{e^{ix}-e^{-ix}}{2i}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>To develop…</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 40%" />
+<col style="width: 30%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\cosh{x}=\frac{e^x+e^{-x}}{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\arccos(\cos{x})=x [0;\pi]\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\cos(\arccos{x})=x [-1;1]\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\sinh{x}=\frac{e^x-e^{-x}}{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\arcsin(\sin{x})=x [-\frac{\pi}{2};\frac{\pi}{2}]\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\sin(\arcsin{x})=x [-1;1]\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\tanh{x}=\frac{e^{2x}-1}{e^{2x}+1}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\arctan(\tan{x})=x [-\frac{\pi}{2};\frac{\pi}{2}]\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\tan(\arctan{x})=x \mathbb{R}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="linearisation">
+<h3><a class="toc-backref" href="#id11">Linearisation</a><a class="headerlink" href="#linearisation" title="Permalink to this headline">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(cos^2(x)=\frac{1-\cos{2x}}{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(sin^2(x)=\frac{1-\cos{2x}}{2}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>To develop…</p>
+<div class="section" id="integration">
+<h4><a class="toc-backref" href="#id12">Integration</a><a class="headerlink" href="#integration" title="Permalink to this headline">¶</a></h4>
+<dl class="field-list simple">
+<dt class="field-odd">Derivatives</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 38%" />
+<col style="width: 37%" />
+<col style="width: 26%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(Function\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(Derivative\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(Domain\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(a\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(ax\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(a\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(x^n\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(nx^{n-1}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\frac{1}{x^n}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(-\frac{n}{x^{n+1}}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\sqrt{x}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{1}{2 \sqrt{x}}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\ln{x}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{1}{x}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(e^x\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(e^x\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\sin{x}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\cos{x}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\cos{x}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(-\sin{x}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\tan{x}=\frac{\sin{x}}{\cos{x}}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{1}{\cos^2(x)}=1+\tan^2(x)\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\arcsin{x}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{1}{\sqrt{1-x^2}}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\arccos{x}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(-\frac{1}{\sqrt{1-x^2}}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\arctan{x}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{1}{\sqrt{1+x^2}}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\sinh{x}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\cosh{x}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\cosh{x}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\sinh{x}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\tanh{x}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{1}{cosh^2(x)}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(ku\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(ku'\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(u+v\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(u'+v'\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(uv\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(u'v+uv'\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\frac{u}{v}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{u'v-uv'}{v^2}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(u^n\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(nu'u^{n-1}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\sqrt{u}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{u'}{2\sqrt{u}}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(e^u\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(u'e^u\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\ln{u}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{u'}{u}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\arctan{u}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{u'}{1+u^2}\)</span></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<dl class="field-list simple">
+<dt class="field-odd">Primitives</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 38%" />
+<col style="width: 37%" />
+<col style="width: 26%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(Function\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(Primitive+C\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(Domain\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(x^n\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{1}{n+1}x^{n+1}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\frac{1}{x}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\ln{x}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(u'e^u\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(e^u\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(u'u^n\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{1}{n+1}u^{n+1}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\frac{u'}{u}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\ln{|u|}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\frac{1}{2\sqrt{x}}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\sqrt{x}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\frac{1}{\sqrt{1-u^2}}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\arcsin{u}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\frac{-1}{\sqrt{1-u^2}}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\arccos{u}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\frac{1}{1+u^2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\arctan{u}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(u'\cos{u}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\sin{u}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(u'\sin{u}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(-\cos{u}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\frac{u'}{\cos^2(u)}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\tan{u}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\frac{-u'}{u^2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{1}{u}\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\ln{x}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(x\ln{x}-x\)</span></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="integration-help">
+<h3><a class="toc-backref" href="#id13">Integration Help</a><a class="headerlink" href="#integration-help" title="Permalink to this headline">¶</a></h3>
+<p><span class="math notranslate nohighlight">\(x\sqrt{x} = x^{\frac{3}{2}}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\frac{1}{x^2+2x+5} = \frac{1}{(x+\alpha)(x+\beta)} \Rightarrow \frac{a}{x+\alpha}+\frac{b}{x+\beta}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\frac{1}{1+e^{-x}} = \frac{1+e^{-x}-e^{-x}}{1+e^{-x}}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\mu = \frac{1}{b-a} \int_a^b f\)</span></p>
+<p>Parité:
+<span class="math notranslate nohighlight">\(f(-x)=f(x)\)</span> Paire
+<span class="math notranslate nohighlight">\(f(-x)=-f(x)\)</span> Impaire</p>
+<p>Tangentes
+<span class="math notranslate nohighlight">\(f'(a)(x-a)+f(a)=y\)</span></p>
+<p><span class="math notranslate nohighlight">\(\lim_{x \to a} \frac{f(x)-f(a)}{x-a} = f'(a)\)</span></p>
+<p>ex:
+<span class="math notranslate nohighlight">\(\lim_{x \to 0} \frac{\sin{x}}{x}=\frac{\sin{x}-\sin{0}}{x-0}=\sin'(0)=\cos(0)=1\)</span></p>
+<p><span class="math notranslate nohighlight">\((f \circ u)'(x)=u'(x)f(u(x))\)</span></p>
+<p><span class="math notranslate nohighlight">\(f(x)=y \Leftrightarrow x=f^{-1}(y)\)</span></p>
+<p><span class="math notranslate nohighlight">\((f^{-1})'(y)=\frac{1}{f'(x)}\)</span> and <span class="math notranslate nohighlight">\(y=f(x)\)</span></p>
+</div>
+<div class="section" id="limits">
+<h3><a class="toc-backref" href="#id14">Limits</a><a class="headerlink" href="#limits" title="Permalink to this headline">¶</a></h3>
+<p>limits in 0</p>
+<p>partie régulière (terme constant)
+=&gt; même limite
+=&gt; même signe</p>
+<p>Si <span class="math notranslate nohighlight">\(\frac{0}{0} \Rightarrow  x=1+h (ex en 1) puis h \rightarrow 0\)</span></p>
+<p><span class="math notranslate nohighlight">\(\lim\limits_{\substack{h \to 0}} ln(h) = h+\circ(h)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\lim\limits_{\substack{h \to 0}} sin(h) = h+\circ(h)\)</span></p>
+</div>
+<div class="section" id="integration-by-parts">
+<h3><a class="toc-backref" href="#id15">Integration by Parts</a><a class="headerlink" href="#integration-by-parts" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-integration-by-parts-formula admonition">
+<p class="admonition-title">Integration by Parts Formula</p>
+<p><span class="math notranslate nohighlight">\(\left\uparrow \begin{array}{l}
+A (arctan, arcsin, arccos) \\
+L (logarithm) \\
+P (polynomial) \\
+E (exponential) \\
+S (sin, cos, tan)
+\end{array}\right\} Priority (primitive)\quad Formula: \int_{a}^{b} fg' = \left[fg\right]_a^b - \int_{a}^{b} f'g\)</span></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p><span class="math notranslate nohighlight">\(\left. \begin{array}{l} xe^x \\ u v' \end{array}\right.
+\left(\begin{array}{l} u=x \longrightarrow u'=1 \\v'=e^x \longrightarrow v=e^x\end{array}\right)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\int_{a}^{b} uv'=\left[uv\right]_a^b-\int_{a}^{b} u'v \Leftrightarrow ...\)</span></p>
+</div>
+<div class="section" id="integration-by-change-of-variables">
+<h3><a class="toc-backref" href="#id16">Integration by Change of Variables</a><a class="headerlink" href="#integration-by-change-of-variables" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-integration-by-change-of-variables admonition">
+<p class="admonition-title">Integration by Change of Variables</p>
+<p><span class="math notranslate nohighlight">\(Formula: \int_{u(a)}^{u(b)} f(x) dx = \int_{a}^{b} f(u(t))u'(t) dt\quad\)</span> We changed variable by posing <span class="math notranslate nohighlight">\(x=u(t)\)</span></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p><span class="math notranslate nohighlight">\(\int_{0}^{1} \sqrt{1-t^2}dt\)</span> with <span class="math notranslate nohighlight">\(t=\sin(x) \Leftrightarrow \left\{ \begin{array}{l} \frac{dt}{dx}=\cos(x) \\ dt=\cos(x) dx \end{array}\right. \left\{ \begin{array}{l} \sin{\frac{\pi}{2}}=1 \\ \sin{0}=0 \end{array}\right.\)</span></p>
+<p><span class="math notranslate nohighlight">\(\int_{0}^{\frac{\pi}{2}} \sqrt{1-\sin^2(x)\cos(x)dx} \Leftrightarrow \int_{0}^{\frac{\pi}{2}} |\cos(x)|\cos(x)dx\)</span></p>
+<p><span class="math notranslate nohighlight">\(Explanation: \sin^2(x)+\cos^2(x)=1 \Leftrightarrow |\cos(x)|=\sqrt{\sin^2(x)-1}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\int_{0}^{\frac{\pi}{2}} |\cos(x)|\cos(x)dx \Leftrightarrow  \frac{1}{2}\left[\sin(2x)+x\right]_{0}^{\frac{\pi}{2}} = \frac{1}{2}(0+\frac{\pi}{2}-0-0)=\frac{\pi}{4}\)</span></p>
+<p><span class="math notranslate nohighlight">\(Explanation: cos^2(x)=(\frac{e^{ix}+e^{-ix}}{2})^2 = \frac{1}{4}(e^{2ix}+e^{-2ix}+2e^{ix}e^{-ix}) = \frac{1}{2}(\cos(2x)+1)\)</span></p>
+</div>
+<div class="section" id="integrability-and-comparison">
+<h3><a class="toc-backref" href="#id17">Integrability and Comparison</a><a class="headerlink" href="#integrability-and-comparison" title="Permalink to this headline">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 72%" />
+<col style="width: 28%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(f=\underset{\alpha}{\bigcirc}(g)\frac{f}{g}=u \underset{\alpha}{\longmapsto} \mathbb{R}&gt;1\)</span></p></td>
+<td><p>f dominated by g</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(f=\underset{\alpha}{\circ}(g)\frac{f}{g}=u \underset{\alpha}{\longmapsto} 0\)</span></p></td>
+<td><p>f negligible in front of g</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(f\underset{\alpha}{\sim}(g)\frac{f}{g}=u \underset{\alpha}{\longmapsto} 1\)</span></p></td>
+<td><p>f similar to g</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="field-list simple">
+<dt class="field-odd">Convergence</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p>Geometrical sequence and <span class="math notranslate nohighlight">\(|q|&lt;1 \rightarrow \sum_{n=0}^{+\infty} q^n = \frac{1}{1-q}\)</span></p>
+<p>Real sequence with positive terms : divide by <span class="math notranslate nohighlight">\(\frac{1}{n^2}\)</span> or by <span class="math notranslate nohighlight">\(\frac{2^n}{1}\)</span></p>
+<p>Numerical sequence example:</p>
+<p><span class="math notranslate nohighlight">\(un=\sqrt{n}-\sqrt{n-1} \Leftrightarrow \sum un =\)</span></p>
+<p><span class="math notranslate nohighlight">\(\left. \begin{array}{l} (\sqrt{1})-\sqrt{0} \\ (\sqrt{2})-(\sqrt{1}) \\ ... \\ \sqrt{n}-(\sqrt{n-1}) \end{array}\right. = \sqrt{n} \underset{n \to +\infty}{\longmapsto} +\infty\)</span></p>
+<p><span class="math notranslate nohighlight">\(f-g \underset{+\infty}{\longmapsto} 0 (asymptote)\)</span></p>
+<div class="admonition-riemann-exponent admonition">
+<p class="admonition-title">Riemann (exponent)</p>
+<p><span class="math notranslate nohighlight">\(\sum \frac{1}{n^{\alpha}}\)</span> converges iff <span class="math notranslate nohighlight">\(\alpha&gt;1\)</span></p>
+</div>
+<div class="admonition-geometrical-reason admonition">
+<p class="admonition-title">Geometrical (reason)</p>
+<p><span class="math notranslate nohighlight">\(\sum (r)^n\)</span> converges iff <span class="math notranslate nohighlight">\(|r|&lt;1\)</span></p>
+</div>
+<div class="section" id="series">
+<h4><a class="toc-backref" href="#id18">Series</a><a class="headerlink" href="#series" title="Permalink to this headline">¶</a></h4>
+<dl class="field-list simple">
+<dt class="field-odd">Factorials</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="admonition-factorial-formula admonition">
+<p class="admonition-title">Factorial Formula</p>
+<p><span class="math notranslate nohighlight">\(n! = \prod\limits_{1 \leq i \leq n} i = 1 \times 2 \times 3 \times 4 \times ... \times (n-1) \times n\)</span></p>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 10%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(n\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(3\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(4\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(5\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(6\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(7\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(8\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(n!\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(6\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(24\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(120\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(720\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(5040\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(40320\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="taylor-series">
+<h3><a class="toc-backref" href="#id19">Taylor Series</a><a class="headerlink" href="#taylor-series" title="Permalink to this headline">¶</a></h3>
+<p><span class="math notranslate nohighlight">\(e^x = \sum\limits_{n=0}^{+\infty} \frac{x^n}{n!} = 1+\frac{x}{1!}+\frac{x^2}{2!}+\frac{x^3}{3!}+...+\frac{x^n}{n!}+\circ(x^n)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\frac{1}{1-x} = \sum\limits_{n=0}^{+\infty} x^n = 1+x+x^2+x^3+...+x^n+\circ(x^n)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\ln(1+x) = \sum\limits_{n=1}^{+\infty} \frac{(-1)^{n+1}}{n}x^n = x-\frac{x^2}{2}+\frac{x^3}{3}-...+(-1)^{n-1}\frac{x^n}{n}+\circ(x^n)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\sin(x) = \sum\limits_{n=0}^{+\infty} \frac{(-1)^n}{(2n+1)!}x^{2n+1} = x-\frac{x^3}{3!}+\frac{x^5}{5!}-...+(-1)^n\frac{x^{2n+1}}{(2n)!}+\circ(x^{2n+1})\)</span></p>
+<p><span class="math notranslate nohighlight">\(\cos(x) \sum\limits_{n=0}^{+\infty} \frac{(-1)^n}{(2n)!}x^{2n} = 1-\frac{x^2}{2!}+\frac{x^4}{4!}-...+(-1)^n\frac{x^{2n}}{(2n)!}+\circ(x^{2n})\)</span></p>
+<p><span class="math notranslate nohighlight">\((1+x)^\alpha = 1+\sum\limits_{n=1}^{+\infty} \binom{\alpha}{n}x^n = 1+\frac{\alpha}{1!}x+\frac{\alpha(\alpha-1)}{2!}x^2+\frac{\alpha(\alpha-1)(\alpha-2}{3!}x^3+...+\frac{\alpha(\alpha-1)...(\alpha-n+1)}{n!}x^n+\circ(x^{n})\)</span></p>
+<dl class="field-list simple">
+<dt class="field-odd">Overfittingt and Underfitting</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="figure align-default">
+<img alt="https://miro.medium.com/max/2250/1*6vPGzBNppqMHllg1o_se8Q.png" src="https://miro.medium.com/max/2250/1*6vPGzBNppqMHllg1o_se8Q.png" />
+</div>
+<div id="regression_jxgbox" class="jxgbox" style="width:800px; height:400px;"></div>
+<script type="text/javascript">
+        board = JXG.JSXGraph.initBoard('regression_jxgbox', {boundingbox:[-2, 100, 220, -70], grid: false ,axis:true, pan: {enabled: false}, showCopyright:false, showNavigation:false, showFullscreen:true});
+
+        board.suspendUpdate();
+        var pointlist = [];
+        var degree = board.create('slider',[[10,90],[100,90],[1,1,30]],{name:'degree', snapWidth:1});
+        var number = board.create('slider',[[10,80],[100,80],[3,10,30]],{name:'number', snapWidth:1});
+
+        for (i=0; i<number.Value();i++) { pointlist.push(board.create('point', [200*Math.random() , 30*Math.random()+20 ], { style:4, strokecolor:"blue", name:" "})); }
+        board.unsuspendUpdate();
+
+        var regression = JXG.Math.Numerics.regressionPolynomial(degree, pointlist);
+        var reg = board.create('functiongraph',[regression],{strokeColor:'red'});
+
+        var t = board.create('text',[20,-40, function(){ return "r(x) = " + regression.getTerm();} ],{strokeColor:'black',fontSize:'14px'});
+
+        number.on('drag', function() { numberPoints(); });
+
+        function numberPoints() {
+                board.suspendUpdate();
+
+                if (!(number.Value() == 2 && degree.Value() >= 1)) {
+                        for (i=0; i<pointlist.length; i++){ board.removeObject(pointlist[i]) }
+                        pointlist = [];
+
+                        for (i=0; i<number.Value();i++) { pointlist.push(board.create('point', [200*Math.random() , 30*Math.random()+20 ], { style:4, strokecolor:"blue", name:" "})); }
+
+                        regression = JXG.Math.Numerics.regressionPolynomial(degree, pointlist);
+                        board.removeObject(reg)
+                        reg = board.create('functiongraph',[regression],{strokeColor:'red'});
+                }
+
+                board.unsuspendUpdate();
+        }
+</script></div>
+<div class="section" id="fourier-series">
+<h3><a class="toc-backref" href="#id20">Fourier Series</a><a class="headerlink" href="#fourier-series" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-fourier-coefficients-formula admonition">
+<p class="admonition-title">Fourier coefficients Formula</p>
+<p><span class="math notranslate nohighlight">\(\left. \begin{array}{l}
+an=\frac{2}{T}\int_{0}^{T} f(t)\cos(\frac{2\pi}{T}n^t)dt \\
+bn=\frac{2}{T}\int_{0}^{T} f(t)\sin(\frac{2\pi}{T}n^t)dt
+\end{array}\right\} n \geqslant 1\)</span></p>
+</div>
+<div class="figure align-default">
+<img alt="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Fourier_Series.svg/220px-Fourier_Series.svg.png" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Fourier_Series.svg/220px-Fourier_Series.svg.png" />
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Fourier Transform</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="section" id="differential-equations">
+<h4><a class="toc-backref" href="#id21">Differential Equations</a><a class="headerlink" href="#differential-equations" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="fractals">
+<h4><a class="toc-backref" href="#id22">Fractals</a><a class="headerlink" href="#fractals" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Discrete.html" class="btn btn-neutral float-right" title="Maths - Discrete" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Maths.html" class="btn btn-neutral float-left" title="Maths" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, LHOUTELLIER Maël
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+
+    
+        <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+            <span class="rst-current-version" data-toggle="rst-current-version">
+                <span class="fa fa-book"> Help Sheet</span>
+                    v: latest
+                <span class="fa fa-caret-down"></span>
+            </span>
+            
+            <div class="rst-other-versions">
+                <dl>
+                    <dt>Versions</dt>
+                    
+                        <dd><a href="#">latest</a></dd>
+                        <dd><a href="#">1.0</a></dd>
+                        <dd><a href="#">1.1</a></dd>
+                    
+                </dl>
+
+                 <dl>
+                    <dt>Downloads</dt>
+                    <dd><a href="#">PDF</a></dd>
+                    <dd><a href="#">ePub</a></dd>
+                    <dd><a href="#">HTML</a></dd>
+                </dl>
+                
+                <dl>
+                    <dt>Informations</dt>
+                    <dd><a href="https://github.com/mlhoutel/Help-Sheet">Project Git</a></dd>
+                    <dd><a href="https://mlhoutel.github.io/maellhoutellier.com/">My website</a></dd>
+                </dl>
+
+                <dl>
+                    <dt>Debug</dt>
+                    <dd><a href="#" data-toggle="rst-debug-badge">Swap badge position</a></dd>
+                </dl>
+            </div>
+        </div>
+    
+    
+    <style>
+        :root {
+            --c-blue: #2980B9;     /* Black    [31;  39;  45]  */
+            --c-grey: #24313A;
+        }
+
+        /* Sidebar header (and topbar for mobile) */
+        .wy-side-nav-search, .wy-nav-top {
+            background: var(--c-blue);
+        }
+        /* Sidebar */
+        .wy-nav-side {
+            background: var(--c-grey);
+        }
+    </style>
+
+
+
+</body>
+</html>

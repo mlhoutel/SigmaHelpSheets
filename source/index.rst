@@ -34,12 +34,12 @@ This website is **primarly built** for me to check the things I may have forgot,
 Table of the sheets by Subject
 ===============================
 
-:Sciences [Maths Physics Chemistry CS Algorithmy]:
-	
+.. admonition:: Sciences
+
 	Fundamental sciences are very important to me, I am really interested in understanding the mechanisms and rules governing the world. As a hobby, I make small simulations and visualizations of physical systems, mainly at the macroscopic level. :raw-html:`&#128516;`
 
 .. toctree::
-	:maxdepth: 1
+	:maxdepth: 2
 	:caption: Sciences
 	
 	pages/Maths/Maths.rst
@@ -48,9 +48,7 @@ Table of the sheets by Subject
 	pages/Computer Science/Computer Science.rst
 	pages/Algorithms/Algorithms.rst
 
-
-
-:Desktop Languages [C Cpp Python Csharp Java]:
+.. admonition:: Desktop Languages
 
 	I describle desktop languages as languages which are mainly used to create application software on computer / mobile platforms independently of web (warning, not exclusive: for example, python can be used for the web, like currently this website :raw-html:`&#128521;` )
 
@@ -61,7 +59,7 @@ Table of the sheets by Subject
 	* are translated in read time, or scripting languages (like Python, Ruby ...)
 	
 .. toctree::
-	:maxdepth: 1
+	:maxdepth: 2
 	:caption: Desktop Languages
 
 	pages/Cpp/Cpp.rst
@@ -70,25 +68,24 @@ Table of the sheets by Subject
 	pages/Csharp/Csharp.rst
 	pages/Java/Java.rst
 
-:Web Languages [Js Php]:
+.. admonition:: Web Languages
 	
-	I describle web languages as frontend/backend languages which are mainly used to create web application
+	I describle web languages as frontend/backend languages which are mainly used to create web application, not to be confused with layout languages, such as html, latex or markdown. 
 	
 .. toctree::
-	:maxdepth: 1
+	:maxdepth: 2
 	:caption: Web Languages
 
 	pages/JavaScript/JavaScript.rst
 	pages/Php/Php.rst
 
-:System:
+.. admonition:: System
 	
-	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+	
 
 
 .. toctree::
-	:maxdepth: 1
+	:maxdepth: 2
 	:caption: System
 
 	pages/Windows/Windows.rst
@@ -101,7 +98,7 @@ Table of the sheets by Subject
 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
 
 .. toctree::
-	:maxdepth: 1
+	:maxdepth: 2
 	:caption: Miscellaneous
 
 	pages/Sphinx/Sphinx.rst
@@ -170,6 +167,18 @@ Miscellanious
 | | `Website Cmder`_                        | | `Website Screen to Gif`_                | | `Website Sublime Text`_                 |
 | | `GitHub Cmder`_                         | | `GitHub Screen to Gif`_                 | | `GitHub Packages Sublime Text`_         |
 +-------------------------------------------+-------------------------------------------+-------------------------------------------+
+
+:Programming and Algorithmy training:
+
++--------------------------------------------------------------+-------------------------------------------+
+| https://www.hackerrank.com/dashboard                         | Practice Problem solving/Languages etc    |
++--------------------------------------------------------------+-------------------------------------------+
+| https://www.geeksforgeeks.org/fundamentals-of-algorithms/    | Main algorithms explanation               |
++--------------------------------------------------------------+-------------------------------------------+
+| https://www.typingclub.com/sportal/program-3.game            | Train to type faster                      |
++--------------------------------------------------------------+-------------------------------------------+
+| https://playground.tensorflow.org/                           | IA Visualisation/tensorflow               |
++--------------------------------------------------------------+-------------------------------------------+
 
 :Other usefull websites:
 
