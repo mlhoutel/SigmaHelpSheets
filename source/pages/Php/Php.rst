@@ -29,6 +29,28 @@ TODO
 Cheat Sheets
 ===========================
 
+Usefull Informations
+---------------------------
+
+.. _Browse phpnet: https://www.php.net/docs.php
+.. _src: http://pypl.github.io/PYPL.html
+
++------------------------------------------------------+-------------------------------------------------------+
+| **Official Documentation - Phpnet**                  | **About PHP**                                         |
++------------------------------------------------------+-------------------------------------------------------+
+|                                                      | **Type of Language:** Imperative, Object-Oriented     |
+|   .. image:: phpnet.PNG                              +-------------------------------------------------------+
+|      :target: `Browse phpnet`_                       | **Born in:** 1994                                     |
+|      :align: center                                  +-------------------------------------------------------+
+|                                                      | **Caracteristics:** Simple, permissive, html inbedded |
+|                                                      +-------------------------------------------------------+
+|   .. image:: ../../../browse_website.png             | **Popularity:** 5.85% (5th) `src`_                    |
+|      :target: `Browse phpnet`_                       +-------------------------------------------------------+
+|      :width: 200                                     | **Usefull for:** website backend, database linking    |
+|      :align: center                                  +-------------------------------------------------------+
+|                                                      | **Misc:**  ...                                        |
++------------------------------------------------------+-------------------------------------------------------+
+
 Types and Variables
 ---------------------------
 

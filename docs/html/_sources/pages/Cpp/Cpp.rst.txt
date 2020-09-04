@@ -246,8 +246,31 @@ When you use multiple libraries, it could be some ``conflicts`` under names betw
 
 ----------------------------------------------------------------------------------
 
+
+
 Cheat Sheets
 ===========================
+
+Usefull Informations
+---------------------------
+
+.. _Browse cppreference: https://en.cppreference.com/w/
+.. _src: http://pypl.github.io/PYPL.html
++------------------------------------------------------+-------------------------------------------------------+
+| **Unofficial Documentation - CppReference**          | **About Cpp**                                         |
++------------------------------------------------------+-------------------------------------------------------+
+|                                                      | **Type of Language:** Procedural, Object-Oriented     |
+|   .. image:: cppreference.PNG                        +-------------------------------------------------------+
+|      :target: `Browse cppreference`_                 | **Born in:** 1985                                     |
+|      :align: center                                  +-------------------------------------------------------+
+|                                                      | **Caracteristics:** Statically typed, low level, fast |
+|                                                      +-------------------------------------------------------+
+|   .. image:: ../../../browse_website.png             | **Popularity:** 5.8% (6th) `src`_                     |
+|      :target: `Browse cppreference`_                 +-------------------------------------------------------+
+|      :width: 200                                     | **Usefull for:** softwares, games, embedded...        |
+|      :align: center                                  +-------------------------------------------------------+
+|                                                      | **Misc:**  ...                                        |
++------------------------------------------------------+-------------------------------------------------------+
 
 Basic C Cheat Sheet
 ---------------------------
@@ -280,7 +303,7 @@ Types and Variables
 | Long ``/u/``      | ``unsigned     | ``32+ bits`` | 0                 | 4 294 967 295     | ``%l`` | ``unsigned     |
 | Integer           | long int``     |              | :math:`(0)`       | :math:`(2^{32}-1)`|        | long``         |
 +-------------------+----------------+--------------+-------------------+-------------------+--------+----------------+
-| Long Long ``/s/`` | ``long long    | ``64+ bits`` | -9.223e-15        | -9.223e+15        | ``%ll``| ``signed       |
+| Long Long ``/s/`` | ``long long    | ``64+ bits`` | -9.223e-15        | 9.223e+15         | ``%ll``| ``signed       |
 | Integer           | int``          |              | :math:`(-2^{63})` | :math:`(2^{63}-1)`|        | long long``    |
 +-------------------+----------------+--------------+-------------------+-------------------+--------+----------------+
 | Long Long ``/u/`` | ``unsigned long| ``64+ bits`` | 0                 | 18.446e+15        | ``%ll``| ``unsigned     |
