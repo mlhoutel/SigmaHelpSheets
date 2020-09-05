@@ -11,12 +11,19 @@ Setup Postgres/Apache
 
 SQL 
 ============================
-(POSTGRES/...)
+
+.. todo::
+
+    (POSTGRES/...)
 
 PL/SQL 
 ============================
-(ORACLE/...)
+.. todo::
+	
+	(ORACLE/...)
 
 Security
 ============================
-(SQL injection...)
+.. todo::
+	
+	(SQL injection...)

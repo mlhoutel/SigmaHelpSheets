@@ -34,7 +34,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.3.5/jsxgraphcore.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
         <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
@@ -104,7 +104,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Maths/Maths.html">Maths</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Physics/Physics.html">Physics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Chemistry/Chemistry.html">Chemistry</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Computer Science/Computer Science.html">Computer Science</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Computer%20Science/Computer%20Science.html">Computer Science</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Algorithms/Algorithms.html">Algorithms</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Desktop Languages</span></p>
@@ -279,67 +279,67 @@
 <div class="contents local topic" id="table-of-contents">
 <p class="topic-title">Table of Contents</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#introduction" id="id7">Introduction</a></p>
+<li><p><a class="reference internal" href="#introduction" id="id10">Introduction</a></p>
 <ul>
-<li><p><a class="reference internal" href="#history-of-the-c-language" id="id8">History of the C language</a></p></li>
-<li><p><a class="reference internal" href="#evolution-toward-c" id="id9">Evolution toward C++</a></p></li>
+<li><p><a class="reference internal" href="#history-of-the-c-language" id="id11">History of the C language</a></p></li>
+<li><p><a class="reference internal" href="#evolution-toward-c" id="id12">Evolution toward C++</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#programming-in-c" id="id10">Programming in C</a></p>
+<li><p><a class="reference internal" href="#programming-in-c" id="id13">Programming in C</a></p>
 <ul>
-<li><p><a class="reference internal" href="#first-program-helloworld-c" id="id11">First Program : helloworld.c</a></p></li>
-<li><p><a class="reference internal" href="#compiling" id="id12">Compiling</a></p>
+<li><p><a class="reference internal" href="#first-program-helloworld-c" id="id14">First Program : helloworld.c</a></p></li>
+<li><p><a class="reference internal" href="#compiling" id="id15">Compiling</a></p>
 <ul>
-<li><p><a class="reference internal" href="#setup-gcc-and-compiling-a-basic-program" id="id13">Setup GCC and compiling a basic program</a></p></li>
-<li><p><a class="reference internal" href="#compilator-settings-and-flags" id="id14">Compilator settings and flags</a></p></li>
+<li><p><a class="reference internal" href="#setup-gcc-and-compiling-a-basic-program" id="id16">Setup GCC and compiling a basic program</a></p></li>
+<li><p><a class="reference internal" href="#compilator-settings-and-flags" id="id17">Compilator settings and flags</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#import-and-use-libraries" id="id15">Import and use Libraries</a></p>
+<li><p><a class="reference internal" href="#import-and-use-libraries" id="id18">Import and use Libraries</a></p>
 <ul>
-<li><p><a class="reference internal" href="#includes-and-dependancies" id="id16">Includes and Dependancies</a></p></li>
-<li><p><a class="reference internal" href="#namespace-and-utilities" id="id17">Namespace and utilities</a></p></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#cheat-sheets" id="id18">Cheat Sheets</a></p>
-<ul>
-<li><p><a class="reference internal" href="#usefull-informations" id="id19">Usefull Informations</a></p></li>
-<li><p><a class="reference internal" href="#basic-c-cheat-sheet" id="id20">Basic C Cheat Sheet</a></p>
-<ul>
-<li><p><a class="reference internal" href="#types-and-variables" id="id21">Types and Variables</a></p></li>
-<li><p><a class="reference internal" href="#input-output" id="id22">Input Output</a></p></li>
-<li><p><a class="reference internal" href="#variables-tests-and-loops" id="id23">Variables, Tests and Loops</a></p></li>
-<li><p><a class="reference internal" href="#random-numbers" id="id24">Random numbers</a></p></li>
-<li><p><a class="reference internal" href="#arrays" id="id25">Arrays</a></p></li>
-<li><p><a class="reference internal" href="#functions" id="id26">Functions</a></p></li>
-<li><p><a class="reference internal" href="#structures" id="id27">Structures</a></p></li>
-<li><p><a class="reference internal" href="#pointers-and-smart-pointers" id="id28">Pointers and Smart pointers</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#id4" id="id29">Basic C++ Cheat Sheet</a></p>
-<ul>
-<li><p><a class="reference internal" href="#id5" id="id30">Input Output</a></p></li>
-<li><p><a class="reference internal" href="#id6" id="id31">Arrays</a></p></li>
-<li><p><a class="reference internal" href="#classes-and-properties" id="id32">Classes and Properties</a></p></li>
-<li><p><a class="reference internal" href="#inheritances" id="id33">Inheritances</a></p></li>
-<li><p><a class="reference internal" href="#virtual-classes" id="id34">Virtual classes</a></p></li>
-<li><p><a class="reference internal" href="#vectors" id="id35">Vectors</a></p></li>
-<li><p><a class="reference internal" href="#threads" id="id36">Threads</a></p></li>
+<li><p><a class="reference internal" href="#includes-and-dependancies" id="id19">Includes and Dependancies</a></p></li>
+<li><p><a class="reference internal" href="#namespace-and-utilities" id="id20">Namespace and utilities</a></p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#sfml" id="id37">SFML</a></p></li>
-<li><p><a class="reference internal" href="#qt" id="id38">Qt</a></p></li>
-<li><p><a class="reference internal" href="#cuda" id="id39">CUDA</a></p></li>
-<li><p><a class="reference internal" href="#cmake-and-builds" id="id40">CMake and Builds</a></p></li>
+<li><p><a class="reference internal" href="#cheat-sheets" id="id21">Cheat Sheets</a></p>
+<ul>
+<li><p><a class="reference internal" href="#usefull-informations" id="id22">Usefull Informations</a></p></li>
+<li><p><a class="reference internal" href="#basic-c-cheat-sheet" id="id23">Basic C Cheat Sheet</a></p>
+<ul>
+<li><p><a class="reference internal" href="#types-and-variables" id="id24">Types and Variables</a></p></li>
+<li><p><a class="reference internal" href="#input-output" id="id25">Input Output</a></p></li>
+<li><p><a class="reference internal" href="#variables-tests-and-loops" id="id26">Variables, Tests and Loops</a></p></li>
+<li><p><a class="reference internal" href="#random-numbers" id="id27">Random numbers</a></p></li>
+<li><p><a class="reference internal" href="#arrays" id="id28">Arrays</a></p></li>
+<li><p><a class="reference internal" href="#functions" id="id29">Functions</a></p></li>
+<li><p><a class="reference internal" href="#structures" id="id30">Structures</a></p></li>
+<li><p><a class="reference internal" href="#pointers-and-smart-pointers" id="id31">Pointers and Smart pointers</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#id4" id="id32">Basic C++ Cheat Sheet</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id5" id="id33">Input Output</a></p></li>
+<li><p><a class="reference internal" href="#id6" id="id34">Arrays</a></p></li>
+<li><p><a class="reference internal" href="#classes-and-properties" id="id35">Classes and Properties</a></p></li>
+<li><p><a class="reference internal" href="#inheritances" id="id36">Inheritances</a></p></li>
+<li><p><a class="reference internal" href="#virtual-classes" id="id37">Virtual classes</a></p></li>
+<li><p><a class="reference internal" href="#vectors" id="id38">Vectors</a></p></li>
+<li><p><a class="reference internal" href="#threads" id="id39">Threads</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#sfml" id="id40">SFML</a></p></li>
+<li><p><a class="reference internal" href="#qt" id="id41">Qt</a></p></li>
+<li><p><a class="reference internal" href="#cuda" id="id42">CUDA</a></p></li>
+<li><p><a class="reference internal" href="#cmake-and-builds" id="id43">CMake and Builds</a></p></li>
 </ul>
 </div>
 <div class="section" id="introduction">
-<h2><a class="toc-backref" href="#id7">Introduction</a><a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id10">Introduction</a><a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="history-of-the-c-language">
-<h3><a class="toc-backref" href="#id8">History of the C language</a><a class="headerlink" href="#history-of-the-c-language" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id11">History of the C language</a><a class="headerlink" href="#history-of-the-c-language" title="Permalink to this headline">¶</a></h3>
 <p>C is an <code class="docutils literal notranslate"><span class="pre">imperative</span> <span class="pre">procedural</span> <span class="pre">language</span></code>. It was designed to be  <code class="docutils literal notranslate"><span class="pre">compiled</span></code> to provide  <code class="docutils literal notranslate"><span class="pre">low-level</span> <span class="pre">access</span> <span class="pre">to</span> <span class="pre">memory</span></code>.</p>
 <p>It was developed between 1972 and 1973 by  <code class="docutils literal notranslate"><span class="pre">Dennis</span> <span class="pre">Ritchie</span></code>, initially to construct utilities running on the  <code class="docutils literal notranslate"><span class="pre">Unix</span></code> operating system.
 During the 1980s, C gradually gained popularity and became one of the most widely used programming languages.</p>
@@ -347,16 +347,16 @@ During the 1980s, C gradually gained popularity and became one of the most widel
 Moreover, it is realy  <code class="docutils literal notranslate"><span class="pre">fast</span> <span class="pre">and</span> <span class="pre">light</span></code> and permit to manage the low level datas with the  <code class="docutils literal notranslate"><span class="pre">pointers</span></code>, one thing that most of the high level languages can’t.</p>
 </div>
 <div class="section" id="evolution-toward-c">
-<h3><a class="toc-backref" href="#id9">Evolution toward C++</a><a class="headerlink" href="#evolution-toward-c" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id12">Evolution toward C++</a><a class="headerlink" href="#evolution-toward-c" title="Permalink to this headline">¶</a></h3>
 <p>C++ was developped in 1979 by  <code class="docutils literal notranslate"><span class="pre">Bjarne</span> <span class="pre">Stroustrup</span></code>. It was firstly named  <code class="docutils literal notranslate"><span class="pre">C</span> <span class="pre">with</span> <span class="pre">Classes</span></code> by it’s creator, then renamed in 1983.
 It is an evolution toward an more  <code class="docutils literal notranslate"><span class="pre">Object</span> <span class="pre">Oriented</span> <span class="pre">programming</span> <span class="pre">language</span></code>, that it implements with Classes, Inheritance and many others functionnalities.</p>
 <p>The current version of it is  <code class="docutils literal notranslate"><span class="pre">C++17</span></code> (2017). A new one is standardized by the ISO every 3 years since 2011, the next versions is  <code class="docutils literal notranslate"><span class="pre">C++20</span></code>, already released but not every functionnality are supported yet on the compilators.</p>
 </div>
 </div>
 <div class="section" id="programming-in-c">
-<h2><a class="toc-backref" href="#id10">Programming in C</a><a class="headerlink" href="#programming-in-c" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id13">Programming in C</a><a class="headerlink" href="#programming-in-c" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="first-program-helloworld-c">
-<h3><a class="toc-backref" href="#id11">First Program : helloworld.c</a><a class="headerlink" href="#first-program-helloworld-c" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id14">First Program : helloworld.c</a><a class="headerlink" href="#first-program-helloworld-c" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -375,7 +375,7 @@ It is an evolution toward an more  <code class="docutils literal notranslate"><s
 To put it simply, we get the <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">code</span></code> (<em>helloworld.c</em>) and put it into a <code class="docutils literal notranslate"><span class="pre">compiler</span></code> with the right settings and dependancies, and this compiler output and <code class="docutils literal notranslate"><span class="pre">executable</span></code> (<em>helloworld.exe</em>) that you can run from your machine. We will use the <code class="docutils literal notranslate"><span class="pre">command</span> <span class="pre">line</span></code> to build and run this file, it’s realy easy.</p>
 </div>
 <div class="section" id="compiling">
-<h3><a class="toc-backref" href="#id12">Compiling</a><a class="headerlink" href="#compiling" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id15">Compiling</a><a class="headerlink" href="#compiling" title="Permalink to this headline">¶</a></h3>
 <p>But first of all, you will need a compiler. That’s a piece of software that transform your file from <code class="docutils literal notranslate"><span class="pre">readable</span> <span class="pre">instructions</span></code> (in english) into a language that your machine can understand: <code class="docutils literal notranslate"><span class="pre">binaries</span></code> (0 and 1), that’s what an <code class="docutils literal notranslate"><span class="pre">.exe</span></code> file is (if you open it with and text editor, you will see some stranges charaters).</p>
 <p>Many C compiler exists, (<a class="reference external" href="https://en.wikipedia.org/wiki/List_of_compilers#C_compilers">See all</a>), I recommand these ones:</p>
 <table class="docutils align-default">
@@ -398,7 +398,7 @@ To put it simply, we get the <code class="docutils literal notranslate"><span cl
 <p>I recommand to install GCC by MinGW instead of compiling it yourself, you will find explanations on how to proceed <a class="reference external" href="http://mingw.org/wiki/Getting_Started">HERE</a></p>
 </div>
 <div class="section" id="setup-gcc-and-compiling-a-basic-program">
-<h4><a class="toc-backref" href="#id13">Setup GCC and compiling a basic program</a><a class="headerlink" href="#setup-gcc-and-compiling-a-basic-program" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id16">Setup GCC and compiling a basic program</a><a class="headerlink" href="#setup-gcc-and-compiling-a-basic-program" title="Permalink to this headline">¶</a></h4>
 <ol class="arabic">
 <li><p>If you are on windows, you can press <code class="docutils literal notranslate"><span class="pre">Windows</span></code> + <code class="docutils literal notranslate"><span class="pre">Q</span></code> then type <code class="docutils literal notranslate"><span class="pre">cmd</span></code> to open the command line.</p>
 <blockquote>
@@ -440,7 +440,7 @@ To put it simply, we get the <code class="docutils literal notranslate"><span cl
 <p class="centered">
 <strong>Good luck!</strong></p></div>
 <div class="section" id="compilator-settings-and-flags">
-<h4><a class="toc-backref" href="#id14">Compilator settings and flags</a><a class="headerlink" href="#compilator-settings-and-flags" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id17">Compilator settings and flags</a><a class="headerlink" href="#compilator-settings-and-flags" title="Permalink to this headline">¶</a></h4>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>You can call the compiler by <code class="docutils literal notranslate"><span class="pre">gcc</span></code> for the <strong>C compiler</strong> and <code class="docutils literal notranslate"><span class="pre">g++</span></code> for the <strong>C++ compiler</strong>. I explain here the flags that I use and find the <strong>most important</strong>, but you can find all the gcc flags <a class="reference external" href="https://gcc.gnu.org/onlinedocs/gcc/Option-Summary.html">HERE</a>. If you want, you can even create a <code class="docutils literal notranslate"><span class="pre">.bat</span></code> file to automate the command and launch the compilations.</p>
@@ -574,9 +574,9 @@ To put it simply, we get the <code class="docutils literal notranslate"><span cl
 </div>
 </div>
 <div class="section" id="import-and-use-libraries">
-<h3><a class="toc-backref" href="#id15">Import and use Libraries</a><a class="headerlink" href="#import-and-use-libraries" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id18">Import and use Libraries</a><a class="headerlink" href="#import-and-use-libraries" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="includes-and-dependancies">
-<h4><a class="toc-backref" href="#id16">Includes and Dependancies</a><a class="headerlink" href="#includes-and-dependancies" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id19">Includes and Dependancies</a><a class="headerlink" href="#includes-and-dependancies" title="Permalink to this headline">¶</a></h4>
 <p>To <strong>include a library</strong> we use the <code class="docutils literal notranslate"><span class="pre">#include</span></code> command.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&lt;library.h&gt;</span></code> when the headers folder is already linked in the compiler</p></li>
@@ -598,7 +598,7 @@ To put it simply, we get the <code class="docutils literal notranslate"><span cl
 <p><em>informations from https://en.cppreference.com/w/cpp/header</em></p>
 </div>
 <div class="section" id="namespace-and-utilities">
-<h4><a class="toc-backref" href="#id17">Namespace and utilities</a><a class="headerlink" href="#namespace-and-utilities" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id20">Namespace and utilities</a><a class="headerlink" href="#namespace-and-utilities" title="Permalink to this headline">¶</a></h4>
 <p>When you use multiple libraries, it could be some <code class="docutils literal notranslate"><span class="pre">conflicts</span></code> under names between some libraries, that’s why we use <code class="docutils literal notranslate"><span class="pre">namespaces</span></code>.</p>
 <p class="centered">
 <strong>“Namespaces provide a method for preventing name conflicts in large projects.” <a class="reference external" href="https://en.cppreference.com/w/cpp/language/namespace">source</a></strong></p><dl class="field-list simple">
@@ -638,9 +638,9 @@ To put it simply, we get the <code class="docutils literal notranslate"><span cl
 </div>
 <hr class="docutils" />
 <div class="section" id="cheat-sheets">
-<h2><a class="toc-backref" href="#id18">Cheat Sheets</a><a class="headerlink" href="#cheat-sheets" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id21">Cheat Sheets</a><a class="headerlink" href="#cheat-sheets" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="usefull-informations">
-<h3><a class="toc-backref" href="#id19">Usefull Informations</a><a class="headerlink" href="#usefull-informations" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id22">Usefull Informations</a><a class="headerlink" href="#usefull-informations" title="Permalink to this headline">¶</a></h3>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 50%" />
@@ -669,9 +669,9 @@ To put it simply, we get the <code class="docutils literal notranslate"><span cl
 </table>
 </div>
 <div class="section" id="basic-c-cheat-sheet">
-<h3><a class="toc-backref" href="#id20">Basic C Cheat Sheet</a><a class="headerlink" href="#basic-c-cheat-sheet" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id23">Basic C Cheat Sheet</a><a class="headerlink" href="#basic-c-cheat-sheet" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="types-and-variables">
-<h4><a class="toc-backref" href="#id21">Types and Variables</a><a class="headerlink" href="#types-and-variables" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id24">Types and Variables</a><a class="headerlink" href="#types-and-variables" title="Permalink to this headline">¶</a></h4>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><code class="docutils literal notranslate"><span class="pre">/s/</span></code> stand for <strong>Signed</strong> and <code class="docutils literal notranslate"><span class="pre">/u/</span></code> for <strong>Unsigned</strong></p>
@@ -1591,7 +1591,7 @@ Integer</p></td>
 </table>
 </div>
 <div class="section" id="input-output">
-<h4><a class="toc-backref" href="#id22">Input Output</a><a class="headerlink" href="#input-output" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id25">Input Output</a><a class="headerlink" href="#input-output" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-c notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -1652,7 +1652,7 @@ value of <code class="docutils literal notranslate"><span class="pre">2147483648
 </div>
 </div>
 <div class="section" id="variables-tests-and-loops">
-<h4><a class="toc-backref" href="#id23">Variables, Tests and Loops</a><a class="headerlink" href="#variables-tests-and-loops" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id26">Variables, Tests and Loops</a><a class="headerlink" href="#variables-tests-and-loops" title="Permalink to this headline">¶</a></h4>
 <dl class="field-list simple">
 <dt class="field-odd">VARIABLES DECLARATIONS</dt>
 <dd class="field-odd"><p></p></dd>
@@ -1883,7 +1883,7 @@ value of <code class="docutils literal notranslate"><span class="pre">2147483648
 </div>
 </div>
 <div class="section" id="random-numbers">
-<h4><a class="toc-backref" href="#id24">Random numbers</a><a class="headerlink" href="#random-numbers" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id27">Random numbers</a><a class="headerlink" href="#random-numbers" title="Permalink to this headline">¶</a></h4>
 <dl class="field-list simple">
 <dt class="field-odd">RANDOMS</dt>
 <dd class="field-odd"><p></p></dd>
@@ -1943,7 +1943,7 @@ value of <code class="docutils literal notranslate"><span class="pre">2147483648
 </div>
 </div>
 <div class="section" id="arrays">
-<h4><a class="toc-backref" href="#id25">Arrays</a><a class="headerlink" href="#arrays" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id28">Arrays</a><a class="headerlink" href="#arrays" title="Permalink to this headline">¶</a></h4>
 <dl class="field-list simple">
 <dt class="field-odd">ARRAYS</dt>
 <dd class="field-odd"><p></p></dd>
@@ -2091,7 +2091,7 @@ value of <code class="docutils literal notranslate"><span class="pre">2147483648
 </td></tr></table></div>
 </div>
 <div class="section" id="functions">
-<h4><a class="toc-backref" href="#id26">Functions</a><a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id29">Functions</a><a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-c notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -2109,7 +2109,7 @@ value of <code class="docutils literal notranslate"><span class="pre">2147483648
 </td></tr></table></div>
 </div>
 <div class="section" id="structures">
-<h4><a class="toc-backref" href="#id27">Structures</a><a class="headerlink" href="#structures" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id30">Structures</a><a class="headerlink" href="#structures" title="Permalink to this headline">¶</a></h4>
 <dl class="field-list simple">
 <dt class="field-odd">RECTANGLE STRUCTURE EXAMPLE</dt>
 <dd class="field-odd"><p></p></dd>
@@ -2201,7 +2201,7 @@ value of <code class="docutils literal notranslate"><span class="pre">2147483648
 </div>
 </div>
 <div class="section" id="pointers-and-smart-pointers">
-<h4><a class="toc-backref" href="#id28">Pointers and Smart pointers</a><a class="headerlink" href="#pointers-and-smart-pointers" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id31">Pointers and Smart pointers</a><a class="headerlink" href="#pointers-and-smart-pointers" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://www.youtube.com/watch?v=IzoFn3dfsPA">https://www.youtube.com/watch?v=IzoFn3dfsPA</a>
 <a class="reference external" href="https://www.youtube.com/watch?v=DTxHyVn0ODg">https://www.youtube.com/watch?v=DTxHyVn0ODg</a>
 <a class="reference external" href="https://www.youtube.com/watch?v=UOB7-B2MfwA">https://www.youtube.com/watch?v=UOB7-B2MfwA</a></p>
@@ -2217,12 +2217,12 @@ Passing by reference …</p>
 </div>
 </div>
 <div class="section" id="id4">
-<h3><a class="toc-backref" href="#id29">Basic C++ Cheat Sheet</a><a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id32">Basic C++ Cheat Sheet</a><a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id5">
-<h4><a class="toc-backref" href="#id30">Input Output</a><a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id33">Input Output</a><a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
 </div>
 <div class="section" id="id6">
-<h4><a class="toc-backref" href="#id31">Arrays</a><a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id34">Arrays</a><a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
 <dl class="field-list simple">
 <dt class="field-odd">ARRAYS</dt>
 <dd class="field-odd"><p></p></dd>
@@ -2316,22 +2316,22 @@ Passing by reference …</p>
 </td></tr></table></div>
 </div>
 <div class="section" id="classes-and-properties">
-<h4><a class="toc-backref" href="#id32">Classes and Properties</a><a class="headerlink" href="#classes-and-properties" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id35">Classes and Properties</a><a class="headerlink" href="#classes-and-properties" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://www.youtube.com/watch?v=V-BFlMrBtqQ">https://www.youtube.com/watch?v=V-BFlMrBtqQ</a></p>
 </div>
 <div class="section" id="inheritances">
-<h4><a class="toc-backref" href="#id33">Inheritances</a><a class="headerlink" href="#inheritances" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id36">Inheritances</a><a class="headerlink" href="#inheritances" title="Permalink to this headline">¶</a></h4>
 </div>
 <div class="section" id="virtual-classes">
-<h4><a class="toc-backref" href="#id34">Virtual classes</a><a class="headerlink" href="#virtual-classes" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id37">Virtual classes</a><a class="headerlink" href="#virtual-classes" title="Permalink to this headline">¶</a></h4>
 </div>
 <div class="section" id="vectors">
-<h4><a class="toc-backref" href="#id35">Vectors</a><a class="headerlink" href="#vectors" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id38">Vectors</a><a class="headerlink" href="#vectors" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://www.youtube.com/watch?v=PocJ5jXv8No">https://www.youtube.com/watch?v=PocJ5jXv8No</a>
 <a class="reference external" href="https://www.youtube.com/watch?v=HcESuwmlHEY">https://www.youtube.com/watch?v=HcESuwmlHEY</a></p>
 </div>
 <div class="section" id="threads">
-<h4><a class="toc-backref" href="#id36">Threads</a><a class="headerlink" href="#threads" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id39">Threads</a><a class="headerlink" href="#threads" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://www.youtube.com/watch?v=wXBcwHwIt_I">https://www.youtube.com/watch?v=wXBcwHwIt_I</a></p>
 <div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -2416,7 +2416,7 @@ Passing by reference …</p>
 </div>
 </div>
 <div class="section" id="sfml">
-<h2><a class="toc-backref" href="#id37">SFML</a><a class="headerlink" href="#sfml" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id40">SFML</a><a class="headerlink" href="#sfml" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -2560,14 +2560,26 @@ Passing by reference …</p>
 </td></tr></table></div>
 </div>
 <div class="section" id="qt">
-<h2><a class="toc-backref" href="#id38">Qt</a><a class="headerlink" href="#qt" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id41">Qt</a><a class="headerlink" href="#qt" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-todo admonition" id="id7">
+<p class="admonition-title">Todo</p>
+<p>Qt</p>
+</div>
 </div>
 <div class="section" id="cuda">
-<h2><a class="toc-backref" href="#id39">CUDA</a><a class="headerlink" href="#cuda" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id42">CUDA</a><a class="headerlink" href="#cuda" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://matehickey.github.io/Projet-CUDA-M2/site/cuda/">https://matehickey.github.io/Projet-CUDA-M2/site/cuda/</a></p>
+<div class="admonition-todo admonition" id="id8">
+<p class="admonition-title">Todo</p>
+<p>Cuda</p>
+</div>
 </div>
 <div class="section" id="cmake-and-builds">
-<h2><a class="toc-backref" href="#id40">CMake and Builds</a><a class="headerlink" href="#cmake-and-builds" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id43">CMake and Builds</a><a class="headerlink" href="#cmake-and-builds" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-todo admonition" id="id9">
+<p class="admonition-title">Todo</p>
+<p>CMake</p>
+</div>
 </div>
 </div>
 

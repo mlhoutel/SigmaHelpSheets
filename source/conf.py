@@ -27,10 +27,13 @@ release = '1.0.0'
 
 # -- General configuration ---------------------------------------------------
 
+# Display todos by setting to True
+todo_include_todos = True
+
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['recommonmark','sphinx_rtd_theme','nbsphinx','sphinx_copybutton']
+extensions = ['recommonmark','sphinx_rtd_theme','nbsphinx','sphinx_copybutton','sphinx.ext.todo']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -59,7 +62,7 @@ html_css_files = ['https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.3.5/jsxgrap
 html_js_files = ['debug.js', 'https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.3.5/jsxgraphcore.js', 'https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js']
 
 html_title = "Sigma Help Sheets"
-html_short_title = "Sigma HS"
+html_short_title = "Sigma"
 html_logo = "_static/sigmwhite.svg"
 html_favicon = "_static/sumblack.ico"
 html_show_sourcelink = False

@@ -34,7 +34,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.3.5/jsxgraphcore.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
         <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
@@ -104,7 +104,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Maths/Maths.html">Maths</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Physics/Physics.html">Physics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Chemistry/Chemistry.html">Chemistry</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Computer Science/Computer Science.html">Computer Science</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Computer%20Science/Computer%20Science.html">Computer Science</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Algorithms/Algorithms.html">Algorithms</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Desktop Languages</span></p>
@@ -127,7 +127,26 @@
 </ul>
 <p class="caption"><span class="caption-text">Miscellaneous</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Sphinx</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Sphinx</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setup">Setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#installation-with-anaconda">Installation with Anaconda</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#website-setup">Website Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#cheat-sheets">Cheat Sheets</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#restructuredtext-rst">ReStructuredText (.rst)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#markdown-md">MarkDown (.md)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#themes">Themes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#install-theme">Install Theme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#edit-style">Edit Style</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code-syntax-highlighting">Code Syntax Highlighting</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../Docker/Docker.html">Docker</a></li>
 </ul>
 
@@ -224,13 +243,283 @@
     text-align: unset;
 }
 </style>
-<div class="toctree-wrapper compound">
-</div>
 <div class="section" id="sphinx">
 <h1>Sphinx<a class="headerlink" href="#sphinx" title="Permalink to this headline">¶</a></h1>
-<blockquote>
-<div><p>sphinx-quickstart</p>
-</div></blockquote>
+<div class="contents local topic" id="table-of-contents">
+<p class="topic-title">Table of Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#introduction" id="id2">Introduction</a></p></li>
+<li><p><a class="reference internal" href="#setup" id="id3">Setup</a></p>
+<ul>
+<li><p><a class="reference internal" href="#installation-with-anaconda" id="id4">Installation with Anaconda</a></p></li>
+<li><p><a class="reference internal" href="#website-setup" id="id5">Website Setup</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#cheat-sheets" id="id6">Cheat Sheets</a></p>
+<ul>
+<li><p><a class="reference internal" href="#restructuredtext-rst" id="id7">ReStructuredText (.rst)</a></p></li>
+<li><p><a class="reference internal" href="#markdown-md" id="id8">MarkDown (.md)</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#themes" id="id9">Themes</a></p>
+<ul>
+<li><p><a class="reference internal" href="#install-theme" id="id10">Install Theme</a></p></li>
+<li><p><a class="reference internal" href="#edit-style" id="id11">Edit Style</a></p></li>
+<li><p><a class="reference internal" href="#code-syntax-highlighting" id="id12">Code Syntax Highlighting</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="introduction">
+<h2><a class="toc-backref" href="#id2">Introduction</a><a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>Intro</p>
+</div>
+</div>
+<div class="section" id="setup">
+<h2><a class="toc-backref" href="#id3">Setup</a><a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="installation-with-anaconda">
+<h3><a class="toc-backref" href="#id4">Installation with Anaconda</a><a class="headerlink" href="#installation-with-anaconda" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Install Anaconda:</strong> <a class="reference external" href="https://docs.anaconda.com/anaconda/install/windows/">https://docs.anaconda.com/anaconda/install/windows/</a></p>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda create -n sphinx <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.7 <span class="c1"># Create the env we will use for sphinx</span>
+$ conda activate sphinx                         <span class="c1"># Activate the env (reopen a new command if error)</span>
+<span class="o">(</span>sphinx<span class="o">)</span> $ conda install sphinx         <span class="c1"># Install Sphinx from the package repository</span>
+
+<span class="c1"># Extentions (themes, converter, highligting etc)</span>
+<span class="o">(</span>sphinx<span class="o">)</span> $ conda install -c anaconda recommonmark               <span class="c1"># If you want to use the .md language in addition to the .rst base one</span>
+<span class="o">(</span>sphinx<span class="o">)</span> $ conda install -c anaconda sphinx_rtd_theme   <span class="c1"># Read The Doc theme is a cool theme to begin, see example at https://sphinx-rtd-theme.readthedocs.io/en/stable/</span>
+<span class="o">(</span>sphinx<span class="o">)</span> $ conda install -c conda-forge nbsphinx                <span class="c1"># If you want to have embedded notebooks into the documentation</span>
+<span class="o">(</span>sphinx<span class="o">)</span> $ conda install -c conda-forge sphinx-copybutton <span class="c1"># Add a copy button on the code blocks</span>
+
+<span class="o">(</span>sphinx<span class="o">)</span> $ mkdir website_folder         <span class="c1"># Create the website folder</span>
+<span class="o">(</span>sphinx<span class="o">)</span> $ <span class="nb">cd</span> website_folder            <span class="c1"># Go into the folder</span>
+<span class="o">(</span>sphinx<span class="o">)</span> $ sphinx-quickstart            <span class="c1"># Initialize the website</span>
+
+<span class="o">(</span>sphinx<span class="o">)</span> $ make html
+<span class="o">(</span>sphinx<span class="o">)</span> $ start chrome _build/html/index.html
+</pre></div>
+</div>
+</div>
+<div class="section" id="website-setup">
+<h3><a class="toc-backref" href="#id5">Website Setup</a><a class="headerlink" href="#website-setup" title="Permalink to this headline">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Source Folder</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>source                                          *Root*
+├─── _static                                    *Ressource*
+│     ├─── main.js
+│     ├─── style.css
+│     ├─── image.png
+│     ├─── favicon.ico
+│     └─── logo.svg
+├─── _templates                                 *Templates*
+│     └─── layout.html
+├─── pages                                      *Pages*
+├─── conf.py                                    *Config*
+└─── index.rst                                  *Main Page*
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Conf File</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Configuration file for the Sphinx documentation builder.</span>
+
+<span class="o">/*</span> <span class="o">...</span> <span class="o">*/</span>
+
+<span class="c1"># -- Project information -----------------------------------------------------</span>
+
+<span class="n">project</span> <span class="o">=</span> <span class="s1">&#39;Project-Name&#39;</span>
+<span class="n">copyright</span> <span class="o">=</span> <span class="s1">&#39;Copyright text&#39;</span>
+<span class="n">author</span> <span class="o">=</span> <span class="s1">&#39;Author Name&#39;</span>
+<span class="n">release</span> <span class="o">=</span> <span class="s1">&#39;1.0.0&#39;</span>
+
+<span class="o">/*</span> <span class="o">...</span> <span class="o">*/</span>
+
+<span class="c1"># -- General configuration ---------------------------------------------------</span>
+
+<span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;recommonmark&#39;</span><span class="p">,</span><span class="s1">&#39;sphinx_rtd_theme&#39;</span><span class="p">,</span><span class="s1">&#39;nbsphinx&#39;</span><span class="p">,</span><span class="s1">&#39;sphinx_copybutton&#39;</span><span class="p">]</span>
+<span class="n">templates_path</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_templates&#39;</span><span class="p">]</span>
+<span class="n">exclude_patterns</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;sphinx_rtd_theme&#39;</span>
+<span class="n">pygments_style</span> <span class="o">=</span> <span class="s1">&#39;monokai&#39;</span>
+
+<span class="n">html_static_path</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_static&#39;</span><span class="p">]</span>
+<span class="n">html_css_files</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;style.css&#39;</span><span class="p">]</span>
+<span class="n">html_js_files</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;main.js&#39;</span><span class="p">]</span>
+
+<span class="n">html_title</span> <span class="o">=</span> <span class="s2">&quot;Website Title&quot;</span>
+<span class="n">html_short_title</span> <span class="o">=</span> <span class="s2">&quot;Title&quot;</span>
+<span class="n">html_logo</span> <span class="o">=</span> <span class="s2">&quot;_static/logo.svg&quot;</span>
+<span class="n">html_favicon</span> <span class="o">=</span> <span class="s2">&quot;_static/favicon.ico&quot;</span>
+
+<span class="n">html_show_sourcelink</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;logo_only&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s1">&#39;prev_next_buttons_location&#39;</span><span class="p">:</span> <span class="s1">&#39;both&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="cheat-sheets">
+<h2><a class="toc-backref" href="#id6">Cheat Sheets</a><a class="headerlink" href="#cheat-sheets" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="restructuredtext-rst">
+<h3><a class="toc-backref" href="#id7">ReStructuredText (.rst)</a><a class="headerlink" href="#restructuredtext-rst" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="gh">============================</span>
+<span class="gh">Main Title</span>
+<span class="gh">============================</span>
+
+<span class="gh">Sub Title</span>
+<span class="gh">============================</span>
+
+<span class="gh">Sub Sub Title</span>
+<span class="gh">----------------------------</span>
+
+<span class="gh">Sub Sub Sub Title</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+
+<span class="nc">:Title note:</span>
+</pre></div>
+</div>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">contents</span><span class="p">::</span> Table of Contents
+        <span class="nc">:local:</span>
+
+<span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
+        <span class="nc">:maxdepth:</span> 2
+        <span class="nc">:caption:</span> Maths Tree
+
+        File.rst
+</pre></div>
+</div>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="s">``inline code``</span>
+
+Code example<span class="se">::</span>
+
+<span class="s">        if (a == b) { /* code */ }</span>
+
+<span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span>
+
+        if (a == b) { /<span class="ge">* code *</span>/ }
+
+<span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> c
+        <span class="nc">:linenos:</span>
+        <span class="nc">:lines:</span> 1, 3-5
+    <span class="nc">:start-after:</span> 3
+    <span class="nc">:end-before:</span> 5
+
+        if (a == b) { /<span class="ge">* code *</span>/ }
+
+<span class="p">..</span> <span class="ow">literalinclude</span><span class="p">::</span> file.c
+        <span class="nc">:language:</span> c
+        <span class="nc">:linenos:</span>
+</pre></div>
+</div>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>+---------------------+---------+---+
+<span class="o">|</span> 1                   | 2       | 3 |
++---------------------+---------+---+
+
++---------+---------+-----------+
+<span class="o">|</span> 1       | 2       | 3         |
++=========+=========+===========+
+<span class="o">|</span> 4                 | 5         |
++---------+---------+-----------+
+<span class="o">|</span> 6       | 7       | 10        |
++---------+---------+           |
+<span class="o">|</span> 8       | 9       |           |
++---------+---------+-----------+
+
+<span class="p">..</span> <span class="ow">csv-table</span><span class="p">::</span> a title
+   <span class="nc">:header:</span> &quot;1&quot;, &quot;2&quot;, &quot;3&quot;
+   <span class="nc">:widths:</span> 20, 20, 20
+
+   &quot;4&quot;, &quot;5&quot;, &quot;6&quot;
+   &quot;7&quot;, &quot;8&quot;, &quot;9&quot;
+</pre></div>
+</div>
+<div class="topic">
+<p class="topic-title">Topic title</p>
+<p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l’imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n’a pas fait que survivre cinq siècles, mais s’est aussi adapté à la bureautique informatique, sans que son contenu n’en soit modifié. Il a été popularisé dans les années 196</p>
+</div>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> image.jpg
+    <span class="nc">:width:</span> 200px
+    <span class="nc">:align:</span> center
+    <span class="nc">:height:</span> 100px
+    <span class="nc">:alt:</span> alternate text
+
+<span class="p">..</span> <span class="ow">figure</span><span class="p">::</span> image.jpg
+    <span class="nc">:width:</span> 200px
+    <span class="nc">:align:</span> center
+    <span class="nc">:height:</span> 100px
+    <span class="nc">:alt:</span> alternate text
+    <span class="nc">:figclass:</span> align-center
+
+    Caption text
+</pre></div>
+</div>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">todo</span><span class="p">::</span>
+<span class="p">..</span> <span class="ow">seealso</span><span class="p">::</span> Note
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> Note
+<span class="p">..</span> <span class="ow">warning</span><span class="p">::</span> Note
+<span class="p">..</span> <span class="ow">Attention</span><span class="p">::</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+<span class="p">..</span> <span class="ow">Caution</span><span class="p">::</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+<span class="p">..</span> <span class="ow">DANGER</span><span class="p">::</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+<span class="p">..</span> <span class="ow">WARNING</span><span class="p">::</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+<span class="p">..</span> <span class="ow">Error</span><span class="p">::</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+<span class="p">..</span> <span class="ow">Hint</span><span class="p">::</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+<span class="p">..</span> <span class="ow">Important</span><span class="p">::</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+<span class="p">..</span> <span class="ow">Note</span><span class="p">::</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+<span class="p">..</span> <span class="ow">Tip</span><span class="p">::</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+<span class="p">..</span> <span class="ow">admonition</span><span class="p">::</span> Custom Title
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+<span class="p">..</span> <span class="ow">topic</span><span class="p">::</span> Title
+
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        uis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+<span class="p">..</span> <span class="ow">sidebar</span><span class="p">::</span> Sidebar Title
+        <span class="nc">:subtitle:</span> Sidebar Subtitle
+
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        uis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</pre></div>
+</div>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="na">:download:</span><span class="nv">`download samplet.py &lt;sample.py&gt;`</span>
+<span class="na">:math:</span><span class="nv">`\alpha &gt; \beta`</span>
+<span class="p">..</span> <span class="ow">math</span><span class="p">::</span>
+
+n_{\mathrm{offset}} = \sum_{k=0}^{N-1} s_k n_k
+</pre></div>
+</div>
+</div>
+<div class="section" id="markdown-md">
+<h3><a class="toc-backref" href="#id8">MarkDown (.md)</a><a class="headerlink" href="#markdown-md" title="Permalink to this headline">¶</a></h3>
+<p>Installation</p>
+</div>
+</div>
+<div class="section" id="themes">
+<h2><a class="toc-backref" href="#id9">Themes</a><a class="headerlink" href="#themes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="install-theme">
+<h3><a class="toc-backref" href="#id10">Install Theme</a><a class="headerlink" href="#install-theme" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="edit-style">
+<h3><a class="toc-backref" href="#id11">Edit Style</a><a class="headerlink" href="#edit-style" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="code-syntax-highlighting">
+<h3><a class="toc-backref" href="#id12">Code Syntax Highlighting</a><a class="headerlink" href="#code-syntax-highlighting" title="Permalink to this headline">¶</a></h3>
+<p>sphinx-quickstart</p>
 <p>pip install pypandoc</p>
 <p>import pypandoc
 output = pypandoc.convert_file(‘PRISMATIC.md’, ‘rst’)</p>
@@ -243,13 +532,11 @@ output = pypandoc.convert_file(‘PRISMATIC.md’, ‘rst’)</p>
 <p><a class="reference external" href="https://docs.typo3.org/m/typo3/docs-how-to-document/master/en-us/WritingReST/Codeblocks.html">https://docs.typo3.org/m/typo3/docs-how-to-document/master/en-us/WritingReST/Codeblocks.html</a></p>
 <p><a class="reference external" href="https://pygments.org/docs/lexers/">https://pygments.org/docs/lexers/</a></p>
 <p><a class="reference external" href="https://stylishthemes.github.io/Syntax-Themes/pygments/">https://stylishthemes.github.io/Syntax-Themes/pygments/</a></p>
-<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<p class="centered">
-<strong>“Namespaces provide a method for preventing name conflicts in large projects.” <a class="reference external" href="https://en.cppreference.com/w/cpp/language/namespace">source</a></strong></p><div class="admonition tip">
+<div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p><a class="reference external" href="https://nbsphinx.readthedocs.io/en/0.7.0/installation.html">https://nbsphinx.readthedocs.io/en/0.7.0/installation.html</a></p>
+</div>
+</div>
 </div>
 </div>
 

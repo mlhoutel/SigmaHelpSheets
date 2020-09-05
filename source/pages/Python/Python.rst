@@ -9,23 +9,39 @@ Python
 Language
 ============================
 
-Anaconda (conda pip)
+.. todo::
+
+	Language
+
+Packages Manager
 ============================
+
+Pip
+----------------------------
+
+Anaconda
+----------------------------
 
 Manage Environments
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-conda create -n env_name python=3.7 pandas=0.16
+.. code:: bash
 
-source activate env_name
-conda activate env_name
+	conda create -n env_name python=3.7 pandas=0.16
 
-source desactivate
+	source activate env_name
+	conda activate env_name
 
-conda list (enviroment)
+	source desactivate
 
-anaconda search tensoflow (cloud)
-anaconda show jjhelmus/tensorflow
+	conda list (enviroment)
+
+	conda install name_packages
+	conda update name_packages
+	conda remove name_packages
+
+	anaconda search tensoflow (cloud)
+	anaconda show jjhelmus/tensorflow
 
 Install Packages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -35,13 +51,13 @@ conda
 
 ...
 
+.. code:: bash
 
-conda create -n prismatic python=3.7
-conda activate prismatic
-conda install -c ericpre pyprismatic
+	conda create -n prismatic python=3.7
+	conda activate prismatic
+	conda install -c ericpre pyprismatic
 
-
-conda install constructor
+	conda install constructor
 
 
 
@@ -116,7 +132,7 @@ Generating the Package skeletton:
 Source code must be availlable ``as one file`` (as an archive [.tar.gz, .zip, .tar.bz2, .tar.xz] or tagged on GitHub)
 
 Package Structure
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------
 
 Base Template:
 https://github.com/conda-forge/staged-recipes
@@ -140,7 +156,7 @@ installer settings in construct.yaml
 cross plateform, create installer for linux, os, windows
 
 Install a Precompiled Package
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------
 
 1. Search package on the Anaconda Cloud: https://anaconda.org/conda-forge
 2. Install the package: ``conda install -c conda-forge prismatic_gui``
@@ -148,7 +164,7 @@ Install a Precompiled Package
 4. You can find the binaries in ``Anaconda3\envs\env_name\Library\bin``
 
 Build Locally a Package
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------
 
 1. Install conda-build: ``conda install conda-build [--use-local]``
 2. Make your package, or get a package source code (ex: https://github.com/ericpre/prismatic_split-feedstock)
@@ -160,7 +176,7 @@ Build Locally a Package
 	conda build recipe -c conda-forge --variants "{'cuda_compiler_version':'10.2'}“
 
 Build for Remote
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------
 
 Todo (Azure pipeline)
 

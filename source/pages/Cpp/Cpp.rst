@@ -660,10 +660,22 @@ SFML
 Qt
 ============================
 
+.. todo::
+
+	Qt
+
 CUDA
 ============================
 
 https://matehickey.github.io/Projet-CUDA-M2/site/cuda/
 
+.. todo::
+
+	Cuda
+
 CMake and Builds
 ============================
+
+.. todo::
+
+	CMake

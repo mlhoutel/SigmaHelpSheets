@@ -11,12 +11,16 @@ Introduction
 History of the C# language
 ----------------------------
 
-TODO
+.. todo::
+
+	History
 
 Programming in C #
 ----------------------------
 
-TODO
+.. todo::
+
+	Setup env
 
 Cheat Sheets
 ===========================
@@ -295,7 +299,9 @@ Classes and Properties
 
 :INTERFACES:
 
-TODO
+.. todo::
+	
+	Interfaces etc
 
 Test Unit
 ---------------------------
@@ -433,15 +439,21 @@ The Code-Behin of the GUI is defined in the App.xaml.cs
 	System.Windows.Application.Current.Shutdown();
 
 
+.. todo::
 
+	Develop / Add examples
 
 
 MVVM Light
 ============================
 
-TODO
+.. todo::
+
+	MVVM
 
 API
 ============================
 
-TODO
+.. todo::
+
+	API

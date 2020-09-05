@@ -34,7 +34,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.3.5/jsxgraphcore.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
         <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
@@ -102,7 +102,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Maths/Maths.html">Maths</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Physics/Physics.html">Physics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Chemistry/Chemistry.html">Chemistry</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Computer Science/Computer Science.html">Computer Science</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Computer%20Science/Computer%20Science.html">Computer Science</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Algorithms/Algorithms.html">Algorithms</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Desktop Languages</span></p>
@@ -463,12 +463,12 @@ of Alan Pryor Jr., Colin Ophus and Jianwei Miao*</p>
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">pyprismatic</span> <span class="k">as</span> <span class="nn">pr</span>
-<span class="kn">import</span> <span class="nn">h5py</span> <span class="k">as</span> <span class="nn">h5</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span></span>import pyprismatic as pr
+import h5py as h5
+import numpy as np
+import matplotlib.pyplot as plt
 
-<span class="kn">from</span> <span class="nn">numpy.fft</span> <span class="kn">import</span> <span class="n">fft</span><span class="p">,</span> <span class="n">ifft</span><span class="p">,</span> <span class="n">fft2</span><span class="p">,</span> <span class="n">ifft2</span><span class="p">,</span> <span class="n">fftshift</span><span class="p">,</span> <span class="n">ifftshift</span>
+from numpy.fft import fft, ifft, fft2, ifft2, fftshift, ifftshift
 </pre></div>
 </div>
 </div>
@@ -480,37 +480,37 @@ of Alan Pryor Jr., Colin Ophus and Jianwei Miao*</p>
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">INPUTLINK</span>     <span class="o">=</span> <span class="s2">&quot;SI100.XYZ&quot;</span> <span class="c1"># link to the .XYZ file with the structure&#39;s atoms coordinates</span>
-<span class="n">OUTPUTLINK</span>    <span class="o">=</span> <span class="s2">&quot;output.h5&quot;</span> <span class="c1"># link to the hdf output of the simulation</span>
-<span class="n">PARAMETERLINK</span> <span class="o">=</span> <span class="s2">&quot;parameters.txt&quot;</span> <span class="c1"># link to save the file with the parameters of the simulation</span>
+<span></span>INPUTLINK     = &quot;SI100.XYZ&quot; # link to the .XYZ file with the structure&#39;s atoms coordinates
+OUTPUTLINK    = &quot;output.h5&quot; # link to the hdf output of the simulation
+PARAMETERLINK = &quot;parameters.txt&quot; # link to save the file with the parameters of the simulation
 
-<span class="c1"># We initialize the meta object with all the simulations parameters</span>
-<span class="n">meta</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">Metadata</span><span class="p">(</span><span class="n">filenameAtoms</span><span class="o">=</span><span class="n">INPUTLINK</span><span class="p">,</span> <span class="n">filenameOutput</span><span class="o">=</span><span class="n">OUTPUTLINK</span><span class="p">)</span>
+# We initialize the meta object with all the simulations parameters
+meta = pr.Metadata(filenameAtoms=INPUTLINK, filenameOutput=OUTPUTLINK)
 
-<span class="c1"># Then we edit some of the parameters to save the simulation datas</span>
-<span class="n">meta</span><span class="o">.</span><span class="n">readParameters</span><span class="p">(</span><span class="n">PARAMETERLINK</span><span class="p">)</span>
-<span class="c1"># meta.writeParameters(PARAMETERLINK)</span>
-<span class="n">meta</span><span class="o">.</span><span class="n">savePotentialSlices</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">meta</span><span class="o">.</span><span class="n">saveDPC_CoM</span>  <span class="o">=</span> <span class="mi">1</span>
-<span class="n">meta</span><span class="o">.</span><span class="n">save2DOutput</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">meta</span><span class="o">.</span><span class="n">save3DOutput</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">meta</span><span class="o">.</span><span class="n">save4DOutput</span> <span class="o">=</span> <span class="mi">0</span>
+# Then we edit some of the parameters to save the simulation datas
+meta.readParameters(PARAMETERLINK)
+# meta.writeParameters(PARAMETERLINK)
+meta.savePotentialSlices = 1
+meta.saveDPC_CoM  = 1
+meta.save2DOutput = 1
+meta.save3DOutput = 1
+meta.save4DOutput = 0
 
 
-<span class="c1"># We save the acceleration voltage of the electron beams (in V)</span>
-<span class="n">acc_</span> <span class="o">=</span> <span class="n">meta</span><span class="o">.</span><span class="n">E0</span>
+# We save the acceleration voltage of the electron beams (in V)
+acc_ = meta.E0
 
-<span class="c1"># You can call the toString() method of the metadata object to see all it&#39;s parameters</span>
-<span class="c1"># meta.toString()</span>
+# You can call the toString() method of the metadata object to see all it&#39;s parameters
+# meta.toString()
 
-<span class="c1"># Finally we run the simulation</span>
-<span class="n">meta</span><span class="o">.</span><span class="n">go</span><span class="p">()</span>
+# Finally we run the simulation
+meta.go()
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Simulation from the atomic structure (</span><span class="si">{}</span><span class="s2">) done.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">INPUTLINK</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Output datas saved in </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">OUTPUTLINK</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Simulation parameters saved in </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">PARAMETERLINK</span><span class="p">))</span>
+print(&quot;Simulation from the atomic structure ({}) done.&quot;.format(INPUTLINK))
+print(&quot;Output datas saved in {}&quot;.format(OUTPUTLINK))
+print(&quot;Simulation parameters saved in {}&quot;.format(PARAMETERLINK))
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Simulation Acceleration Voltage = </span><span class="si">{}</span><span class="s2"> kiloVolt&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">acc_</span><span class="o">/</span><span class="mi">1000</span><span class="p">))</span>
+print(&quot;\nSimulation Acceleration Voltage = {} kiloVolt&quot;.format(acc_/1000))
 </pre></div>
 </div>
 </div>
@@ -531,73 +531,73 @@ Simulation Acceleration Voltage = 90.0 kiloVolt
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#Recursively find the subfiles and display the structure like the tree function</span>
-<span class="k">def</span> <span class="nf">recursiveHDF</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">pathstring</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
-    <span class="c1">#Test if it is an hdf subfolder</span>
-    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="s1">&#39;keys&#39;</span><span class="p">):</span>
+<span></span>#Recursively find the subfiles and display the structure like the tree function
+def recursiveHDF(f, pathstring=&#39;&#39;):
+    #Test if it is an hdf subfolder
+    if hasattr(f, &#39;keys&#39;):
 
-        <span class="c1">#List the subkeys of this folder</span>
-        <span class="n">subkeys</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
-        <span class="c1">#Test if it is empty</span>
-        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">subkeys</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">pathstring</span> <span class="o">+</span> <span class="s1">&#39;└─── empty&#39;</span> <span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="c1">#Print every subdirectory</span>
-            <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">subkeys</span><span class="p">)):</span>
-                <span class="n">subkey</span> <span class="o">=</span> <span class="n">subkeys</span><span class="p">[</span><span class="n">s</span><span class="p">]</span>
-                <span class="k">if</span><span class="p">(</span><span class="n">s</span><span class="o">+</span><span class="mi">1</span><span class="o">==</span><span class="nb">len</span><span class="p">(</span><span class="n">subkeys</span><span class="p">)):</span>
-                    <span class="nb">print</span><span class="p">(</span><span class="n">pathstring</span> <span class="o">+</span> <span class="s1">&#39;└─── &#39;</span> <span class="o">+</span> <span class="n">subkey</span><span class="p">)</span>
-                    <span class="n">recursiveHDF</span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="n">subkey</span><span class="p">],</span> <span class="n">pathstring</span><span class="o">+</span><span class="s1">&#39;     &#39;</span><span class="p">)</span>
-                <span class="k">else</span><span class="p">:</span>
-                    <span class="nb">print</span><span class="p">(</span><span class="n">pathstring</span> <span class="o">+</span> <span class="s1">&#39;├─── &#39;</span> <span class="o">+</span> <span class="n">subkey</span><span class="p">)</span>
-                    <span class="n">recursiveHDF</span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="n">subkey</span><span class="p">],</span> <span class="n">pathstring</span><span class="o">+</span><span class="s1">&#39;│    &#39;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">pathstring</span> <span class="o">+</span> <span class="s1">&#39;└─── matrix&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
+        #List the subkeys of this folder
+        subkeys = list(f.keys())
+        #Test if it is empty
+        if len(subkeys) == 0:
+            print(pathstring + &#39;└─── empty&#39; )
+        else:
+            #Print every subdirectory
+            for s in range(len(subkeys)):
+                subkey = subkeys[s]
+                if(s+1==len(subkeys)):
+                    print(pathstring + &#39;└─── &#39; + subkey)
+                    recursiveHDF(f[subkey], pathstring+&#39;     &#39;)
+                else:
+                    print(pathstring + &#39;├─── &#39; + subkey)
+                    recursiveHDF(f[subkey], pathstring+&#39;│    &#39;)
+    else:
+        print(pathstring + &#39;└─── matrix&#39; + str(f.shape))
 
-<span class="c1">#Display multiple images on the same line</span>
-<span class="k">def</span> <span class="nf">displayLine</span><span class="p">(</span><span class="n">images</span><span class="p">,</span> <span class="n">labels</span><span class="p">):</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">images</span><span class="p">)</span>
-    <span class="n">fig</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">15</span><span class="o">/</span><span class="n">n</span><span class="p">))</span>
+#Display multiple images on the same line
+def displayLine(images, labels):
+    n = len(images)
+    fig=plt.figure(figsize=(20, 15/n))
 
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-        <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-        <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">labels</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-        <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">images</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-        <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    for i in range(n):
+        fig.add_subplot(1, n, i+1)
+        plt.title(labels[i])
+        plt.imshow(images[i])
+        plt.colorbar()
+    plt.show()
 
-<span class="c1"># We open the output file for reading with the H5py library (HDF5 file)</span>
-<span class="n">f</span> <span class="o">=</span> <span class="n">h5</span><span class="o">.</span><span class="n">File</span><span class="p">(</span><span class="n">OUTPUTLINK</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+# We open the output file for reading with the H5py library (HDF5 file)
+f = h5.File(OUTPUTLINK, &#39;r&#39;)
 
-<span class="c1"># We use the recursiveHDF function to recursively read the file</span>
-<span class="c1"># recursiveHDF(f)</span>
+# We use the recursiveHDF function to recursively read the file
+# recursiveHDF(f)
 
-<span class="c1"># We then read the datas stored from the Projected potential computation</span>
-<span class="n">potential</span> <span class="o">=</span> <span class="n">f</span><span class="p">[</span><span class="s1">&#39;4DSTEM_simulation/data/realslices/ppotential/realslice&#39;</span><span class="p">][()]</span> <span class="c1"># computed slices of the atoms potential</span>
+# We then read the datas stored from the Projected potential computation
+potential = f[&#39;4DSTEM_simulation/data/realslices/ppotential/realslice&#39;][()] # computed slices of the atoms potential
 
-<span class="c1"># We also get the axis of the datas, X and Y for the 2D plane coordinates position, and Z for the slice position (thickness)</span>
-<span class="n">Xaxis</span> <span class="o">=</span> <span class="n">f</span><span class="p">[</span><span class="s1">&#39;4DSTEM_simulation/data/realslices/ppotential/dim1&#39;</span><span class="p">][()]</span> <span class="c1"># potential slice X axis (in Å)</span>
-<span class="n">Yaxis</span> <span class="o">=</span> <span class="n">f</span><span class="p">[</span><span class="s1">&#39;4DSTEM_simulation/data/realslices/ppotential/dim2&#39;</span><span class="p">][()]</span> <span class="c1"># potential slice Y axis (in Å)</span>
-<span class="n">Zaxis</span> <span class="o">=</span> <span class="n">f</span><span class="p">[</span><span class="s1">&#39;4DSTEM_simulation/data/realslices/ppotential/dim3&#39;</span><span class="p">][()]</span> <span class="c1"># potential slice Z axis (in Å)</span>
+# We also get the axis of the datas, X and Y for the 2D plane coordinates position, and Z for the slice position (thickness)
+Xaxis = f[&#39;4DSTEM_simulation/data/realslices/ppotential/dim1&#39;][()] # potential slice X axis (in Å)
+Yaxis = f[&#39;4DSTEM_simulation/data/realslices/ppotential/dim2&#39;][()] # potential slice Y axis (in Å)
+Zaxis = f[&#39;4DSTEM_simulation/data/realslices/ppotential/dim3&#39;][()] # potential slice Z axis (in Å)
 
-<span class="c1"># We get the size of the potential slice dimensions (in Px)</span>
-<span class="n">Xdim</span><span class="p">,</span> <span class="n">Ydim</span><span class="p">,</span> <span class="n">Zdim</span> <span class="o">=</span> <span class="n">potential</span><span class="o">.</span><span class="n">shape</span>
+# We get the size of the potential slice dimensions (in Px)
+Xdim, Ydim, Zdim = potential.shape
 
-<span class="c1"># We get the scale of the pixels for the slice dimensions in the direct space (in Å)</span>
-<span class="n">Xscale</span><span class="p">,</span> <span class="n">Yscale</span><span class="p">,</span> <span class="n">Zscale</span> <span class="o">=</span> <span class="p">[(</span><span class="n">Xaxis</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">Xaxis</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="p">(</span><span class="n">Yaxis</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">Yaxis</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="p">(</span><span class="n">Zaxis</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">Zaxis</span><span class="p">[</span><span class="mi">0</span><span class="p">])]</span>
+# We get the scale of the pixels for the slice dimensions in the direct space (in Å)
+Xscale, Yscale, Zscale = [(Xaxis[1] - Xaxis[0]), (Yaxis[1] - Yaxis[0]), (Zaxis[1] - Zaxis[0])]
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Potentials for: </span><span class="si">{}</span><span class="s2"> slices&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Zdim</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Thickness:      </span><span class="si">{}</span><span class="s2">Å&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Zscale</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pixels size:    </span><span class="si">{}</span><span class="s2">Åx</span><span class="si">{}</span><span class="s2">Å&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Xscale</span><span class="p">,</span> <span class="n">Yscale</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dimension:      </span><span class="si">{}</span><span class="s2">x</span><span class="si">{}</span><span class="s2"> (</span><span class="si">{}</span><span class="s2"> pixels)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Xdim</span><span class="p">,</span> <span class="n">Ydim</span><span class="p">,</span> <span class="n">Xdim</span><span class="o">*</span><span class="n">Ydim</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dimension:      </span><span class="si">{}</span><span class="s2">Åx</span><span class="si">{}</span><span class="s2">Å&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Xscale</span><span class="o">*</span><span class="n">Ydim</span><span class="p">,</span> <span class="n">Yscale</span><span class="o">*</span><span class="n">Ydim</span><span class="p">))</span>
+print(&quot;Potentials for: {} slices&quot;.format(Zdim))
+print(&quot;Thickness:      {}Å&quot;.format(Zscale))
+print(&quot;Pixels size:    {}Åx{}Å&quot;.format(Xscale, Yscale))
+print(&quot;Dimension:      {}x{} ({} pixels)&quot;.format(Xdim, Ydim, Xdim*Ydim))
+print(&quot;Dimension:      {}Åx{}Å&quot;.format(Xscale*Ydim, Yscale*Ydim))
 
-<span class="c1"># We display the projected potential slices</span>
-<span class="n">displayLine</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="n">potential</span><span class="p">[:,:,</span><span class="n">i</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">Zdim</span><span class="p">)],</span> <span class="p">[</span><span class="s2">&quot;Potential Slice </span><span class="si">{}</span><span class="s2"> </span><span class="se">\n</span><span class="s2"> min = </span><span class="si">{}</span><span class="s2">;  max = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">potential</span><span class="p">[:,:,</span><span class="n">i</span><span class="p">]),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">potential</span><span class="p">[:,:,</span><span class="n">i</span><span class="p">]))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">Zdim</span><span class="p">)])</span>
+# We display the projected potential slices
+displayLine([np.matrix(potential[:,:,i]) for i in range(Zdim)], [&quot;Potential Slice {} \n min = {};  max = {}&quot;.format(i, np.min(potential[:,:,i]), np.max(potential[:,:,i])) for i in range(Zdim)])
 
-<span class="c1"># We close the .h5 file to avoid conflits</span>
-<span class="n">f</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
-<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+# We close the .h5 file to avoid conflits
+f.flush()
+f.close()
 
 </pre></div>
 </div>
@@ -629,29 +629,29 @@ Dimension:      16.28999948501587Åx16.28999948501587Å
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">m0</span> <span class="o">=</span> <span class="mf">9.109383e-31</span> <span class="c1"># Electron mass (in kg)</span>
-<span class="n">e_</span> <span class="o">=</span> <span class="mf">1.602177e-19</span> <span class="c1"># Elementary charge (in coulomb)</span>
-<span class="n">c_</span> <span class="o">=</span> <span class="mi">299792458</span> <span class="c1"># Light speed (in m/s)</span>
-<span class="n">h_</span> <span class="o">=</span> <span class="mf">6.62607e-34</span> <span class="c1"># Planck constant in (m2 kg/s)</span>
+<span></span>m0 = 9.109383e-31 # Electron mass (in kg)
+e_ = 1.602177e-19 # Elementary charge (in coulomb)
+c_ = 299792458 # Light speed (in m/s)
+h_ = 6.62607e-34 # Planck constant in (m2 kg/s)
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;beam acceleration = </span><span class="si">{}</span><span class="s2"> kV&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">acc_</span><span class="o">/</span><span class="mi">1000</span><span class="p">))</span>
+print(&quot;beam acceleration = {} kV&quot;.format(acc_/1000))
 
-<span class="c1"># We compute the electron beam energy with the electrong beam voltage</span>
-<span class="n">E0</span> <span class="o">=</span> <span class="n">m0</span> <span class="o">*</span> <span class="n">c_</span> <span class="o">*</span> <span class="n">c_</span>
-<span class="n">E1</span> <span class="o">=</span> <span class="n">e_</span> <span class="o">*</span> <span class="n">acc_</span>
+# We compute the electron beam energy with the electrong beam voltage
+E0 = m0 * c_ * c_
+E1 = e_ * acc_
 
-<span class="c1"># We compute the Wave length (in Å)</span>
-<span class="n">lambda_</span> <span class="o">=</span> <span class="n">h_</span> <span class="o">*</span> <span class="n">c_</span><span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">E0</span><span class="o">*</span><span class="n">E1</span> <span class="o">+</span> <span class="n">E1</span><span class="o">*</span><span class="n">E1</span><span class="p">)</span> <span class="o">*</span> <span class="mf">1e10</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;lambda_ = </span><span class="si">{}</span><span class="s2">Å&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">lambda_</span><span class="p">))</span>
+# We compute the Wave length (in Å)
+lambda_ = h_ * c_/ np.sqrt(2*E0*E1 + E1*E1) * 1e10
+print(&quot;lambda_ = {}Å&quot;.format(lambda_))
 
-<span class="c1"># Beam interaction (in V-1 A-1)</span>
-<span class="c1"># I prefer to write sigma_ like this because, the unit of sigma are then straightforward.</span>
-<span class="n">sigma_</span> <span class="o">=</span> <span class="mf">2.</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="n">lambda_</span><span class="o">/</span><span class="n">acc_</span> <span class="o">*</span> <span class="p">(</span><span class="n">E0</span><span class="o">+</span><span class="n">E1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">E0</span><span class="o">+</span><span class="n">E1</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;sigma_ = </span><span class="si">{}</span><span class="s2">V-1 A-1&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sigma_</span><span class="p">))</span>
+# Beam interaction (in V-1 A-1)
+# I prefer to write sigma_ like this because, the unit of sigma are then straightforward.
+sigma_ = 2.*np.pi/lambda_/acc_ * (E0+E1)/(2*E0+E1)
+print(&quot;sigma_ = {}V-1 A-1&quot;.format(sigma_))
 
-<span class="c1"># We initialize the waves functions as a matrix of the same shape as the slices</span>
-<span class="c1"># https://en.wikipedia.org/wiki/Wave_function</span>
-<span class="n">electronWaves</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">Xdim</span><span class="p">,</span> <span class="n">Ydim</span><span class="p">,</span> <span class="n">Zdim</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">complex</span><span class="p">)</span>
+# We initialize the waves functions as a matrix of the same shape as the slices
+# https://en.wikipedia.org/wiki/Wave_function
+electronWaves = np.zeros(shape=(Xdim, Ydim, Zdim), dtype=np.complex)
 </pre></div>
 </div>
 </div>
@@ -659,70 +659,70 @@ Dimension:      16.28999948501587Åx16.28999948501587Å
 </div>
 <div class="section" id="2.1-First-the-complex-electron-wave-\psi-representing-the-initial-converged-probe-is-defined,-typically-as-an-Airy-disk-function-[c].-This-probe-is-positioned-at-the-desired-location-on-the-sample-surface-in-realspace-[d].">
 <h2>2.1 First the complex electron wave <span class="math notranslate nohighlight">\(\psi\)</span> representing the initial converged probe is defined, typically as an Airy disk function [c]. This probe is positioned at the desired location on the sample surface in realspace [d].<a class="headerlink" href="#2.1-First-the-complex-electron-wave-\psi-representing-the-initial-converged-probe-is-defined,-typically-as-an-Airy-disk-function-[c].-This-probe-is-positioned-at-the-desired-location-on-the-sample-surface-in-realspace-[d]." title="Permalink to this headline">¶</a></h2>
-<p><img alt="813d3f9b02f94a79a31c86cba5f90fc2" src="../../_images/figure1.png" /></p>
+<p><img alt="f6554e54c7da4e72b53989b0ff867019" src="../../_images/figure1.png" /></p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># We compute the input probe in the condenser aperture plane</span>
-<span class="c1"># rec_inputProbe is the input wave function in the condensor aperture plane. Radius is linked to the condensor aperture radius</span>
-<span class="c1"># TAKE CARE OF THE UNITS : indeed there is a &#39;demagnification&#39; between the condensor aperture and the &#39;sample&#39; conjugated plane</span>
-<span class="c1"># Without this demagnification radius, to go from the condensor aperture plane to the input plane of the sample, one should apply</span>
-<span class="c1"># an inverse Fourier Transform</span>
-<span class="c1"># For the units, the easiest is to work with angles (radian is in fact no physical units !) and take for reference the angles</span>
-<span class="c1"># without demagnification i.e. a demagnification equal to 1, i.e. use the sample (direct space) and its reciprocal space (</span>
-<span class="c1">#  calibrated in radian using the relationship between reciprocal vectors and angles ( lambda g = alpha )</span>
+<span></span># We compute the input probe in the condenser aperture plane
+# rec_inputProbe is the input wave function in the condensor aperture plane. Radius is linked to the condensor aperture radius
+# TAKE CARE OF THE UNITS : indeed there is a &#39;demagnification&#39; between the condensor aperture and the &#39;sample&#39; conjugated plane
+# Without this demagnification radius, to go from the condensor aperture plane to the input plane of the sample, one should apply
+# an inverse Fourier Transform
+# For the units, the easiest is to work with angles (radian is in fact no physical units !) and take for reference the angles
+# without demagnification i.e. a demagnification equal to 1, i.e. use the sample (direct space) and its reciprocal space (
+#  calibrated in radian using the relationship between reciprocal vectors and angles ( lambda g = alpha )
 
-<span class="c1"># Radius is linked to the condensor aperture radius</span>
-<span class="n">HradiusMrad</span><span class="p">,</span> <span class="n">KradiusMrad</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span> <span class="c1"># in mrad</span>
+# Radius is linked to the condensor aperture radius
+HradiusMrad, KradiusMrad = [10, 10] # in mrad
 
-<span class="c1"># TAKE CARE OF THE UNITS : indeed there is a &#39;demagnification&#39; between the condensor aperture and the &#39;sample&#39; conjugated plane</span>
-<span class="c1"># Without this demagnification radius, to go from the condensor aperture plane to the input plane of the sample,</span>
-<span class="c1"># one should apply an inverse Fourier Transform</span>
-<span class="c1"># IN FACT THE EASIEST SOLUTION FOR THE UNIT ISSUE IS TO USE THE pixel_size of the direct space !!!</span>
-<span class="c1">#    a) from the dir_pixel_size compute the rec_pixel_size    b) knowing the convergence angle (in fact this is the conjugated aperture condensor size in the reciprocal space of the sample )</span>
-<span class="c1">#   compute the radius in pixel</span>
-<span class="c1"># JLR a oublié les conventions de prismatic et trouve plus rapide pour l&#39;instant de redéfinir les siennes</span>
-<span class="c1"># MAEL : --&gt; cherche à uniformiser les 2 en écrivant dir_pixel_size = prismatic_value</span>
+# TAKE CARE OF THE UNITS : indeed there is a &#39;demagnification&#39; between the condensor aperture and the &#39;sample&#39; conjugated plane
+# Without this demagnification radius, to go from the condensor aperture plane to the input plane of the sample,
+# one should apply an inverse Fourier Transform
+# IN FACT THE EASIEST SOLUTION FOR THE UNIT ISSUE IS TO USE THE pixel_size of the direct space !!!
+#    a) from the dir_pixel_size compute the rec_pixel_size    b) knowing the convergence angle (in fact this is the conjugated aperture condensor size in the reciprocal space of the sample )
+#   compute the radius in pixel
+# JLR a oublié les conventions de prismatic et trouve plus rapide pour l&#39;instant de redéfinir les siennes
+# MAEL : --&gt; cherche à uniformiser les 2 en écrivant dir_pixel_size = prismatic_value
 
-<span class="n">Hscale</span><span class="p">,</span> <span class="n">Kscale</span><span class="p">,</span> <span class="n">Lscale</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">Xdim</span> <span class="o">*</span> <span class="n">Xscale</span><span class="p">),</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">Ydim</span> <span class="o">*</span> <span class="n">Yscale</span><span class="p">),</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">Zdim</span> <span class="o">*</span> <span class="n">Zscale</span><span class="p">)]</span> <span class="c1"># in Angstrom-1</span>
+Hscale, Kscale, Lscale = [1/(Xdim * Xscale), 1/(Ydim * Yscale), 1/(Zdim * Zscale)] # in Angstrom-1
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Reciprocal pixel size = </span><span class="si">{}</span><span class="s2">Å-1 x </span><span class="si">{}</span><span class="s2">Å-1 x </span><span class="si">{}</span><span class="s2">Å-1&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Hscale</span><span class="p">,</span> <span class="n">Kscale</span><span class="p">,</span> <span class="n">Lscale</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Direct_pixel_size = </span><span class="si">{}</span><span class="s2">Å x </span><span class="si">{}</span><span class="s2">Å x </span><span class="si">{}</span><span class="s2">Å)</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Xscale</span><span class="p">,</span> <span class="n">Yscale</span><span class="p">,</span> <span class="n">Zscale</span><span class="p">))</span>
+print(&quot;Reciprocal pixel size = {}Å-1 x {}Å-1 x {}Å-1&quot;.format(Hscale, Kscale, Lscale))
+print(&quot;Direct_pixel_size = {}Å x {}Å x {}Å)\n&quot;.format(Xscale, Yscale, Zscale))
 
-<span class="n">HscaleRad</span><span class="p">,</span> <span class="n">KscaleRad</span>    <span class="o">=</span> <span class="p">[</span><span class="n">lambda_</span> <span class="o">*</span> <span class="n">Hscale</span><span class="p">,</span> <span class="n">lambda_</span> <span class="o">*</span> <span class="n">Kscale</span><span class="p">]</span>  <span class="c1"># the reciprocal pixel size in radian</span>
-<span class="n">Hradius</span><span class="p">,</span> <span class="n">Kradius</span> <span class="o">=</span> <span class="p">[</span><span class="n">HradiusMrad</span> <span class="o">*</span> <span class="mf">1e-3</span><span class="o">/</span><span class="n">lambda_</span><span class="p">,</span> <span class="n">KradiusMrad</span> <span class="o">*</span> <span class="mf">1e-3</span><span class="o">/</span><span class="n">lambda_</span><span class="p">]</span>
-<span class="n">HradiusPix</span><span class="p">,</span> <span class="n">KradiusPix</span> <span class="o">=</span> <span class="p">[</span><span class="n">Hradius</span> <span class="o">/</span> <span class="n">HscaleRad</span><span class="p">,</span> <span class="n">Kradius</span> <span class="o">/</span> <span class="n">KscaleRad</span><span class="p">]</span>
+HscaleRad, KscaleRad    = [lambda_ * Hscale, lambda_ * Kscale]  # the reciprocal pixel size in radian
+Hradius, Kradius = [HradiusMrad * 1e-3/lambda_, KradiusMrad * 1e-3/lambda_]
+HradiusPix, KradiusPix = [Hradius / HscaleRad, Kradius / KscaleRad]
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Radius in pixel = </span><span class="si">{}</span><span class="s2"> x </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">HradiusPix</span><span class="p">,</span> <span class="n">KradiusPix</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Radius in mrad = </span><span class="si">{}</span><span class="s2"> x </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">HradiusMrad</span><span class="p">,</span> <span class="n">KradiusMrad</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Radius in Å-1 = </span><span class="si">{}</span><span class="s2"> x </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Hradius</span><span class="p">,</span> <span class="n">Kradius</span><span class="p">))</span>
+print(&quot;Radius in pixel = {} x {}&quot;.format(HradiusPix, KradiusPix))
+print(&quot;Radius in mrad = {} x {}&quot;.format(HradiusMrad, KradiusMrad))
+print(&quot;Radius in Å-1 = {} x {}&quot;.format(Hradius, Kradius))
 
-<span class="c1">#  JLR prefers to use meshgrid as it is done in several programs working with 2D images</span>
-<span class="c1">#  xx, yy will be 2D arrays representing the column and row indexes of the images, the index origin being at the center of the image</span>
-<span class="c1">#  these arrays can then be used both in real and reciprocal spaces and pixel size values have to be used to have the correct units</span>
-<span class="c1"># next line is a typical short python equality. JLR is not sure that this one line is better than 2 lines of codes</span>
-<span class="c1">#  it should be better to define x, y as signed integer</span>
-<span class="n">x</span><span class="p">,</span> <span class="n">y</span>    <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">Xdim</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;float32&quot;</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">Xdim</span><span class="o">/</span><span class="mi">2</span><span class="p">)),</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">Ydim</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;float32&quot;</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">Ydim</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
-<span class="n">xx</span><span class="p">,</span> <span class="n">yy</span>  <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
-<span class="n">fx</span><span class="p">,</span> <span class="n">fy</span>  <span class="o">=</span> <span class="n">xx</span><span class="o">*</span><span class="n">Hscale</span><span class="p">,</span> <span class="n">yy</span><span class="o">*</span><span class="n">Hscale</span>
+#  JLR prefers to use meshgrid as it is done in several programs working with 2D images
+#  xx, yy will be 2D arrays representing the column and row indexes of the images, the index origin being at the center of the image
+#  these arrays can then be used both in real and reciprocal spaces and pixel size values have to be used to have the correct units
+# next line is a typical short python equality. JLR is not sure that this one line is better than 2 lines of codes
+#  it should be better to define x, y as signed integer
+x, y    = (np.arange(0, Xdim, dtype=&quot;float32&quot;) - np.floor(Xdim/2)), (np.arange(0, Ydim, dtype=&quot;float32&quot;) - np.floor(Ydim/2))
+xx, yy  = np.meshgrid(x,y)
+fx, fy  = xx*Hscale, yy*Hscale
 
-<span class="c1">#aperture_ = fx**2 + fy**2 &lt; Hradius**2 # condensor aperture</span>
-<span class="n">aperture_</span> <span class="o">=</span> <span class="p">(</span><span class="n">fx</span><span class="o">/</span><span class="n">Hradius</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">fy</span><span class="o">/</span><span class="n">Kradius</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="c1"># condensor aperture</span>
-<span class="n">rec_inputProbe</span> <span class="o">=</span> <span class="n">aperture_</span> <span class="o">+</span> <span class="mi">0</span><span class="n">j</span>
+#aperture_ = fx**2 + fy**2 &lt; Hradius**2 # condensor aperture
+aperture_ = (fx/Hradius)**2 + (fy/Kradius)**2 &lt; 1 # condensor aperture
+rec_inputProbe = aperture_ + 0j
 
-<span class="c1"># apparently when doing an FFT in numpy, the origin should be be at the top,left corner and not at the center of the image</span>
-<span class="c1"># so we have to apply an ifftshift or fftshift (JLR does not see the difference ? ) to correct for that.</span>
-<span class="n">inputProbe</span>  <span class="o">=</span> <span class="n">fftshift</span><span class="p">(</span><span class="n">ifft2</span><span class="p">(</span><span class="n">ifftshift</span><span class="p">(</span><span class="n">rec_inputProbe</span><span class="p">)))</span>
-<span class="n">norm</span>        <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">inputProbe</span><span class="p">)</span>
-<span class="n">inputProbe</span> <span class="o">/=</span> <span class="n">norm</span>
+# apparently when doing an FFT in numpy, the origin should be be at the top,left corner and not at the center of the image
+# so we have to apply an ifftshift or fftshift (JLR does not see the difference ? ) to correct for that.
+inputProbe  = fftshift(ifft2(ifftshift(rec_inputProbe)))
+norm        = np.linalg.norm(inputProbe)
+inputProbe /= norm
 
-<span class="c1"># il serait egalement bien de normaliser la fonction d&#39;onde (normalement elle devrait aller à 0 en bord de boite sinon le nombre de pixel est pas suffisant ...)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">max_probe = </span><span class="si">{}</span><span class="se">\n</span><span class="si">{}</span><span class="s2"> norm = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">inputProbe</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">inputProbe</span><span class="p">),</span> <span class="n">norm</span><span class="p">))</span>
+# il serait egalement bien de normaliser la fonction d&#39;onde (normalement elle devrait aller à 0 en bord de boite sinon le nombre de pixel est pas suffisant ...)
+print(&quot;\nmax_probe = {}\n{} norm = {}&quot;.format(np.max(inputProbe), np.linalg.norm(inputProbe), norm))
 
-<span class="n">displayLine</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">rec_inputProbe</span><span class="p">),</span>  <span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">inputProbe</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">imag</span><span class="p">(</span><span class="n">inputProbe</span><span class="p">)],</span>
-            <span class="p">[</span><span class="s2">&quot;Probe (Reciprocal Space-condensor Plane)&quot;</span><span class="p">,</span> <span class="s2">&quot;Input Probe (Real Space) &quot;</span><span class="p">,</span> <span class="s2">&quot;probe (imaginary) &quot;</span><span class="p">])</span>
+displayLine([np.real(rec_inputProbe),  np.real(inputProbe), np.imag(inputProbe)],
+            [&quot;Probe (Reciprocal Space-condensor Plane)&quot;, &quot;Input Probe (Real Space) &quot;, &quot;probe (imaginary) &quot;])
 
 </pre></div>
 </div>
@@ -767,8 +767,8 @@ max_probe = (0.04718646522044221+0j)
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><img alt="98dee23c35b64d999cf195156b7999c9" src="../../_images/reciproque.png" /></p></td>
-<td><p><img alt="8e096915b73443db9d26291970ca705d" src="../../_images/reciproque.gif" /></p></td>
+<tr class="row-even"><td><p><img alt="3dee765128364f918fdb7e890803ccca" src="../../_images/reciproque.png" /></p></td>
+<td><p><img alt="1c4cdaea03354181944506b8c3de9562" src="../../_images/reciproque.gif" /></p></td>
 </tr>
 </tbody>
 </table>
@@ -800,20 +800,20 @@ max_probe = (0.04718646522044221+0j)
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># Interaction with potential</span>
-<span class="c1"># https://fr.wikipedia.org/wiki/Espace_réciproque</span>
-<span class="c1"># https://fr.wikipedia.org/wiki/Réseau_réciproque</span>
+<span></span># Interaction with potential
+# https://fr.wikipedia.org/wiki/Espace_réciproque
+# https://fr.wikipedia.org/wiki/Réseau_réciproque
 
-<span class="c1"># complex(0,1) = 1j = 1.0j</span>
+# complex(0,1) = 1j = 1.0j
 
-<span class="c1"># Transmission of the input probe in the slice with the potentials</span>
-<span class="k">def</span> <span class="nf">transmission</span><span class="p">(</span><span class="n">inputProbes</span><span class="p">,</span> <span class="n">projectedPotential</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">inputProbes</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">sigma_</span><span class="o">*</span><span class="n">projectedPotential</span><span class="p">)</span>
+# Transmission of the input probe in the slice with the potentials
+def transmission(inputProbes, projectedPotential):
+    return inputProbes*np.exp(1j*sigma_*projectedPotential)
 
-<span class="n">electronWaves</span><span class="p">[:,:,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">transmission</span><span class="p">(</span><span class="n">inputProbe</span><span class="p">,</span> <span class="n">potential</span><span class="p">[:,:,</span><span class="mi">0</span><span class="p">])</span>
+electronWaves[:,:,0] = transmission(inputProbe, potential[:,:,0])
 
-<span class="n">displayLine</span><span class="p">([</span><span class="n">electronWaves</span><span class="p">[:,:,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">real</span><span class="p">,</span> <span class="n">electronWaves</span><span class="p">[:,:,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">imag</span><span class="p">],</span>
-            <span class="p">[</span><span class="s2">&quot;Real Part&quot;</span>              <span class="p">,</span> <span class="s2">&quot;Imaginary Part&quot;</span><span class="p">])</span>
+displayLine([electronWaves[:,:,0].real, electronWaves[:,:,0].imag],
+            [&quot;Real Part&quot;              , &quot;Imaginary Part&quot;])
 </pre></div>
 </div>
 </div>
@@ -832,24 +832,24 @@ max_probe = (0.04718646522044221+0j)
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># Propagation in vacuum over the distance t_</span>
-<span class="c1"># wave_in is the initial wave funtion expressed in the direct space</span>
-<span class="c1"># It seems better to store the wave function only in the direct space</span>
-<span class="c1"># (apparently prismatic has 2 arrays for the wavefunctions:</span>
-<span class="c1"># one in the direct space and one in the reciprocal space (to check) )</span>
+<span></span># Propagation in vacuum over the distance t_
+# wave_in is the initial wave funtion expressed in the direct space
+# It seems better to store the wave function only in the direct space
+# (apparently prismatic has 2 arrays for the wavefunctions:
+# one in the direct space and one in the reciprocal space (to check) )
 
-<span class="n">propagator</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">lambda_</span><span class="o">*</span><span class="p">(</span><span class="n">fx</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">fy</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">Zscale</span><span class="p">)</span>
+propagator = np.exp(-1j*np.pi*lambda_*(fx**2+fy**2)*Zscale)
 
-<span class="k">def</span> <span class="nf">propagate</span><span class="p">(</span><span class="n">wave_in</span><span class="p">):</span>
-    <span class="n">wave_out</span>   <span class="o">=</span> <span class="n">ifft2</span><span class="p">(</span><span class="n">fftshift</span><span class="p">(</span><span class="n">fft2</span><span class="p">(</span><span class="n">wave_in</span><span class="p">)</span> <span class="o">*</span> <span class="n">propagator</span><span class="p">)</span> <span class="p">)</span>
-    <span class="n">displayLine</span><span class="p">([</span><span class="n">propagator</span><span class="o">.</span><span class="n">real</span><span class="p">,</span> <span class="n">propagator</span><span class="o">.</span><span class="n">imag</span><span class="p">,</span> <span class="n">wave_out</span><span class="o">.</span><span class="n">real</span><span class="p">,</span> <span class="n">wave_out</span><span class="o">.</span><span class="n">imag</span><span class="p">],</span>
-            <span class="p">[</span><span class="s2">&quot;Propagator real&quot;</span><span class="p">,</span> <span class="s2">&quot;Propagator imag&quot;</span><span class="p">,</span> <span class="s2">&quot;Wave real&quot;</span><span class="p">,</span><span class="s2">&quot;Wave imag&quot;</span><span class="p">])</span>
-    <span class="k">return</span> <span class="n">wave_out</span>
+def propagate(wave_in):
+    wave_out   = ifft2(fftshift(fft2(wave_in) * propagator) )
+    displayLine([propagator.real, propagator.imag, wave_out.real, wave_out.imag],
+            [&quot;Propagator real&quot;, &quot;Propagator imag&quot;, &quot;Wave real&quot;,&quot;Wave imag&quot;])
+    return wave_out
 
-<span class="n">electronWaves</span><span class="p">[:,:,</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">propagate</span><span class="p">(</span><span class="n">electronWaves</span><span class="p">[:,:,</span><span class="mi">0</span><span class="p">])</span>
+electronWaves[:,:,1] = propagate(electronWaves[:,:,0])
 
-<span class="n">displayLine</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">electronWaves</span><span class="p">[:,:,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">real</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">electronWaves</span><span class="p">[:,:,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">imag</span><span class="p">)],</span>
-            <span class="p">[</span><span class="s2">&quot;Absolute slice Real&quot;</span>                 <span class="p">,</span> <span class="s2">&quot;Absolute slice Imag&quot;</span><span class="p">])</span>
+displayLine([np.abs(electronWaves[:,:,1].real), np.abs(electronWaves[:,:,1].imag)],
+            [&quot;Absolute slice Real&quot;                 , &quot;Absolute slice Imag&quot;])
 </pre></div>
 </div>
 </div>
@@ -872,18 +872,18 @@ max_probe = (0.04718646522044221+0j)
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># Recompute all</span>
-<span class="n">electronWaves</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">Xdim</span><span class="p">,</span> <span class="n">Ydim</span><span class="p">,</span> <span class="n">Zdim</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">complex</span><span class="p">)</span>
+<span></span># Recompute all
+electronWaves = np.zeros(shape=(Xdim, Ydim, Zdim), dtype=np.complex)
 
-<span class="n">electronWaves</span><span class="p">[:,:,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">transmission</span><span class="p">(</span><span class="n">inputProbe</span><span class="p">,</span> <span class="n">potential</span><span class="p">[:,:,</span><span class="mi">0</span><span class="p">])</span>
-<span class="n">displayLine</span><span class="p">([</span><span class="n">electronWaves</span><span class="p">[:,:,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">real</span><span class="p">,</span> <span class="n">electronWaves</span><span class="p">[:,:,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">imag</span><span class="p">],</span>
-            <span class="p">[</span><span class="s2">&quot;Real Part&quot;</span><span class="p">,</span> <span class="s2">&quot;Imaginary Part&quot;</span><span class="p">])</span>
+electronWaves[:,:,0] = transmission(inputProbe, potential[:,:,0])
+displayLine([electronWaves[:,:,0].real, electronWaves[:,:,0].imag],
+            [&quot;Real Part&quot;, &quot;Imaginary Part&quot;])
 
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">Zdim</span><span class="p">):</span>
-    <span class="n">electronWaves</span><span class="p">[:,:,</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">propagate</span><span class="p">(</span><span class="n">electronWaves</span><span class="p">[:,:,</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-    <span class="n">displayLine</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">electronWaves</span><span class="p">[:,:,</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">real</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">electronWaves</span><span class="p">[:,:,</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">imag</span><span class="p">)],</span>
-                <span class="p">[</span><span class="s2">&quot;Real Part&quot;</span><span class="p">,</span> <span class="s2">&quot;Imaginary Part&quot;</span><span class="p">])</span>
-    <span class="n">electronWaves</span><span class="p">[:,:,</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">transmission</span><span class="p">(</span><span class="n">potential</span><span class="p">[:,:,</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">potential</span><span class="p">[:,:,</span><span class="n">i</span><span class="p">])</span>
+for i in range(1, Zdim):
+    electronWaves[:,:,i] = propagate(electronWaves[:,:,i-1])
+    displayLine([np.abs(electronWaves[:,:,i].real), np.abs(electronWaves[:,:,i].imag)],
+                [&quot;Real Part&quot;, &quot;Imaginary Part&quot;])
+    electronWaves[:,:,i] = transmission(potential[:,:,i-1], potential[:,:,i])
 </pre></div>
 </div>
 </div>
@@ -930,8 +930,8 @@ max_probe = (0.04718646522044221+0j)
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">displayLine</span><span class="p">([</span><span class="n">electronWaves</span><span class="p">[:,:,</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">real</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">Zdim</span><span class="p">)],</span> <span class="p">[</span><span class="s2">&quot;Electron Wave </span><span class="si">{}</span><span class="s2"> Real Part&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">Zdim</span><span class="p">)])</span>
-<span class="n">displayLine</span><span class="p">([</span><span class="n">electronWaves</span><span class="p">[:,:,</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">imag</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">Zdim</span><span class="p">)],</span> <span class="p">[</span><span class="s2">&quot;Electron Wave </span><span class="si">{}</span><span class="s2"> Imag Part&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">Zdim</span><span class="p">)])</span>
+<span></span>displayLine([electronWaves[:,:,i].real for i in range(Zdim)], [&quot;Electron Wave {} Real Part&quot;.format(i) for i in range(Zdim)])
+displayLine([electronWaves[:,:,i].imag for i in range(Zdim)], [&quot;Electron Wave {} Imag Part&quot;.format(i) for i in range(Zdim)])
 </pre></div>
 </div>
 </div>

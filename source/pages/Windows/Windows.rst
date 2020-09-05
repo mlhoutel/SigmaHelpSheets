@@ -9,8 +9,20 @@ Windows
 Structure
 ============================
 
+.. todo::
+
+	Structure
+
 Environment Variables
 ============================
 
+.. todo::
+
+	Variables
+
 Batch
 ============================
+
+.. todo::
+
+	Batch

@@ -11,7 +11,9 @@ Introduction
 History of the PHP language
 ----------------------------
 
-TODO
+.. todo::
+
+	Language
 
 Programming in PHP
 ----------------------------
@@ -19,12 +21,16 @@ Programming in PHP
 A Backend language
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-TODO
+.. todo::
+
+	Explanation
 
 Setup Apache server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-TODO
+.. todo::
+
+	Apache server
 
 Cheat Sheets
 ===========================
@@ -460,9 +466,13 @@ TODO
 MVC
 ============================
 
-TODO
+.. todo::
+
+	Mvc
 
 Laravel
 ============================
 
-TODO
+.. todo::
+
+	Laravel

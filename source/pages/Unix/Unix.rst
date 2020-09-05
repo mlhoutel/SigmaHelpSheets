@@ -70,8 +70,20 @@ Linux directory
 Structure
 ============================
 
+.. todo::
+
+    Structure
+
 Administration
 ============================
 
+.. todo::
+
+    Administration
+
 Bash
 ============================
+
+.. todo::
+
+    Bash
