@@ -5,8 +5,11 @@ Maths - Geometry
 .. contents:: Table of Contents
 	:local: 
 
-Triangle
+Shapes
 ---------------------------------
+
+Trianglex
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 :Pythagorean Theorem:
 
@@ -96,7 +99,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 
 Circles
----------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Circle Equation	
 
@@ -122,7 +125,7 @@ Circles
 
 
 Ellipses
----------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Ellipse Equation	
 
@@ -174,14 +177,14 @@ Definition
 
 :Euler formula:
 
-:math:`e^{i\pi}=-1`
+:math:`e^{i\pi}=-1 \iff \frac{(i \pi)^0}{0!} + \frac{(i \pi)^1}{1!} + \frac{(i \pi)^2}{2!} + \frac{(i \pi)^3}{3!} + \dots = -1`
 
 +--------------------------------------------+---------------------------------------------+
-| :math:`\cos{x}=\frac{e^{ix}+e^{-ix}}{2}`   | :math:`\sin{x}=\frac{e^{ix}-e^{-ix}}{2i}`   |
+| :math:`\cos(x)=\frac{e^{ix}+e^{-ix}}{2}`   | :math:`\sin(x)=\frac{e^{ix}-e^{-ix}}{2i}`   |
 +--------------------------------------------+---------------------------------------------+
-| :math:`\cos{x}^2=\frac{cos(2x)+1}{2}`      | :math:`\sin{x}^2=\frac{1-cos(2x)}{2}`       |
+| :math:`\cos(x)^2=\frac{cos(2x)+1}{2}`      | :math:`\sin(x)^2=\frac{1-cos(2x)}{2}`       |
 +--------------------------------------------+---------------------------------------------+
-| :math:`\cos{x}^3=\frac{cos(3x)+3cos(x)}{4}`| :math:`\sin{x}^3=\frac{3sin(x)-sin(3x)}{4}` |
+| :math:`\cos(x)^3=\frac{cos(3x)+3cos(x)}{4}`| :math:`\sin(x)^3=\frac{3sin(x)-sin(3x)}{4}` |
 +--------------------------------------------+---------------------------------------------+
 
 .. admonition:: Linearizations Example
@@ -365,14 +368,132 @@ Transformations
 
 	**3. Angle:** :math:`\theta = arg(1-i \sqrt{3}) = arg(2 * (\frac{1}{2} - i \frac{\sqrt{3}}{2})) = arg(2 * cos(-\frac{\pi}{3}) + i sin(-\frac{\pi}{3})) = 2e^{i* (-\frac{\pi}{3})}`
 
-Matrices
----------------------------------
-
-https://www.youtube.com/watch?v=rowWM-MijXU
-
 Vectors
 ---------------------------------
 
+Matrices
+---------------------------------
+
+Definition
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Matrix
+
+	:math:`A = \left( \matrix{ a_{11} & a_{12} & \dots & a_{1p} \cr
+	a_{21} & a_{22} & \dots & a_{2p} \cr
+	\vdots & \vdots & \ddots & \vdots \cr
+	a_{n1} & a_{n2} & \dots & a_{np} \cr} \right) \quad \left. \begin{array}{l} dimension \\ order \\ size \end{array}\right\} n \times p`
+
++------------+----------------------------------------------------------+
+| **Matrix** | **Exemple**                                              |
++------------+----------------------------------------------------------+
+| Square     | :math:`\left( \matrix{ 1 & 2 \cr 3 & 4 \cr} \right)`     |
++------------+----------------------------------------------------------+
+| Line       | :math:`\left( \matrix{ 1 & 2 & 3 & 4 \cr} \right)`       |
++------------+----------------------------------------------------------+
+| Column     | :math:`\left( \matrix{ 1 \cr 2 \cr 3 \cr 4 \cr} \right)` |
++------------+----------------------------------------------------------+
+| Null       | :math:`\left( \matrix{ 0 & 0 \cr 0 & 0 \cr} \right)`     |
++------------+----------------------------------------------------------+
+| Diagonal   | :math:`\left( \matrix{ 1 & 0 \cr 0 & 2 \cr} \right)`     |
++------------+----------------------------------------------------------+
+| Unit (Id)  | :math:`\left( \matrix{ 1 & 0 \cr 0 & 1 \cr} \right)`     |
++------------+----------------------------------------------------------+
+
+:math:`(A+B)^n = \sum\limits_{k=0}^{n} \binom{n}{p} A^{n-k}B^k` where :math:`\binom{n}{p} = \frac{n!}{k!(n-k)!}`
+
+Operations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Matrix Addition (:math:`A+B`)
+
+	The **two Matrices** must have **the same shape**
+
+	*alaways commutative* (:math:`A+B=B+A`)
+
+	:math:`\left( \matrix{ 1 & 2 & 3 \cr 4 & 5 & 6 \cr} \right) + \left( \matrix{ 7 & 8 & 9 \cr 10 & 11 & 12 \cr} \right) = \left( \matrix{ 1+7 & 2+8 & 3+9 \cr 4+10 & 5+11 & 6+12 \cr} \right) = \left( \matrix{ 8 & 10 & 12 \cr 14 & 16 & 18 \cr} \right)`
+
+.. admonition:: Matrix Multiplication (:math:`A \times B`) 
+	
+	The **first Matrix width** must have the same size as the **second Matrix height**
+
+	*usually not commutative* (:math:`A \times B \neq B \times A`)
+
+	:math:`\left( \matrix{ 1 & 2 & 3 \cr 4 & 5 & 6 \cr} \right) \times \left( \matrix{ 7 & 8 \cr 9 & 10 \cr 11 & 12 \cr} \right) = \left( \matrix{ 1*7+2*9+3*11 & 1*8+2*10+3*12 \cr 4*7+5*9+6*11 & 4*8+5*10+6*12 \cr} \right) = \left( \matrix{ 58 & 64 \cr 139 & 154 \cr} \right)`
+
+.. admonition:: Scalar Multiplication (:math:`n \times B`) 
+	
+	The **first Matrix width** must have the same size as the **second Matrix height**
+
+	*alaways commutative* (:math:`n \times B=B \times n`)
+
+	:math:`3 \times \left( \matrix{ 7 & 8 \cr 9 & 10 \cr 11 & 12 \cr} \right) = \left( \matrix{ 3*7 & 3*8 \cr 3*9 & 3*10 \cr 3*11 & 3*12 \cr} \right) = \left( \matrix{ 21 & 24 \cr 27 & 30 \cr 33 & 36 \cr} \right)`
+
+.. admonition:: Matrix Power (:math:`A^n`) 
+
+	:math:`A^0 = Id(A) = \left( \matrix{ 1 & 0 & \dots & 0 \cr
+	0 & 1 & \dots & 0 \cr
+	\vdots & \vdots & \ddots & \vdots \cr
+	0 & 0 & \dots & 1 \cr} \right)`
+
+	:math:`A^n = A \times A \times \dots \times A`
+
+.. admonition:: Matrix Inverse (:math:`A^{-1}`)
+	
+	:math:`Mn(\mathbb{R})` is all the **square matrices** of **order n**
+
+	:math:`\forall A \in Mn(\mathbb{R}), \exists A^{-1} \iff \exists B | A \times B = B \times A = Id(A), B = A^{-1}`
+
+.. admonition:: Matrix Division (:math:`\frac{A}{B}`) 
+
+	:math:`\exists B^{-1} \iff \frac{A}{B} = A \times (1/B) = A \times B^{-1}`
+
+:Gaussian Elimination:
+
+**Transform a system** in another similar one (with the same solutions) as a **Triangular matrix** (easier to resolve).
+
+**We have our initial system**
+
+:math:`\left\{ \begin{array}{l} x+2y+2z = 2 \\ x+3y-2z = -1 \\ 3x+5y+8z = 8 \end{array}\right. \begin{array}{l} (L1) \\ (L2) \\ (L3) \end{array}`
+
+**We then use L1 like a pivot and we eliminate x in L2 and L3**
+
+:math:`\left\{ \begin{array}{l} x+2y+2z = 2 \\ \qquad y-4z = -3 \\ \qquad -y+2z = 2 \end{array}\right. \begin{array}{l} (L1) \\ (L2 \leftarrow L2 - L1) \\ (L3 \leftarrow L3 - 3L1) \end{array}`
+
+**Finally, we use L2 like a pivot and we eliminate y in L3**
+
+:math:`\left\{ \begin{array}{l} x+2y+2z = 2 \\ \qquad y-4z = -3 \\ \qquad \quad -2z = -1 \end{array}\right. \begin{array}{l} (L1) \\ (L2) \\ (L3 \leftarrow L3 + L2) \end{array}`
+
+Resolution
+
+:math:`\begin{array}{l} (L3) \\ (L2) \\ (L1) \end{array} \left. \begin{array}{l} -2z = -1 \iff z= \frac{1}{2} \\ y-4z=-3 \iff y-2=-3 \iff y=-1 \\ x+2y+2z=2 \iff x-2+1=2 \iff x=3\end{array}\right.`
+
+:Sarrus Method:
+
+:Cramers rule:
+
+
+
+Resolve a System
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+:math:`(S) \quad \left\{ \begin{array}{l} ax + by = s \\ cx + dy = t \end{array}\right.` (We need as many unknowns as lines)
+
+We have :math:`A = \left( \matrix{ a & b \cr c & d \cr} \right), B = \left( \matrix{ s \cr t \cr} \right), X = \left( \matrix{ x \cr y \cr} \right)`
+
+:math:`(S) = A \times X = B, X = A^{-1} \times B \iff \exists A^{-1}` (1 solution)
+
+:Exemple:
+
+:math:`(S) \quad \left\{ \begin{array}{l} 3x + 4y = 1 \\ 5x + 7y = 2 \end{array}\right. \quad A = \left( \matrix{ 3 & 4 \cr 5 & 7 \cr} \right), B = \left( \matrix{ 1 \cr 2 \cr} \right), X = \left( \matrix{ x \cr y \cr} \right)`
+
+:math:`A^{-1} = \left( \matrix{ 7 & -4 \cr -5 & 3 \cr} \right)`
+
+:math:`X = A^{-1} \times B = \left( \matrix{ 7 & -4 \cr -5 & 3 \cr} \right) \times \left( \matrix{ 1 \cr 2 \cr} \right) = \left( \matrix{ -1 \cr 1 \cr} \right)`
+
+:math:`x=-1, y=1`
+
+https://www.youtube.com/watch?v=rowWM-MijXU
 
 Vector spaces
 ---------------------------------
