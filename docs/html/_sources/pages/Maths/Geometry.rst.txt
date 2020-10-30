@@ -124,6 +124,28 @@ Circles and Ellipse
 
 	:math:`(\frac{(x-a)}{Hrad})^2+\frac{(y-b)}{Vrad})^2=1 \Leftrightarrow \sqrt{(\frac{(x-a)}{Hrad})^2+\frac{(y-b)}{Vrad})^2}=1`
 
++---------------------+---------------------------------+
+| Semi-major Diameter | :math:`Da=2 \times a`           |
++---------------------+---------------------------------+
+| Semi-minor Diameter | :math:`Db=2 \times b`           |
++---------------------+---------------------------------+
+| h                   | :math:`\frac{(a-b)^2}{(a+b)^2}` |
++---------------------+---------------------------------+
+| Exentricity e       | :math:`\frac{\sqrt{a^2-b^2}}{a}`|
++---------------------+---------------------------------+
+| Area                | :math:`A=\pi \times a \times b `|
++---------------------+---------------------------------+
+
+It does not exist and formula for the exact formula of the Circumference, here's some approximations (in order of precision):
+
+Popular approximation (5%) :math:`2 \pi \sqrt{\frac{a^2+b^2}{2}}`
+
+Ramanujan first approximation: (0.005%) :math:`\pi (3 (a+b) - \sqrt{(3a+b)(a+3b)})`
+
+Ramanujan second approximation: (0.0000005%) :math:`\pi (a+b)(1+\frac{3h}{10+\sqrt{4-3h}}`
+
+Series approximation: :math:`\pi (a+b)(1 + \frac{h}{4} + \frac{h^2}{64} + \frac{h^3}{256} + \frac{25h^4}{16384} + ... )`
+
 .. raw:: html
 	
 	<div id="ellipse_jxgbox" class="jxgbox" style="width:200px; height:200px;"></div>

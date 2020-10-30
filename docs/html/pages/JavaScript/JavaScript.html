@@ -117,9 +117,35 @@
 <p class="caption"><span class="caption-text">Web Languages</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">JavaScript</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#language">Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#history-of-the-javascript-language">History of the JavaScript language</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#evolution-toward-a-global-language">Evolution toward a Global language</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#programming-in-js">Programming in JS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#first-program-webpage">First Program : webpage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#variables">Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#console-log">Console Log</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tests">Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#loops">Loops</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#selectors">Selectors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#events">Events</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#typescript">Typescript</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#ajax">Ajax</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#p5">p5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#nodejs">NodeJs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#vuejs">VueJs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#framework">Framework</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#router">Router</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vuetify">Vuetify</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vuex">Vuex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#jest">Jest</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../Php/Php.html">PHP</a></li>
@@ -229,29 +255,471 @@
     text-align: unset;
 }
 </style>
-<div class="toctree-wrapper compound">
-</div>
 <div class="section" id="javascript">
 <h1>JavaScript<a class="headerlink" href="#javascript" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="language">
-<h2>Language<a class="headerlink" href="#language" title="Permalink to this headline">¶</a></h2>
+<div class="contents local topic" id="table-of-contents">
+<p class="topic-title">Table of Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#introduction" id="id3">Introduction</a></p>
+<ul>
+<li><p><a class="reference internal" href="#history-of-the-javascript-language" id="id4">History of the JavaScript language</a></p></li>
+<li><p><a class="reference internal" href="#evolution-toward-a-global-language" id="id5">Evolution toward a Global language</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#programming-in-js" id="id6">Programming in JS</a></p>
+<ul>
+<li><p><a class="reference internal" href="#first-program-webpage" id="id7">First Program : webpage</a></p></li>
+<li><p><a class="reference internal" href="#variables" id="id8">Variables</a></p></li>
+<li><p><a class="reference internal" href="#console-log" id="id9">Console Log</a></p></li>
+<li><p><a class="reference internal" href="#tests" id="id10">Tests</a></p></li>
+<li><p><a class="reference internal" href="#loops" id="id11">Loops</a></p></li>
+<li><p><a class="reference internal" href="#functions" id="id12">Functions</a></p></li>
+<li><p><a class="reference internal" href="#selectors" id="id13">Selectors</a></p></li>
+<li><p><a class="reference internal" href="#events" id="id14">Events</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#typescript" id="id15">Typescript</a></p></li>
+<li><p><a class="reference internal" href="#ajax" id="id16">Ajax</a></p></li>
+<li><p><a class="reference internal" href="#p5" id="id17">p5</a></p></li>
+<li><p><a class="reference internal" href="#nodejs" id="id18">NodeJs</a></p></li>
+<li><p><a class="reference internal" href="#vuejs" id="id19">VueJs</a></p>
+<ul>
+<li><p><a class="reference internal" href="#installation" id="id20">Installation</a></p></li>
+<li><p><a class="reference internal" href="#framework" id="id21">Framework</a></p></li>
+<li><p><a class="reference internal" href="#router" id="id22">Router</a></p></li>
+<li><p><a class="reference internal" href="#vuetify" id="id23">Vuetify</a></p></li>
+<li><p><a class="reference internal" href="#vuex" id="id24">Vuex</a></p></li>
+<li><p><a class="reference internal" href="#jest" id="id25">Jest</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="introduction">
+<h2><a class="toc-backref" href="#id3">Introduction</a><a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="history-of-the-javascript-language">
+<h3><a class="toc-backref" href="#id4">History of the JavaScript language</a><a class="headerlink" href="#history-of-the-javascript-language" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="evolution-toward-a-global-language">
+<h3><a class="toc-backref" href="#id5">Evolution toward a Global language</a><a class="headerlink" href="#evolution-toward-a-global-language" title="Permalink to this headline">¶</a></h3>
+<p>Popularity
+NodeJs
+Typescript
+Frameworks</p>
+</div>
+</div>
+<div class="section" id="programming-in-js">
+<h2><a class="toc-backref" href="#id6">Programming in JS</a><a class="headerlink" href="#programming-in-js" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="first-program-webpage">
+<h3><a class="toc-backref" href="#id7">First Program : webpage</a><a class="headerlink" href="#first-program-webpage" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Space Invader<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;style.css&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span><span class="p">&gt;</span>
+    <span class="cm">/*</span>
+<span class="cm">        We must wait that the web page is fully loaded before beggining</span>
+<span class="cm">        to access and edit it&#39;s components (We wait DOMContentLoaded)</span>
+<span class="cm">    */</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;DOMContentLoaded&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+
+        <span class="cm">/*</span>
+<span class="cm">            We can read the elements in the page with selectors.</span>
+<span class="cm">            We store it into a variable with: let v = ...</span>
+<span class="cm">        */</span>
+        <span class="kd">let</span> <span class="nx">body</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;body&quot;</span><span class="p">)</span>
+
+        <span class="cm">/*</span>
+<span class="cm">            You can use console.log(...) to display text or objects</span>
+<span class="cm">            in the web browser console (Ctrl + Shift + J for Chrome)</span>
+<span class="cm">        */</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Document loaded&quot;</span><span class="p">)</span>
+    <span class="p">})</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">style</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span><span class="p">&gt;</span>
+    <span class="o">*</span> <span class="p">{</span>
+        <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="kt">px</span><span class="p">;</span>
+        <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="kt">px</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="variables">
+<h3><a class="toc-backref" href="#id8">Variables</a><a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h3>
+<p>JavaScript is Dynamically typed. There is ‘types’ but they are computed on the go, you cannot statically declare the type of a variable.
+That’s one of the reasons why JS is not a fast language. TypeScript has been created to fix this by enabling the declaration of the type,
+but it’s a virtual fix because in the end it’s also compiled in JS.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/* Declare with LET */</span>
+<span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="s1">&#39;A&#39;</span> <span class="cm">/* This is my default declaration for the variables */</span>
+<span class="kd">let</span> <span class="nx">b</span> <span class="cm">/* You can also declare a variable without assigning it a value */</span>
+<span class="kd">let</span> <span class="nx">c</span> <span class="o">=</span> <span class="mi">15</span> <span class="cm">/* The variable type is automaticly computed... */</span>
+<span class="nx">c</span> <span class="o">=</span> <span class="s1">&#39;test&#39;</span> <span class="cm">/* ...but no problem for assigning it everithing, no parse needed*/</span>
+
+<span class="cm">/*</span>
+<span class="cm">    Let is a local definition, you can only access it in the current bloc.</span>
+<span class="cm">    To create global variables, just declare them outside the main bloc.</span>
+<span class="cm">*/</span>
+<span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">d</span> <span class="o">=</span> <span class="s1">&#39;my local variable&#39;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">d</span><span class="p">)</span> <span class="cm">/* &#39;my local variable&#39; : we are inside the bloc */</span>
+<span class="p">}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">d</span><span class="p">)</span> <span class="cm">/* undefined : we are outside the bloc were d is defined */</span>
+
+<span class="cm">/* Declare with VAR */</span>
+
+<span class="cm">/*</span>
+<span class="cm">    Var is the same as Let but it&#39;s permit to declare variables in the Global</span>
+<span class="cm">    condext: it attach the var to the &#39;window&#39; object instead of the bloc</span>
+<span class="cm">*/</span>
+<span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">e</span> <span class="o">=</span> <span class="s1">&#39;my global variable&#39;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="cm">/* &#39;my global variable&#39; */</span>
+<span class="p">}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="cm">/* &#39;my global variable&#39; */</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">e</span><span class="p">)</span> <span class="cm">/* &#39;my global variable&#39; */</span>
+
+<span class="cm">/* Declare with CONST */</span>
+<span class="kr">const</span> <span class="nx">NUMBER</span> <span class="o">=</span> <span class="mi">1</span> <span class="cm">/* const must be defined when declarated and cannot be edited */</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="console-log">
+<h3><a class="toc-backref" href="#id9">Console Log</a><a class="headerlink" href="#console-log" title="Permalink to this headline">¶</a></h3>
+<p>Console log display the items passed by parameters</p>
+</div>
+<div class="section" id="tests">
+<h3><a class="toc-backref" href="#id10">Tests</a><a class="headerlink" href="#tests" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="cm">/* Condition */</span><span class="p">)</span> <span class="p">{</span>
+    <span class="cm">/* Code */</span>
+<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="cm">/* Condition */</span><span class="p">)</span> <span class="p">{</span>
+    <span class="cm">/* Code */</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="cm">/* Code */</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="loops">
+<h3><a class="toc-backref" href="#id11">Loops</a><a class="headerlink" href="#loops" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="cm">/* 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 */</span>
+<span class="p">}</span>
+
+<span class="k">do</span> <span class="p">{</span>
+    <span class="cm">/* Code */</span>
+<span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="cm">/* Condition */</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="p">(</span><span class="cm">/* Condition */</span><span class="p">)</span> <span class="p">{</span>
+    <span class="cm">/* Code */</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="nx">items</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;B&#39;</span><span class="p">,</span><span class="s1">&#39;C&#39;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="k">in</span> <span class="nx">items</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span> <span class="cm">/* 0, 1, 2 */</span>
+    <span class="nx">items</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="cm">/* A, B, C */</span>
+<span class="p">}</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="k">of</span> <span class="nx">items</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span> <span class="cm">/* A, B, C */</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="functions">
+<h3><a class="toc-backref" href="#id12">Functions</a><a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/* Parameters with default values become optionnal */</span>
+<span class="kd">function</span> <span class="nx">print</span><span class="p">(</span><span class="nx">parameter</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">parameter</span><span class="p">)</span>
+    <span class="k">return</span> <span class="kc">true</span> <span class="cm">/* You can choose to return something or not */</span>
+<span class="p">}</span>
+
+<span class="nx">print</span><span class="p">()</span> <span class="cm">/* 0 */</span>
+<span class="nx">print</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">)</span> <span class="cm">/* &#39;test&#39; */</span>
+
+<span class="cm">/* You can also declare functions like this */</span>
+<span class="kd">let</span> <span class="nx">func</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="s1">&#39;test&#39;</span> <span class="cm">/* this function just return &#39;test&#39; */</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">func</span><span class="p">())</span> <span class="cm">/* &#39;test&#39; */</span>
+
+<span class="kd">let</span> <span class="nx">func</span> <span class="o">=</span> <span class="p">(</span><span class="nx">parameterA</span><span class="p">,</span> <span class="nx">parameterB</span> <span class="p">...)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="cm">/* Code */</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="selectors">
+<h3><a class="toc-backref" href="#id13">Selectors</a><a class="headerlink" href="#selectors" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">document</span><span class="p">)</span> <span class="cm">/* reference all the informations on the current page */</span>
+
+<span class="cm">/* Get elements with querySelector */</span>
+<span class="kd">let</span> <span class="nx">body</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;body&quot;</span><span class="p">)</span> <span class="cm">/* We select the html element body */</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;#idObject&quot;</span><span class="p">)</span> <span class="cm">/* We cans select object like in css, with the id... */</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;.classObject&quot;</span><span class="p">)</span> <span class="cm">/* ... and the class, but it only return the first */</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&quot;.classObject&quot;</span><span class="p">)</span> <span class="cm">/* To get all items in an array, we use querySelectorAll */</span>
+
+<span class="cm">/* Get elements with getElementById */</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;idObject&#39;</span><span class="p">)</span> <span class="cm">/* We can get the first*/</span>
+
+<span class="cm">/* Get elements with getElementByClassName */</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementByClassName</span><span class="p">(</span><span class="s1">&#39;classA classB ...&#39;</span><span class="p">)</span> <span class="cm">/* We get the array of all elements that have both classes */</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementByClassName</span><span class="p">(</span><span class="s1">&#39;class&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="cm">/* ... to get the first element of the list */</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="events">
+<h3><a class="toc-backref" href="#id14">Events</a><a class="headerlink" href="#events" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="cm">/* Code */</span> <span class="p">},</span> <span class="mi">5000</span><span class="p">)</span> <span class="cm">/* After 5000ms */</span>
+<span class="nx">setInterval</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="cm">/* Code */</span> <span class="p">}</span> <span class="mi">3000</span><span class="p">)</span> <span class="cm">/* Every 3000ms */</span>
+
+<span class="nx">element</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* Code */</span> <span class="p">})</span>
+
+<span class="kd">function</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* Code */</span> <span class="p">}).</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* Code */</span> <span class="p">})</span>
+
+<span class="nx">async</span> <span class="kd">function</span> <span class="nx">asynchrone</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">value</span> <span class="o">=</span> <span class="nx">await</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="cm">/* Code */</span> <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">value</span>
+<span class="p">}</span>
+
+<span class="k">try</span> <span class="p">{</span> <span class="cm">/* Code */</span> <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* Code */</span> <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="typescript">
+<h2><a class="toc-backref" href="#id15">Typescript</a><a class="headerlink" href="#typescript" title="Permalink to this headline">¶</a></h2>
 <div class="admonition-todo admonition" id="id1">
 <p class="admonition-title">Todo</p>
 <p>Language</p>
 </div>
 </div>
 <div class="section" id="ajax">
-<h2>Ajax<a class="headerlink" href="#ajax" title="Permalink to this headline">¶</a></h2>
-<div class="admonition-todo admonition" id="id2">
-<p class="admonition-title">Todo</p>
-<p>Ajax</p>
+<h2><a class="toc-backref" href="#id16">Ajax</a><a class="headerlink" href="#ajax" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">function</span> <span class="n">Send</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">callback</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">let</span> <span class="n">xhr</span> <span class="o">=</span> <span class="n">new</span> <span class="n">XMLHttpRequest</span><span class="p">();</span>
+    <span class="n">xhr</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;POST&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">true</span><span class="p">);</span>
+    <span class="n">xhr</span><span class="o">.</span><span class="n">responseType</span> <span class="o">=</span> <span class="s2">&quot;json&quot;</span><span class="p">;</span>
+    <span class="n">xhr</span><span class="o">.</span><span class="n">setRequestHeader</span><span class="p">(</span><span class="s2">&quot;Content-type&quot;</span><span class="p">,</span> <span class="s2">&quot;application/x-www-form-urlencoded&quot;</span><span class="p">);</span>
+
+    <span class="n">xhr</span><span class="o">.</span><span class="n">onreadystatechange</span> <span class="o">=</span> <span class="n">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">xhr</span><span class="o">.</span><span class="n">readyState</span> <span class="o">===</span> <span class="n">XMLHttpRequest</span><span class="o">.</span><span class="n">DONE</span> <span class="o">&amp;&amp;</span> <span class="n">xhr</span><span class="o">.</span><span class="n">status</span> <span class="o">===</span> <span class="mi">200</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">callback</span><span class="p">(</span><span class="n">xhr</span><span class="o">.</span><span class="n">response</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="n">let</span> <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">let</span> <span class="n">attr</span> <span class="ow">in</span> <span class="n">params</span><span class="p">)</span> <span class="n">s</span> <span class="o">+=</span> <span class="n">attr</span> <span class="o">+</span> <span class="s2">&quot;=&quot;</span> <span class="o">+</span> <span class="n">params</span><span class="p">[</span><span class="n">attr</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;&amp;&quot;</span><span class="p">;</span>
+    <span class="n">xhr</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">function</span> <span class="n">Get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">new</span> <span class="n">Promise</span><span class="p">(</span><span class="n">function</span><span class="p">(</span><span class="n">resolve</span><span class="p">,</span> <span class="n">reject</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">let</span> <span class="n">xhr</span> <span class="o">=</span> <span class="n">new</span> <span class="n">XMLHttpRequest</span><span class="p">();</span>
+        <span class="n">xhr</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="n">url</span><span class="p">);</span>
+        <span class="n">xhr</span><span class="o">.</span><span class="n">onload</span> <span class="o">=</span> <span class="n">function</span> <span class="p">()</span> <span class="p">{</span>
+
+            <span class="n">let</span> <span class="n">data</span> <span class="o">=</span> <span class="n">JSON</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">xhr</span><span class="o">.</span><span class="n">responseText</span><span class="p">);</span>
+            <span class="n">resolve</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+            <span class="o">//</span><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+        <span class="p">}</span>
+        <span class="n">xhr</span><span class="o">.</span><span class="n">onerror</span> <span class="o">=</span> <span class="n">reject</span><span class="p">;</span>
+        <span class="n">xhr</span><span class="o">.</span><span class="n">send</span><span class="p">();</span>
+    <span class="p">});</span>
+<span class="p">}</span>
+</pre></div>
 </div>
 </div>
 <div class="section" id="p5">
-<h2>p5<a class="headerlink" href="#p5" title="Permalink to this headline">¶</a></h2>
-<div class="admonition-todo admonition" id="id3">
+<h2><a class="toc-backref" href="#id17">p5</a><a class="headerlink" href="#p5" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-todo admonition" id="id2">
 <p class="admonition-title">Todo</p>
 <p>p5</p>
+</div>
+</div>
+<div class="section" id="nodejs">
+<h2><a class="toc-backref" href="#id18">NodeJs</a><a class="headerlink" href="#nodejs" title="Permalink to this headline">¶</a></h2>
+<p>“NodeJs is an open source cross-plateform back-end JavaScript Environment that execute javaScript outside a web browser.
+It was build in 2009 in JavaScript and in C/C++ where JavaScript was performing too slow.
+Node use V8 to compile JS source code to native machine code at runtime.</p>
+<p>Downlaod Node: <a class="reference external" href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">node</span> <span class="o">--</span><span class="n">version</span>
+
+<span class="n">node</span>
+<span class="o">&gt;</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span>
+<span class="mi">4</span>
+<span class="o">&gt;</span> <span class="o">.</span><span class="n">help</span>
+<span class="o">&gt;</span> <span class="o">.</span><span class="n">exit</span>
+
+<span class="n">node</span> <span class="n">file</span><span class="o">.</span><span class="n">js</span>
+</pre></div>
+</div>
+<p>Node Package Manager (npm)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">npm</span> <span class="n">install</span> <span class="n">package</span>
+<span class="n">npm</span> <span class="n">view</span> <span class="n">package</span>
+<span class="n">npm</span> <span class="n">search</span> <span class="n">package</span>
+<span class="n">npm</span> <span class="n">help</span>
+<span class="n">npm</span> <span class="n">version</span>
+<span class="n">npm</span> <span class="nb">list</span>
+<span class="n">npm</span> <span class="n">update</span> <span class="o">/*</span> <span class="n">update</span> <span class="nb">all</span> <span class="n">packages</span> <span class="o">*/</span>
+<span class="n">npm</span> <span class="n">init</span> <span class="o">/*</span> <span class="n">Tool</span> <span class="n">to</span> <span class="n">initialize</span> <span class="n">package</span><span class="o">.</span><span class="n">js</span> <span class="o">*/</span>
+
+<span class="n">npm</span> <span class="n">test</span>
+<span class="n">npm</span> <span class="n">start</span>
+<span class="n">npm</span> <span class="n">run</span> <span class="n">serve</span>
+</pre></div>
+</div>
+<p>Node Path System (path)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">const</span> <span class="n">path</span> <span class="o">=</span> <span class="n">require</span><span class="p">(</span><span class="s1">&#39;path&#39;</span><span class="p">)</span>
+<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s1">&#39;src&#39;</span> <span class="o">+</span> <span class="n">path</span><span class="o">.</span><span class="n">sep</span> <span class="o">+</span> <span class="s1">&#39;file&#39;</span><span class="p">)</span>
+<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;src&#39;</span><span class="p">,</span><span class="s1">&#39;file&#39;</span><span class="p">))</span>
+
+<span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="o">/*</span> <span class="n">file</span> <span class="n">name</span> <span class="o">*/</span>
+<span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="o">/*</span> <span class="n">folder</span> <span class="n">name</span> <span class="o">*/</span>
+<span class="n">path</span><span class="o">.</span><span class="n">extname</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="o">/*</span> <span class="n">file</span> <span class="n">extention</span> <span class="o">*/</span>
+<span class="n">path</span><span class="o">.</span><span class="n">isAbsolute</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="o">/*</span> <span class="n">false</span> <span class="k">if</span> <span class="n">relative</span> <span class="o">*/</span>
+<span class="n">path</span><span class="o">.</span><span class="n">relative</span><span class="p">(</span><span class="n">pathA</span><span class="p">,</span> <span class="n">pathB</span><span class="p">)</span> <span class="o">/*</span> <span class="k">return</span> <span class="n">relative</span> <span class="n">path</span> <span class="n">to</span> <span class="n">go</span> <span class="kn">from</span> <span class="nn">A</span> <span class="n">to</span> <span class="n">B</span> <span class="o">*/</span>
+<span class="n">path</span><span class="o">.</span><span class="n">resolve</span><span class="p">(</span><span class="s1">&#39;path&#39;</span><span class="p">,</span><span class="n">step</span><span class="p">,</span><span class="n">step</span><span class="p">,</span><span class="o">...</span><span class="p">)</span> <span class="o">/*</span> <span class="k">return</span> <span class="n">the</span> <span class="n">absolute</span> <span class="n">path</span> <span class="n">after</span> <span class="n">completing</span> <span class="n">the</span> <span class="n">steps</span> <span class="o">*/</span>
+</pre></div>
+</div>
+<p>Node File System (fs)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">const</span> <span class="n">fs</span> <span class="o">=</span> <span class="n">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">)</span>
+<span class="n">const</span> <span class="n">path</span> <span class="o">=</span> <span class="n">require</span><span class="p">(</span><span class="s1">&#39;path&#39;</span><span class="p">)</span>
+<span class="n">const</span> <span class="n">filename</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">__dirname</span><span class="p">,</span> <span class="s1">&#39;file&quot;)</span>
+<span class="o">/*</span>
+    <span class="n">__dirname</span><span class="p">:</span> <span class="n">current</span> <span class="n">repertory</span>
+    <span class="n">__filename</span><span class="p">:</span> <span class="n">current</span> <span class="n">file</span>
+<span class="o">*/</span>
+
+<span class="n">fs</span><span class="o">.</span><span class="n">readFile</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="p">(</span><span class="n">err</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="n">res</span><span class="p">))</span>
+<span class="p">})</span>
+
+<span class="n">fs</span><span class="o">.</span><span class="n">readDir</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="p">(</span><span class="n">err</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">res</span><span class="p">)</span> <span class="o">/*</span> <span class="n">files</span> <span class="ow">and</span> <span class="n">subfolders</span> <span class="o">*/</span>
+<span class="p">})</span>
+
+<span class="n">fs</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="p">(</span><span class="n">err</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{})</span> <span class="o">/*</span> <span class="n">make</span> <span class="n">folder</span> <span class="o">*/</span>
+<span class="n">fs</span><span class="o">.</span><span class="n">copyFile</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="p">(</span><span class="n">err</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{})</span> <span class="o">/*</span> <span class="n">copy</span> <span class="n">file</span> <span class="o">*/</span>
+<span class="n">fs</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">new</span><span class="p">,</span> <span class="p">(</span><span class="n">err</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{})</span> <span class="o">/*</span> <span class="n">rename</span> <span class="n">file</span><span class="o">/</span><span class="n">folder</span> <span class="o">*/</span>
+<span class="n">fs</span><span class="o">.</span><span class="n">rmdir</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="p">(</span><span class="n">err</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{})</span> <span class="o">/*</span> <span class="n">remove</span> <span class="n">folder</span> <span class="k">if</span> <span class="n">empty</span> <span class="o">*/</span>
+<span class="n">fs</span><span class="o">.</span><span class="n">unlink</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">new</span><span class="p">,</span> <span class="p">(</span><span class="n">err</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{}</span> <span class="o">/*</span> <span class="n">remove</span> <span class="n">file</span><span class="o">*/</span>
+</pre></div>
+</div>
+<p>Server HTTP (http)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">const</span> <span class="n">http</span> <span class="o">=</span> <span class="n">require</span><span class="p">(</span><span class="s1">&#39;http&#39;</span><span class="p">)</span>
+<span class="n">const</span> <span class="n">server</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">createServer</span><span class="p">()</span>
+<span class="n">server</span><span class="o">.</span><span class="n">listen</span><span class="p">(</span><span class="mi">4000</span><span class="p">,</span> <span class="s1">&#39;localhost&#39;</span><span class="p">)</span>
+
+<span class="n">server</span><span class="o">.</span><span class="n">on</span><span class="p">(</span><span class="s1">&#39;request&#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="n">res</span><span class="o">.</span><span class="n">setHeader</span><span class="p">(</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">,</span> <span class="s1">&#39;text/html; charset=utf-8&#39;</span><span class="p">)</span>
+
+    <span class="n">res</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Hello world&#39;</span><span class="p">)</span>
+    <span class="n">res</span><span class="o">.</span><span class="n">end</span><span class="p">()</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="vuejs">
+<h2><a class="toc-backref" href="#id19">VueJs</a><a class="headerlink" href="#vuejs" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="installation">
+<h3><a class="toc-backref" href="#id20">Installation</a><a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="framework">
+<h3><a class="toc-backref" href="#id21">Framework</a><a class="headerlink" href="#framework" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="router">
+<h3><a class="toc-backref" href="#id22">Router</a><a class="headerlink" href="#router" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="vuetify">
+<h3><a class="toc-backref" href="#id23">Vuetify</a><a class="headerlink" href="#vuetify" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="vuex">
+<h3><a class="toc-backref" href="#id24">Vuex</a><a class="headerlink" href="#vuex" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="jest">
+<h3><a class="toc-backref" href="#id25">Jest</a><a class="headerlink" href="#jest" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">npm</span> <span class="n">install</span> <span class="n">jest</span> <span class="o">--</span><span class="n">save</span><span class="o">-</span><span class="n">dev</span>
+
+<span class="n">package</span><span class="o">.</span><span class="n">json</span>
+
+<span class="s2">&quot;scripts&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;test&quot;</span><span class="p">:</span> <span class="s2">&quot;jest&quot;</span>
+<span class="p">},</span>
+<span class="s2">&quot;jest&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;collectCoverage&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">mkdir</span> <span class="n">src</span><span class="o">/</span><span class="n">utils</span><span class="o">/</span><span class="n">__tests__</span>
+<span class="n">cd</span> <span class="n">src</span><span class="o">/</span><span class="n">utils</span><span class="o">/</span><span class="n">__tests__</span>
+<span class="n">echo</span><span class="o">.&gt;</span><span class="n">Element</span><span class="o">.</span><span class="n">spec</span><span class="o">.</span><span class="n">js</span>
+
+<span class="o">/*</span> <span class="n">Run</span> <span class="n">tests</span> <span class="o">*/</span>
+<span class="n">npm</span> <span class="n">test</span> <span class="o">--</span><span class="n">coverage</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>src
+└───test
+    ├───smoke
+    └───unit
+        ├───coverage
+        └───specs // units tests here
+</pre></div>
+</div>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span>import Element from &#39;src/element&#39; /* With Babel*/
+const Element = required(&#39;src/element&#39;) /* Without Babel*/
+
+jest.mock(&#39;library&#39;) /* if the element use an external library */
+
+/* Describle contain one or more related tests */
+describle(&#39;description string&#39;, () =&gt; {
+
+    /* Before each test */
+    beforeEach(() =&gt; {
+        /* Environment setup */
+        process.env = {
+            /* Environment variables setup */
+        }
+    })
+
+    /* After each test */
+    afterEach(() =&gt; {
+        /* Clean things */
+    })
+
+    /* You then describle your tests with: test or it (alias) */
+    it(&#39;test description&#39;, () =&gt; {
+        /* Variables Setup */
+        const input = [
+            { id:0, name:&#39;A&#39; },
+            { id:0, name:&#39;B&#39; },
+            { id:0, name:&#39;C&#39; }
+        ]
+        const output = [{ id:0, name:&#39;B&#39; }]
+        const spy = jest.spyOn(object, &#39;function&#39;)
+
+        /* Function Test */
+        // [...]
+
+        /* Assertions */
+        expect(/*...*/).toEquals(output) /* Result */
+        expect(spy).toHaveBeenCalledTimes(1) /* Spy */
+        expect(/*...*/).toMatch(&#39;Error&quot;) /* Errors */
+    })
+
+    it(&#39;async test description&#39;, async () =&gt; {
+        /* Here we test with an async function */
+    })
+
+
+}
+</pre></div>
+</div>
 </div>
 </div>
 </div>
