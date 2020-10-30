@@ -1,10 +1,9 @@
-.. toctree::
-	:caption: Table of Contents:
-	:maxdepth: 2
-
 ============================
 Python
 ============================
+
+.. contents:: Table of Contents
+	:local: 
 
 Language
 ============================
@@ -12,6 +11,9 @@ Language
 .. todo::
 
 	Language
+
+Cheat Sheets
+===========================
 
 Packages Manager
 ============================
@@ -21,6 +23,20 @@ Pip
 
 Anaconda
 ----------------------------
+
+Introduction
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Cheat Sheets
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code:: bash
+
+	conda info 
+	conda update conda
+	conda env list
+	conda env remove --name env-name
+
 
 Manage Environments
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -43,47 +59,115 @@ Manage Environments
 	anaconda search tensoflow (cloud)
 	anaconda show jjhelmus/tensorflow
 
-Install Packages
+Create and Share Packages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-pip
-conda
+package minimum recipe:
 
-...
+.. code-block::
 
-.. code:: bash
+	package\
+	├─── meta.yaml # package informations
+	├─── bld.bat # win build file
+	└─── build.sh # unix build file
 
-	conda create -n prismatic python=3.7
-	conda activate prismatic
-	conda install -c ericpre pyprismatic
-
-	conda install constructor
-
-
-
-Create Packages
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-CONDA FORGE
-https://conda-forge.org/docs/user/introduction.html#what-is-conda-forge
-
-STRUCTURE
+Base Template:
+https://github.com/conda-forge/staged-recipes
 https://conda-forge.org/docs/user/ci-skeleton.html
 
-AZURE PIPELINES
-https://www.youtube.com/watch?v=7pzBwuMjpP0
+.. code-block:: 
 
+	git clone https://github.com/conda-forge/staged-recipes.git
 
-Create structure: yaml
-then build (locally or from remote like azure pipelines)?
+.. _HERE: https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html
 
+meta.yaml example (for more explanations, see `HERE`_)
 
-https://www.youtube.com/watch?v=HSK-6dCnYVQ
+.. code-block::
 
-3 files min:
-	meta.yaml (description, version, source code, requirements)
-	bld.bat (Windows build package)
-	build.sh (Unix build package)
+	{% set name = "name" %}
+	{% set version = "2.1.3" %}
+	{% set release = "10.1" %}
+
+	package:
+	  name: {{ name|lower }}
+	  version: {{ version }}
+
+	source:
+	  url: https://github.com/user/package/{{ name }} - {{ version }}.tar.gz
+	  sha256: (...)
+
+	build:
+		skip: True  # [py<35]
+		number: 1
+		script: python build.py {{ release }} 
+		# [linux] 
+		# [win]
+
+	requirements:
+		# requirement when building the package
+		build:
+			- {{ compiler('c') }}
+			- {{ compiler('cxx') }}
+			- {{ compiler('fortran') }}
+		# requirement when building for specific target plateform
+		host:
+			- python
+			- pip
+
+		# requirement when running the package
+		run:
+			- python
+
+	test:
+	  imports:
+	    - package
+
+	about:
+	  home: https://github.com/user/package
+	  license_file: LICENSE.txt
+	  summary: 'fast description here'
+	  doc_url: https://website.io/
+	  dev_url: https://github.com/user/package
+
+Install a Precompiled Package
+------------------------------
+
+1. Search package on the Anaconda Cloud: https://anaconda.org/conda-forge
+2. Install the package: ``conda install -c conda-forge prismatic_gui``
+3. It will Download and Extract all the packages that the program need to run (in ``Anaconda3\envs\env_name\Library``)
+4. You can find the binaries in ``Anaconda3\envs\env_name\Library\bin``
+
+Build Locally a Package
+------------------------------
+
+1. Install conda-build: ``conda install conda-build [--use-local]``
+2. Make your package, or get a package source code (ex: https://github.com/ericpre/prismatic_split-feedstock)
+3. Lanch the build conda build recipe -c conda-forge
+4. You can find the build in ``Anaconda3\conda-bld``
+
+.. code-block:: 
+
+	conda build recipe -c conda-forge --variants "{'cuda_compiler_version':'10.2'}“
+
+Build for Remote
+------------------------------
+
+.. todo::
+
+	AZURE PIPELINES
+	https://www.youtube.com/watch?v=7pzBwuMjpP0
+
+Conda-Forge
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+https://conda-forge.org/docs/user/introduction.html#what-is-conda-forge
+
+reproducable method for building package on all plateforms:
+- recipes are submitted to the staged-recipes repository
+- once working, a feedstock repository is created
+- bug fixes and new versions are done in the feedstock repository
+- packages are uploaded to the conda-forge channel
 
 Conda constructor (env bootstrapper)
 
@@ -146,39 +230,12 @@ https://conda-forge.org/docs/maintainer/adding_pkgs.html#meta-yaml
 
 selecteur ``# [linux] [win]``
 
-- bld.bat (Windows build package)
-- build.sh (Unix build package)
-
 Conda constructor (env bootstrapper)
 
 conda install constructor
 installer settings in construct.yaml
 cross plateform, create installer for linux, os, windows
 
-Install a Precompiled Package
-------------------------------
-
-1. Search package on the Anaconda Cloud: https://anaconda.org/conda-forge
-2. Install the package: ``conda install -c conda-forge prismatic_gui``
-3. It will Download and Extract all the packages that the program need to run (in ``Anaconda3\envs\env_name\Library``)
-4. You can find the binaries in ``Anaconda3\envs\env_name\Library\bin``
-
-Build Locally a Package
-------------------------------
-
-1. Install conda-build: ``conda install conda-build [--use-local]``
-2. Make your package, or get a package source code (ex: https://github.com/ericpre/prismatic_split-feedstock)
-3. Lanch the build conda build recipe -c conda-forge
-4. You can find the build in ``Anaconda3\conda-bld``
-
-.. code-block:: 
-
-	conda build recipe -c conda-forge --variants "{'cuda_compiler_version':'10.2'}“
-
-Build for Remote
-------------------------------
-
-Todo (Azure pipeline)
 
 TEMP
 ============================

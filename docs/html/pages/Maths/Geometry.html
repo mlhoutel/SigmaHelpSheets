@@ -105,11 +105,26 @@
 <li class="toctree-l2"><a class="reference internal" href="Analysis.html">Maths - Analysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Discrete.html">Maths - Discrete</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Maths - Geometry</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#triangle">Triangle</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#circles-and-ellipse">Circles and Ellipse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#shapes">Shapes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#trianglex">Trianglex</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#circles">Circles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ellipses">Ellipses</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#complex-numbers">Complex Numbers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#definition">Definition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transformations">Transformations</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#vectors">Vectors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#matrices">Matrices</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Definition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#operations">Operations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#resolve-a-system">Resolve a System</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#vector-spaces">Vector spaces</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#tensors">Tensors</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#matrix">Matrix</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#quaternions">Quaternions</a></li>
 </ul>
 </li>
@@ -245,16 +260,36 @@
 <div class="contents local topic" id="table-of-contents">
 <p class="topic-title">Table of Contents</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#triangle" id="id3">Triangle</a></p></li>
-<li><p><a class="reference internal" href="#circles-and-ellipse" id="id4">Circles and Ellipse</a></p></li>
-<li><p><a class="reference internal" href="#vectors" id="id5">Vectors</a></p></li>
-<li><p><a class="reference internal" href="#tensors" id="id6">Tensors</a></p></li>
-<li><p><a class="reference internal" href="#matrix" id="id7">Matrix</a></p></li>
-<li><p><a class="reference internal" href="#quaternions" id="id8">Quaternions</a></p></li>
+<li><p><a class="reference internal" href="#shapes" id="id2">Shapes</a></p>
+<ul>
+<li><p><a class="reference internal" href="#trianglex" id="id3">Trianglex</a></p></li>
+<li><p><a class="reference internal" href="#circles" id="id4">Circles</a></p></li>
+<li><p><a class="reference internal" href="#ellipses" id="id5">Ellipses</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#complex-numbers" id="id6">Complex Numbers</a></p>
+<ul>
+<li><p><a class="reference internal" href="#definition" id="id7">Definition</a></p></li>
+<li><p><a class="reference internal" href="#transformations" id="id8">Transformations</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#vectors" id="id9">Vectors</a></p></li>
+<li><p><a class="reference internal" href="#matrices" id="id10">Matrices</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id1" id="id11">Definition</a></p></li>
+<li><p><a class="reference internal" href="#operations" id="id12">Operations</a></p></li>
+<li><p><a class="reference internal" href="#resolve-a-system" id="id13">Resolve a System</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#vector-spaces" id="id14">Vector spaces</a></p></li>
+<li><p><a class="reference internal" href="#tensors" id="id15">Tensors</a></p></li>
+<li><p><a class="reference internal" href="#quaternions" id="id16">Quaternions</a></p></li>
 </ul>
 </div>
-<div class="section" id="triangle">
-<h2><a class="toc-backref" href="#id3">Triangle</a><a class="headerlink" href="#triangle" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="shapes">
+<h2><a class="toc-backref" href="#id2">Shapes</a><a class="headerlink" href="#shapes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="trianglex">
+<h3><a class="toc-backref" href="#id3">Trianglex</a><a class="headerlink" href="#trianglex" title="Permalink to this headline">¶</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">Pythagorean Theorem</dt>
 <dd class="field-odd"><p></p></dd>
@@ -336,8 +371,8 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         var pE = board.create('intersection', [line_DE, line_CA, 0], { name:'E', fillColor: 'blue'});
 
 </script></div>
-<div class="section" id="circles-and-ellipse">
-<h2><a class="toc-backref" href="#id4">Circles and Ellipse</a><a class="headerlink" href="#circles-and-ellipse" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="circles">
+<h3><a class="toc-backref" href="#id4">Circles</a><a class="headerlink" href="#circles" title="Permalink to this headline">¶</a></h3>
 <div class="admonition-circle-equation admonition">
 <p class="admonition-title">Circle Equation</p>
 <p><span class="math notranslate nohighlight">\((x-a)^2+(y-b)^2=r^2 \Leftrightarrow \sqrt{(x-a)^2+(y-b)^2}=r\)</span></p>
@@ -359,13 +394,16 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </tr>
 </tbody>
 </table>
-<div id="circle_jxgbox" class="jxgbox" style="width:200px; height:200px;"></div>
+<div id="circle_jxgbox" class="jxgbox" style="width:400px; height:400px;"></div>
 <script type="text/javascript">
         var board = JXG.JSXGraph.initBoard('circle_jxgbox', {boundingbox: [0, 10, 10, 0], axis:true, pan: {enabled: false}, showCopyright:false, showNavigation:false})
         var p1 = board.create('point', [4.0, 4.0])
     var p2 = board.create('point', [2.0, 2.0])
     var c1 = board.create('circle', [p1, p2])
-</script><div class="admonition-ellipse-equation admonition">
+</script></div>
+<div class="section" id="ellipses">
+<h3><a class="toc-backref" href="#id5">Ellipses</a><a class="headerlink" href="#ellipses" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-ellipse-equation admonition">
 <p class="admonition-title">Ellipse Equation</p>
 <p><span class="math notranslate nohighlight">\((\frac{(x-a)}{Hrad})^2+\frac{(y-b)}{Vrad})^2=1 \Leftrightarrow \sqrt{(\frac{(x-a)}{Hrad})^2+\frac{(y-b)}{Vrad})^2}=1\)</span></p>
 </div>
@@ -388,17 +426,27 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 <td><p><span class="math notranslate nohighlight">\(\frac{\sqrt{a^2-b^2}}{a}\)</span></p></td>
 </tr>
 <tr class="row-odd"><td><p>Area</p></td>
-<td><p>:math:<a href="#id1"><span class="problematic" id="id2">`</span></a>A=pi times a times b `</p></td>
+<td><p><span class="math notranslate nohighlight">\(A=\pi \times a \times b\)</span></p></td>
 </tr>
 </tbody>
 </table>
-<p>It does not exist and formula for the exact formula of the Circumference, here’s some approximations (in order of precision):</p>
-<p>Popular approximation (5%) <span class="math notranslate nohighlight">\(2 \pi \sqrt{\frac{a^2+b^2}{2}}\)</span></p>
-<p>Ramanujan first approximation: (0.005%) <span class="math notranslate nohighlight">\(\pi (3 (a+b) - \sqrt{(3a+b)(a+3b)})\)</span></p>
-<p>Ramanujan second approximation: (0.0000005%) <span class="math notranslate nohighlight">\(\pi (a+b)(1+\frac{3h}{10+\sqrt{4-3h}}\)</span></p>
-<p>Series approximation: <span class="math notranslate nohighlight">\(\pi (a+b)(1 + \frac{h}{4} + \frac{h^2}{64} + \frac{h^3}{256} + \frac{25h^4}{16384} + ... )\)</span></p>
-<div id="ellipse_jxgbox" class="jxgbox" style="width:200px; height:200px;"></div>
+<dl class="field-list simple">
+<dt class="field-odd">Popular approximation</dt>
+<dd class="field-odd"><p>(5%) <span class="math notranslate nohighlight">\(2 \pi \sqrt{\frac{a^2+b^2}{2}}\)</span></p>
+</dd>
+<dt class="field-even">Ramanujan first approximation</dt>
+<dd class="field-even"><p>(0.005%) <span class="math notranslate nohighlight">\(\pi (3 (a+b) - \sqrt{(3a+b)(a+3b)})\)</span></p>
+</dd>
+<dt class="field-odd">Ramanujan second approximation</dt>
+<dd class="field-odd"><p>(0.0000005%) <span class="math notranslate nohighlight">\(\pi (a+b)(1+\frac{3h}{10+\sqrt{4-3h}}\)</span></p>
+</dd>
+<dt class="field-even">Series approximation</dt>
+<dd class="field-even"><p>(0.0000…%) <span class="math notranslate nohighlight">\(\pi (a+b)(1 + \frac{h}{4} + \frac{h^2}{64} + \frac{h^3}{256} + \frac{25h^4}{16384} + ... )\)</span></p>
+</dd>
+</dl>
+<div id="ellipse_jxgbox" class="jxgbox" style="width:400px; height:400px;"></div>
 <script type="text/javascript">
+
         var board = JXG.JSXGraph.initBoard('ellipse_jxgbox', {boundingbox: [-10, 10, 10, -10], axis:true, pan: {enabled: false}, showCopyright:false, showNavigation:false})
 
         // Create an Ellipse by three points
@@ -408,19 +456,356 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         var ellipse_el = board.create('ellipse',[ellipse_A,ellipse_B,ellipse_C]);
 
 </script></div>
+</div>
+<div class="section" id="complex-numbers">
+<h2><a class="toc-backref" href="#id6">Complex Numbers</a><a class="headerlink" href="#complex-numbers" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="definition">
+<h3><a class="toc-backref" href="#id7">Definition</a><a class="headerlink" href="#definition" title="Permalink to this headline">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Euler formula</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p><span class="math notranslate nohighlight">\(e^{i\pi}=-1 \iff \frac{(i \pi)^0}{0!} + \frac{(i \pi)^1}{1!} + \frac{(i \pi)^2}{2!} + \frac{(i \pi)^3}{3!} + \dots = -1\)</span></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 49%" />
+<col style="width: 51%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\cos(x)=\frac{e^{ix}+e^{-ix}}{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\sin(x)=\frac{e^{ix}-e^{-ix}}{2i}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\cos(x)^2=\frac{cos(2x)+1}{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\sin(x)^2=\frac{1-cos(2x)}{2}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\cos(x)^3=\frac{cos(3x)+3cos(x)}{4}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\sin(x)^3=\frac{3sin(x)-sin(3x)}{4}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition-linearizations-example admonition">
+<p class="admonition-title">Linearizations Example</p>
+<p><span class="math notranslate nohighlight">\(cos(x)^2 = \left( \frac{e^{ix} + e^{-ix}}{2} \right)^2 \\ = \frac{(e^{ix})^2 + 2e^{ix}e^{-ix} + (e^{-ix})^2}{2^2} = \frac{e^{2ix}+2e^{ix}e^{-ix}+e^{-2ix}}{4} \\ = \frac{e^{2ix} + 2 + e^{-2ix}}{4} = \frac{2(\frac{e^{2ix} + e^{-2ix}}{2}) + 2}{4} \\ = \frac{2cos(2x)+2}{4} = \frac{cos(2x)+1}{2}\)</span></p>
+<p><span class="math notranslate nohighlight">\(sin(x)^2 = \left( \frac{e^{ix} - e^{-ix}}{2i} \right)^2 \\ = \frac{(e^{ix})^2 - 2e^{ix}e^{-ix} + (e^{-ix})^2}{2^2 * i^2} = \frac{e^{2ix}-2e^{ix}e^{-ix}+e^{-2ix}}{-4} \\ = \frac{e^{2ix} - 2 + e^{-2ix}}{-4} = \frac{2(\frac{e^{2ix} + e^{-2ix}}{2}) - 2}{-4} \\ = \frac{2cos(2x)-2}{-4} = \frac{1-cos(2x)}{2}\)</span></p>
+</div>
+<div class="admonition-complex-definition admonition">
+<p class="admonition-title">Complex definition</p>
+<p><span class="math notranslate nohighlight">\(\sqrt{i} = -1\)</span> and <span class="math notranslate nohighlight">\(\frac{d}{dt} e^t = e^t\)</span> then <span class="math notranslate nohighlight">\(\frac{d}{dt} e^{it} = i*e^{it}\)</span></p>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 43%" />
+<col style="width: 23%" />
+<col style="width: 34%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Complex number</p></td>
+<td><p>Real Part</p></td>
+<td><p>Imaginary Part</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(z = a + ib\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(a\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(ib\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<div id="complex_jxgbox" class="jxgbox" style="width:400px; height:400px;"></div>
+<script type="text/javascript">
+        var board = JXG.JSXGraph.initBoard('complex_jxgbox', {boundingbox: [-1.5, 1.5, 1.5, -1.5], axis:true, pan: {enabled: false}, showCopyright:false, showNavigation:false})
+        var p1 = board.create('point', [0.0, 0.0], { fixed:true, visible:true })
+    var p2 = board.create('point', [1.0, 0.0], { fixed:true, visible:false })
+    var c1 = board.create('circle', [p1, p2], { dash:1, strokeColor:'grey', strokeOpacity:0.6 })
+    var s1 = board.create('slider', [[-1.4,-1.2],[1.0,-1.2],[0,Math.PI/4,4*Math.PI]], {name:'t', snapWidth:0.01})
+    var p4 = board.create('point', [
+        function(){return Math.cos(s1.Value())},
+        function(){return Math.sin(s1.Value())}],
+        {name:'z = e^{it}', tracer:true})
+
+    var p5 = board.create('point', [
+        function(){return Math.cos(s1.Value()) + Math.cos(s1.Value()+Math.PI/2)},
+        function(){return Math.sin(s1.Value()) + Math.sin(s1.Value()+Math.PI/2)}],
+        {name:'d/dt'})
+
+    var p6 = board.create('point', [function(){return Math.cos(s1.Value())}, 0.0], {name:'cos(t)', color:'grey'})
+    var p7 = board.create('point', [0.0, function(){return Math.sin(s1.Value())}], {name:'sin(t)', color:'grey'})
+
+    var l1 = board.create('segment', [p1, p4])
+    var l2 = board.create('segment', [p4, p5], {strokeColor:'grey', strokeOpacity:0.2 })
+
+    var l3 = board.create('segment', [p4, p6], {strokeColor:'grey', strokeOpacity:0.6, dash:1 })
+    var l4 = board.create('segment', [p4, p7], {strokeColor:'grey', strokeOpacity:0.6, dash:1 })
+
+    var a1 = board.create('angle', [p2, p1, p4], {radius:0.2, name:'t'})
+    var a2 = board.create('angle', [p5, p4, p1], {radius:0.1})
+
+    t0 = board.create('text', [1.1, 0.1, '0']);
+    t1 = board.create('text', [1.1, -0.1, '2 Pi']);
+    t2 = board.create('text', [0.0, 1.1, 'Pi/2']);
+    t3 = board.create('text', [-1.1, 0.0, 'Pi']);
+    t4 = board.create('text', [0.0, -1.1, '3 Pi/2']);
+
+</script><table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>number</strong></p></td>
+<td><p><span class="math notranslate nohighlight">\(z = \frac{\sqrt{3}}{2} + \frac{1}{2} i\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>modulus</strong></p></td>
+<td><p><span class="math notranslate nohighlight">\(|z| = \frac{\sqrt{3}}{2}^2 + \frac{1}{2}^2 = 0.75 + 0.25 = 1\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>argument</strong></p></td>
+<td><p><span class="math notranslate nohighlight">\(arg(z) = \frac{\pi}{6}\)</span> <span class="math notranslate nohighlight">\((cos(\frac{\pi}{6})=\frac{\sqrt{3}}{2}\)</span>, <span class="math notranslate nohighlight">\(sin(\frac{\pi}{6})=\frac{1}{2})\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>trigo</strong></p></td>
+<td><p><span class="math notranslate nohighlight">\(z = mod*(cos(arg)+i*sin(arg)) = cos(\frac{\pi}{6}) + i*sin(\frac{\pi}{6})\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>polar</strong></p></td>
+<td><p><span class="math notranslate nohighlight">\(z = mod*e^{i*arg} = e^{i*\frac{\pi}{6}}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>conjug</strong></p></td>
+<td><p><span class="math notranslate nohighlight">\(\overline{z} = \frac{\sqrt{3}}{2} + -\frac{1}{2} i\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="transformations">
+<h3><a class="toc-backref" href="#id8">Transformations</a><a class="headerlink" href="#transformations" title="Permalink to this headline">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Rotation</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<ul class="simple">
+<li><p>center <span class="math notranslate nohighlight">\(\Omega(\omega)\)</span></p></li>
+<li><p>angle <span class="math notranslate nohighlight">\(\theta\)</span></p></li>
+</ul>
+<div id="rotation_jxgbox" class="jxgbox" style="width:400px; height:400px;"></div>
+<script type="text/javascript">
+        var board = JXG.JSXGraph.initBoard('rotation_jxgbox', {boundingbox: [-1.5, 1.5, 1.5, -1.5], axis:true, pan: {enabled: false}, showCopyright:false, showNavigation:false})
+        var p1 = board.create('point', [0.0, 0.0], { fixed:true, visible:true, name:"Ω(ω)", color:'blue' })
+    var p2 = board.create('point', [1.0, 0.0], { fixed:true, visible:true, name:"z1", color:'blue' })
+    var srotation1 = board.create('slider', [[-1.4,-1.2],[1.0,-1.2],[0.0,(2*Math.PI)/3,4*Math.PI]], {name:'θ', snapWidth:0.1})
+
+    var p3 = board.create('point', [
+        function(){return Math.cos(srotation1.Value())},
+        function(){return Math.sin(srotation1.Value())}], { fixed:true, visible:true, name:"z2", color:'red' })
+
+    var l1 = board.create('segment', [p1, p2], {strokeColor:'grey', strokeOpacity:0.6, dash:1 })
+    var l2 = board.create('segment', [p1, p3], {strokeColor:'grey', strokeOpacity:0.6, dash:1 })
+
+    var a1 = board.create('angle', [p2, p1, p3], {radius:0.2, name:'θ'})
+</script><dl class="field-list simple">
+<dt class="field-odd">Translation</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<ul class="simple">
+<li><p>vector <span class="math notranslate nohighlight">\(u\)</span></p></li>
+</ul>
+<div id="translation_jxgbox" class="jxgbox" style="width:400px; height:400px;"></div>
+<script type="text/javascript">
+        var board = JXG.JSXGraph.initBoard('translation_jxgbox', {boundingbox: [-1.5, 1.5, 1.5, -1.5], axis:true, pan: {enabled: false}, showCopyright:false, showNavigation:false})
+    var p1 = board.create('point', [0.3, -0.5], { fixed:true, visible:true, name:"z1", color:'blue' })
+    var svectorx = board.create('slider', [[-1.4,-1.2],[0.8,-1.2],[-1.4,0.3,1.4]], {name:'ux', snapWidth:0.05})
+    var svectory = board.create('slider', [[-1.4,-1.4],[0.8,-1.4],[-1.4,-0.2,1.4]], {name:'uy', snapWidth:0.05})
+
+    var p2 = board.create('point', [
+        function(){return p1.X() + svectorx.Value()},
+        function(){return p1.Y() + svectory.Value()}], { fixed:true, visible:true, name:"z2", color:'red' })
+
+    var l1 = board.create('segment', [p1, p2], {strokeColor:'red', strokeOpacity:0.6, name:'u' })
+</script><dl class="field-list simple">
+<dt class="field-odd">Homothety</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<ul class="simple">
+<li><p>center <span class="math notranslate nohighlight">\(\Omega(\omega)\)</span></p></li>
+<li><p>ratio <span class="math notranslate nohighlight">\(k = \frac{kb}{ka}\)</span></p></li>
+</ul>
+<div id="homothety_jxgbox" class="jxgbox" style="width:400px; height:400px;"></div>
+<script type="text/javascript">
+        var board = JXG.JSXGraph.initBoard('homothety_jxgbox', {boundingbox: [-1.5, 1.5, 1.5, -1.5], axis:true, pan: {enabled: false}, showCopyright:false, showNavigation:false})
+
+    var p1 = board.create('point', [0.0, 0.0], { fixed:true, visible:true, name:"Ω(ω)", color:'blue' })
+    var p2 = board.create('point', [0.8, 1.2], { fixed:true, visible:true, name:"z1", color:'blue' })
+    var sratio = board.create('slider', [[-1.4,-1.2],[1.0,-1.2],[-2.0,1.2,2.0]], {name:'k', snapWidth:0.05})
+
+    var p3 = board.create('point', [ function(){ return p2.X()*sratio.Value() }, function(){ return p2.Y()*sratio.Value()}], { fixed:true, visible:true, name:"z2", color:'red' })
+    var l1 = board.create('segment', [p1, p2], {strokeColor:'grey', strokeOpacity:0.6, dash:1 })
+    var l2 = board.create('segment', [p1, p3], {strokeColor:'red', strokeOpacity:0.6, dash:0 })
+</script><dl class="field-list simple">
+<dt class="field-odd">Similarity</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<ul class="simple">
+<li><p>center <span class="math notranslate nohighlight">\(\Omega(\omega)\)</span> (single invariant  point, resolve <span class="math notranslate nohighlight">\(s(\omega)=\omega\)</span>)</p></li>
+<li><p>angle <span class="math notranslate nohighlight">\(\theta = Arg(a)\)</span></p></li>
+<li><p>ratio <span class="math notranslate nohighlight">\(k = |a|\)</span></p></li>
+</ul>
+<p><strong>Rotation</strong> of center <span class="math notranslate nohighlight">\(\Omega(\omega)\)</span> and of angle <span class="math notranslate nohighlight">\(\theta\)</span> then <strong>Homothety</strong> of center <span class="math notranslate nohighlight">\(\Omega(\omega)\)</span> and of ration <span class="math notranslate nohighlight">\(k\)</span></p>
+<div id="similarity_jxgbox" class="jxgbox" style="width:400px; height:400px;"></div>
+<script type="text/javascript">
+        var board = JXG.JSXGraph.initBoard('similarity_jxgbox', {boundingbox: [-1.5, 1.5, 1.5, -1.5], axis:true, pan: {enabled: false}, showCopyright:false, showNavigation:false})
+
+    var p1 = board.create('point', [0.0, 0.0], { fixed:true, visible:true, name:"Ω(ω)", color:'blue' })
+    var p2 = board.create('point', [0.8, 1.2], { fixed:true, visible:true, name:"z1", color:'blue' })
+    var p4 = board.create('point', [1.0, 0.0], { fixed:true, visible:false })
+    var a2 = board.create('angle', [p2, p1, p4], {  visible:false })
+    var ssimratio = board.create('slider', [[-1.4,-1.2],[1.0,-1.2],[-2.0,0.5,2.0]], {name:'k', snapWidth:0.05})
+    var ssimrota = board.create('slider', [[-1.4,-1.4],[1.0,-1.4],[0.0,(2*Math.PI)/3,4*Math.PI]], {name:'θ', snapWidth:0.1})
+
+    var p3 = board.create('point', [
+        function(){
+                return Math.cos(ssimrota.Value()-a2.Value()) * p1.Dist(p2) * ssimratio.Value()
+        },
+        function(){
+                return Math.sin(ssimrota.Value()-a2.Value()) * p1.Dist(p2) * ssimratio.Value()
+        }],
+        { fixed:true, visible:true, name:"z2", color:'red' })
+
+    var l1 = board.create('segment', [p1, p2], {strokeColor:'grey', strokeOpacity:0.6, dash:1 })
+    var l2 = board.create('segment', [p1, p3], {strokeColor:'red', strokeOpacity:0.6, dash:0 })
+        var a1 = board.create('angle', [p2, p1, p3], {radius:0.2, name:'θ'})
+</script><div class="admonition-example admonition">
+<p class="admonition-title">Example</p>
+<p><strong>Similarity of</strong> <span class="math notranslate nohighlight">\(\left[ \begin{array}{l} s: \mathbb{C} \rightarrow \mathbb{C} \\ \quad z \rightarrow (1-i\sqrt{3})z + 2i \end{array} \right]\)</span></p>
+<p><strong>1. Center:</strong> <span class="math notranslate nohighlight">\(s(\omega) = \omega \Leftrightarrow (1-i\sqrt{3})\omega + 2i = \omega \\
+\qquad \qquad \Leftrightarrow \omega-(i\sqrt{3})\omega + 2i = \omega \\
+\qquad \qquad \Leftrightarrow (i\sqrt{3}\omega - 2i = 0 \\
+\qquad \qquad \Leftrightarrow \omega = \frac{2i}{i\sqrt{3}} = 2\)</span></p>
+<p><strong>2. Ratio:</strong> <span class="math notranslate nohighlight">\(k=|1-i \sqrt{3}| = \sqrt{1^2 + (\sqrt{3})^2} = \sqrt{1+3} = 2\)</span></p>
+<p><strong>3. Angle:</strong> <span class="math notranslate nohighlight">\(\theta = arg(1-i \sqrt{3}) = arg(2 * (\frac{1}{2} - i \frac{\sqrt{3}}{2})) = arg(2 * cos(-\frac{\pi}{3}) + i sin(-\frac{\pi}{3})) = 2e^{i* (-\frac{\pi}{3})}\)</span></p>
+</div>
+</div>
+</div>
 <div class="section" id="vectors">
-<h2><a class="toc-backref" href="#id5">Vectors</a><a class="headerlink" href="#vectors" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id9">Vectors</a><a class="headerlink" href="#vectors" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="tensors">
-<h2><a class="toc-backref" href="#id6">Tensors</a><a class="headerlink" href="#tensors" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://www.youtube.com/watch?v=TvxmkZmBa-k">https://www.youtube.com/watch?v=TvxmkZmBa-k</a></p>
+<div class="section" id="matrices">
+<h2><a class="toc-backref" href="#id10">Matrices</a><a class="headerlink" href="#matrices" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3><a class="toc-backref" href="#id11">Definition</a><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-matrix admonition">
+<p class="admonition-title">Matrix</p>
+<p><span class="math notranslate nohighlight">\(A = \left( \matrix{ a_{11} &amp; a_{12} &amp; \dots &amp; a_{1p} \cr
+a_{21} &amp; a_{22} &amp; \dots &amp; a_{2p} \cr
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \cr
+a_{n1} &amp; a_{n2} &amp; \dots &amp; a_{np} \cr} \right) \quad \left. \begin{array}{l} dimension \\ order \\ size \end{array}\right\} n \times p\)</span></p>
 </div>
-<div class="section" id="matrix">
-<h2><a class="toc-backref" href="#id7">Matrix</a><a class="headerlink" href="#matrix" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 83%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Matrix</strong></p></td>
+<td><p><strong>Exemple</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>Square</p></td>
+<td><p><span class="math notranslate nohighlight">\(\left( \matrix{ 1 &amp; 2 \cr 3 &amp; 4 \cr} \right)\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Line</p></td>
+<td><p><span class="math notranslate nohighlight">\(\left( \matrix{ 1 &amp; 2 &amp; 3 &amp; 4 \cr} \right)\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Column</p></td>
+<td><p><span class="math notranslate nohighlight">\(\left( \matrix{ 1 \cr 2 \cr 3 \cr 4 \cr} \right)\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Null</p></td>
+<td><p><span class="math notranslate nohighlight">\(\left( \matrix{ 0 &amp; 0 \cr 0 &amp; 0 \cr} \right)\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Diagonal</p></td>
+<td><p><span class="math notranslate nohighlight">\(\left( \matrix{ 1 &amp; 0 \cr 0 &amp; 2 \cr} \right)\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Unit (Id)</p></td>
+<td><p><span class="math notranslate nohighlight">\(\left( \matrix{ 1 &amp; 0 \cr 0 &amp; 1 \cr} \right)\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p><span class="math notranslate nohighlight">\((A+B)^n = \sum\limits_{k=0}^{n} \binom{n}{p} A^{n-k}B^k\)</span> where <span class="math notranslate nohighlight">\(\binom{n}{p} = \frac{n!}{k!(n-k)!}\)</span></p>
+</div>
+<div class="section" id="operations">
+<h3><a class="toc-backref" href="#id12">Operations</a><a class="headerlink" href="#operations" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-matrix-addition-math-a-b admonition">
+<p class="admonition-title">Matrix Addition (<span class="math notranslate nohighlight">\(A+B\)</span>)</p>
+<p>The <strong>two Matrices</strong> must have <strong>the same shape</strong></p>
+<p><em>alaways commutative</em> (<span class="math notranslate nohighlight">\(A+B=B+A\)</span>)</p>
+<p><span class="math notranslate nohighlight">\(\left( \matrix{ 1 &amp; 2 &amp; 3 \cr 4 &amp; 5 &amp; 6 \cr} \right) + \left( \matrix{ 7 &amp; 8 &amp; 9 \cr 10 &amp; 11 &amp; 12 \cr} \right) = \left( \matrix{ 1+7 &amp; 2+8 &amp; 3+9 \cr 4+10 &amp; 5+11 &amp; 6+12 \cr} \right) = \left( \matrix{ 8 &amp; 10 &amp; 12 \cr 14 &amp; 16 &amp; 18 \cr} \right)\)</span></p>
+</div>
+<div class="admonition-matrix-multiplication-math-a-times-b admonition">
+<p class="admonition-title">Matrix Multiplication (<span class="math notranslate nohighlight">\(A \times B\)</span>)</p>
+<p>The <strong>first Matrix width</strong> must have the same size as the <strong>second Matrix height</strong></p>
+<p><em>usually not commutative</em> (<span class="math notranslate nohighlight">\(A \times B \neq B \times A\)</span>)</p>
+<p><span class="math notranslate nohighlight">\(\left( \matrix{ 1 &amp; 2 &amp; 3 \cr 4 &amp; 5 &amp; 6 \cr} \right) \times \left( \matrix{ 7 &amp; 8 \cr 9 &amp; 10 \cr 11 &amp; 12 \cr} \right) = \left( \matrix{ 1*7+2*9+3*11 &amp; 1*8+2*10+3*12 \cr 4*7+5*9+6*11 &amp; 4*8+5*10+6*12 \cr} \right) = \left( \matrix{ 58 &amp; 64 \cr 139 &amp; 154 \cr} \right)\)</span></p>
+</div>
+<div class="admonition-scalar-multiplication-math-n-times-b admonition">
+<p class="admonition-title">Scalar Multiplication (<span class="math notranslate nohighlight">\(n \times B\)</span>)</p>
+<p>The <strong>first Matrix width</strong> must have the same size as the <strong>second Matrix height</strong></p>
+<p><em>alaways commutative</em> (<span class="math notranslate nohighlight">\(n \times B=B \times n\)</span>)</p>
+<p><span class="math notranslate nohighlight">\(3 \times \left( \matrix{ 7 &amp; 8 \cr 9 &amp; 10 \cr 11 &amp; 12 \cr} \right) = \left( \matrix{ 3*7 &amp; 3*8 \cr 3*9 &amp; 3*10 \cr 3*11 &amp; 3*12 \cr} \right) = \left( \matrix{ 21 &amp; 24 \cr 27 &amp; 30 \cr 33 &amp; 36 \cr} \right)\)</span></p>
+</div>
+<div class="admonition-matrix-power-math-a-n admonition">
+<p class="admonition-title">Matrix Power (<span class="math notranslate nohighlight">\(A^n\)</span>)</p>
+<p><span class="math notranslate nohighlight">\(A^0 = Id(A) = \left( \matrix{ 1 &amp; 0 &amp; \dots &amp; 0 \cr
+0 &amp; 1 &amp; \dots &amp; 0 \cr
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \cr
+0 &amp; 0 &amp; \dots &amp; 1 \cr} \right)\)</span></p>
+<p><span class="math notranslate nohighlight">\(A^n = A \times A \times \dots \times A\)</span></p>
+</div>
+<div class="admonition-matrix-inverse-math-a-1 admonition">
+<p class="admonition-title">Matrix Inverse (<span class="math notranslate nohighlight">\(A^{-1}\)</span>)</p>
+<p><span class="math notranslate nohighlight">\(Mn(\mathbb{R})\)</span> is all the <strong>square matrices</strong> of <strong>order n</strong></p>
+<p><span class="math notranslate nohighlight">\(\forall A \in Mn(\mathbb{R}), \exists A^{-1} \iff \exists B | A \times B = B \times A = Id(A), B = A^{-1}\)</span></p>
+</div>
+<div class="admonition-matrix-division-math-frac-a-b admonition">
+<p class="admonition-title">Matrix Division (<span class="math notranslate nohighlight">\(\frac{A}{B}\)</span>)</p>
+<p><span class="math notranslate nohighlight">\(\exists B^{-1} \iff \frac{A}{B} = A \times (1/B) = A \times B^{-1}\)</span></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Gaussian Elimination</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p><strong>Transform a system</strong> in another similar one (with the same solutions) as a <strong>Triangular matrix</strong> (easier to resolve).</p>
+<p><strong>We have our initial system</strong></p>
+<p><span class="math notranslate nohighlight">\(\left\{ \begin{array}{l} x+2y+2z = 2 \\ x+3y-2z = -1 \\ 3x+5y+8z = 8 \end{array}\right. \begin{array}{l} (L1) \\ (L2) \\ (L3) \end{array}\)</span></p>
+<p><strong>We then use L1 like a pivot and we eliminate x in L2 and L3</strong></p>
+<p><span class="math notranslate nohighlight">\(\left\{ \begin{array}{l} x+2y+2z = 2 \\ \qquad y-4z = -3 \\ \qquad -y+2z = 2 \end{array}\right. \begin{array}{l} (L1) \\ (L2 \leftarrow L2 - L1) \\ (L3 \leftarrow L3 - 3L1) \end{array}\)</span></p>
+<p><strong>Finally, we use L2 like a pivot and we eliminate y in L3</strong></p>
+<p><span class="math notranslate nohighlight">\(\left\{ \begin{array}{l} x+2y+2z = 2 \\ \qquad y-4z = -3 \\ \qquad \quad -2z = -1 \end{array}\right. \begin{array}{l} (L1) \\ (L2) \\ (L3 \leftarrow L3 + L2) \end{array}\)</span></p>
+<p>Resolution</p>
+<p><span class="math notranslate nohighlight">\(\begin{array}{l} (L3) \\ (L2) \\ (L1) \end{array} \left. \begin{array}{l} -2z = -1 \iff z= \frac{1}{2} \\ y-4z=-3 \iff y-2=-3 \iff y=-1 \\ x+2y+2z=2 \iff x-2+1=2 \iff x=3\end{array}\right.\)</span></p>
+<dl class="field-list simple">
+<dt class="field-odd">Sarrus Method</dt>
+<dd class="field-odd"><p></p></dd>
+<dt class="field-even">Cramers rule</dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+</div>
+<div class="section" id="resolve-a-system">
+<h3><a class="toc-backref" href="#id13">Resolve a System</a><a class="headerlink" href="#resolve-a-system" title="Permalink to this headline">¶</a></h3>
+<p><span class="math notranslate nohighlight">\((S) \quad \left\{ \begin{array}{l} ax + by = s \\ cx + dy = t \end{array}\right.\)</span> (We need as many unknowns as lines)</p>
+<p>We have <span class="math notranslate nohighlight">\(A = \left( \matrix{ a &amp; b \cr c &amp; d \cr} \right), B = \left( \matrix{ s \cr t \cr} \right), X = \left( \matrix{ x \cr y \cr} \right)\)</span></p>
+<p><span class="math notranslate nohighlight">\((S) = A \times X = B, X = A^{-1} \times B \iff \exists A^{-1}\)</span> (1 solution)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Exemple</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p><span class="math notranslate nohighlight">\((S) \quad \left\{ \begin{array}{l} 3x + 4y = 1 \\ 5x + 7y = 2 \end{array}\right. \quad A = \left( \matrix{ 3 &amp; 4 \cr 5 &amp; 7 \cr} \right), B = \left( \matrix{ 1 \cr 2 \cr} \right), X = \left( \matrix{ x \cr y \cr} \right)\)</span></p>
+<p><span class="math notranslate nohighlight">\(A^{-1} = \left( \matrix{ 7 &amp; -4 \cr -5 &amp; 3 \cr} \right)\)</span></p>
+<p><span class="math notranslate nohighlight">\(X = A^{-1} \times B = \left( \matrix{ 7 &amp; -4 \cr -5 &amp; 3 \cr} \right) \times \left( \matrix{ 1 \cr 2 \cr} \right) = \left( \matrix{ -1 \cr 1 \cr} \right)\)</span></p>
+<p><span class="math notranslate nohighlight">\(x=-1, y=1\)</span></p>
 <p><a class="reference external" href="https://www.youtube.com/watch?v=rowWM-MijXU">https://www.youtube.com/watch?v=rowWM-MijXU</a></p>
 </div>
+</div>
+<div class="section" id="vector-spaces">
+<h2><a class="toc-backref" href="#id14">Vector spaces</a><a class="headerlink" href="#vector-spaces" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tensors">
+<h2><a class="toc-backref" href="#id15">Tensors</a><a class="headerlink" href="#tensors" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=TvxmkZmBa-k">https://www.youtube.com/watch?v=TvxmkZmBa-k</a></p>
+</div>
 <div class="section" id="quaternions">
-<h2><a class="toc-backref" href="#id8">Quaternions</a><a class="headerlink" href="#quaternions" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id16">Quaternions</a><a class="headerlink" href="#quaternions" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
