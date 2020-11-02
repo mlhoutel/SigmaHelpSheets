@@ -615,7 +615,7 @@ To put it simply, we get the <code class="docutils literal notranslate"><span cl
 </dd>
 </dl>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">namespace</span> <span class="n">sf</span> <span class="p">{</span>
-        <span class="n">RectangleShape</span> <span class="nf">rectangle</span><span class="p">(</span><span class="n">Vector2f</span><span class="p">(</span><span class="mi">120</span><span class="p">,</span><span class="mi">50</span><span class="p">));</span>
+        <span class="n">RectangleShape</span> <span class="n">rectangle</span><span class="p">(</span><span class="n">Vector2f</span><span class="p">(</span><span class="mi">120</span><span class="p">,</span><span class="mi">50</span><span class="p">));</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -1793,7 +1793,7 @@ value of <code class="docutils literal notranslate"><span class="pre">2147483648
 	<span class="k">if</span> <span class="p">(</span><span class="n">A</span><span class="o">!=</span><span class="mi">42</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* (NOT EQUAL) TRUE */</span> <span class="p">}</span>
 	<span class="k">if</span> <span class="p">(</span><span class="n">A</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* (GREATER THAN) FALSE */</span> <span class="p">}</span>
 	<span class="k">if</span> <span class="p">(</span><span class="n">A</span><span class="o">&gt;=</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* (GREATER OR EQUAL) TRUE*/</span> <span class="p">}</span>
-	<span class="k">if</span> <span class="p">(</span><span class="n">A</span><span class="o">&lt;</span><span class="mi">-2</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* (LOWER THAN) FALSE*/</span> <span class="p">}</span>
+	<span class="k">if</span> <span class="p">(</span><span class="n">A</span><span class="o">&lt;-</span><span class="mi">2</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* (LOWER THAN) FALSE*/</span> <span class="p">}</span>
 	<span class="k">if</span> <span class="p">(</span><span class="n">A</span><span class="o">&lt;=</span><span class="n">B</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* (LOWER OR EQUAL) FALSE*/</span> <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
@@ -1911,10 +1911,10 @@ value of <code class="docutils literal notranslate"><span class="pre">2147483648
 21
 22
 23
-24</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="c1"> 	// NULL</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="c1"> //srand, rand</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;time.h&gt;</span><span class="c1"> 	// time</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;math.h&gt;</span><span class="c1">	// pow</span><span class="cp"></span>
+24</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt; 	// NULL</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt; //srand, rand</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;time.h&gt; 	// time</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;math.h&gt;	// pow</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
 	
@@ -2067,7 +2067,7 @@ value of <code class="docutils literal notranslate"><span class="pre">2147483648
 
 		<span class="k">case</span> <span class="mi">0</span><span class="o">:</span> <span class="c1">// week[0] == week[1]</span>
 			<span class="k">break</span><span class="p">;</span>
-		<span class="k">case</span> <span class="mi">-1</span><span class="o">:</span> <span class="c1">// week[0] &lt; week[1]</span>
+		<span class="k">case</span> <span class="o">-</span><span class="mi">1</span><span class="o">:</span> <span class="c1">// week[0] &lt; week[1]</span>
 			<span class="k">break</span><span class="p">;</span>
 		<span class="k">case</span> <span class="mi">1</span><span class="o">:</span> <span class="c1">// week[0] &gt; week[1]</span>
 			<span class="k">break</span><span class="p">;</span>

@@ -113,6 +113,7 @@ Console Log
 Console log display the items passed by parameters
 
 .. code-block::
+
     /* Text */
     console.log('test here') 
 

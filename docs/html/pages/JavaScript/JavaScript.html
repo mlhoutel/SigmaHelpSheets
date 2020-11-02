@@ -394,6 +394,34 @@ but it’s a virtual fix because in the end it’s also compiled in JS.</p>
 <div class="section" id="console-log">
 <h3><a class="toc-backref" href="#id9">Console Log</a><a class="headerlink" href="#console-log" title="Permalink to this headline">¶</a></h3>
 <p>Console log display the items passed by parameters</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>/* Text */
+console.log(&#39;test here&#39;)
+
+/* Array */
+console.log([{ id: 0, name: &#39;A&#39;}, { id: 1, name: &#39;B&#39;}, { id: 2, name: &#39;C&#39;}])
+(3) [{…}, {…}, {…}]
+    &gt; 0: {id: 0, name: &quot;A&quot;}
+    &gt; 1: {id: 1, name: &quot;B&quot;}
+    &gt; 2: {id: 2, name: &quot;C&quot;}
+    length: 3
+    &gt; __proto__: Array(0)
+
+/* Text */
+console.log(&#39;Insert %s here&#39;,&#39;text&#39;)
+/*
+    You can interpolate values with flags:
+    %s (string)
+    %d (decimal)
+    %j (json)
+    %O (object with depth of 4)
+    %o (object with depth of 2)
+*/
+
+console.error() /* For errors */
+console.dir() /* For directories */
+class Console /* Create a console object */
+</pre></div>
+</div>
 </div>
 <div class="section" id="tests">
 <h3><a class="toc-backref" href="#id10">Tests</a><a class="headerlink" href="#tests" title="Permalink to this headline">¶</a></h3>
