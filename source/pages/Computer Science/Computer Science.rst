@@ -1,16 +1,13 @@
-.. toctree::
-	:caption: Table of Contents:
-	:maxdepth: 2
-
 ============================
 Computer Science
 ============================
 
+.. contents:: Table of Contents
+	:local: 
+
 Binairy et Hexadecimal
 ============================
 
-Boolean Logic
-============================
 
 Datas types 
 ============================

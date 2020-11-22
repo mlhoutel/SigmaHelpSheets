@@ -111,9 +111,14 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#propositional-calculus-and-logic">Propositional calculus and Logic</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#connectors-and-expressions">Connectors and expressions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#proposals-and-tables-of-truths">Proposals and tables of truths</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#boolean-logic">Boolean logic</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#reciprocal-and-contraposed">Reciprocal and Contraposed</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#conjunctive-and-disjunctive">Conjunctive and Disjunctive</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#simplification">Simplification</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#languages-theory">Languages Theory</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#operations">Operations</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#functions-and-properties">Functions and Properties</a><ul>
@@ -279,30 +284,36 @@
 <li><p><a class="reference internal" href="#propositional-calculus-and-logic" id="id4">Propositional calculus and Logic</a></p>
 <ul>
 <li><p><a class="reference internal" href="#connectors-and-expressions" id="id5">Connectors and expressions</a></p></li>
-<li><p><a class="reference internal" href="#proposals-and-tables-of-truths" id="id6">Proposals and tables of truths</a></p></li>
+<li><p><a class="reference internal" href="#boolean-logic" id="id6">Boolean logic</a></p></li>
 <li><p><a class="reference internal" href="#reciprocal-and-contraposed" id="id7">Reciprocal and Contraposed</a></p></li>
-<li><p><a class="reference internal" href="#conjunctive-and-disjunctive" id="id8">Conjunctive and Disjunctive</a></p></li>
+<li><p><a class="reference internal" href="#simplification" id="id8">Simplification</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#functions-and-properties" id="id9">Functions and Properties</a></p>
+<li><p><a class="reference internal" href="#languages-theory" id="id9">Languages Theory</a></p>
 <ul>
-<li><p><a class="reference internal" href="#continuous" id="id10">Continuous</a></p></li>
-<li><p><a class="reference internal" href="#mesurable" id="id11">Mesurable</a></p></li>
-<li><p><a class="reference internal" href="#injection" id="id12">Injection</a></p></li>
-<li><p><a class="reference internal" href="#surjection" id="id13">Surjection</a></p></li>
-<li><p><a class="reference internal" href="#bijection" id="id14">Bijection</a></p></li>
+<li><p><a class="reference internal" href="#introduction" id="id10">Introduction</a></p></li>
+<li><p><a class="reference internal" href="#operations" id="id11">Operations</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#probability" id="id15">Probability</a></p>
+<li><p><a class="reference internal" href="#functions-and-properties" id="id12">Functions and Properties</a></p>
 <ul>
-<li><p><a class="reference internal" href="#discrete-variable" id="id16">Discrete Variable</a></p></li>
-<li><p><a class="reference internal" href="#continuous-variable" id="id17">Continuous Variable</a></p></li>
-<li><p><a class="reference internal" href="#comparison" id="id18">Comparison</a></p></li>
-<li><p><a class="reference internal" href="#approximation" id="id19">Approximation</a></p></li>
-<li><p><a class="reference internal" href="#distribution" id="id20">Distribution</a></p></li>
-<li><p><a class="reference internal" href="#average-estimation" id="id21">Average Estimation</a></p></li>
-<li><p><a class="reference internal" href="#proportion-estimation" id="id22">Proportion Estimation</a></p></li>
-<li><p><a class="reference internal" href="#confidence-interval" id="id23">Confidence Interval</a></p></li>
+<li><p><a class="reference internal" href="#continuous" id="id13">Continuous</a></p></li>
+<li><p><a class="reference internal" href="#mesurable" id="id14">Mesurable</a></p></li>
+<li><p><a class="reference internal" href="#injection" id="id15">Injection</a></p></li>
+<li><p><a class="reference internal" href="#surjection" id="id16">Surjection</a></p></li>
+<li><p><a class="reference internal" href="#bijection" id="id17">Bijection</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#probability" id="id18">Probability</a></p>
+<ul>
+<li><p><a class="reference internal" href="#discrete-variable" id="id19">Discrete Variable</a></p></li>
+<li><p><a class="reference internal" href="#continuous-variable" id="id20">Continuous Variable</a></p></li>
+<li><p><a class="reference internal" href="#comparison" id="id21">Comparison</a></p></li>
+<li><p><a class="reference internal" href="#approximation" id="id22">Approximation</a></p></li>
+<li><p><a class="reference internal" href="#distribution" id="id23">Distribution</a></p></li>
+<li><p><a class="reference internal" href="#average-estimation" id="id24">Average Estimation</a></p></li>
+<li><p><a class="reference internal" href="#proportion-estimation" id="id25">Proportion Estimation</a></p></li>
+<li><p><a class="reference internal" href="#confidence-interval" id="id26">Confidence Interval</a></p></li>
 </ul>
 </li>
 </ul>
@@ -422,8 +433,51 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="proposals-and-tables-of-truths">
-<h3><a class="toc-backref" href="#id6">Proposals and tables of truths</a><a class="headerlink" href="#proposals-and-tables-of-truths" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="boolean-logic">
+<h3><a class="toc-backref" href="#id6">Boolean logic</a><a class="headerlink" href="#boolean-logic" title="Permalink to this headline">¶</a></h3>
+<p><span class="math notranslate nohighlight">\(\mathbb{B} = \{ 0 , 1 \}\)</span></p>
+<p><span class="math notranslate nohighlight">\(p \in \mathbb{B}, \left\{ \begin{array}{l} p = 0 \Leftrightarrow \neg p = 1 \\ p = 1 \Leftrightarrow \neg p = 0 \end{array}\right.\)</span></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 24%" />
+<col style="width: 25%" />
+<col style="width: 21%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(p\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(q\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(p \lor q\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(p \land q\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\neg p\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(1\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(1\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0\)</span></p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="section" id="reciprocal-and-contraposed">
 <h3><a class="toc-backref" href="#id7">Reciprocal and Contraposed</a><a class="headerlink" href="#reciprocal-and-contraposed" title="Permalink to this headline">¶</a></h3>
@@ -436,8 +490,8 @@
 <p><span class="math notranslate nohighlight">\(p \Rightarrow q \Leftrightarrow \neg q \Rightarrow p\)</span></p>
 </div>
 </div>
-<div class="section" id="conjunctive-and-disjunctive">
-<h3><a class="toc-backref" href="#id8">Conjunctive and Disjunctive</a><a class="headerlink" href="#conjunctive-and-disjunctive" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="simplification">
+<h3><a class="toc-backref" href="#id8">Simplification</a><a class="headerlink" href="#simplification" title="Permalink to this headline">¶</a></h3>
 <div class="admonition-conjunctive-form admonition">
 <p class="admonition-title">Conjunctive Form</p>
 <p>It is a <code class="docutils literal notranslate"><span class="pre">conjunction</span> <span class="pre">of</span> <span class="pre">sub-propositions</span></code> composed only of <span class="math notranslate nohighlight">\(\lor\)</span> and <span class="math notranslate nohighlight">\(\neg\)</span></p>
@@ -450,26 +504,82 @@
 </div>
 </div>
 </div>
+<div class="section" id="languages-theory">
+<h2><a class="toc-backref" href="#id9">Languages Theory</a><a class="headerlink" href="#languages-theory" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="introduction">
+<h3><a class="toc-backref" href="#id10">Introduction</a><a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-alphabet admonition">
+<p class="admonition-title">Alphabet</p>
+<p>Every finished set</p>
+<p><span class="math notranslate nohighlight">\(Binairy: A = \{0,1\}\)</span></p>
+<p><span class="math notranslate nohighlight">\(Latin: A = \{a,b,\dots,z,A,B,\dots,Z\}\)</span></p>
+<p><span class="math notranslate nohighlight">\(ASCII: A = \{a,b,\dots,z,A,B,\dots,Z\,0,1,\dots,9 \}\)</span></p>
+</div>
+<div class="admonition-language admonition">
+<p class="admonition-title">Language</p>
+<p>Set of words in an Alphabet</p>
+<p><span class="math notranslate nohighlight">\(L^n\)</span> = n words of <span class="math notranslate nohighlight">\(L\)</span></p>
+</div>
+<div class="admonition-letters admonition">
+<p class="admonition-title">Letters</p>
+<p>Element of a finished set</p>
+<p><span class="math notranslate nohighlight">\(Binairy: L = 0 \in \{0,1\}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\varepsilon\)</span> is the empty element in each set</p>
+</div>
+<div class="admonition-words admonition">
+<p class="admonition-title">Words</p>
+<p>Finished sequence of elements in a set</p>
+<p><span class="math notranslate nohighlight">\(Binairy: A = \{0,1\}, A^* = \{\varepsilon, 0, 1, 00, 01, 10, 11, 001,\dots \}\)</span></p>
+<p><span class="math notranslate nohighlight">\(Binairy: A = \{0,1\}, A^+ = \{0, 1, 00, 01, 10, 11, 001,\dots \}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\alpha\)</span> a word on <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(\alpha: [1,n] \Rightarrow A\)</span></p>
+<p><span class="math notranslate nohighlight">\(n\)</span> is the lenght of the word, <span class="math notranslate nohighlight">\(|\alpha| = n\)</span></p>
+</div>
+</div>
+<div class="section" id="operations">
+<h3><a class="toc-backref" href="#id11">Operations</a><a class="headerlink" href="#operations" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-equality-of-words admonition">
+<p class="admonition-title">Equality of Words</p>
+<p>On the same Alphabet: <span class="math notranslate nohighlight">\(\alpha \in A, \beta \in A\)</span></p>
+<p><span class="math notranslate nohighlight">\(\left\{ \begin{array}{l} |\alpha| = |\beta| = n \\ \forall i \in [1,n], \alpha i = \beta i \end{array}\right.\)</span></p>
+<p>ex:</p>
+<p><span class="math notranslate nohighlight">\(A = \{a,b,\dots,z,A,B,\dots,Z\}\)</span>, <span class="math notranslate nohighlight">\(\alpha \in A\)</span>, <span class="math notranslate nohighlight">\(\beta \in A\)</span></p>
+<p><span class="math notranslate nohighlight">\(\alpha = word, \beta = word \rightarrow \alpha = \beta\)</span></p>
+</div>
+<div class="admonition-concatenation admonition">
+<p class="admonition-title">Concatenation</p>
+<p><span class="math notranslate nohighlight">\(\left. \begin{array}{l} A^* \times A^* \rightarrow A^* \\ (\alpha, \beta) \rightarrow \alpha . \beta \end{array}\right., \alpha . \beta = \sum\limits_{i=0}^{|\alpha|} \alpha i +  \sum\limits_{j=0}^{|\beta|} \beta i\)</span></p>
+<p><span class="math notranslate nohighlight">\(|\alpha . \beta| = |\alpha| + |\beta|\)</span></p>
+<p>ex:</p>
+<p><span class="math notranslate nohighlight">\(L1 = \{a,aa\}\)</span>, <span class="math notranslate nohighlight">\(L2 = \{b,bb\}\)</span>, <span class="math notranslate nohighlight">\(L1.L2 =  \{ab, ba, aab, baa, \dots \}\)</span></p>
+<p><span class="math notranslate nohighlight">\(L1 = \{a,ab\}\)</span>, <span class="math notranslate nohighlight">\(L2 = \{abab, aa\}\)</span>, <span class="math notranslate nohighlight">\(L1^{-1}.L2 =  \{ab, a \}\)</span></p>
+</div>
+<div class="admonition-kleen-closure admonition">
+<p class="admonition-title">Kleen closure</p>
+<p>Also named iterative closure, or stared closure.
+It’s the smallest language on A that contains L and the empty word, and that is stable by concatenation.</p>
+</div>
+</div>
+</div>
 <div class="section" id="functions-and-properties">
-<h2><a class="toc-backref" href="#id9">Functions and Properties</a><a class="headerlink" href="#functions-and-properties" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id12">Functions and Properties</a><a class="headerlink" href="#functions-and-properties" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="continuous">
-<h3><a class="toc-backref" href="#id10">Continuous</a><a class="headerlink" href="#continuous" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id13">Continuous</a><a class="headerlink" href="#continuous" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="mesurable">
-<h3><a class="toc-backref" href="#id11">Mesurable</a><a class="headerlink" href="#mesurable" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id14">Mesurable</a><a class="headerlink" href="#mesurable" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="injection">
-<h3><a class="toc-backref" href="#id12">Injection</a><a class="headerlink" href="#injection" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id15">Injection</a><a class="headerlink" href="#injection" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="surjection">
-<h3><a class="toc-backref" href="#id13">Surjection</a><a class="headerlink" href="#surjection" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id16">Surjection</a><a class="headerlink" href="#surjection" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="bijection">
-<h3><a class="toc-backref" href="#id14">Bijection</a><a class="headerlink" href="#bijection" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id17">Bijection</a><a class="headerlink" href="#bijection" title="Permalink to this headline">¶</a></h3>
 </div>
 </div>
 <div class="section" id="probability">
-<h2><a class="toc-backref" href="#id15">Probability</a><a class="headerlink" href="#probability" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id18">Probability</a><a class="headerlink" href="#probability" title="Permalink to this headline">¶</a></h2>
 <div class="admonition-conditional-probability admonition">
 <p class="admonition-title">Conditional probability</p>
 <p><span class="math notranslate nohighlight">\(\mathit{P}_{B}(A)\)</span>: Probability of A knowing B</p>
@@ -477,7 +587,7 @@
 <p><span class="math notranslate nohighlight">\(\mathit{P}_{B}(A)=\frac{P(A \cap B)}{P(B)} \Leftrightarrow P(A \cap B) = \mathit{P}_{B}(A) \times P(B) = \mathit{P}_{A}(B) \times P(A)\)</span></p>
 <p><span class="math notranslate nohighlight">\(Independence \Rightarrow P(A \cap B) = P(A) \times P(B)\)</span></p>
 <div class="section" id="discrete-variable">
-<h3><a class="toc-backref" href="#id16">Discrete Variable</a><a class="headerlink" href="#discrete-variable" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id19">Discrete Variable</a><a class="headerlink" href="#discrete-variable" title="Permalink to this headline">¶</a></h3>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 33%" />
@@ -548,7 +658,7 @@
 <span class="math notranslate nohighlight">\(\lambda=p \times n = 1 \times 3, P(X=4)=e^{-3} \times \frac{3^4}{3!}=0.168\)</span></p>
 </div>
 <div class="section" id="continuous-variable">
-<h3><a class="toc-backref" href="#id17">Continuous Variable</a><a class="headerlink" href="#continuous-variable" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id20">Continuous Variable</a><a class="headerlink" href="#continuous-variable" title="Permalink to this headline">¶</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">Exponential</dt>
 <dd class="field-odd"><p></p></dd>
@@ -628,7 +738,7 @@
 <p><span class="math notranslate nohighlight">\(\prod(t)=P(T&lt;t)=\int_{-\infty}^{t} (\frac{1}{2\pi} \times e^{-\frac{t^2}{2}})dt\)</span></p>
 </div>
 <div class="section" id="comparison">
-<h3><a class="toc-backref" href="#id18">Comparison</a><a class="headerlink" href="#comparison" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id21">Comparison</a><a class="headerlink" href="#comparison" title="Permalink to this headline">¶</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">Expectation</dt>
 <dd class="field-odd"><p></p></dd>
@@ -642,7 +752,7 @@
 <p><span class="math notranslate nohighlight">\(Z=\frac{1030-995}{\sqrt{\frac{5^2}{10}+\frac{7^2}{20}}}=15.7 \geqslant 1.96 (5\%)\)</span></p>
 </div>
 <div class="section" id="approximation">
-<h3><a class="toc-backref" href="#id19">Approximation</a><a class="headerlink" href="#approximation" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id22">Approximation</a><a class="headerlink" href="#approximation" title="Permalink to this headline">¶</a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">Binomial by Normal</dt>
 <dd class="field-odd"><p></p></dd>
@@ -708,7 +818,7 @@
 </table>
 </div>
 <div class="section" id="distribution">
-<h3><a class="toc-backref" href="#id20">Distribution</a><a class="headerlink" href="#distribution" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id23">Distribution</a><a class="headerlink" href="#distribution" title="Permalink to this headline">¶</a></h3>
 <div class="admonition-normal-median admonition">
 <p class="admonition-title">Normal Median</p>
 <p><span class="math notranslate nohighlight">\(\overline{X} \Rightarrow N(\mu, \frac{\sigma}{\sqrt{n}})\)</span> for an infinite population, else <span class="math notranslate nohighlight">\(m=\frac{\sigma}{\sqrt{n}} \times \sqrt{\frac{N-n}{N-1}}\)</span></p>
@@ -731,7 +841,7 @@
 <p><span class="math notranslate nohighlight">\(P(f&lt;1.2)=P(T&lt;\frac{0.012-0.01}{0.0014})=P(T&lt;1.42)=92.22\%\)</span></p>
 </div>
 <div class="section" id="average-estimation">
-<h3><a class="toc-backref" href="#id21">Average Estimation</a><a class="headerlink" href="#average-estimation" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id24">Average Estimation</a><a class="headerlink" href="#average-estimation" title="Permalink to this headline">¶</a></h3>
 <div class="admonition-ponctual-estimation admonition">
 <p class="admonition-title">Ponctual Estimation</p>
 <p><span class="math notranslate nohighlight">\(X(\mu=?, \sigma=?) \Rightarrow\)</span> sample of size n <span class="math notranslate nohighlight">\((\mu e, \sigma e)\)</span></p>
@@ -766,7 +876,7 @@
 </div>
 </div>
 <div class="section" id="proportion-estimation">
-<h3><a class="toc-backref" href="#id22">Proportion Estimation</a><a class="headerlink" href="#proportion-estimation" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id25">Proportion Estimation</a><a class="headerlink" href="#proportion-estimation" title="Permalink to this headline">¶</a></h3>
 <div class="admonition-ponctual-estimation admonition">
 <p class="admonition-title">Ponctual Estimation</p>
 <p><span class="math notranslate nohighlight">\(\sigma(D)=\sqrt{\frac{\sigma 1}{n1}^2 + \frac{\sigma 2}{n2}^2}\)</span></p>
@@ -793,7 +903,7 @@
 <p><span class="math notranslate nohighlight">\(N(\frac{1}{4}, \sqrt{\frac{\frac{1}{4} \times \frac{3}{4}}{160}})=N(0.25, 0.03423)\)</span></p>
 </div>
 <div class="section" id="confidence-interval">
-<h3><a class="toc-backref" href="#id23">Confidence Interval</a><a class="headerlink" href="#confidence-interval" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id26">Confidence Interval</a><a class="headerlink" href="#confidence-interval" title="Permalink to this headline">¶</a></h3>
 <div class="admonition-confidence-interval admonition">
 <p class="admonition-title">Confidence Interval</p>
 <p><span class="math notranslate nohighlight">\(P(p \in (a,b))=P(f-t \sqrt{\frac{f(1-f)}{n}} &lt; p &lt; f+t \sqrt{\frac{f(1-f)}{n}}) = \alpha\)</span></p>

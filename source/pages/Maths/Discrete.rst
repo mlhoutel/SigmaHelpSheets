@@ -42,7 +42,7 @@ Notations
 +-----------------+------------------+-----------------------------+
 
 Extensional definition of a set
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 :math:`A = \{x \in \mathbb{R} / x^2 + 2x - 3 = 0\}`
 
@@ -64,8 +64,26 @@ Connectors and expressions
 | :math:`\downarrow`| **Pierce**  | :math:`p \uparrow q \Leftrightarrow \neg(p \lor q)`  |
 +-------------------+-------------+------------------------------------------------------+
 
-Proposals and tables of truths
+Boolean logic
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+:math:`\mathbb{B} = \{ 0 , 1 \}`
+
+:math:`p \in \mathbb{B}, \left\{ \begin{array}{l} p = 0 \Leftrightarrow \neg p = 1 \\ p = 1 \Leftrightarrow \neg p = 0 \end{array}\right.`
+
+
++-----------+-----------+------------------+-------------------+----------------+
+| :math:`p` | :math:`q` | :math:`p \lor q` | :math:`p \land q` | :math:`\neg p` |
++-----------+-----------+------------------+-------------------+----------------+
+| :math:`0` | :math:`0` | :math:`0`        | :math:`0`         | :math:`1`      |
++-----------+-----------+------------------+-------------------+----------------+
+| :math:`0` | :math:`1` | :math:`1`        | :math:`0`         | :math:`1`      |
++-----------+-----------+------------------+-------------------+----------------+
+| :math:`1` | :math:`0` | :math:`1`        | :math:`0`         | :math:`0`      |
++-----------+-----------+------------------+-------------------+----------------+
+| :math:`1` | :math:`1` | :math:`1`        | :math:`1`         | :math:`0`      |
++-----------+-----------+------------------+-------------------+----------------+
+
 
 Reciprocal and Contraposed
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -78,7 +96,7 @@ Reciprocal and Contraposed
 	
 	:math:`p \Rightarrow q \Leftrightarrow \neg q \Rightarrow p`
 
-Conjunctive and Disjunctive
+Simplification
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Conjunctive Form
@@ -92,6 +110,98 @@ Conjunctive and Disjunctive
 	It is a ``disjonction of sub-propositions`` composed only of :math:`\land` and :math:`\neg`
 
 	**example:** :math:`(p \land \neg r) \lor (r \land q \land \neg r) \lor (q \land r)`
+
+
+Languages Theory
+---------------------------------
+
+Introduction
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Alphabet
+
+	Every finished set
+
+	:math:`Binairy: A = \{0,1\}`
+
+	:math:`Latin: A = \{a,b,\dots,z,A,B,\dots,Z\}`
+
+	:math:`ASCII: A = \{a,b,\dots,z,A,B,\dots,Z\,0,1,\dots,9 \}`
+
+.. admonition:: Language
+	
+	Set of words in an Alphabet
+
+	:math:`L^n` = n words of :math:`L`
+
+.. admonition:: Letters
+
+	Element of a finished set
+
+	:math:`Binairy: L = 0 \in \{0,1\}`
+
+	:math:`\varepsilon` is the empty element in each set
+
+.. admonition:: Words
+
+	Finished sequence of elements in a set
+
+	:math:`Binairy: A = \{0,1\}, A^* = \{\varepsilon, 0, 1, 00, 01, 10, 11, 001,\dots \}`
+
+	:math:`Binairy: A = \{0,1\}, A^+ = \{0, 1, 00, 01, 10, 11, 001,\dots \}`
+
+	:math:`\alpha` a word on :math:`A`, :math:`\alpha: [1,n] \Rightarrow A`
+
+	:math:`n` is the lenght of the word, :math:`|\alpha| = n`
+
+Operations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Equality of Words
+
+	On the same Alphabet: :math:`\alpha \in A, \beta \in A`
+
+	:math:`\left\{ \begin{array}{l} |\alpha| = |\beta| = n \\ \forall i \in [1,n], \alpha i = \beta i \end{array}\right.`
+
+	ex: 
+
+	:math:`A = \{a,b,\dots,z,A,B,\dots,Z\}`, :math:`\alpha \in A`, :math:`\beta \in A`
+
+	:math:`\alpha = word, \beta = word \rightarrow \alpha = \beta`
+
+.. admonition:: Concatenation
+	
+	:math:`\left. \begin{array}{l} A^* \times A^* \rightarrow A^* \\ (\alpha, \beta) \rightarrow \alpha . \beta \end{array}\right., \alpha . \beta = \sum\limits_{i=0}^{|\alpha|} \alpha i +  \sum\limits_{j=0}^{|\beta|} \beta i`
+
+	:math:`|\alpha . \beta| = |\alpha| + |\beta|`
+
+	ex:
+
+	:math:`L1 = \{a,aa\}`, :math:`L2 = \{b,bb\}`, :math:`L1.L2 =  \{ab, ba, aab, baa, \dots \}`
+
+	:math:`L1 = \{a,ab\}`, :math:`L2 = \{abab, aa\}`, :math:`L1^{-1}.L2 =  \{ab, a \}`
+
+.. admonition:: Kleen closure
+	
+	Also named iterative closure, or stared closure.
+	It's the smallest language on A that contains L and the empty word, and that is stable by concatenation.
+
+.. admonition:: Convexity
+
+	:math:`tofo`
+
+Automata:
+
+https://tex.stackexchange.com/questions/120002/how-to-modify-the-default-latex-package-parameters-of-sphinx
+
+https://tex.stackexchange.com/questions/20784/which-package-can-be-used-to-draw-automata
+
+https://github.com/sphinx-contrib/tikz
+
+https://miktex.org/
+
+https://pypi.org/project/sphinxcontrib-tikz/
+
 
 Functions and Properties
 ---------------------------------

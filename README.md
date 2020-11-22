@@ -25,4 +25,5 @@ conda install -c conda-forge recommonmark -y
 conda install -c anaconda sphinx_rtd_theme -y
 conda install -c conda-forge nbsphinx -y
 conda install -c conda-forge sphinx-copybutton -y
+pip install sphinxcontrib-tikz
 ```

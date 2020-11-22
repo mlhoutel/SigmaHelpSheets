@@ -113,7 +113,21 @@
 <li class="toctree-l1"><a class="reference internal" href="../Python/Python.html">Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Csharp/Csharp.html">C#</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Java</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#language">Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#history-of-the-java">History of the Java</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#programming-in-java">Programming in Java</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#javafx">JavaFx</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#first-program">First Program</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pac">PAC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elements">Elements</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#agencement">Agencement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#components">Components</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -227,15 +241,144 @@
     text-align: unset;
 }
 </style>
-<div class="toctree-wrapper compound">
-</div>
 <div class="section" id="java">
 <h1>Java<a class="headerlink" href="#java" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="language">
-<h2>Language<a class="headerlink" href="#language" title="Permalink to this headline">¶</a></h2>
-<div class="admonition-todo admonition" id="id1">
-<p class="admonition-title">Todo</p>
-<p>Language</p>
+<div class="contents local topic" id="table-of-contents">
+<p class="topic-title">Table of Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#introduction" id="id1">Introduction</a></p>
+<ul>
+<li><p><a class="reference internal" href="#history-of-the-java" id="id2">History of the Java</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#programming-in-java" id="id3">Programming in Java</a></p></li>
+<li><p><a class="reference internal" href="#javafx" id="id4">JavaFx</a></p>
+<ul>
+<li><p><a class="reference internal" href="#first-program" id="id5">First Program</a></p></li>
+<li><p><a class="reference internal" href="#pac" id="id6">PAC</a></p></li>
+<li><p><a class="reference internal" href="#elements" id="id7">Elements</a></p>
+<ul>
+<li><p><a class="reference internal" href="#agencement" id="id8">Agencement</a></p></li>
+<li><p><a class="reference internal" href="#components" id="id9">Components</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="introduction">
+<h2><a class="toc-backref" href="#id1">Introduction</a><a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="history-of-the-java">
+<h3><a class="toc-backref" href="#id2">History of the Java</a><a class="headerlink" href="#history-of-the-java" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="programming-in-java">
+<h2><a class="toc-backref" href="#id3">Programming in Java</a><a class="headerlink" href="#programming-in-java" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="javafx">
+<h2><a class="toc-backref" href="#id4">JavaFx</a><a class="headerlink" href="#javafx" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="first-program">
+<h3><a class="toc-backref" href="#id5">First Program</a><a class="headerlink" href="#first-program" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">javafx.application.Application</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">javafx.stage.Stage</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">javafx.scene.Scene</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">javafx.scene.layout.BorderPane</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">javafx.scene.control.Button</span><span class="p">;</span>
+
+<span class="cm">/*</span>
+<span class="cm">        Structure: Stage &gt; Scene &gt; Nodes</span>
+<span class="cm">*/</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyApplication</span> <span class="kd">extends</span> <span class="n">Application</span> <span class="p">{</span>
+        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">start</span><span class="p">(</span><span class="n">Stage</span> <span class="n">stage</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">stage</span><span class="p">.</span><span class="na">setTitle</span><span class="p">(</span><span class="s">&quot;Application Title&quot;</span><span class="p">);</span>
+                <span class="n">stage</span><span class="p">.</span><span class="na">setScene</span><span class="p">(</span><span class="n">createScene</span><span class="p">(</span><span class="n">stage</span><span class="p">));</span>
+                <span class="n">stage</span><span class="p">.</span><span class="na">show</span><span class="p">();</span>
+        <span class="p">}</span>
+        <span class="kd">public</span> <span class="n">Scene</span> <span class="nf">createScene</span><span class="p">(</span><span class="n">Stage</span> <span class="n">stage</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">BorderPane</span> <span class="n">root</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BorderPane</span><span class="p">();</span>
+                <span class="n">Button</span> <span class="n">button</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Button</span><span class="p">(</span><span class="s">&quot;Button Label&quot;</span><span class="p">);</span>
+                <span class="n">root</span><span class="p">.</span><span class="na">setCenter</span><span class="p">(</span><span class="n">button</span><span class="p">);</span>
+                <span class="k">return</span> <span class="k">new</span> <span class="n">Scene</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">launch</span><span class="p">();</span>
+        <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pac">
+<h3><a class="toc-backref" href="#id6">PAC</a><a class="headerlink" href="#pac" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="elements">
+<h3><a class="toc-backref" href="#id7">Elements</a><a class="headerlink" href="#elements" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="agencement">
+<h4><a class="toc-backref" href="#id8">Agencement</a><a class="headerlink" href="#agencement" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">javafx.scene.layout.Hbox</span><span class="p">;</span>
+
+<span class="n">Hbox</span> <span class="n">root</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Hbox</span><span class="p">();</span>
+<span class="n">root</span><span class="p">.</span><span class="na">getChildren</span><span class="p">().</span><span class="na">addAll</span><span class="p">(</span><span class="cm">/* ... */</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">javafx.scene.layout.Vbox</span><span class="p">;</span>
+
+<span class="n">Vbox</span> <span class="n">root</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Vbox</span><span class="p">();</span>
+<span class="n">root</span><span class="p">.</span><span class="na">getChildren</span><span class="p">().</span><span class="na">addAll</span><span class="p">(</span><span class="cm">/* ... */</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">javafx.scene.layout.FlowPane</span><span class="p">;</span>
+
+<span class="n">FlowPane</span> <span class="n">root</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FlowPane</span><span class="p">(</span><span class="n">Orientation</span><span class="p">.</span><span class="na">HORIZONTAL</span><span class="p">);</span>
+<span class="n">root</span><span class="p">.</span><span class="na">setRowValignment</span><span class="p">(</span><span class="n">VPos</span><span class="p">.</span><span class="na">TOP</span><span class="p">);</span>
+<span class="n">root</span><span class="p">.</span><span class="na">setColumnHalignment</span><span class="p">(</span><span class="n">HPos</span><span class="p">.</span><span class="na">CENTER</span><span class="p">);</span>
+<span class="n">root</span><span class="p">.</span><span class="na">getChildren</span><span class="p">().</span><span class="na">addAll</span><span class="p">(</span><span class="cm">/* ... */</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">javafx.scene.layout.TilePane</span><span class="p">;</span>
+
+<span class="n">TilePane</span> <span class="n">root</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TilePane</span><span class="p">(</span><span class="n">Orientation</span><span class="p">.</span><span class="na">HORIZONTAL</span><span class="p">);</span>
+<span class="n">root</span><span class="p">.</span><span class="na">getChildren</span><span class="p">().</span><span class="na">addAll</span><span class="p">(</span><span class="cm">/* ... */</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">javafx.scene.layout.GridPane</span><span class="p">;</span>
+
+<span class="n">GridPane</span> <span class="n">root</span> <span class="o">=</span> <span class="k">new</span> <span class="n">GridPane</span><span class="p">();</span>
+<span class="n">root</span><span class="p">.</span><span class="na">addRow</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="cm">/* Node, Node,... */</span><span class="p">);</span>
+<span class="n">root</span><span class="p">.</span><span class="na">addColumn</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="cm">/* Node, Node,... */</span><span class="p">);</span>
+<span class="n">root</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="cm">/* Node */</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+<span class="n">root</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="cm">/* Node */</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">javafx.scene.layout.AnchorPane</span><span class="p">;</span>
+
+<span class="n">AnchorPane</span> <span class="n">root</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AnchorPane</span><span class="p">();</span>
+<span class="n">root</span><span class="p">.</span><span class="na">getChildren</span><span class="p">().</span><span class="na">addAll</span><span class="p">(</span><span class="cm">/* ... */</span><span class="p">);</span>
+<span class="n">root</span><span class="p">.</span><span class="na">setTopAnchor</span><span class="p">(</span><span class="cm">/* Node */</span><span class="p">,</span> <span class="mf">40.0</span><span class="p">);</span>
+<span class="n">root</span><span class="p">.</span><span class="na">setRightAnchor</span><span class="p">(</span><span class="cm">/* Node */</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">);</span>
+<span class="n">root</span><span class="p">.</span><span class="na">setBottomAnchor</span><span class="p">(</span><span class="cm">/* Node */</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">);</span>
+<span class="n">root</span><span class="p">.</span><span class="na">setLeftAnchor</span><span class="p">(</span><span class="cm">/* Node */</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">javafx.scene.layout.StackPane</span><span class="p">;</span>
+
+<span class="n">StackPane</span> <span class="n">root</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StackPane</span><span class="p">();</span>
+<span class="n">root</span><span class="p">.</span><span class="na">getChildren</span><span class="p">().</span><span class="na">addAll</span><span class="p">(</span><span class="cm">/* ... */</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">javafx.scene.layout.BorderPane</span><span class="p">;</span>
+
+<span class="n">BorderPane</span> <span class="n">root</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BorderPane</span><span class="p">();</span>
+<span class="n">root</span><span class="p">.</span><span class="na">setTop</span><span class="p">(</span><span class="cm">/* ... */</span><span class="p">);</span>
+<span class="n">root</span><span class="p">.</span><span class="na">setBottom</span><span class="p">(</span><span class="cm">/* ... */</span><span class="p">);</span>
+<span class="n">root</span><span class="p">.</span><span class="na">setLeft</span><span class="p">(</span><span class="cm">/* ... */</span><span class="p">);</span>
+<span class="n">root</span><span class="p">.</span><span class="na">setRight</span><span class="p">(</span><span class="cm">/* ... */</span><span class="p">);</span>
+<span class="n">root</span><span class="p">.</span><span class="na">setCenter</span><span class="p">(</span><span class="cm">/* ... */</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="components">
+<h4><a class="toc-backref" href="#id9">Components</a><a class="headerlink" href="#components" title="Permalink to this headline">¶</a></h4>
+</div>
 </div>
 </div>
 </div>
