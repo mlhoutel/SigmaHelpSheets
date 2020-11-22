@@ -106,7 +106,23 @@
 <li class="toctree-l1"><a class="reference internal" href="../Chemistry/Chemistry.html">Chemistry</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Computer Science</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#binairy-et-hexadecimal">Binairy et Hexadecimal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#datas-types">Datas types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#data-structures-and-programming-paradigms">Data Structures and Programming Paradigms</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#modularity-and-typing">Modularity and Typing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#creating-a-new-type">Creating a new Type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#data-persistence">Data Persistence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hierarchy-aggregation-and-inheritance">Hierarchy: Aggregation and Inheritance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#layered-architectures">Layered architectures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#design-patterns">Design Patterns</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#languages-theory-and-automatas">Languages Theory and Automatas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#operations">Operations</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#system">System</a></li>
 </ul>
 </li>
@@ -234,19 +250,390 @@
 <div class="contents local topic" id="table-of-contents">
 <p class="topic-title">Table of Contents</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#binairy-et-hexadecimal" id="id1">Binairy et Hexadecimal</a></p></li>
-<li><p><a class="reference internal" href="#datas-types" id="id2">Datas types</a></p></li>
-<li><p><a class="reference internal" href="#system" id="id3">System</a></p></li>
+<li><p><a class="reference internal" href="#binairy-et-hexadecimal" id="id4">Binairy et Hexadecimal</a></p></li>
+<li><p><a class="reference internal" href="#data-structures-and-programming-paradigms" id="id5">Data Structures and Programming Paradigms</a></p>
+<ul>
+<li><p><a class="reference internal" href="#modularity-and-typing" id="id6">Modularity and Typing</a></p>
+<ul>
+<li><p><a class="reference internal" href="#introduction" id="id7">Introduction</a></p></li>
+<li><p><a class="reference internal" href="#creating-a-new-type" id="id8">Creating a new Type</a></p></li>
+<li><p><a class="reference internal" href="#data-persistence" id="id9">Data Persistence</a></p></li>
+<li><p><a class="reference internal" href="#hierarchy-aggregation-and-inheritance" id="id10">Hierarchy: Aggregation and Inheritance</a></p></li>
+<li><p><a class="reference internal" href="#layered-architectures" id="id11">Layered architectures</a></p></li>
+<li><p><a class="reference internal" href="#design-patterns" id="id12">Design Patterns</a></p>
+<ul>
+<li><p><a class="reference internal" href="#flyweight-design-pattern" id="id13">1) Flyweight Design Pattern</a></p></li>
+<li><p><a class="reference internal" href="#memento-design-pattern" id="id14">2) Memento Design Pattern</a></p></li>
+<li><p><a class="reference internal" href="#state-design-pattern" id="id15">3) State Design Pattern</a></p></li>
+<li><p><a class="reference internal" href="#singleton-design-pattern" id="id16">4) Singleton Design Pattern</a></p></li>
+<li><p><a class="reference internal" href="#adapter-design-pattern" id="id17">5) Adapter Design Pattern</a></p></li>
+<li><p><a class="reference internal" href="#observer-design-pattern" id="id18">6) Observer Design Pattern</a></p></li>
+<li><p><a class="reference internal" href="#strategy-design-pattern" id="id19">7) Strategy Design Pattern</a></p></li>
+<li><p><a class="reference internal" href="#iterator-design-pattern" id="id20">8) Iterator Design Pattern</a></p></li>
+<li><p><a class="reference internal" href="#decorator-design-pattern" id="id21">9) Decorator Design Pattern</a></p></li>
+<li><p><a class="reference internal" href="#proxy-design-pattern" id="id22">10) Proxy Design Pattern</a></p></li>
+<li><p><a class="reference internal" href="#facade-design-pattern" id="id23">11) Facade Design Pattern</a></p></li>
+<li><p><a class="reference internal" href="#mediator-design-pattern" id="id24">12) Mediator Design Pattern</a></p></li>
+<li><p><a class="reference internal" href="#chain-of-responsability-design-patterns" id="id25">13) Chain of Responsability Design Patterns</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#languages-theory-and-automatas" id="id26">Languages Theory and Automatas</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id3" id="id27">Introduction</a></p></li>
+<li><p><a class="reference internal" href="#operations" id="id28">Operations</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#system" id="id29">System</a></p></li>
 </ul>
 </div>
 <div class="section" id="binairy-et-hexadecimal">
-<h2><a class="toc-backref" href="#id1">Binairy et Hexadecimal</a><a class="headerlink" href="#binairy-et-hexadecimal" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id4">Binairy et Hexadecimal</a><a class="headerlink" href="#binairy-et-hexadecimal" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="datas-types">
-<h2><a class="toc-backref" href="#id2">Datas types</a><a class="headerlink" href="#datas-types" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="data-structures-and-programming-paradigms">
+<h2><a class="toc-backref" href="#id5">Data Structures and Programming Paradigms</a><a class="headerlink" href="#data-structures-and-programming-paradigms" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="modularity-and-typing">
+<h3><a class="toc-backref" href="#id6">Modularity and Typing</a><a class="headerlink" href="#modularity-and-typing" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="introduction">
+<h4><a class="toc-backref" href="#id7">Introduction</a><a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h4>
+<p>Evolution of the Languages towards an increasingly modular and abstract programming</p>
+<p>=&gt; Assembly
+=&gt; C
+=&gt; C++
+=&gt; Java
+=&gt; Js
+=&gt; Ts</p>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>POO vs Functionnal</p>
+</div>
+</div>
+<div class="section" id="creating-a-new-type">
+<h4><a class="toc-backref" href="#id8">Creating a new Type</a><a class="headerlink" href="#creating-a-new-type" title="Permalink to this headline">¶</a></h4>
+<p>Creating a new Type (TypeScript) : example of the Car</p>
+<p>Two points of view when defining a new type:</p>
+<ul class="simple">
+<li><p><strong>Internal:</strong> How to build and manage the elements (how to build a car?)</p></li>
+<li><p><strong>External:</strong> How to use the instances of that element (how to drive a car?)</p></li>
+</ul>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Defining an impementation of a type différents Layers:</span>
+<span class="kr">class</span> <span class="nx">Car</span> <span class="p">{</span>
+        <span class="cm">/* Attributes (values, fields, properties) */</span>
+        <span class="kr">private</span> <span class="kt">number</span> <span class="nx">price</span>
+        <span class="kr">private</span> <span class="kt">string</span> <span class="nx">brand</span>
+        <span class="kr">private</span> <span class="kt">string</span> <span class="nx">plate</span>
+
+        <span class="cm">/* Methods (Factories, Constructors, Accessors, Functions) */</span>
+
+        <span class="cm">/* Factories (Builders) */</span>
+        <span class="kr">constructor</span><span class="p">()</span> <span class="c1">// Multiple implementations with the overload</span>
+        <span class="kr">constructor</span><span class="p">(</span><span class="nx">price</span>: <span class="kt">number</span><span class="p">,</span> <span class="nx">brand</span>: <span class="kt">string</span><span class="p">,</span> <span class="nx">plate</span>: <span class="kt">string</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">this</span><span class="p">.</span><span class="nx">price</span> <span class="o">=</span> <span class="nx">price</span>
+                <span class="k">this</span><span class="p">.</span><span class="nx">brand</span> <span class="o">=</span> <span class="nx">brand</span>
+                <span class="k">this</span><span class="p">.</span><span class="nx">plate</span> <span class="o">=</span> <span class="nx">plate</span>
+        <span class="p">}</span>
+        <span class="c1">// Garbage collection (ex: c++ ~destructor)</span>
+
+        <span class="cm">/* Constructors (Setters) */</span>
+        <span class="nx">setPrice</span><span class="p">(</span><span class="nx">price</span> : <span class="kt">number</span><span class="p">)</span> <span class="p">{</span> <span class="k">this</span><span class="p">.</span><span class="nx">price</span> <span class="o">=</span> <span class="nx">price</span> <span class="p">}</span>
+        <span class="nx">setBrand</span><span class="p">(</span><span class="nx">brand</span> : <span class="kt">string</span><span class="p">)</span> <span class="p">{</span> <span class="k">this</span><span class="p">.</span><span class="nx">brand</span> <span class="o">=</span> <span class="nx">brand</span> <span class="p">}</span>
+        <span class="nx">setPlate</span><span class="p">(</span><span class="nx">plate</span> : <span class="kt">string</span><span class="p">)</span> <span class="p">{</span> <span class="k">this</span><span class="p">.</span><span class="nx">plate</span> <span class="o">=</span> <span class="nx">plate</span> <span class="p">}</span>
+
+        <span class="cm">/* Accessors (Getters) */</span>
+        <span class="nx">getPrice</span><span class="p">()</span> <span class="o">:</span> <span class="kt">number</span> <span class="p">{</span> <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">price</span> <span class="p">}</span>
+        <span class="nx">getBrand</span><span class="p">()</span> <span class="o">:</span> <span class="kt">string</span> <span class="p">{</span> <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">brand</span> <span class="p">}</span>
+        <span class="nx">getPlate</span><span class="p">()</span> <span class="o">:</span> <span class="kt">string</span> <span class="p">{</span> <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">plate</span> <span class="p">}</span>
+
+        <span class="cm">/* Functions */</span>
+        <span class="nx">computeSomething</span><span class="p">()</span><span class="o">:</span> <span class="kt">number</span> <span class="p">{</span> <span class="k">return</span> <span class="mi">0</span> <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="data-persistence">
+<h4><a class="toc-backref" href="#id9">Data Persistence</a><a class="headerlink" href="#data-persistence" title="Permalink to this headline">¶</a></h4>
+<p><strong>Immutability: Keep the initial state, each computation create a new object</strong></p>
+<ul class="simple">
+<li><p><strong>Benefits:</strong> Permit to avoid errors due to the change of the object. For instance, if multiple entities can access the object at the same time, or if you just don’t want the state of the object to change.</p></li>
+<li><p><strong>DrawBack:</strong> Can be heavier on memory due to the initialisation of a new element for each change in the object state</p></li>
+</ul>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">class</span> <span class="nx">ImmutableNumber</span> <span class="p">{</span>
+        <span class="kr">constructor</span><span class="p">(</span><span class="kr">private</span> <span class="nx">value</span>: <span class="kt">number</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+
+        <span class="nx">getValue</span><span class="p">()</span> <span class="o">:</span> <span class="kt">number</span> <span class="p">{</span> <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">value</span> <span class="p">}</span>
+
+        <span class="nx">plusNumber</span><span class="p">(</span><span class="nx">other</span>: <span class="kt">ImmutableNumber</span><span class="p">)</span> <span class="o">:</span> <span class="nx">ImmutableNumber</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="k">new</span> <span class="nx">ImmutableNumber</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">getValue</span><span class="p">()</span> <span class="o">+</span> <span class="nx">other</span><span class="p">.</span><span class="nx">getValue</span><span class="p">())</span>
+        <span class="p">}</span>
+
+        <span class="nx">minusNumber</span><span class="p">(</span><span class="nx">other</span>: <span class="kt">ImmutableNumber</span><span class="p">)</span> <span class="o">:</span> <span class="nx">ImmutableNumber</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="k">new</span> <span class="nx">ImmutableNumber</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">getValue</span><span class="p">()</span> <span class="o">-</span> <span class="nx">other</span><span class="p">.</span><span class="nx">getValue</span><span class="p">())</span>
+        <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Mutability: The state of the object can change, allows to edit it</strong></p>
+<ul class="simple">
+<li><p><strong>Benefits:</strong> Some case just need to have an object evolution.</p></li>
+<li><p><strong>DrawBack:</strong> Harder to manage the states, and riskier.</p></li>
+</ul>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">class</span> <span class="nx">MutableNumber</span> <span class="p">{</span>
+        <span class="kr">constructor</span><span class="p">(</span><span class="kr">private</span> <span class="nx">value</span>: <span class="kt">number</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+
+        <span class="nx">getValue</span><span class="p">()</span> <span class="o">:</span> <span class="kt">number</span> <span class="p">{</span> <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">value</span> <span class="p">}</span>
+        <span class="nx">setValue</span><span class="p">(</span><span class="nx">value</span>: <span class="kt">number</span><span class="p">)</span> <span class="p">{</span> <span class="k">this</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="nx">value</span> <span class="p">}</span>
+
+        <span class="nx">plusNumber</span><span class="p">(</span><span class="nx">other</span>: <span class="kt">MutableNumber</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">this</span><span class="p">.</span><span class="nx">setValue</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">getValue</span><span class="p">()</span> <span class="o">+</span> <span class="nx">other</span><span class="p">.</span><span class="nx">getValue</span><span class="p">())</span>
+        <span class="p">}</span>
+
+        <span class="nx">minusNumber</span><span class="p">(</span><span class="nx">other</span>: <span class="kt">MutableNumber</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">this</span><span class="p">.</span><span class="nx">setValue</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">getValue</span><span class="p">()</span> <span class="o">-</span> <span class="nx">other</span><span class="p">.</span><span class="nx">getValue</span><span class="p">())</span>
+        <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="hierarchy-aggregation-and-inheritance">
+<h4><a class="toc-backref" href="#id10">Hierarchy: Aggregation and Inheritance</a><a class="headerlink" href="#hierarchy-aggregation-and-inheritance" title="Permalink to this headline">¶</a></h4>
+<p><strong>Aggregation (Has a X)</strong></p>
+<ul>
+<li><p>Code factorisation with the aggregation of the differents classes</p></li>
+<li><p>Multiples forms:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Shared Aggregation</strong> (objects are independants)</p></li>
+<li><p><strong>Symbiosis</strong> (same life duration)</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">class</span> <span class="nx">Driver</span> <span class="p">{</span>
+        <span class="cm">/* Driver class implementation */</span>
+<span class="p">}</span>
+
+<span class="kr">class</span> <span class="nx">Wheel</span> <span class="p">{</span>
+        <span class="cm">/* Wheel class implementation */</span>
+<span class="p">}</span>
+
+<span class="kr">class</span> <span class="nx">Frame</span> <span class="p">{</span>
+        <span class="cm">/* Frame class implementation */</span>
+<span class="p">}</span>
+
+<span class="cm">/*</span>
+<span class="cm">        The Car class is an example of the Aggregation:</span>
+<span class="cm">        It HAS a driver, wheels and a frame</span>
+<span class="cm">*/</span>
+
+<span class="kr">class</span> <span class="nx">Car</span> <span class="p">{</span>
+        <span class="kr">private</span> <span class="nx">driver</span>: <span class="kt">Driver</span>
+        <span class="kr">private</span> <span class="nx">wheels</span>: <span class="kt">Array</span><span class="o">&lt;</span><span class="nx">Wheel</span><span class="o">&gt;</span>
+        <span class="kr">private</span> <span class="nx">frame</span>: <span class="kt">Frame</span>
+
+        <span class="kr">constructor</span><span class="p">(</span><span class="nx">driver</span>: <span class="kt">Driver</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">this</span><span class="p">.</span><span class="nx">driver</span> <span class="o">=</span> <span class="nx">driver</span>
+                <span class="k">this</span><span class="p">.</span><span class="nx">wheels</span> <span class="o">=</span> <span class="p">[</span><span class="k">new</span> <span class="nx">Wheel</span><span class="p">(),</span> <span class="k">new</span> <span class="nx">Wheel</span><span class="p">(),</span> <span class="k">new</span> <span class="nx">Wheel</span><span class="p">(),</span> <span class="k">new</span> <span class="nx">Wheel</span><span class="p">()]</span>
+                <span class="k">this</span><span class="p">.</span><span class="nx">frame</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Frame</span><span class="p">()</span>
+        <span class="p">}</span>
+
+        <span class="cm">/*</span>
+<span class="cm">                With this exemples, we could also say thet these components</span>
+<span class="cm">                don&#39;t have the same relation with the Car class:</span>
+
+<span class="cm">                - The Wheels and the Frame seems pretty linked to the Car</span>
+<span class="cm">                  In fact, we can see that they are only created in the Car constructor.</span>
+<span class="cm">                  =&gt; We could say that the Car is in symbiosis with the Wheels and the Frame</span>
+<span class="cm">                  ... but it&#39;s not realy true, the wheels could be changed, the car</span>
+<span class="cm">                  would still be the same. The interpretation is realy specific to what you need</span>
+
+<span class="cm">                - The Driver seems completely independant from the rest of the pieces. It is</span>
+<span class="cm">                passed by parameter in the constructor, and we can emit the supposition that</span>
+<span class="cm">                the driver can be changed, for instance if he sells the car to another Driver</span>
+<span class="cm">                =&gt; We could say that the Driver is in a shared aggregation with the Car</span>
+<span class="cm">        */</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Inheritance (Is a X)</strong></p>
+<ul>
+<li><p>Polymorphism : Multiplicity of essences</p></li>
+<li><p>Data storage:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Covariant</strong> (accept object that are more specialized)</p></li>
+<li><p><strong>Contravariant</strong> (don’t accept any more specialized object)</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">class</span> <span class="nx">Vehicle</span> <span class="p">{</span>
+        <span class="kr">private</span> <span class="nx">driver</span>: <span class="kt">Driver</span>
+        <span class="kr">private</span> <span class="nx">wheels</span>: <span class="kt">Array</span><span class="o">&lt;</span><span class="nx">Wheel</span><span class="o">&gt;</span>
+        <span class="kr">private</span> <span class="nx">frame</span>: <span class="kt">Frame</span>
+
+        <span class="cm">/* Vehicle implementation */</span>
+<span class="p">}</span>
+
+<span class="cm">/* A Car IS a Vehicle, it will have the same attributes and methods... */</span>
+<span class="kr">class</span> <span class="nx">Car</span> <span class="kr">extends</span> <span class="nx">Vehicle</span> <span class="p">{</span>
+
+        <span class="cm">/* Car class implementation */</span>
+<span class="p">}</span>
+
+<span class="cm">/* ... but moreover, it can implement new attributes and methods! */</span>
+<span class="kr">class</span> <span class="nx">Truck</span> <span class="kr">extends</span> <span class="nx">Vehicle</span> <span class="p">{</span>
+        <span class="kr">private</span> <span class="nx">trailer</span>: <span class="kt">Trailer</span> <span class="c1">// The trailer is specific to the truck</span>
+
+        <span class="cm">/* Truck class implementation */</span>
+<span class="p">}</span>
+
+<span class="cm">/*</span>
+<span class="cm">        We can see that the Polymorphism allows to store multiple childs</span>
+<span class="cm">        of the Car class in the same Array, that&#39;s really usefull</span>
+<span class="cm">*/</span>
+<span class="kd">let</span> <span class="nx">MyVehicles</span>: <span class="kt">Array</span><span class="o">&lt;</span><span class="nx">Vehicles</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">[</span><span class="k">new</span> <span class="nx">Car</span><span class="p">(),</span> <span class="k">new</span> <span class="nx">Truck</span><span class="p">()]</span>
+</pre></div>
+</div>
+<div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">Todo</p>
+<p>Class /
+Abstract Class /
+Interface</p>
+</div>
+</div>
+<div class="section" id="layered-architectures">
+<h4><a class="toc-backref" href="#id11">Layered architectures</a><a class="headerlink" href="#layered-architectures" title="Permalink to this headline">¶</a></h4>
+<p><strong>Universal architecture:</strong></p>
+<ul class="simple">
+<li><p><em>Low Layer</em> (internal): accessors and builders</p></li>
+<li><p><em>High Layer</em> (external): services implemented using the low layer</p></li>
+</ul>
+<p><strong>Factorisation Cases:</strong></p>
+<ul class="simple">
+<li><p><em>Simple Inheritance:</em> descending aproach (factoring the bottom layer)</p></li>
+<li><p><em>Simple Inheritance:</em> ascending aproach (factoring the top layer)</p></li>
+<li><p><em>Multiple Inheritance:</em> independant bottom and top layers</p></li>
+<li><p><em>Agregation with Delegation:</em> composition of the top layer (inject dependances)</p></li>
+</ul>
+</div>
+<div class="section" id="design-patterns">
+<h4><a class="toc-backref" href="#id12">Design Patterns</a><a class="headerlink" href="#design-patterns" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="flyweight-design-pattern">
+<h5><a class="toc-backref" href="#id13">1) Flyweight Design Pattern</a><a class="headerlink" href="#flyweight-design-pattern" title="Permalink to this headline">¶</a></h5>
+</div>
+<div class="section" id="memento-design-pattern">
+<h5><a class="toc-backref" href="#id14">2) Memento Design Pattern</a><a class="headerlink" href="#memento-design-pattern" title="Permalink to this headline">¶</a></h5>
+</div>
+<div class="section" id="state-design-pattern">
+<h5><a class="toc-backref" href="#id15">3) State Design Pattern</a><a class="headerlink" href="#state-design-pattern" title="Permalink to this headline">¶</a></h5>
+</div>
+<div class="section" id="singleton-design-pattern">
+<h5><a class="toc-backref" href="#id16">4) Singleton Design Pattern</a><a class="headerlink" href="#singleton-design-pattern" title="Permalink to this headline">¶</a></h5>
+</div>
+<div class="section" id="adapter-design-pattern">
+<h5><a class="toc-backref" href="#id17">5) Adapter Design Pattern</a><a class="headerlink" href="#adapter-design-pattern" title="Permalink to this headline">¶</a></h5>
+</div>
+<div class="section" id="observer-design-pattern">
+<h5><a class="toc-backref" href="#id18">6) Observer Design Pattern</a><a class="headerlink" href="#observer-design-pattern" title="Permalink to this headline">¶</a></h5>
+</div>
+<div class="section" id="strategy-design-pattern">
+<h5><a class="toc-backref" href="#id19">7) Strategy Design Pattern</a><a class="headerlink" href="#strategy-design-pattern" title="Permalink to this headline">¶</a></h5>
+</div>
+<div class="section" id="iterator-design-pattern">
+<h5><a class="toc-backref" href="#id20">8) Iterator Design Pattern</a><a class="headerlink" href="#iterator-design-pattern" title="Permalink to this headline">¶</a></h5>
+</div>
+<div class="section" id="decorator-design-pattern">
+<h5><a class="toc-backref" href="#id21">9) Decorator Design Pattern</a><a class="headerlink" href="#decorator-design-pattern" title="Permalink to this headline">¶</a></h5>
+</div>
+<div class="section" id="proxy-design-pattern">
+<h5><a class="toc-backref" href="#id22">10) Proxy Design Pattern</a><a class="headerlink" href="#proxy-design-pattern" title="Permalink to this headline">¶</a></h5>
+</div>
+<div class="section" id="facade-design-pattern">
+<h5><a class="toc-backref" href="#id23">11) Facade Design Pattern</a><a class="headerlink" href="#facade-design-pattern" title="Permalink to this headline">¶</a></h5>
+</div>
+<div class="section" id="mediator-design-pattern">
+<h5><a class="toc-backref" href="#id24">12) Mediator Design Pattern</a><a class="headerlink" href="#mediator-design-pattern" title="Permalink to this headline">¶</a></h5>
+</div>
+<div class="section" id="chain-of-responsability-design-patterns">
+<h5><a class="toc-backref" href="#id25">13) Chain of Responsability Design Patterns</a><a class="headerlink" href="#chain-of-responsability-design-patterns" title="Permalink to this headline">¶</a></h5>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="languages-theory-and-automatas">
+<h2><a class="toc-backref" href="#id26">Languages Theory and Automatas</a><a class="headerlink" href="#languages-theory-and-automatas" title="Permalink to this headline">¶</a></h2>
+<p>For introduction, See <a class="reference external" href="../Maths/Discrete.html#propositional-calculus-and-logic">Propositional Calculus and Logic</a></p>
+<div class="section" id="id3">
+<h3><a class="toc-backref" href="#id27">Introduction</a><a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-alphabet admonition">
+<p class="admonition-title">Alphabet</p>
+<p>Every finished set</p>
+<p><span class="math notranslate nohighlight">\(Binairy: A = \{0,1\}\)</span></p>
+<p><span class="math notranslate nohighlight">\(Latin: A = \{a,b,\dots,z,A,B,\dots,Z\}\)</span></p>
+<p><span class="math notranslate nohighlight">\(ASCII: A = \{a,b,\dots,z,A,B,\dots,Z\,0,1,\dots,9 \}\)</span></p>
+</div>
+<div class="admonition-language admonition">
+<p class="admonition-title">Language</p>
+<p>Set of words in an Alphabet</p>
+<p><span class="math notranslate nohighlight">\(L^n\)</span> = n words of <span class="math notranslate nohighlight">\(L\)</span></p>
+</div>
+<div class="admonition-letters admonition">
+<p class="admonition-title">Letters</p>
+<p>Element of a finished set</p>
+<p><span class="math notranslate nohighlight">\(Binairy: L = 0 \in \{0,1\}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\varepsilon\)</span> is the empty element in each set</p>
+</div>
+<div class="admonition-words admonition">
+<p class="admonition-title">Words</p>
+<p>Finished sequence of elements in a set</p>
+<p><span class="math notranslate nohighlight">\(Binairy: A = \{0,1\}, A^* = \{\varepsilon, 0, 1, 00, 01, 10, 11, 001,\dots \}\)</span></p>
+<p><span class="math notranslate nohighlight">\(Binairy: A = \{0,1\}, A^+ = \{0, 1, 00, 01, 10, 11, 001,\dots \}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\alpha\)</span> a word on <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(\alpha: [1,n] \Rightarrow A\)</span></p>
+<p><span class="math notranslate nohighlight">\(n\)</span> is the lenght of the word, <span class="math notranslate nohighlight">\(|\alpha| = n\)</span></p>
+</div>
+</div>
+<div class="section" id="operations">
+<h3><a class="toc-backref" href="#id28">Operations</a><a class="headerlink" href="#operations" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-equality-of-words admonition">
+<p class="admonition-title">Equality of Words</p>
+<p>On the same Alphabet: <span class="math notranslate nohighlight">\(\alpha \in A, \beta \in A\)</span></p>
+<p><span class="math notranslate nohighlight">\(\left\{ \begin{array}{l} |\alpha| = |\beta| = n \\ \forall i \in [1,n], \alpha i = \beta i \end{array}\right.\)</span></p>
+<p>ex:</p>
+<p><span class="math notranslate nohighlight">\(A = \{a,b,\dots,z,A,B,\dots,Z\}\)</span>, <span class="math notranslate nohighlight">\(\alpha \in A\)</span>, <span class="math notranslate nohighlight">\(\beta \in A\)</span></p>
+<p><span class="math notranslate nohighlight">\(\alpha = word, \beta = word \rightarrow \alpha = \beta\)</span></p>
+</div>
+<div class="admonition-concatenation admonition">
+<p class="admonition-title">Concatenation</p>
+<p><span class="math notranslate nohighlight">\(\left. \begin{array}{l} A^* \times A^* \rightarrow A^* \\ (\alpha, \beta) \rightarrow \alpha . \beta \end{array}\right., \alpha . \beta = \sum\limits_{i=0}^{|\alpha|} \alpha i +  \sum\limits_{j=0}^{|\beta|} \beta i\)</span></p>
+<p><span class="math notranslate nohighlight">\(|\alpha . \beta| = |\alpha| + |\beta|\)</span></p>
+<p>ex:</p>
+<p><span class="math notranslate nohighlight">\(L1 = \{a,aa\}\)</span>, <span class="math notranslate nohighlight">\(L2 = \{b,bb\}\)</span>, <span class="math notranslate nohighlight">\(L1.L2 =  \{ab, ba, aab, baa, \dots \}\)</span></p>
+<p><span class="math notranslate nohighlight">\(L1 = \{a,ab\}\)</span>, <span class="math notranslate nohighlight">\(L2 = \{abab, aa\}\)</span>, <span class="math notranslate nohighlight">\(L1^{-1}.L2 =  \{ab, a \}\)</span></p>
+</div>
+<div class="admonition-kleen-closure admonition">
+<p class="admonition-title">Kleen closure</p>
+<p>Also named iterative closure, or stared closure.
+It’s the smallest language on A that contains L and the empty word, and that is stable by concatenation.</p>
+</div>
+<div class="admonition-convexity admonition">
+<p class="admonition-title">Convexity</p>
+<p><span class="math notranslate nohighlight">\(tofo\)</span></p>
+</div>
+<p>Automatas drawing in sphinx…</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://tex.stackexchange.com/questions/120002/how-to-modify-the-default-latex-package-parameters-of-sphinx">https://tex.stackexchange.com/questions/120002/how-to-modify-the-default-latex-package-parameters-of-sphinx</a></p></li>
+<li><p><a class="reference external" href="https://tex.stackexchange.com/questions/20784/which-package-can-be-used-to-draw-automata">https://tex.stackexchange.com/questions/20784/which-package-can-be-used-to-draw-automata</a></p></li>
+<li><p><a class="reference external" href="https://github.com/sphinx-contrib/tikz">https://github.com/sphinx-contrib/tikz</a></p></li>
+<li><p><a class="reference external" href="https://miktex.org/">https://miktex.org/</a></p></li>
+<li><p><a class="reference external" href="https://pypi.org/project/sphinxcontrib-tikz/">https://pypi.org/project/sphinxcontrib-tikz/</a></p></li>
+</ul>
+</div>
 </div>
 <div class="section" id="system">
-<h2><a class="toc-backref" href="#id3">System</a><a class="headerlink" href="#system" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id29">System</a><a class="headerlink" href="#system" title="Permalink to this headline">¶</a></h2>
 <p>RSA</p>
 <p><a class="reference external" href="https://www.youtube.com/watch?v=AQDCe585Lnc">https://www.youtube.com/watch?v=AQDCe585Lnc</a></p>
 </div>
