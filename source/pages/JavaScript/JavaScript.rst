@@ -412,9 +412,20 @@ Vuex
 Jest
 ---------------------------
 
+:Unit Testing:
+
 .. code-block::
 
     npm install jest --save-dev
+
+    mkdir src/utils/__tests__
+    cd src/utils/__tests__
+    echo.>Element.spec.js
+
+    /* Run tests */
+    npm test --coverage 
+
+.. code-block:: 
 
     package.json
 
@@ -424,13 +435,6 @@ Jest
     "jest": {
         "collectCoverage": true,
     }
-
-    mkdir src/utils/__tests__
-    cd src/utils/__tests__
-    echo.>Element.spec.js
-
-    /* Run tests */
-    npm test --coverage 
 
 .. code-block::
 
@@ -487,8 +491,82 @@ Jest
         it('async test description', async () => {
             /* Here we test with an async function */
         })
-
-
     }
     
-            
+Cypress
+---------------------------
+
+:Integration Testing:
+
+.. code-block:: js
+    
+    install global cypress: npm install -g cypress
+
+    cypress run -P . --config video=false --spec '**/integration/test.spec.js' -b chrome
+    cypress open -P .
+
+.. code-block::
+
+    src
+    └───cypress
+        ├───support
+        |   ├───index.js
+        |   └───commands.js
+        └───tests
+            ├───smoke
+            └───integration
+                └───test.spec.js // integration tests here
+
+.. code-block:: js
+    
+    support/index.js
+
+    Cypress.on("window:before:load", function(window){
+        const original = window.EventTarget.prototype.addEventListener
+
+        window.EventTarget.prototype.addEventListener = function() {
+            if (argument && argument[0] === "beforeunload") { return }
+            return original.apply(this, arguments)
+        }
+
+        Objet.defineProperty(window, "beforeunload", {
+            get: function() {},
+            set: function() {}
+        })
+    })
+
+.. code-block:: js
+    
+    support/commands.js
+
+    //<button type="button" data-test="mybutton">Button</button>
+
+    Cypress.Commands.add("SelectMyButton", () => {
+        return cy.get('[data-test="mybutton"]')
+    })
+
+    Cypress.Commands.add("ClickMyButton", () => {
+        cy.SelectMyButton().click()
+    })
+
+
+.. code-block:: js
+    
+    integration/test.spec.js
+
+    describle("Tests description", function() {
+
+        const BUTTON_CLICKED = "clicked"
+
+        beforeEach(() => { /* ... */ })
+        afterEach(() => { /* ... */ })
+
+        it("Test description", function() {
+            cy.ClickMyButton()
+            cy.contains(BUTTON_CLICKED)
+        })
+
+        /* ... */
+    })
+
+
